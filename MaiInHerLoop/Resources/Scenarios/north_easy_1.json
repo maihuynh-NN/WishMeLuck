@@ -1,48 +1,53 @@
 {
   "id": "north_easy_1",
-  "titleVI": "Lũ sông nhỏ",
-  "titleEN": "Small River Flood",
-  "startQuestionID": "q1",
+  "region": "north",
+  "title_en": "Small River Flood",
+  "title_vi": "Lũ sông nhỏ",
+  "intro_en": "Heavy rain is expected overnight.",
+  "intro_vi": "Mưa lớn được dự báo trong đêm.",
+  "start_question": "q1",
   "questions": [
     {
       "id": "q1",
-      "textVI": "Nước đang dâng, bạn làm gì?",
-      "textEN": "The water is rising. What do you do?",
+      "text_en": "Water is rising. What do you do?",
+      "text_vi": "Nước đang dâng. Bạn làm gì?",
+      "timer": 25,
       "options": [
         {
           "id": "o1",
-          "textVI": "Gọi hàng xóm",
-          "textEN": "Call neighbors",
-          "traitTag": "team",
-          "nextQuestionID": "q2"
+          "text_en": "Call neighbors",
+          "text_vi": "Gọi hàng xóm",
+          "trait_tag": "tap_the",
+          "next_question": "q2"
         },
         {
           "id": "o2",
-          "textVI": "Kiểm tra đồ đạc",
-          "textEN": "Check supplies",
-          "traitTag": "practical",
-          "nextQuestionID": "q2"
+          "text_en": "Check supplies",
+          "text_vi": "Kiểm tra đồ đạc",
+          "trait_tag": "thuc_te",
+          "next_question": "q2"
         }
       ]
     },
     {
       "id": "q2",
-      "textVI": "Bạn ưu tiên điều gì?",
-      "textEN": "What do you prioritize?",
+      "text_en": "What do you prioritize?",
+      "text_vi": "Bạn ưu tiên điều gì?",
+      "timer": 20,
       "options": [
         {
           "id": "o3",
-          "textVI": "An toàn mọi người",
-          "textEN": "Everyone’s safety",
-          "traitTag": "team",
-          "nextQuestionID": null
+          "text_en": "People’s safety",
+          "text_vi": "An toàn mọi người",
+          "trait_tag": "tap_the",
+          "next_question": null
         },
         {
           "id": "o4",
-          "textVI": "Giữ tài sản",
-          "textEN": "Protect property",
-          "traitTag": "practical",
-          "nextQuestionID": null
+          "text_en": "Protect property",
+          "text_vi": "Giữ tài sản",
+          "trait_tag": "thuc_te",
+          "next_question": null
         }
       ]
     }
