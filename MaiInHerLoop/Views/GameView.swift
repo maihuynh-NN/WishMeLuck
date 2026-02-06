@@ -14,6 +14,10 @@ struct GameView: View {
         VStack(spacing: 24) {
 
             if let question = engine.currentQuestion {
+                
+                Text("Time remaining: \(engine.timeRemaining)")
+                       .font(.caption)
+                       .foregroundColor(.secondary)
 
                 Text(question.textEN)
                     .font(.title2)
