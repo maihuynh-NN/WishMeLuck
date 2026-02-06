@@ -34,12 +34,13 @@ struct GameView: View {
 
             } else if engine.isComplete {
 
-                Text("Scenario Complete")
-                    .font(.title)
-                    .padding()
-
-                Text("Dominant trait: \(engine.dominantTrait())")
-                    .font(.body)
+                if let archetype = ArchetypeRepository.archetype(
+                    for: engine.dominantTrait()
+                ) {
+                    ReflectionResultView(archetype: archetype)
+                } else {
+                    Text("Reflection unavailable")
+                }
             }
         }
         .padding()
