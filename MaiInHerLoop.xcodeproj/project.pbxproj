@@ -6,8 +6,13 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		D3AC34C82F35FD2B008CE481 /* DiaryModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D3AC34C62F35FD2B008CE481 /* DiaryModel.xcdatamodeld */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		D3379A262F335FD70044E4D3 /* MaiInHerLoop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MaiInHerLoop.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3AC34C72F35FD2B008CE481 /* DiaryModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DiaryModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -32,6 +37,7 @@
 		D3379A1D2F335FD70044E4D3 = {
 			isa = PBXGroup;
 			children = (
+				D3AC34C62F35FD2B008CE481 /* DiaryModel.xcdatamodeld */,
 				D3379A282F335FD70044E4D3 /* MaiInHerLoop */,
 				D3379A272F335FD70044E4D3 /* Products */,
 			);
@@ -119,6 +125,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3AC34C82F35FD2B008CE481 /* DiaryModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +335,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D3AC34C62F35FD2B008CE481 /* DiaryModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D3AC34C72F35FD2B008CE481 /* DiaryModel.xcdatamodel */,
+			);
+			currentVersion = D3AC34C72F35FD2B008CE481 /* DiaryModel.xcdatamodel */;
+			path = DiaryModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = D3379A1E2F335FD70044E4D3 /* Project object */;
 }

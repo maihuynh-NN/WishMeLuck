@@ -41,7 +41,9 @@ struct GameView: View {
                 if let archetype = ArchetypeRepository.archetype(
                     for: engine.dominantTrait()
                 ) {
-                    ReflectionResultView(archetype: archetype)
+                    ReflectionResultView(
+                        snapshot: .from(archetype: archetype)
+                    )
                 } else {
                     Text("Reflection unavailable")
                 }
