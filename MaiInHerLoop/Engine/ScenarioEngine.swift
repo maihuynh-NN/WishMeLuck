@@ -19,6 +19,10 @@ final class ScenarioEngine: ObservableObject {
     private let scenario: Scenario
     private let questionMap: [String: Question]
     private var timer: Timer?
+    
+    var scenarioID: String {
+        scenario.id
+    }
 
     // MARK: - Init
     init(scenario: Scenario) {

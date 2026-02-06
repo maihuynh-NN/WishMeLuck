@@ -14,10 +14,10 @@ struct GameView: View {
         VStack(spacing: 24) {
 
             if let question = engine.currentQuestion {
-                
+
                 Text("Time remaining: \(engine.timeRemaining)")
-                       .font(.caption)
-                       .foregroundColor(.secondary)
+                    .font(.caption)
+                    .foregroundColor(.secondary)
 
                 Text(question.textEN)
                     .font(.title2)
@@ -41,8 +41,19 @@ struct GameView: View {
                 if let archetype = ArchetypeRepository.archetype(
                     for: engine.dominantTrait()
                 ) {
+                    let snapshot = ReflectionSnapshot(
+                        archetypeID: archetype.id,
+                        recognitionText: archetype.recognitionEN,
+                        bullets: archetype.bulletsEN,
+                        strength: archetype.strengthEN,
+                        blindSpot: archetype.blindSpotEN,
+                        direction: archetype.directionEN,
+                        scenarioID: engine.scenarioID
+                    )
+
                     ReflectionResultView(
-                        snapshot: .from(archetype: archetype)
+                        snapshot: snapshot,
+                        shouldPersist: true
                     )
                 } else {
                     Text("Reflection unavailable")
@@ -52,4 +63,3 @@ struct GameView: View {
         .padding()
     }
 }
-
