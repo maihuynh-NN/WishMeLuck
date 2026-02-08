@@ -3,7 +3,7 @@
     <entity name="DiaryEntry" representedClassName="DiaryEntry" syncable="YES" codeGenerationType="class">
         <attribute name="archetypeID" optional="YES" attributeType="String"/>
         <attribute name="blindSpot" optional="YES" attributeType="String"/>
-        <attribute name="bullets" attributeType="Transformable" valueTransformerName="NSSecureUnarchiveFromData" customClassName="[String]"/>
+        <attribute name="bullets" attributeType="Transformable" valueTransformerName="NSSecureUnarchiveFromData" customClassName="NSArray"/>
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="direction" optional="YES" attributeType="String"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>

@@ -23,7 +23,7 @@ struct DiaryListView: View {
                         snapshot: ReflectionSnapshot(
                             archetypeID: entry.archetypeID ?? "",
                             recognitionText: entry.recognitionText ?? "",
-                            bullets: entry.bullets ?? [],
+                            bullets: entry.bullets as? [String] ?? [],
                             strength: entry.strength ?? "",
                             blindSpot: entry.blindSpot ?? "",
                             direction: entry.direction ?? "",
