@@ -15,39 +15,31 @@
       "options": [
         {
           "id": "o1",
-          "text_en": "Call neighbors",
-          "text_vi": "Gọi hàng xóm",
-          "trait_tag": "tap_the",
+          "text_en": "Move to higher ground immediately",
+          "text_vi": "Di chuyển lên cao ngay lập tức",
+          "trait_tag": "risk_recognition",
           "next_question": "q2"
         },
         {
           "id": "o2",
-          "text_en": "Check supplies",
-          "text_vi": "Kiểm tra đồ đạc",
-          "trait_tag": "thuc_te",
+          "text_en": "Check weather updates first",
+          "text_vi": "Kiểm tra cập nhật thời tiết trước",
+          "trait_tag": "information_first",
           "next_question": "q2"
-        }
-      ]
-    },
-    {
-      "id": "q2",
-      "text_en": "What do you prioritize?",
-      "text_vi": "Bạn ưu tiên điều gì?",
-      "timer": 20,
-      "options": [
+        },
         {
           "id": "o3",
-          "text_en": "People’s safety",
-          "text_vi": "An toàn mọi người",
-          "trait_tag": "tap_the",
-          "next_question": null
+          "text_en": "Start securing valuables",
+          "text_vi": "Bắt đầu bảo vệ tài sản",
+          "trait_tag": "immediate_action",
+          "next_question": "q2"
         },
         {
           "id": "o4",
-          "text_en": "Protect property",
-          "text_vi": "Giữ tài sản",
-          "trait_tag": "thuc_te",
-          "next_question": null
+          "text_en": "Handle it yourself without alerting others",
+          "text_vi": "Tự xử lý mà không báo cho người khác",
+          "trait_tag": "self_reliance",
+          "next_question": "q2"
         }
       ]
     }

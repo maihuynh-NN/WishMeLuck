@@ -8,13 +8,16 @@ import SwiftUI
 
 @main
 struct MaiInHerLoopApp: App {
-
     let persistenceController = PersistenceController.shared
 
     var body: some Scene {
         WindowGroup {
             NavigationStack {
-                GameView(engine: ScenarioEngine(scenario: InitialScenario.northEasy))
+                if let scenario = JSONLoader.loadScenario(id: "north_easy_1") {
+                    GameView(engine: ScenarioEngine(scenario: scenario))
+                } else {
+                    Text("Failed to load scenario")
+                }
             }
             .environment(\.managedObjectContext,
                           persistenceController.container.viewContext)

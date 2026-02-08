@@ -48,3 +48,4 @@ struct DiaryListView: View {
         .navigationTitle("Diary")
     }
 }
+
