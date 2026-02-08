@@ -14,7 +14,8 @@ final class ScenarioEngine: ObservableObject {
     @Published var traitCounts: [String: Int] = [:]
     @Published var timeRemaining: Int = 0
     @Published var isComplete: Bool = false
-
+    @Published var score: Int = 100
+    
     // MARK: - Private
     private let scenario: Scenario
     private let questionMap: [String: Question]
@@ -96,17 +97,18 @@ final class ScenarioEngine: ObservableObject {
     private func handleTimeout() {
         stopTimer()
 
-        // penalty: decrement all traits, floor at 0
-        for key in traitCounts.keys {
-            traitCounts[key] = max(0, traitCounts[key, default: 0] - 1)
-        }
+        score = max(0, score - 10)
+        print("TIMEOUT: Score penalty applied. New score: \(score)")
 
-        // move forward WITHOUT selecting an option
+        // Move forward WITHOUT selecting an option
         advanceWithoutSelection()
     }
 
     private func advanceWithoutSelection() {
         guard let current = currentQuestion else { return }
+
+        traitCounts["information_first", default: 0] += 1
+        print("⏱️ TIMEOUT: Assigned default trait 'information_first'")
 
         // no branching on timeout; assume linear flow
         if let index = scenario.questions.firstIndex(where: { $0.id == current.id }),
@@ -120,5 +122,6 @@ final class ScenarioEngine: ObservableObject {
     private func completeScenario() {
         currentQuestion = nil
         isComplete = true
+        print("✅ SCENARIO COMPLETE: Final score: \(score)")
     }
 }
