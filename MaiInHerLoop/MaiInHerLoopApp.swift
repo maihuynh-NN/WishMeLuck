@@ -13,11 +13,11 @@ struct MaiInHerLoopApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(
-                    \.managedObjectContext,
-                    persistenceController.container.viewContext
-                )
+            NavigationStack {
+                GameView(engine: ScenarioEngine(scenario: InitialScenario.northEasy))
+            }
+            .environment(\.managedObjectContext,
+                          persistenceController.container.viewContext)
         }
     }
 }
