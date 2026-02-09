@@ -1,0 +1,264 @@
+
+{
+  "id": "north_easy_3",
+  "region": "north",
+  "title_en": "Typhoon Approach",
+  "title_vi": "Bão Đang Đến",
+  "intro_en": "Weather services announce a typhoon will make landfall in 48 hours. Your coastal town is in its predicted path.",
+  "intro_vi": "Dịch vụ thời tiết thông báo bão sẽ đổ bộ trong 48 giờ. Thị trấn ven biển của bạn nằm trên đường đi dự kiến của nó.",
+  "start_question": "q1",
+  "questions": [
+    {
+      "id": "q1",
+      "text_en": "A typhoon is forecast for your area in 48 hours. What's your priority?",
+      "text_vi": "Dự báo có bão trong khu vực của bạn sau 48 giờ. Ưu tiên của bạn là gì?",
+      "timer": 25,
+      "options": [
+        {
+          "id": "o1",
+          "text_en": "Take the warning seriously and begin preparing",
+          "text_vi": "Coi trọng cảnh báo và bắt đầu chuẩn bị",
+          "trait_tag": "risk_recognition",
+          "next_question": "q2"
+        },
+        {
+          "id": "o2",
+          "text_en": "Check multiple weather sources for accuracy",
+          "text_vi": "Kiểm tra nhiều nguồn thời tiết để xác nhận",
+          "trait_tag": "information_first",
+          "next_question": "q2"
+        },
+        {
+          "id": "o3",
+          "text_en": "Start securing property right away",
+          "text_vi": "Bắt đầu bảo vệ tài sản ngay lập tức",
+          "trait_tag": "immediate_action",
+          "next_question": "q2"
+        },
+        {
+          "id": "o4",
+          "text_en": "Plan based on your own experience with storms",
+          "text_vi": "Lên kế hoạch dựa trên kinh nghiệm của bạn với bão",
+          "trait_tag": "self_reliance",
+          "next_question": "q2"
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "text_en": "Shops are running out of supplies. Lines are long.",
+      "text_vi": "Các cửa hàng đang hết hàng. Hàng dài.",
+      "timer": 25,
+      "options": [
+        {
+          "id": "o5",
+          "text_en": "Get what you can before it's too late",
+          "text_vi": "Mua những gì bạn có thể trước khi quá muộn",
+          "trait_tag": "risk_recognition",
+          "next_question": "q3"
+        },
+        {
+          "id": "o6",
+          "text_en": "Check what you already have at home first",
+          "text_vi": "Kiểm tra những gì bạn đã có ở nhà trước",
+          "trait_tag": "information_first",
+          "next_question": "q4"
+        },
+        {
+          "id": "o7",
+          "text_en": "Buy essentials quickly and move on",
+          "text_vi": "Mua đồ thiết yếu nhanh và tiếp tục",
+          "trait_tag": "immediate_action",
+          "next_question": "q3"
+        },
+        {
+          "id": "o8",
+          "text_en": "Skip the crowds and use what you have",
+          "text_vi": "Bỏ qua đám đông và dùng những gì bạn có",
+          "trait_tag": "self_reliance",
+          "next_question": "q4"
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "text_en": "Winds are picking up. Storm surge warnings are issued.",
+      "text_vi": "Gió đang mạnh lên. Cảnh báo sóng lớn được ban hành.",
+      "timer": 20,
+      "options": [
+        {
+          "id": "o9",
+          "text_en": "Recognize flooding risk and move valuables up",
+          "text_vi": "Nhận ra nguy cơ lụt và di chuyển đồ có giá trị lên cao",
+          "trait_tag": "risk_recognition",
+          "next_question": "q5"
+        },
+        {
+          "id": "o10",
+          "text_en": "Check the expected surge height for your area",
+          "text_vi": "Kiểm tra độ cao sóng dự kiến cho khu vực của bạn",
+          "trait_tag": "information_first",
+          "next_question": "q5"
+        },
+        {
+          "id": "o11",
+          "text_en": "Secure windows and doors immediately",
+          "text_vi": "Bảo vệ cửa sổ và cửa ra vào ngay lập tức",
+          "trait_tag": "immediate_action",
+          "next_question": "q5"
+        },
+        {
+          "id": "o12",
+          "text_en": "Handle preparations at your own pace",
+          "text_vi": "Xử lý việc chuẩn bị theo nhịp độ của bạn",
+          "trait_tag": "self_reliance",
+          "next_question": "q5"
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "text_en": "Authorities recommend coastal evacuation. You're in the zone.",
+      "text_vi": "Chính quyền khuyến cáo sơ tán ven biển. Bạn ở trong khu vực.",
+      "timer": 20,
+      "options": [
+        {
+          "id": "o13",
+          "text_en": "Take the recommendation seriously",
+          "text_vi": "Coi trọng khuyến cáo",
+          "trait_tag": "risk_recognition",
+          "next_question": "q5"
+        },
+        {
+          "id": "o14",
+          "text_en": "Research evacuation routes and shelters",
+          "text_vi": "Nghiên cứu tuyến đường sơ tán và nơi trú ẩn",
+          "trait_tag": "information_first",
+          "next_question": "q5"
+        },
+        {
+          "id": "o15",
+          "text_en": "Pack and leave for the shelter",
+          "text_vi": "Thu dọn và đi đến nơi trú ẩn",
+          "trait_tag": "immediate_action",
+          "next_question": "q5"
+        },
+        {
+          "id": "o16",
+          "text_en": "Decide whether to stay or go yourself",
+          "text_vi": "Tự quyết định ở lại hay đi",
+          "trait_tag": "self_reliance",
+          "next_question": "q5"
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "text_en": "The typhoon is 12 hours away. Power is expected to fail.",
+      "text_vi": "Bão còn 12 giờ nữa. Điện dự kiến sẽ mất.",
+      "timer": 15,
+      "options": [
+        {
+          "id": "o17",
+          "text_en": "Prepare for extended power outage",
+          "text_vi": "Chuẩn bị cho mất điện kéo dài",
+          "trait_tag": "risk_recognition",
+          "next_question": "q6"
+        },
+        {
+          "id": "o18",
+          "text_en": "Find out how long outages typically last",
+          "text_vi": "Tìm hiểu mất điện thường kéo dài bao lâu",
+          "trait_tag": "information_first",
+          "next_question": "q6"
+        },
+        {
+          "id": "o19",
+          "text_en": "Charge all devices and fill containers with water",
+          "text_vi": "Sạc tất cả thiết bị và đổ đầy nước vào bình",
+          "trait_tag": "immediate_action",
+          "next_question": "q6"
+        },
+        {
+          "id": "o20",
+          "text_en": "Set up your own backup systems",
+          "text_vi": "Thiết lập hệ thống dự phòng riêng",
+          "trait_tag": "self_reliance",
+          "next_question": "q6"
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "text_en": "Typhoon makes landfall. Winds are intense. You hear breaking glass.",
+      "text_vi": "Bão đổ bộ. Gió rất mạnh. Bạn nghe tiếng kính vỡ.",
+      "timer": 15,
+      "options": [
+        {
+          "id": "o21",
+          "text_en": "Move to the safest room immediately",
+          "text_vi": "Di chuyển đến phòng an toàn nhất ngay lập tức",
+          "trait_tag": "risk_recognition",
+          "next_question": "q7"
+        },
+        {
+          "id": "o22",
+          "text_en": "Identify where the damage is",
+          "text_vi": "Xác định thiệt hại ở đâu",
+          "trait_tag": "information_first",
+          "next_question": "q7"
+        },
+        {
+          "id": "o23",
+          "text_en": "Take shelter in an interior room",
+          "text_vi": "Trú ẩn trong phòng bên trong",
+          "trait_tag": "immediate_action",
+          "next_question": "q7"
+        },
+        {
+          "id": "o24",
+          "text_en": "Stay calm and assess the situation",
+          "text_vi": "Giữ bình tĩnh và đánh giá tình hình",
+          "trait_tag": "self_reliance",
+          "next_question": "q7"
+        }
+      ]
+    },
+    {
+      "id": "q7",
+      "text_en": "The storm passes. There's debris everywhere. What do you do first?",
+      "text_vi": "Bão qua. Mảnh vỡ khắp nơi. Bạn làm gì đầu tiên?",
+      "timer": 15,
+      "options": [
+        {
+          "id": "o25",
+          "text_en": "Check for structural damage before moving around",
+          "text_vi": "Kiểm tra thiệt hại kết cấu trước khi di chuyển",
+          "trait_tag": "risk_recognition",
+          "next_question": null
+        },
+        {
+          "id": "o26",
+          "text_en": "Listen for official all-clear announcements",
+          "text_vi": "Nghe thông báo an toàn chính thức",
+          "trait_tag": "information_first",
+          "next_question": null
+        },
+        {
+          "id": "o27",
+          "text_en": "Begin clearing debris and damage assessment",
+          "text_vi": "Bắt đầu dọn mảnh vỡ và đánh giá thiệt hại",
+          "trait_tag": "immediate_action",
+          "next_question": null
+        },
+        {
+          "id": "o28",
+          "text_en": "Inspect and handle recovery independently",
+          "text_vi": "Kiểm tra và tự xử lý việc phục hồi",
+          "trait_tag": "self_reliance",
+          "next_question": null
+        }
+      ]
+    }
+  ]
+}
