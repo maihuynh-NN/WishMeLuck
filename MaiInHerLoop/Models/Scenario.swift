@@ -6,7 +6,7 @@
 //
 import Foundation
 
-struct Scenario: Codable {
+struct Scenario: Codable, Identifiable {
     let id: String
     let region: String
     let titleEN: String

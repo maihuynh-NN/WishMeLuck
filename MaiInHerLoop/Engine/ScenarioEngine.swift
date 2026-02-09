@@ -15,6 +15,7 @@ final class ScenarioEngine: ObservableObject {
     @Published var timeRemaining: Int = 0
     @Published var isComplete: Bool = false
     @Published var score: Int = 100
+    @Published var isActive: Bool = false  
     
     // MARK: - Private
     private let scenario: Scenario
@@ -33,8 +34,16 @@ final class ScenarioEngine: ObservableObject {
         )
 
         if let first = questionMap[scenario.startQuestionID] {
-            transition(to: first)
+            currentQuestion = first
+            timeRemaining = first.timer
+            // DON'T start timer here
         }
+    }
+    
+    // NEW: Start the game
+    func start() {
+        isActive = true
+        startTimer()
     }
 
     // MARK: - Public actions
@@ -61,13 +70,15 @@ final class ScenarioEngine: ObservableObject {
     private func transition(to question: Question) {
         currentQuestion = question
         timeRemaining = question.timer
-        startTimer()
+        if isActive {  // Only start timer if game is active
+            startTimer()
+        }
     }
 
     private func startTimer() {
         stopTimer()
 
-        guard timeRemaining > 0 else { return }
+        guard timeRemaining > 0, isActive else { return }  // Check isActive
 
         timer = Timer.scheduledTimer(
             withTimeInterval: 1,
@@ -120,8 +131,10 @@ final class ScenarioEngine: ObservableObject {
     }
 
     private func completeScenario() {
+        stopTimer()
         currentQuestion = nil
         isComplete = true
+        isActive = false
         print("✅ SCENARIO COMPLETE: Final score: \(score)")
     }
 }

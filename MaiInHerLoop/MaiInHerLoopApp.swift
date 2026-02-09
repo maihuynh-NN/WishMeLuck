@@ -13,15 +13,9 @@ struct MaiInHerLoopApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationStack {
-                if let scenario = JSONLoader.loadScenario(id: "north_easy_1") {
-                    GameView(engine: ScenarioEngine(scenario: scenario))
-                } else {
-                    Text("Failed to load scenario")
-                }
+                ScenarioListView(region: "north")
             }
-            .environment(\.managedObjectContext,
-                          persistenceController.container.viewContext)
+            .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
 }
-
