@@ -7,7 +7,7 @@
 import SwiftUI
 
 struct ScenarioListView: View {
-    let region: String // "north", "central", or "south"
+    let region: String
     @State private var scenarios: [Scenario] = []
     @State private var loadError: String?
     
@@ -31,7 +31,7 @@ struct ScenarioListView: View {
             } else {
                 List {
                     ForEach(scenarios) { scenario in
-                        NavigationLink(destination: GameView(engine: ScenarioEngine(scenario: scenario))) {
+                        NavigationLink(value: AppScreen.game(scenario: scenario)) {
                             ScenarioRow(scenario: scenario)
                         }
                     }
@@ -57,16 +57,6 @@ struct ScenarioListView: View {
     private func loadScenarios() {
         scenarios = []
         loadError = nil
-        
-        // DEBUG: Print all JSON files in bundle
-        if let resourcePath = Bundle.main.resourcePath {
-            print("📁 Bundle path:", resourcePath)
-            let fm = FileManager.default
-            if let files = try? fm.contentsOfDirectory(atPath: resourcePath) {
-                let jsonFiles = files.filter { $0.hasSuffix(".json") }
-                print("📄 JSON files found:", jsonFiles)
-            }
-        }
         
         for i in 1...3 {
             let scenarioID = "\(region)_easy_\(i)"

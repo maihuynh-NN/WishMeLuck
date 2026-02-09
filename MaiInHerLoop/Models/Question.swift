@@ -6,7 +6,7 @@
 //
 import Foundation
 
-struct Question: Codable {
+struct Question: Codable, Hashable {
     let id: String
     let textEN: String
     let textVI: String
@@ -17,5 +17,14 @@ struct Question: Codable {
         case id, timer, options
         case textEN = "text_en"
         case textVI = "text_vi"
+    }
+    
+    // Hashable conformance
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+    
+    static func == (lhs: Question, rhs: Question) -> Bool {
+        lhs.id == rhs.id
     }
 }

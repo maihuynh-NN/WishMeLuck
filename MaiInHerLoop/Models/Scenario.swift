@@ -6,7 +6,7 @@
 //
 import Foundation
 
-struct Scenario: Codable, Identifiable {
+struct Scenario: Codable, Identifiable, Hashable {
     let id: String
     let region: String
     let titleEN: String
@@ -23,5 +23,14 @@ struct Scenario: Codable, Identifiable {
         case introEN = "intro_en"
         case introVI = "intro_vi"
         case startQuestionID = "start_question"
+    }
+    
+    // Hashable conformance - use id only for performance
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+    
+    static func == (lhs: Scenario, rhs: Scenario) -> Bool {
+        lhs.id == rhs.id
     }
 }
