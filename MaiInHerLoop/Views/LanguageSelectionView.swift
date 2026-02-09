@@ -74,7 +74,7 @@ struct LanguageSelectionView: View {
             Spacer()
         }
         .navigationDestination(isPresented: $navigateToStory) {
-            Text("Story View (Coming in Task 3.3)")
+            StoryView()  //Navigate to StoryView
         }
     }
 }
