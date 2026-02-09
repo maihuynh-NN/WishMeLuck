@@ -31,13 +31,20 @@ struct ScenarioListView: View {
             } else {
                 List {
                     ForEach(scenarios) { scenario in
-                        NavigationLink(value: AppScreen.game(scenario: scenario)) {
+                        NavigationLink(destination: GameView(engine: ScenarioEngine(scenario: scenario))) {  // CHANGED
                             ScenarioRow(scenario: scenario)
                         }
                     }
                 }
                 .navigationTitle(regionTitle)
                 .navigationBarTitleDisplayMode(.large)
+            }
+        }
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                NavigationLink(destination: DiaryListView()) {  // CHANGED
+                    Image(systemName: "book.fill")
+                }
             }
         }
         .onAppear {
