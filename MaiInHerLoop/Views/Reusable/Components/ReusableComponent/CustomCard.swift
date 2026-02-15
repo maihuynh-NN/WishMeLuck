@@ -49,10 +49,10 @@ struct CustomCard<Content: View>: View {
             .ignoresSafeArea(edges: .all)
         
         CustomCard(
-            image: "North",
-            borderColor: Color("Primary"),
+            image: "Central",
+            borderColor: Color("Moss"),
             size: .customed(width: 300, height: 500)
         )
-        .modifier(ShadowModifier(color: Color("Primary")))
+        .modifier(ShadowModifier(color: Color("Moss")))
     }
 }

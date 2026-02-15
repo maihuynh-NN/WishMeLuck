@@ -34,7 +34,6 @@ struct CustomedBorder: ViewModifier {
                 .foregroundStyle(borderColor).opacity(0.4)
                 .frame(width: width, height: height)
              
-
             content
         }
     }
@@ -55,5 +54,9 @@ extension View {
             Text("Profile")
         }
     }
-        .customedBorder(borderShape: "panel-border-003", borderColor: Color("Moss"), buttonType: .customed(width: 300, height: 500))
+        .customedBorder(
+            borderShape: "panel-border-003",
+            borderColor: Color("Moss"),
+            buttonType: .customed(width: 300, height: 500)
+        )
 }

@@ -8,16 +8,18 @@ import SwiftUI
 
 struct CustomButton: View {
     let title: String
+    let textColor: Color
     let buttonColor: Color
     let action: () -> Void
     
     var body: some View {
         Button(action: action) {
             Text(title)
-                .foregroundStyle(buttonColor)
+                .foregroundStyle(textColor)
                 .frame(width: 150, height: 50)
                 .background(buttonColor.opacity(0.5))
         }
+        .background(buttonColor.opacity(0.5))
         .padding(.horizontal, 40)
     }
 }
@@ -25,10 +27,14 @@ struct CustomButton: View {
     #Preview {
         CustomButton(
             title: "How To Play",
-            buttonColor: Color("Moss"),
-            action: {})
-        .modifier(ShadowModifier(color: Color("Moss")))
-        .customedBorder(borderShape: "panel-border-003", borderColor: Color("Moss"), buttonType: .mainButton)
+            textColor: Color(.black),
+            buttonColor: Color(.white),
+            action: {}
+        )
+        .customedBorder(
+            borderShape: "panel-border-003",
+            borderColor: Color("Moss"),
+            buttonType: .mainButton)
 
     }
 

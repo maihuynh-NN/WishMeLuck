@@ -31,7 +31,7 @@ struct CustomMiniButton: View {
 #Preview {
     ZStack {
         LinearGradient(gradient:
-                        Gradient(colors: [Color("SecondaryBase"), Color("PrimaryBase")]),
+                        Gradient(colors: [Color("Moss"), Color("Red")]),
                        startPoint: .topLeading,
                        endPoint: .bottomTrailing
         )
@@ -39,9 +39,9 @@ struct CustomMiniButton: View {
         
         CustomMiniButton(
             icon: "leaderboard",
-            buttonColor: Color("Primary"),
+            buttonColor: Color("Beige"),
             action: {})
-        .modifier(ShadowModifier(color: Color("Primary")))
-        .customedBorder(borderShape: "Button", borderColor: Color("Primary"), buttonType: .miniButton)
+        //.modifier(ShadowModifier(color: Color(.white)))
+        .customedBorder(borderShape: "panel-border-004", borderColor: Color(.white), buttonType: .miniButton)
     }
 }
