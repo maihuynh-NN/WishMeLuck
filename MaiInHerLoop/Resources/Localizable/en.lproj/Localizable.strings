@@ -1,0 +1,14 @@
+//
+//  Localizable.strings
+//  MaiInHerLoop
+//
+//  Created by Huynh Ngoc Nhat Mai on 16/2/26.
+//
+
+"region.title" = "Choose Your Region";
+"region.subtitle" = "Swipe to explore different disasters";
+"mission.button" = "Mission Aboard";
+
+"region.title" = "Chọn Khu Vực";
+"region.subtitle" = "Vuốt để khám phá các thiên tai khác nhau";
+"mission.button" = "Bắt Đầu Nhiệm Vụ";
