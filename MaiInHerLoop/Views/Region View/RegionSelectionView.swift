@@ -150,6 +150,20 @@ struct RegionSelectionView: View {
                     }
                 
                 Spacer()
+    
+            }
+            
+            // MARK: - Region Detail popover (rendered as an in-ZStack overlay)
+            if let region = selectedRegion {
+                RegionDetailPopOver(
+                    region: region,
+                    onClose: { selectedRegion = nil },
+                    onNavigate: {
+                        currentRegion = region
+                        selectedRegion = nil
+                        showDifficultySelector = true
+                    }
+                )
             }
         }
     }
