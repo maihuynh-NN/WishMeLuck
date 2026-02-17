@@ -7,7 +7,7 @@
 import SwiftUI
 
 struct CustomButton: View {
-    let title: String
+    let title: LocalizedStringKey
     let textColor: Color
     let buttonColor: Color
     let action: () -> Void
@@ -19,8 +19,8 @@ struct CustomButton: View {
                 .frame(width: 150, height: 50)
                 .background(buttonColor.opacity(0.5))
         }
-        .background(buttonColor.opacity(0.5))
         .padding(.horizontal, 40)
+
     }
 }
     
@@ -28,7 +28,7 @@ struct CustomButton: View {
         CustomButton(
             title: "How To Play",
             textColor: Color(.black),
-            buttonColor: Color(.white),
+            buttonColor: Color(.blue),
             action: {}
         )
         .customedBorder(

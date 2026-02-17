@@ -41,7 +41,10 @@ struct CustomedBorder: ViewModifier {
 
 extension View {
     func customedBorder(borderShape: String, borderColor: Color, buttonType: ComponentSize) -> some View {
-        self.modifier(CustomedBorder(borderShape: borderShape, borderColor: borderColor,  buttonType: buttonType))
+        self.modifier(CustomedBorder(
+            borderShape: borderShape,
+            borderColor: borderColor,
+            buttonType: buttonType))
     }
 }
 

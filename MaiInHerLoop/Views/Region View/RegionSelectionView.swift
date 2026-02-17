@@ -13,10 +13,7 @@ let regions: [Region] = [
     Region(region_id: 3, name: "Central", story: "Coastal highlands where typhoons write their chronicles in stone.")
 ]
 
-private extension String {
-    var localized: String { NSLocalizedString(self, comment: "") }
-    var lkey: LocalizedStringKey { LocalizedStringKey(self) }
-}
+
 
 struct RegionSelectionView: View {
     
@@ -58,29 +55,101 @@ struct RegionSelectionView: View {
                     
                     HStack {
                         Rectangle()
-                            .fill(Color("Primary").opacity(0.6))
+                            .fill(Color("Moss").opacity(0.6))
                             .frame(height: 1)
                             .padding(.leading, 50)
                         
                         Text("∎")
                             .font(.system(size: 8))
-                            .foregroundColor(Color("Primary"))
+                            .foregroundColor(Color("Moss"))
                         
                         Rectangle()
-                            .fill(Color("Primary").opacity(0.6))
+                            .fill(Color("Moss").opacity(0.6))
                             .frame(height: 1)
                     }
                     .padding(.horizontal, 50)
                     
-                    Text("regionselect.subtitle".lkey) // "Choose the land where you will face the trials of nature"
-                        .font(.system(size: 10, weight: .medium))
-                        .foregroundColor(Color("Secondary2"))
+                    Text("region.subtitle".lkey)
+                        //.font(.system(size: 10, weight: .medium))
+                        .foregroundColor(Color("Moss"))
                         .multilineTextAlignment(.center)
                         .lineSpacing(2)
                         .padding(.horizontal, 40)
-                        .opacity(textOpacity)
+                        //.opacity(textOpacity)
                 }
                 .padding(.bottom, 15)
+                
+                // MARK: - Region Selection Area
+                VStack(spacing: 20) {
+                    TabView(selection: $selection) {
+                        ForEach(Array(regions.enumerated()), id: \.element.region_id) { index, region in
+                            ScaledRegionCard(
+                                region: region,
+                                index: index,
+                                selectedRegion: $selectedRegion
+                            )
+                            .staggeredAppear(delay: Double(index) * 0.2)
+                        }
+                    }
+                    .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
+                    .frame(height: 493)
+                    
+                    // MARK: - Navigation Indicators
+                    HStack(spacing: 8) {
+                        ForEach(0..<regions.count, id: \.self) { index in
+                            Rectangle()
+                                .fill(selection == index ? Color("Moss") : Color("Moss").opacity(0.3))
+                                .frame(
+                                    width: selection == index ? 20 : 8,
+                                    height: selection == index ? 4 : 3
+                                )
+                                .animation(.easeInOut(duration: 0.3), value: selection)
+                        }
+                    }
+                }
+                .padding(.bottom, 15)
+                
+                // MARK: - Action Panel
+                VStack(spacing: 10) {
+                    // Decorative pattern at bottom
+                    HStack(spacing: 4) {
+                        ForEach(0..<7, id: \.self) { _ in
+                            Circle()
+                                .fill(Color("Moss").opacity(0.6))
+                                .frame(width: 2, height: 2)
+                        }
+                    }
+                    .padding(.vertical, 4)
+                    .opacity(textOpacity)
+                    
+                    // Action button
+                        CustomButton(
+                            title: "region.title".lkey,
+                            textColor: Color("Moss"),
+                            buttonColor: Color("Gold")
+                        ) {
+                            let selectedRegion = regions[selection]
+                            self.currentRegion = selectedRegion
+                            showDifficultySelector = true
+                            
+                            VStack {
+                                Text("regionselect.selectButton".lkey)
+                                //.font(.system(size: 8, weight: .bold, design: .monospaced))
+                                    .foregroundColor(Color("Moss"))
+                                    .tracking(0.8)
+                                
+                                Text(regions[selection].name.uppercased())
+                                //.font(.system(size: 14, weight: .black, design: .monospaced))
+                                    .foregroundColor(Color("Gold"))
+                                    .tracking(1.2)
+                            }
+                        }
+                        .customedBorder(borderShape: "panel-border-003", borderColor: Color("Moss"), buttonType: .mainButton)
+                        //.buttonPress()
+                        .emergencyPulse()
+                    }
+                
+                Spacer()
             }
         }
     }
