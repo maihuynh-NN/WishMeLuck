@@ -15,33 +15,9 @@
 		D3AC34C72F35FD2B008CE481 /* DiaryModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DiaryModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		9603FC092F4459D7001B85B8 /* Exceptions for "MaiInHerLoop" folder in "MaiInHerLoop" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				"/Localized: Resources/Localizable/Localizable2.strings",
-			);
-			target = D3379A252F335FD70044E4D3 /* MaiInHerLoop */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
-		9603FC0A2F4459D7001B85B8 /* Exceptions for "MaiInHerLoop" folder in "Compile Sources" phase from "MaiInHerLoop" target */ = {
-			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
-			buildPhase = D3379A222F335FD70044E4D3 /* Sources */;
-			membershipExceptions = (
-				"/Localized: Resources/Localizable/Localizable2.strings",
-			);
-		};
-/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
-
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		D3379A282F335FD70044E4D3 /* MaiInHerLoop */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				9603FC092F4459D7001B85B8 /* Exceptions for "MaiInHerLoop" folder in "MaiInHerLoop" target */,
-				9603FC0A2F4459D7001B85B8 /* Exceptions for "MaiInHerLoop" folder in "Compile Sources" phase from "MaiInHerLoop" target */,
-			);
 			path = MaiInHerLoop;
 			sourceTree = "<group>";
 		};

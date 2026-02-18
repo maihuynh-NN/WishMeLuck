@@ -16,7 +16,6 @@ struct RegionDetailPopOver: View {
     @State private var currentGuideIndex = 0
     @State private var showRiskBriefing = false
    
-    // Giữ nguyên survivalGuide để không đổi cấu trúc dữ liệu
     private var survivalGuide: RegionSurvivalGuide {
         switch region.name {
         case "North":
@@ -30,7 +29,6 @@ struct RegionDetailPopOver: View {
         }
     }
     
-    // MARK: - Chỉ thêm các computed strings/phụ trợ cho localization
     private var regionKey: String {
         switch region.name {
         case "North":   return "north"
@@ -50,7 +48,12 @@ struct RegionDetailPopOver: View {
     }
     
     private var riskBriefingText: String {
-        survivalGuide.riskBriefingKey.localized
+        switch region.name {
+        case "North": return "region.north.riskBriefing".localized
+        case "Central": return "region.central.riskBriefing".localized
+        case "South": return "region.south.riskBriefing".localized
+        default: return ""
+        }
     }
     
     private func sectionKey(_ index: Int, _ field: String) -> LocalizedStringKey {
@@ -85,6 +88,7 @@ struct RegionDetailPopOver: View {
             
             ScrollView(.vertical, showsIndicators: false) {
                 VStack(spacing: 20) {
+                    
                     // MARK: - Header Decorative Pattern
                     VStack(spacing: 8) {
                         HStack(spacing: 4) {
@@ -157,7 +161,7 @@ struct RegionDetailPopOver: View {
                     VStack(spacing: 12) {
                         if showRiskBriefing {
                             Text("")
-                                .typewriter(riskBriefingText, speed: 0.04) // dùng key đã localize
+                                .typewriter(riskBriefingText, speed: 0.04) 
                                 //.font(.system(size: 11, weight: .medium, design: .serif))
                                 .foregroundColor(Color("Gold"))
                                 .italic()
