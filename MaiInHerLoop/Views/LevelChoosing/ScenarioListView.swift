@@ -1,0 +1,214 @@
+//
+//  ScenarioListView.swift
+//  MaiInHerLoop
+//
+//  Created by Mai Huynh Ngoc Nhat on 9/2/26.
+//
+
+import SwiftUI
+
+struct ScenarioListView: View {
+    let region: Region
+
+    @AppStorage("selectedLanguage") private var language = "en"
+    @Environment(\.dismiss) private var dismiss
+
+    @State private var scenarios: [Scenario]
+    @State private var selectedScenario: (scenario: Scenario, index: Int)? = nil
+    @State private var textOpacity = 0.0
+    @State private var headerPulse = false
+    @State private var completedIDs: Set<String> = []
+    @State private var navigateToDiary = false
+
+    // Load synchronously in init — bundle JSON is instant, no async needed
+    init(region: Region) {
+        self.region = region
+        var loaded: [Scenario] = []
+        for i in 1...5 {
+            let id = "\(region.name.lowercased())_easy_\(i)"
+            if let s = JSONLoader.loadScenario(id: id) {
+                loaded.append(s)
+            }
+        }
+        _scenarios = State(initialValue: loaded)
+    }
+
+    private var regionDisplayName: String {
+        switch region.name {
+        case "North":   return "scenariolist.region.north".localized
+        case "Central": return "scenariolist.region.central".localized
+        case "South":   return "scenariolist.region.south".localized
+        default:        return region.name
+        }
+    }
+
+    // 5 scenarios: row of 3, row of 2
+    private var row1: ArraySlice<Scenario> { scenarios.prefix(3) }
+    private var row2: ArraySlice<Scenario> { scenarios.dropFirst(3).prefix(2) }
+
+    var body: some View {
+        ZStack {
+            Color("Background").ignoresSafeArea()
+
+            VStack(spacing: 0) {
+
+                // MARK: - Header
+                VStack(spacing: 12) {
+                    HStack(spacing: 4) {
+                        ForEach(0..<7, id: \.self) { _ in
+                            Rectangle()
+                                .fill(Color("Moss").opacity(0.7))
+                                .frame(width: 3, height: 12)
+                        }
+                    }
+                    .opacity(textOpacity)
+                    .padding(.top, 24)
+
+                    Text("scenariolist.header".lkey)
+                        .font(.system(size: 10, weight: .bold, design: .monospaced))
+                        .foregroundColor(Color("Moss").opacity(0.65))
+                        .tracking(2)
+                        .opacity(textOpacity)
+
+                    Text(regionDisplayName.uppercased())
+                        .font(.system(size: 20, weight: .black, design: .monospaced))
+                        .foregroundColor(Color("Moss"))
+                        .tracking(2)
+                        .opacity(headerPulse ? 1.0 : 0.85)
+
+                    HStack {
+                        Rectangle().fill(Color("Moss").opacity(0.6)).frame(height: 1)
+                        Text("∎").font(.system(size: 8)).foregroundColor(Color("Moss"))
+                        Rectangle().fill(Color("Moss").opacity(0.6)).frame(height: 1)
+                    }
+                    .padding(.horizontal, 50)
+                    .opacity(textOpacity)
+
+                    Text("scenariolist.subheader".lkey)
+                        .font(.system(size: 9, weight: .light, design: .monospaced))
+                        .foregroundColor(Color("Moss").opacity(0.55))
+                        .tracking(0.5)
+                        .italic()
+                        .opacity(textOpacity)
+                }
+                .padding(.bottom, 28)
+
+                // MARK: - Mission board panel
+                CustomPanel(
+                    backgroundColor: Color("Moss").opacity(0.06),
+                    size: .customed(width: 320, height: 220)
+                ) {
+                    VStack(spacing: 14) {
+                        // Row 1 — 3 cards
+                        HStack(spacing: 12) {
+                            ForEach(Array(row1.enumerated()), id: \.element.id) { index, scenario in
+                                BlindBoxCard(
+                                    index: index,
+                                    isCompleted: completedIDs.contains(scenario.id),
+                                    onTap: {
+                                        withAnimation(.easeInOut(duration: 0.25)) {
+                                            selectedScenario = (scenario, index)
+                                        }
+                                    }
+                                )
+                                .staggeredAppear(delay: Double(index) * 0.12)
+                            }
+                        }
+
+                        // Row 2 — 2 cards, centered
+                        HStack(spacing: 12) {
+                            ForEach(Array(row2.enumerated()), id: \.element.id) { index, scenario in
+                                BlindBoxCard(
+                                    index: index + 3,
+                                    isCompleted: completedIDs.contains(scenario.id),
+                                    onTap: {
+                                        withAnimation(.easeInOut(duration: 0.25)) {
+                                            selectedScenario = (scenario, index + 3)
+                                        }
+                                    }
+                                )
+                                .staggeredAppear(delay: Double(index + 3) * 0.12)
+                            }
+                        }
+                    }
+                }
+                .customedBorder(
+                    borderShape: "panel-border-003",
+                    borderColor: Color("Moss").opacity(0.45),
+                    buttonType: .customed(width: 320, height: 220)
+                )
+
+                Spacer()
+
+                // MARK: - Bottom actions
+                VStack(spacing: 14) {
+                    HStack(spacing: 6) {
+                        ForEach(0..<9, id: \.self) { _ in
+                            Circle()
+                                .fill(Color("Moss").opacity(0.4))
+                                .frame(width: 3, height: 3)
+                        }
+                    }
+                    .opacity(textOpacity)
+
+                    NavigationLink(destination: DiaryListView(), isActive: $navigateToDiary) {
+                        EmptyView()
+                    }
+
+                    CustomButton(
+                        title: "scenariolist.diary".lkey,
+                        textColor: Color("Moss"),
+                        buttonColor: Color("Gold")
+                    ) {
+                        navigateToDiary = true
+                    }
+                    .customedBorder(
+                        borderShape: "panel-border-003",
+                        borderColor: Color("Moss"),
+                        buttonType: .mainButton
+                    )
+
+                    Button(action: { dismiss() }) {
+                        Text("scenariolist.back".lkey)
+                            .font(.system(size: 9, weight: .light, design: .monospaced))
+                            .foregroundColor(Color("Moss").opacity(0.55))
+                            .tracking(0.5)
+                            .underline()
+                    }
+                }
+                .padding(.bottom, 36)
+            }
+
+            // MARK: - Mission Briefing Overlay
+            if let selected = selectedScenario {
+                MissionBriefingOverlay(
+                    scenario: selected.scenario,
+                    missionIndex: selected.index,
+                    onRespond: {
+                        completedIDs.insert(selected.scenario.id)
+                    },
+                    onRetreat: {
+                        withAnimation(.easeInOut(duration: 0.25)) {
+                            selectedScenario = nil
+                        }
+                    }
+                )
+            }
+        }
+        .navigationBarHidden(true)
+        .onAppear {
+            withAnimation(Animation.easeInOut(duration: 2.0).repeatForever(autoreverses: true)) {
+                headerPulse = true
+            }
+            withAnimation(.easeIn(duration: 1.0).delay(0.4)) {
+                textOpacity = 1.0
+            }
+        }
+    }
+}
+
+#Preview {
+    NavigationStack {
+        ScenarioListView(region: regions[0])
+    }
+}

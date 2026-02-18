@@ -124,7 +124,6 @@ struct RegionSelectionView: View {
                             self.currentRegion = selectedRegion
                             showDifficultySelector = true
                             
-                            VStack {
                                 Text("regionselect.selectButton".lkey)
                                 //.font(.system(size: 8, weight: .bold, design: .monospaced))
                                     .foregroundColor(Color("Moss"))
@@ -134,7 +133,7 @@ struct RegionSelectionView: View {
                                 //.font(.system(size: 14, weight: .black, design: .monospaced))
                                     .foregroundColor(Color("Gold"))
                                     .tracking(1.2)
-                            }
+                            
                         }
                         .customedBorder(borderShape: "panel-border-003", borderColor: Color("Moss"), buttonType: .mainButton)
                         //.buttonPress()
@@ -145,24 +144,44 @@ struct RegionSelectionView: View {
     
             }
             
-            // MARK: - Region Detail popover (rendered as an in-ZStack overlay)
-            if let region = selectedRegion {
-                RegionDetailPopOver(
-                    region: region,
-                    onClose: { selectedRegion = nil },
-                    onNavigate: {
-                        currentRegion = region
-                        selectedRegion = nil
-                        showDifficultySelector = true
-                    }
-                )
+           
+            
+    
+        }
+        .navigationDestination(isPresented: $showDifficultySelector) {
+            if let region = currentRegion {
+                LevelChoosingView(region: region)
+            }
+        }
+        
+        // MARK: - Popover for region details
+        .popover(item: $selectedRegion) { region in
+            RegionDetailPopOver(
+                region: region,
+                onClose: { selectedRegion = nil },
+                onNavigate: {
+                    currentRegion = region
+                    selectedRegion = nil
+                    showDifficultySelector = true
+                }
+            )
+        }
+        .onAppear {
+            withAnimation(Animation.easeInOut(duration: 2.0).repeatForever(autoreverses: true)) {
+                headerPulse = true
+            }
+            
+            withAnimation(.easeIn(duration: 1.2).delay(0.5)) {
+                textOpacity = 1.0
             }
         }
     }
 }
 
 #Preview {
-    RegionSelectionView()
+    NavigationStack {
+        RegionSelectionView()
+    }
 }
         
 //        VStack(spacing: 32) {

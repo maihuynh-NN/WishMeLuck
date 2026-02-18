@@ -1,0 +1,95 @@
+{
+  "id": "north_easy_4",
+  "region": "north",
+  "title_en": "Landslide Warning",
+  "title_vi": "Cảnh Báo Sạt Lở",
+  "intro_en": "Heavy rain has weakened the hillside above your village. Cracks have appeared in the slope overnight.",
+  "intro_vi": "Mưa lớn đã làm yếu sườn đồi phía trên làng. Các vết nứt xuất hiện trên sườn dốc qua đêm.",
+  "start_question": "q1",
+  "questions": [
+    {
+      "id": "q1",
+      "text_en": "Cracks appear on the hillside above. What do you do first?",
+      "text_vi": "Vết nứt xuất hiện trên sườn đồi. Bạn làm gì trước?",
+      "timer": 25,
+      "options": [
+        {"id": "o1", "text_en": "Assess how deep and wide the cracks are", "text_vi": "Đánh giá độ sâu và rộng của vết nứt", "trait_tag": "risk_recognition", "next_question": "q2"},
+        {"id": "o2", "text_en": "Call local authorities to report it", "text_vi": "Gọi chính quyền địa phương báo cáo", "trait_tag": "information_first", "next_question": "q2"},
+        {"id": "o3", "text_en": "Start moving valuables out of the house", "text_vi": "Bắt đầu chuyển đồ vật giá trị ra khỏi nhà", "trait_tag": "immediate_action", "next_question": "q2"},
+        {"id": "o4", "text_en": "Monitor it yourself through the night", "text_vi": "Tự theo dõi suốt đêm", "trait_tag": "self_reliance", "next_question": "q2"}
+      ]
+    },
+    {
+      "id": "q2",
+      "text_en": "Authorities issue a soft warning but no mandatory evacuation yet.",
+      "text_vi": "Chính quyền đưa ra cảnh báo nhẹ nhưng chưa bắt buộc sơ tán.",
+      "timer": 25,
+      "options": [
+        {"id": "o5", "text_en": "Leave anyway — the risk is real", "text_vi": "Rời đi dù sao — rủi ro là thật", "trait_tag": "risk_recognition", "next_question": "q3"},
+        {"id": "o6", "text_en": "Wait for the mandatory order", "text_vi": "Đợi lệnh bắt buộc", "trait_tag": "information_first", "next_question": "q4"},
+        {"id": "o7", "text_en": "Pack and prepare to leave at any moment", "text_vi": "Đóng gói và sẵn sàng rời đi bất cứ lúc nào", "trait_tag": "immediate_action", "next_question": "q3"},
+        {"id": "o8", "text_en": "Trust your own read of the situation", "text_vi": "Tin vào nhận định của bản thân", "trait_tag": "self_reliance", "next_question": "q4"}
+      ]
+    },
+    {
+      "id": "q3",
+      "text_en": "Leaving early, you pass neighbors still inside their homes.",
+      "text_vi": "Ra đi sớm, bạn đi qua hàng xóm vẫn còn trong nhà.",
+      "timer": 20,
+      "options": [
+        {"id": "o9", "text_en": "Knock and warn them of the danger", "text_vi": "Gõ cửa và cảnh báo họ về nguy hiểm", "trait_tag": "risk_recognition", "next_question": "q5"},
+        {"id": "o10", "text_en": "Tell them what the authorities said", "text_vi": "Kể cho họ nghe những gì chính quyền nói", "trait_tag": "information_first", "next_question": "q5"},
+        {"id": "o11", "text_en": "Help anyone who wants to come with you", "text_vi": "Giúp bất kỳ ai muốn đi cùng bạn", "trait_tag": "immediate_action", "next_question": "q5"},
+        {"id": "o12", "text_en": "Keep moving — your safety comes first", "text_vi": "Tiếp tục đi — sự an toàn của bạn là trên hết", "trait_tag": "self_reliance", "next_question": "q5"}
+      ]
+    },
+    {
+      "id": "q4",
+      "text_en": "A rumbling sound comes from the hillside. Small rocks are falling.",
+      "text_vi": "Tiếng ầm ầm vang lên từ sườn đồi. Đá nhỏ bắt đầu rơi.",
+      "timer": 20,
+      "options": [
+        {"id": "o13", "text_en": "This is the sign — leave immediately", "text_vi": "Đây là dấu hiệu — rời đi ngay", "trait_tag": "risk_recognition", "next_question": "q5"},
+        {"id": "o14", "text_en": "Call authorities to update them", "text_vi": "Gọi chính quyền cập nhật tình hình", "trait_tag": "information_first", "next_question": "q5"},
+        {"id": "o15", "text_en": "Grab only essentials and run", "text_vi": "Chỉ lấy đồ thiết yếu và chạy", "trait_tag": "immediate_action", "next_question": "q5"},
+        {"id": "o16", "text_en": "Find shelter inside a sturdy part of the house", "text_vi": "Tìm nơi trú ẩn trong phần kiên cố của nhà", "trait_tag": "self_reliance", "next_question": "q5"}
+      ]
+    },
+    {
+      "id": "q5",
+      "text_en": "You reach safe ground. Someone is injured nearby from falling debris.",
+      "text_vi": "Bạn đến nơi an toàn. Có người bị thương gần đó do mảnh vỡ rơi.",
+      "timer": 15,
+      "options": [
+        {"id": "o17", "text_en": "Check if it's safe to approach before helping", "text_vi": "Kiểm tra xem có an toàn để tiếp cận không", "trait_tag": "risk_recognition", "next_question": "q6"},
+        {"id": "o18", "text_en": "Call emergency services first", "text_vi": "Gọi dịch vụ cấp cứu trước", "trait_tag": "information_first", "next_question": "q6"},
+        {"id": "o19", "text_en": "Go to them and provide immediate help", "text_vi": "Đến chỗ họ và giúp đỡ ngay", "trait_tag": "immediate_action", "next_question": "q6"},
+        {"id": "o20", "text_en": "Stay put — moving could be dangerous", "text_vi": "Ở yên — di chuyển có thể nguy hiểm", "trait_tag": "self_reliance", "next_question": "q6"}
+      ]
+    },
+    {
+      "id": "q6",
+      "text_en": "Relief workers arrive but are overwhelmed. They ask for volunteers.",
+      "text_vi": "Nhân viên cứu trợ đến nhưng quá tải. Họ kêu gọi tình nguyện viên.",
+      "timer": 15,
+      "options": [
+        {"id": "o21", "text_en": "Volunteer but flag unsafe areas first", "text_vi": "Tình nguyện nhưng báo cáo khu vực nguy hiểm trước", "trait_tag": "risk_recognition", "next_question": "q7"},
+        {"id": "o22", "text_en": "Ask what's most needed before helping", "text_vi": "Hỏi cần gì nhất trước khi giúp", "trait_tag": "information_first", "next_question": "q7"},
+        {"id": "o23", "text_en": "Step up and start helping right away", "text_vi": "Xung phong và bắt đầu giúp ngay", "trait_tag": "immediate_action", "next_question": "q7"},
+        {"id": "o24", "text_en": "Rest — you need to recover first", "text_vi": "Nghỉ ngơi — bạn cần phục hồi trước", "trait_tag": "self_reliance", "next_question": "q7"}
+      ]
+    },
+    {
+      "id": "q7",
+      "text_en": "Days later, rebuilding begins. What's your first contribution?",
+      "text_vi": "Vài ngày sau, việc tái thiết bắt đầu. Đóng góp đầu tiên của bạn là gì?",
+      "timer": 15,
+      "options": [
+        {"id": "o25", "text_en": "Survey which structures are safe to rebuild", "text_vi": "Khảo sát công trình nào an toàn để xây lại", "trait_tag": "risk_recognition", "next_question": null},
+        {"id": "o26", "text_en": "Find out what aid and resources are available", "text_vi": "Tìm hiểu hỗ trợ và nguồn lực nào có sẵn", "trait_tag": "information_first", "next_question": null},
+        {"id": "o27", "text_en": "Start clearing debris immediately", "text_vi": "Bắt đầu dọn dẹp mảnh vỡ ngay", "trait_tag": "immediate_action", "next_question": null},
+        {"id": "o28", "text_en": "Focus on rebuilding your own home first", "text_vi": "Tập trung xây lại nhà mình trước", "trait_tag": "self_reliance", "next_question": null}
+      ]
+    }
+  ]
+}

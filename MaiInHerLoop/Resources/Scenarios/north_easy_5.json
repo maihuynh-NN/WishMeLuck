@@ -1,0 +1,95 @@
+{
+  "id": "north_easy_5",
+  "region": "north",
+  "title_en": "Fog and Flash Flood",
+  "title_vi": "Sương Mù và Lũ Quét",
+  "intro_en": "Dense fog covers the mountain roads. Rain upstream has triggered a flash flood warning for your valley.",
+  "intro_vi": "Sương mù dày đặc bao phủ các con đường núi. Mưa ở thượng nguồn đã kích hoạt cảnh báo lũ quét cho thung lũng của bạn.",
+  "start_question": "q1",
+  "questions": [
+    {
+      "id": "q1",
+      "text_en": "Fog is thick and a flash flood warning just came through. Your first move?",
+      "text_vi": "Sương mù dày và cảnh báo lũ quét vừa phát. Bước đầu tiên của bạn?",
+      "timer": 25,
+      "options": [
+        {"id": "o1", "text_en": "Identify the safest high ground nearby", "text_vi": "Xác định vùng đất cao an toàn gần nhất", "trait_tag": "risk_recognition", "next_question": "q2"},
+        {"id": "o2", "text_en": "Listen to emergency radio for instructions", "text_vi": "Nghe đài khẩn cấp để nhận hướng dẫn", "trait_tag": "information_first", "next_question": "q2"},
+        {"id": "o3", "text_en": "Wake your family and start moving", "text_vi": "Đánh thức gia đình và bắt đầu di chuyển", "trait_tag": "immediate_action", "next_question": "q2"},
+        {"id": "o4", "text_en": "Stay calm and assess before acting", "text_vi": "Bình tĩnh và đánh giá trước khi hành động", "trait_tag": "self_reliance", "next_question": "q2"}
+      ]
+    },
+    {
+      "id": "q2",
+      "text_en": "You hear rushing water in the distance. Fog makes it hard to see.",
+      "text_vi": "Bạn nghe tiếng nước chảy xiết từ xa. Sương mù khiến khó nhìn.",
+      "timer": 25,
+      "options": [
+        {"id": "o5", "text_en": "Move to high ground immediately — don't wait", "text_vi": "Di chuyển lên cao ngay — đừng chờ đợi", "trait_tag": "risk_recognition", "next_question": "q3"},
+        {"id": "o6", "text_en": "Try to determine direction of the sound first", "text_vi": "Cố xác định hướng âm thanh trước", "trait_tag": "information_first", "next_question": "q4"},
+        {"id": "o7", "text_en": "Run uphill with your family now", "text_vi": "Chạy lên dốc với gia đình ngay bây giờ", "trait_tag": "immediate_action", "next_question": "q3"},
+        {"id": "o8", "text_en": "Stay inside — the walls may protect you", "text_vi": "Ở trong nhà — các bức tường có thể bảo vệ bạn", "trait_tag": "self_reliance", "next_question": "q4"}
+      ]
+    },
+    {
+      "id": "q3",
+      "text_en": "Moving in fog, a child in your group falls and twists an ankle.",
+      "text_vi": "Di chuyển trong sương mù, một đứa trẻ trong nhóm ngã và bong gân mắt cá.",
+      "timer": 20,
+      "options": [
+        {"id": "o9", "text_en": "Carry them — stopping is too dangerous", "text_vi": "Cõng họ — dừng lại quá nguy hiểm", "trait_tag": "risk_recognition", "next_question": "q5"},
+        {"id": "o10", "text_en": "Call for help while assessing injury", "text_vi": "Gọi giúp đỡ trong khi kiểm tra vết thương", "trait_tag": "information_first", "next_question": "q5"},
+        {"id": "o11", "text_en": "Pick them up and keep moving without stopping", "text_vi": "Bế họ lên và tiếp tục đi không dừng lại", "trait_tag": "immediate_action", "next_question": "q5"},
+        {"id": "o12", "text_en": "Let them lean on you and set your own pace", "text_vi": "Để họ tựa vào bạn và đặt nhịp độ của riêng bạn", "trait_tag": "self_reliance", "next_question": "q5"}
+      ]
+    },
+    {
+      "id": "q4",
+      "text_en": "Water seeps under the door. The flood is closer than expected.",
+      "text_vi": "Nước thấm qua cửa. Lũ gần hơn dự kiến.",
+      "timer": 20,
+      "options": [
+        {"id": "o13", "text_en": "Go to the roof — it's the only safe spot now", "text_vi": "Lên mái nhà — đó là nơi an toàn duy nhất lúc này", "trait_tag": "risk_recognition", "next_question": "q5"},
+        {"id": "o14", "text_en": "Signal for rescue from the window", "text_vi": "Ra hiệu cứu trợ từ cửa sổ", "trait_tag": "information_first", "next_question": "q5"},
+        {"id": "o15", "text_en": "Break through to the upper floor immediately", "text_vi": "Phá lên tầng trên ngay lập tức", "trait_tag": "immediate_action", "next_question": "q5"},
+        {"id": "o16", "text_en": "Stack furniture and climb above water level", "text_vi": "Chất đồ nội thất và leo lên trên mực nước", "trait_tag": "self_reliance", "next_question": "q5"}
+      ]
+    },
+    {
+      "id": "q5",
+      "text_en": "You reach safety. Others are still missing. Rescue teams are organizing.",
+      "text_vi": "Bạn đến nơi an toàn. Vẫn còn người mất tích. Đội cứu hộ đang tổ chức.",
+      "timer": 15,
+      "options": [
+        {"id": "o17", "text_en": "Share what you know about dangerous spots", "text_vi": "Chia sẻ những gì bạn biết về các điểm nguy hiểm", "trait_tag": "risk_recognition", "next_question": "q6"},
+        {"id": "o18", "text_en": "Give rescuers information about who is missing", "text_vi": "Cung cấp cho đội cứu hộ thông tin về người mất tích", "trait_tag": "information_first", "next_question": "q6"},
+        {"id": "o19", "text_en": "Join the search party immediately", "text_vi": "Tham gia đội tìm kiếm ngay lập tức", "trait_tag": "immediate_action", "next_question": "q6"},
+        {"id": "o20", "text_en": "Rest and recover before doing anything else", "text_vi": "Nghỉ ngơi và phục hồi trước khi làm bất cứ điều gì", "trait_tag": "self_reliance", "next_question": "q6"}
+      ]
+    },
+    {
+      "id": "q6",
+      "text_en": "A family member is missing. Rescuers say it's too dangerous to search now.",
+      "text_vi": "Một thành viên gia đình mất tích. Đội cứu hộ nói nguy hiểm khi tìm kiếm lúc này.",
+      "timer": 15,
+      "options": [
+        {"id": "o21", "text_en": "Trust the rescuers — they know the risks", "text_vi": "Tin tưởng đội cứu hộ — họ biết rủi ro", "trait_tag": "risk_recognition", "next_question": "q7"},
+        {"id": "o22", "text_en": "Ask when conditions will be safe enough", "text_vi": "Hỏi khi nào điều kiện sẽ đủ an toàn", "trait_tag": "information_first", "next_question": "q7"},
+        {"id": "o23", "text_en": "Push to organize a search anyway", "text_vi": "Thúc đẩy tổ chức tìm kiếm dù sao", "trait_tag": "immediate_action", "next_question": "q7"},
+        {"id": "o24", "text_en": "Go look yourself — you know the area", "text_vi": "Tự đi tìm — bạn biết khu vực này", "trait_tag": "self_reliance", "next_question": "q7"}
+      ]
+    },
+    {
+      "id": "q7",
+      "text_en": "The family member is found safe. The village begins recovery. Your role?",
+      "text_vi": "Thành viên gia đình được tìm thấy an toàn. Làng bắt đầu phục hồi. Vai trò của bạn?",
+      "timer": 15,
+      "options": [
+        {"id": "o25", "text_en": "Help identify which homes are safe to return to", "text_vi": "Giúp xác định nhà nào an toàn để trở về", "trait_tag": "risk_recognition", "next_question": null},
+        {"id": "o26", "text_en": "Gather information on aid available to villagers", "text_vi": "Thu thập thông tin về viện trợ cho người dân", "trait_tag": "information_first", "next_question": null},
+        {"id": "o27", "text_en": "Start cleaning and rebuilding right away", "text_vi": "Bắt đầu dọn dẹp và xây dựng lại ngay", "trait_tag": "immediate_action", "next_question": null},
+        {"id": "o28", "text_en": "Focus on your own family's recovery first", "text_vi": "Tập trung vào phục hồi của gia đình mình trước", "trait_tag": "self_reliance", "next_question": null}
+      ]
+    }
+  ]
+}
