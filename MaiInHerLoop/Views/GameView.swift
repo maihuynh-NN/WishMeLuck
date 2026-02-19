@@ -9,60 +9,81 @@ import SwiftUI
 
 struct GameView: View {
     @ObservedObject var engine: ScenarioEngine
+    @Environment(\.dismiss) private var dismiss
+    @State private var showBriefing = true
 
     var body: some View {
-        VStack(spacing: 24) {
+        ZStack {
 
-            if let question = engine.currentQuestion {
+            // MARK: - Game content
+            VStack(spacing: 24) {
 
-                Text("Time remaining: \(engine.timeRemaining)")
-                    .font(.caption)
-                    .foregroundColor(.secondary)
+                if let question = engine.currentQuestion {
 
-                Text(question.textEN)
-                    .font(.title2)
-                    .multilineTextAlignment(.center)
-                    .padding()
+                    Text("Time remaining: \(engine.timeRemaining)")
+                        .font(.caption)
+                        .foregroundColor(.secondary)
 
-                ForEach(question.options, id: \.id) { option in
-                    Button {
-                        engine.selectOption(option)
-                    } label: {
-                        Text(option.textEN)
-                            .frame(maxWidth: .infinity)
-                            .padding()
-                            .background(Color.blue.opacity(0.15))
-                            .cornerRadius(8)
+                    Text(question.textEN)
+                        .font(.title2)
+                        .multilineTextAlignment(.center)
+                        .padding()
+
+                    ForEach(question.options, id: \.id) { option in
+                        Button {
+                            engine.selectOption(option)
+                        } label: {
+                            Text(option.textEN)
+                                .frame(maxWidth: .infinity)
+                                .padding()
+                                .background(Color.blue.opacity(0.15))
+                                .cornerRadius(8)
+                        }
+                    }
+
+                } else if engine.isComplete {
+
+                    if let archetype = ArchetypeRepository.archetype(
+                        for: engine.dominantTrait()
+                    ) {
+                        let snapshot = ReflectionSnapshot(
+                            archetypeID: archetype.id,
+                            recognitionText: archetype.recognitionEN,
+                            bullets: archetype.bulletsEN,
+                            strength: archetype.strengthEN,
+                            blindSpot: archetype.blindSpotEN,
+                            direction: archetype.directionEN,
+                            scenarioID: engine.scenarioID
+                        )
+
+                        ReflectionResultView(
+                            snapshot: snapshot,
+                            shouldPersist: true
+                        )
+                    } else {
+                        Text("Reflection unavailable")
                     }
                 }
+            }
+            .padding()
 
-            } else if engine.isComplete {
-
-                if let archetype = ArchetypeRepository.archetype(
-                    for: engine.dominantTrait()
-                ) {
-                    let snapshot = ReflectionSnapshot(
-                        archetypeID: archetype.id,
-                        recognitionText: archetype.recognitionEN,
-                        bullets: archetype.bulletsEN,
-                        strength: archetype.strengthEN,
-                        blindSpot: archetype.blindSpotEN,
-                        direction: archetype.directionEN,
-                        scenarioID: engine.scenarioID
-                    )
-
-                    ReflectionResultView(
-                        snapshot: snapshot,
-                        shouldPersist: true
-                    )
-                } else {
-                    Text("Reflection unavailable")
-                }
+            // MARK: - Briefing overlay — appears first, dismissed to start game
+            if showBriefing {
+                MissionBriefingOverlay(
+                    scenario: engine.scenario,
+                    missionIndex: engine.missionIndex,
+                    onRespond: {
+                        withAnimation(.easeOut(duration: 0.3)) {
+                            showBriefing = false
+                        }
+                        engine.start()
+                    },
+                    onRetreat: {
+                        dismiss()
+                    }
+                )
             }
         }
-        .padding()
-        .onAppear {
-            engine.start()  // Start timer when view appears
-        }
+        .navigationBarHidden(true)
     }
 }

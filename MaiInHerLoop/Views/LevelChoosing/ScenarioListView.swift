@@ -14,13 +14,12 @@ struct ScenarioListView: View {
     @Environment(\.dismiss) private var dismiss
 
     @State private var scenarios: [Scenario]
-    @State private var selectedScenario: (scenario: Scenario, index: Int)? = nil
     @State private var textOpacity = 0.0
     @State private var headerPulse = false
     @State private var completedIDs: Set<String> = []
     @State private var navigateToDiary = false
+    @State private var activeScenarioIndex: Int? = nil  // controls which NavigationLink fires
 
-    // Load synchronously in init — bundle JSON is instant, no async needed
     init(region: Region) {
         self.region = region
         var loaded: [Scenario] = []
@@ -42,13 +41,27 @@ struct ScenarioListView: View {
         }
     }
 
-    // 5 scenarios: row of 3, row of 2
-    private var row1: ArraySlice<Scenario> { scenarios.prefix(3) }
-    private var row2: ArraySlice<Scenario> { scenarios.dropFirst(3).prefix(2) }
+    private var row1: [Scenario] { Array(scenarios.prefix(3)) }
+    private var row2: [Scenario] { Array(scenarios.dropFirst(3).prefix(2)) }
 
     var body: some View {
         ZStack {
             Color("Background").ignoresSafeArea()
+
+            // Hidden NavigationLinks — one per scenario, fired by activeScenarioIndex
+            VStack { // needs to be in the view tree
+                ForEach(scenarios.indices, id: \.self) { i in
+                    NavigationLink(
+                        destination: GameView(engine: ScenarioEngine(scenario: scenarios[i])),
+                        isActive: Binding(
+                            get: { activeScenarioIndex == i },
+                            set: { if !$0 { activeScenarioIndex = nil } }
+                        )
+                    ) { EmptyView() }
+                }
+            }
+            .frame(width: 0, height: 0)
+            .hidden()
 
             VStack(spacing: 0) {
 
@@ -106,9 +119,7 @@ struct ScenarioListView: View {
                                     index: index,
                                     isCompleted: completedIDs.contains(scenario.id),
                                     onTap: {
-                                        withAnimation(.easeInOut(duration: 0.25)) {
-                                            selectedScenario = (scenario, index)
-                                        }
+                                        activeScenarioIndex = index  // fires the hidden NavigationLink
                                     }
                                 )
                                 .staggeredAppear(delay: Double(index) * 0.12)
@@ -122,9 +133,7 @@ struct ScenarioListView: View {
                                     index: index + 3,
                                     isCompleted: completedIDs.contains(scenario.id),
                                     onTap: {
-                                        withAnimation(.easeInOut(duration: 0.25)) {
-                                            selectedScenario = (scenario, index + 3)
-                                        }
+                                        activeScenarioIndex = index + 3
                                     }
                                 )
                                 .staggeredAppear(delay: Double(index + 3) * 0.12)
@@ -177,22 +186,6 @@ struct ScenarioListView: View {
                     }
                 }
                 .padding(.bottom, 36)
-            }
-
-            // MARK: - Mission Briefing Overlay
-            if let selected = selectedScenario {
-                MissionBriefingOverlay(
-                    scenario: selected.scenario,
-                    missionIndex: selected.index,
-                    onRespond: {
-                        completedIDs.insert(selected.scenario.id)
-                    },
-                    onRetreat: {
-                        withAnimation(.easeInOut(duration: 0.25)) {
-                            selectedScenario = nil
-                        }
-                    }
-                )
             }
         }
         .navigationBarHidden(true)

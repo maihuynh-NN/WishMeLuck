@@ -18,7 +18,6 @@ struct MissionBriefingOverlay: View {
     @State private var textOpacity = 0.0
     @State private var borderPulse = false
     @State private var showTypewriter = false
-    @State private var navigateToGame = false
 
     private var title: String {
         language == "vi" ? scenario.titleVI : scenario.titleEN
@@ -30,7 +29,7 @@ struct MissionBriefingOverlay: View {
     var body: some View {
         ZStack {
             // Dimmed background — no tap dismiss
-            Color("Secondary3").opacity(0.6)
+            Color("Moss").opacity(0.6)
                 .ignoresSafeArea(.all)
 
             CustomPanel(
@@ -40,7 +39,7 @@ struct MissionBriefingOverlay: View {
                 ZStack {
                     // Panel fill
                     RoundedRectangle(cornerRadius: 12)
-                        .fill(Color("Background"))
+                        .fill(Color("Gold"))
                         .frame(width: 335, height: 475)
 
                     VStack(spacing: 0) {
@@ -153,18 +152,12 @@ struct MissionBriefingOverlay: View {
 
                         // MARK: - Actions
                         VStack(spacing: 12) {
-                            NavigationLink(
-                                destination: GameView(engine: ScenarioEngine(scenario: scenario)),
-                                isActive: $navigateToGame
-                            ) { EmptyView() }
-
                             CustomButton(
                                 title: "dispatch.respond".lkey,
-                                textColor: Color("Background"),
+                                textColor: Color("Gold"),
                                 buttonColor: Color("Moss")
                             ) {
                                 onRespond()
-                                navigateToGame = true
                             }
                             .customedBorder(
                                 borderShape: "panel-border-003",
@@ -217,7 +210,7 @@ struct MissionBriefingOverlay: View {
                 }
             }
             .customedBorder(
-                borderShape: "Alternative",
+                borderShape: "panel-border-003",
                 borderColor: Color("Moss"),
                 buttonType: .customed(width: 340, height: 480)
             )

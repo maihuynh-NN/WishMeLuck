@@ -18,12 +18,20 @@ final class ScenarioEngine: ObservableObject {
     @Published var isActive: Bool = false  
     
     // MARK: - Private
-    private let scenario: Scenario
+    let scenario: Scenario
     private let questionMap: [String: Question]
     private var timer: Timer?
     
     var scenarioID: String {
         scenario.id
+    }
+    
+    var missionIndex: Int {
+        let parts = scenario.id.split(separator: "_")
+        if let last = parts.last, let number = Int(last) {
+            return max(0, number - 1)
+        }
+        return 0
     }
 
     // MARK: - Init
