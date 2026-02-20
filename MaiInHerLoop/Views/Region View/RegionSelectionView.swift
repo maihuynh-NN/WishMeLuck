@@ -19,6 +19,10 @@ struct RegionSelectionView: View {
     
     var body: some View {
         ZStack {
+            
+            // Background layer
+            NorthernMistBackground()
+            
             VStack(spacing: 0) {
                 // Top spacer for centering
                 Spacer()
@@ -29,7 +33,7 @@ struct RegionSelectionView: View {
                     HStack(spacing: 4) {
                         ForEach(0..<7, id: \.self) { _ in
                             Rectangle()
-                                .fill(Color("Moss").opacity(0.7))
+                                .fill(Color("Red3").opacity(0.7))
                                 .frame(width: 3, height: 12)
                         }
                     }
@@ -39,7 +43,7 @@ struct RegionSelectionView: View {
                     VStack(spacing: 8) {
                         Text("region.title".lkey)
                         //.font(.system(size: 18, weight: .black, design: .monospaced))
-                            .foregroundColor(Color("Moss"))
+                            .foregroundColor(Color("Red3"))
                             .tracking(2)
                             .opacity(headerPulse ? 1.0 : 0.8)
                         
@@ -47,23 +51,23 @@ struct RegionSelectionView: View {
                     
                     HStack {
                         Rectangle()
-                            .fill(Color("Moss").opacity(0.6))
+                            .fill(Color("Red3").opacity(0.6))
                             .frame(height: 1)
                             .padding(.leading, 50)
                         
                         Text("∎")
                             .font(.system(size: 8))
-                            .foregroundColor(Color("Moss"))
+                            .foregroundColor(Color("Red3"))
                         
                         Rectangle()
-                            .fill(Color("Moss").opacity(0.6))
+                            .fill(Color("Red3").opacity(0.6))
                             .frame(height: 1)
                     }
                     .padding(.horizontal, 50)
                     
                     Text("region.subtitle".lkey)
                         //.font(.system(size: 10, weight: .medium))
-                        .foregroundColor(Color("Moss"))
+                        .foregroundColor(Color("Red3"))
                         .multilineTextAlignment(.center)
                         .lineSpacing(2)
                         .padding(.horizontal, 40)
@@ -90,7 +94,7 @@ struct RegionSelectionView: View {
                     HStack(spacing: 8) {
                         ForEach(0..<regions.count, id: \.self) { index in
                             Rectangle()
-                                .fill(selection == index ? Color("Moss") : Color("Moss").opacity(0.3))
+                                .fill(selection == index ? Color("Red3") : Color("Red3").opacity(0.3))
                                 .frame(
                                     width: selection == index ? 20 : 8,
                                     height: selection == index ? 4 : 3
@@ -107,7 +111,7 @@ struct RegionSelectionView: View {
                     HStack(spacing: 4) {
                         ForEach(0..<7, id: \.self) { _ in
                             Circle()
-                                .fill(Color("Moss").opacity(0.6))
+                                .fill(Color("Red3").opacity(0.6))
                                 .frame(width: 2, height: 2)
                         }
                     }
@@ -117,40 +121,25 @@ struct RegionSelectionView: View {
                     // Action button
                         CustomButton(
                             title: "region.title".lkey,
-                            textColor: Color("Moss"),
-                            buttonColor: Color("Gold")
+                            textColor: Color("Beige"),
+                            buttonColor: Color("Red3")
                         ) {
                             let selectedRegion = regions[selection]
                             self.currentRegion = selectedRegion
                             showDifficultySelector = true
                             
-                                Text("regionselect.selectButton".lkey)
-                                //.font(.system(size: 8, weight: .bold, design: .monospaced))
-                                    .foregroundColor(Color("Moss"))
-                                    .tracking(0.8)
-                                
-                                Text(regions[selection].name.uppercased())
-                                //.font(.system(size: 14, weight: .black, design: .monospaced))
-                                    .foregroundColor(Color("Gold"))
-                                    .tracking(1.2)
-                            
                         }
-                        .customedBorder(borderShape: "panel-border-003", borderColor: Color("Moss"), buttonType: .mainButton)
-                        //.buttonPress()
+                        .customedBorder(borderShape: "panel-border-003", borderColor: Color("Gold3"), buttonType: .mainButton)
                         .emergencyPulse()
                     }
                 
                 Spacer()
     
             }
-            
-           
-            
-    
         }
         .navigationDestination(isPresented: $showDifficultySelector) {
             if let region = currentRegion {
-                LevelChoosingView(region: region)
+                ScenarioListView(region: region)
             }
         }
         
@@ -184,146 +173,3 @@ struct RegionSelectionView: View {
     }
 }
         
-//        VStack(spacing: 32) {
-//            // Title
-//            VStack(spacing: 8) {
-//                Text(titleText)
-//                    .font(.title.bold())
-//                
-//                Text(subtitleText)
-//                    .font(.subheadline)
-//                    .foregroundColor(.secondary)
-//            }
-//            .padding(.top, 40)
-//            
-//            // Region cards carousel
-//            TabView(selection: $selectedRegion) {
-//                RegionCard(
-//                    region: "north",
-//                    icon: "cloud.rain.fill",
-//                    nameEN: "Northern Vietnam",
-//                    nameVI: "Miền Bắc",
-//                    descriptionEN: "Floods and landslides from heavy rainfall",
-//                    descriptionVI: "Lũ lụt và sạt lở đất từ mưa lớn",
-//                    language: language
-//                )
-//                .tag("north")
-//                
-//                RegionCard(
-//                    region: "central",
-//                    icon: "wind",
-//                    nameEN: "Central Vietnam",
-//                    nameVI: "Miền Trung",
-//                    descriptionEN: "Typhoons and coastal storm surges",
-//                    descriptionVI: "Bão và sóng lớn ven biển",
-//                    language: language
-//                )
-//                .tag("central")
-//                
-//                RegionCard(
-//                    region: "south",
-//                    icon: "sun.max.fill",
-//                    nameEN: "Southern Vietnam",
-//                    nameVI: "Miền Nam",
-//                    descriptionEN: "Droughts and river flooding",
-//                    descriptionVI: "Hạn hán và lũ sông",
-//                    language: language
-//                )
-//                .tag("south")
-//            }
-//            .tabViewStyle(.page(indexDisplayMode: .always))
-//            .frame(height: 400)
-//            
-//            // Mission Aboard button - CHANGED to destination-based navigation
-//            NavigationLink(destination: ScenarioListView(region: selectedRegion)) {
-//                Text(missionButtonText)
-//                    .font(.headline)
-//                    .foregroundColor(.white)
-//                    .frame(maxWidth: .infinity)
-//                    .padding()
-//                    .background(Color.blue)
-//                    .cornerRadius(12)
-//            }
-//            .padding(.horizontal, 40)
-//            
-//            Spacer()
-//        }
-//        .navigationBarBackButtonHidden(false)
-//        .toolbar {
-//            ToolbarItem(placement: .navigationBarTrailing) {
-//                NavigationLink(destination: DiaryListView()) {  // CHANGED
-//                    Image(systemName: "book.fill")
-//                }
-//            }
-//        }
-//    }
-//    
-//    // MARK: - Localized Text
-//    
-//    private var titleText: String {
-//        language == "vi" ? "Chọn Khu Vực" : "Choose Your Region"
-//    }
-//    
-//    private var subtitleText: String {
-//        language == "vi"
-//        ? "Vuốt để khám phá các thiên tai khác nhau"
-//        : "Swipe to explore different disasters"
-//    }
-//    
-//    private var missionButtonText: String {
-//        language == "vi" ? "Bắt Đầu Nhiệm Vụ" : "Mission Aboard"
-//    }
-//}
-//
-//// MARK: - Region Card Component
-//
-//struct RegionCard: View {
-//    let region: String
-//    let icon: String
-//    let nameEN: String
-//    let nameVI: String
-//    let descriptionEN: String
-//    let descriptionVI: String
-//    let language: String
-//    
-//    var body: some View {
-//        VStack(spacing: 24) {
-//            // Icon
-//            Image(systemName: icon)
-//                .font(.system(size: 80))
-//                .foregroundColor(.blue)
-//            
-//            // Region name
-//            Text(language == "vi" ? nameVI : nameEN)
-//                .font(.title.bold())
-//            
-//            // Description
-//            Text(language == "vi" ? descriptionVI : descriptionEN)
-//                .font(.body)
-//                .foregroundColor(.secondary)
-//                .multilineTextAlignment(.center)
-//                .padding(.horizontal, 40)
-//        }
-//        .frame(maxWidth: .infinity, maxHeight: .infinity)
-//        .background(
-//            RoundedRectangle(cornerRadius: 20)
-//                .fill(Color.blue.opacity(0.1))
-//        )
-//        .padding(.horizontal, 20)
-//    }
-//}
-
-//#Preview {
-//    NavigationStack {
-//        RegionSelectionView()
-//    }
-//}
-//
-//#Preview("Vietnamese") {
-//    NavigationStack {
-//        RegionSelectionView()
-//            .onAppear {
-//                UserDefaults.standard.set("vi", forKey: "selectedLanguage")
-//            }
-//    }
-//}

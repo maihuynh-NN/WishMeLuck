@@ -16,25 +16,30 @@ struct CustomButton: View {
         Button(action: action) {
             Text(title)
                 .foregroundStyle(textColor)
-                .frame(width: 150, height: 50)
-                .background(buttonColor.opacity(0.5))
+                .frame(width: 155, height: 55)
+                .background(
+                    buttonColor
+                )
         }
         .padding(.horizontal, 40)
 
     }
 }
     
-    #Preview {
+#Preview {
+    ZStack {
+        NorthernMistBackground()
         CustomButton(
             title: "How To Play",
-            textColor: Color(.black),
-            buttonColor: Color(.blue),
+            textColor: Color("Beige"),
+            buttonColor: Color("Red"),
             action: {}
         )
         .customedBorder(
             borderShape: "panel-border-003",
-            borderColor: Color("Moss"),
+            borderColor: Color("Gold3"),
             buttonType: .mainButton)
-
+        
     }
+}
 

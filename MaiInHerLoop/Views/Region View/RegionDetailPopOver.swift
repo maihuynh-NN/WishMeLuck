@@ -82,8 +82,7 @@ struct RegionDetailPopOver: View {
     
     var body: some View {
         ZStack {
-            Color("Moss")
-               .opacity(0.95)
+            Color("Beige3")
                .ignoresSafeArea(.all)
             
             ScrollView(.vertical, showsIndicators: false) {
@@ -94,7 +93,7 @@ struct RegionDetailPopOver: View {
                         HStack(spacing: 4) {
                             ForEach(0..<7, id: \.self) { _ in
                                 Rectangle()
-                                    .fill(Color("Gold").opacity(0.7))
+                                    .fill(Color("Red").opacity(0.7))
                                     .frame(width: 3, height: 12)
                             }
                         }
@@ -105,14 +104,14 @@ struct RegionDetailPopOver: View {
                         ZStack {
                             CustomCard(
                                 image: region.name,
-                                borderColor: Color("Gold"),
+                                borderColor: Color("Red"),
                                 size: .customed(width: 320, height: 220)
                             ) {}
                             
                             VStack {
                                 HStack {
                                     VStack(alignment: .leading, spacing: 4) {
-                                        Text("ui.landing_on".lkey) // "LANDING ON"
+                                        Text("ui.landing_on".lkey)
                                             //.font(.system(size: 10, weight: .bold, design: .monospaced))
                                             .foregroundColor(.white)
                                             .tracking(1)
@@ -143,15 +142,15 @@ struct RegionDetailPopOver: View {
                     // MARK: - Cultural Divider
                     HStack {
                         Rectangle()
-                            .fill(Color("Gold").opacity(0.6))
+                            .fill(Color("Red").opacity(0.6))
                             .frame(height: 1)
                         
                         Text("◆")
                             .font(.system(size: 10))
-                            .foregroundColor(Color("Gold"))
+                            .foregroundColor(Color("Red"))
                         
                         Rectangle()
-                            .fill(Color("Gold").opacity(0.6))
+                            .fill(Color("GoRedld").opacity(0.6))
                             .frame(height: 1)
                     }
                     .padding(.horizontal, 50)
@@ -163,7 +162,7 @@ struct RegionDetailPopOver: View {
                             Text("")
                                 .typewriter(riskBriefingText, speed: 0.04) 
                                 //.font(.system(size: 11, weight: .medium, design: .serif))
-                                .foregroundColor(Color("Gold"))
+                                .foregroundColor(Color("Red"))
                                 .italic()
                                 .multilineTextAlignment(.center)
                                 .lineSpacing(2)
@@ -175,7 +174,7 @@ struct RegionDetailPopOver: View {
                         HStack(spacing: 6) {
                             ForEach(0..<9, id: \.self) { _ in
                                 Circle()
-                                    .fill(Color("Gold").opacity(0.6))
+                                    .fill(Color("Red").opacity(0.6))
                                     .frame(width: 3, height: 3)
                             }
                         }
@@ -184,15 +183,15 @@ struct RegionDetailPopOver: View {
                      
                     HStack {
                         Rectangle()
-                            .fill(Color("Gold").opacity(0.6))
+                            .fill(Color("Red").opacity(0.6))
                             .frame(height: 1)
                         
                         Text("◆")
                             .font(.system(size: 10))
-                            .foregroundColor(Color("Gold"))
+                            .foregroundColor(Color("Red"))
                         
                         Rectangle()
-                            .fill(Color("Gold").opacity(0.6))
+                            .fill(Color("Red").opacity(0.6))
                             .frame(height: 1)
                     }
                     .padding(.horizontal, 50)
@@ -202,7 +201,7 @@ struct RegionDetailPopOver: View {
                     VStack(spacing: 8) {
                         Text("ui.chronicles.title".lkey)
                             .font(.system(size: 12, weight: .bold, design: .monospaced))
-                            .foregroundColor(Color("Gold"))
+                            .foregroundColor(Color("Red"))
                             .tracking(2)
                             .opacity(textOpacity)
                         
@@ -211,7 +210,7 @@ struct RegionDetailPopOver: View {
                             ForEach(0..<8, id: \.self) { _ in
                                 Image(systemName: "chevron.right")
                                     .font(.system(size: 8, weight: .bold))
-                                    .foregroundColor(Color("Gold"))
+                                    .foregroundColor(Color("Red"))
                             }
                         }
                         .opacity(textOpacity)
@@ -382,7 +381,6 @@ struct RegionDetailPopOver: View {
                 .padding(.top, 20)
             }
         }
-        .customedBorder(borderShape: "panel-border-004", borderColor: Color("Gold"), buttonType: .customed(width: 380, height: 700))
         .overlayAppear()
         .onAppear {
             withAnimation(Animation.easeInOut(duration: 2.0).repeatForever(autoreverses: true)) {

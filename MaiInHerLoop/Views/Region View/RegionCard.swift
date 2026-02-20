@@ -14,7 +14,7 @@ struct RegionCard: View {
         ZStack(alignment: .bottom){
             CustomCard(
                 image: region.name,
-                borderColor: Color("Moss"),
+                borderColor: Color("Gold2"),
                 size: .customed(width: 321, height: 482)
             ) {
                 LinearGradient(
@@ -26,7 +26,7 @@ struct RegionCard: View {
                 .frame(width: 321, height: 482)
             }
             .scaledToFit()
-            .modifier(ShadowModifier(color: Color("Moss").opacity(0.3)))
+            .modifier(ShadowModifier(color: Color("Gold2").opacity(0.5)))
             
             // Text overlay
             VStack(alignment: .center, spacing: 16) {

@@ -46,9 +46,9 @@ struct ScenarioListView: View {
 
     var body: some View {
         ZStack {
-            Color("Background").ignoresSafeArea()
-
-            // Hidden NavigationLinks — one per scenario, fired by activeScenarioIndex
+            
+            NorthernMistBackground()
+            
             VStack { // needs to be in the view tree
                 ForEach(scenarios.indices, id: \.self) { i in
                     NavigationLink(
@@ -70,7 +70,7 @@ struct ScenarioListView: View {
                     HStack(spacing: 4) {
                         ForEach(0..<7, id: \.self) { _ in
                             Rectangle()
-                                .fill(Color("Moss").opacity(0.7))
+                                .fill(Color("Red3").opacity(0.7))
                                 .frame(width: 3, height: 12)
                         }
                     }
@@ -190,9 +190,9 @@ struct ScenarioListView: View {
         }
         .navigationBarHidden(true)
         .onAppear {
-            withAnimation(Animation.easeInOut(duration: 2.0).repeatForever(autoreverses: true)) {
-                headerPulse = true
-            }
+//            withAnimation(Animation.easeInOut(duration: 2.0).repeatForever(autoreverses: true)) {
+//                headerPulse = true
+//            }
             withAnimation(.easeIn(duration: 1.0).delay(0.4)) {
                 textOpacity = 1.0
             }
