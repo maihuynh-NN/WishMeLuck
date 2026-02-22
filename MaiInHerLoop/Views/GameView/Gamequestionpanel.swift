@@ -22,8 +22,6 @@ struct GameQuestionPanel: View {
 
     var body: some View {
         panelContent
-            // Slide-in only on the very first question
-            .modifier(ConditionalGameStart(active: isFirstQuestion))
     }
 
     private var panelContent: some View {

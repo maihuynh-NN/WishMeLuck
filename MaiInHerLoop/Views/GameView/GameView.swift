@@ -1,47 +1,25 @@
-//
-//  GameView.swift
-//  MaiInHerLoop
-//
-//  Created by Mai Huynh Ngoc Nhat on 4/2/26.
-//  Rebuilt: 21/2/26
-//
-
 import SwiftUI
 
 struct GameView: View {
     @ObservedObject var engine: ScenarioEngine
     @Environment(\.dismiss) private var dismiss
 
-    // MARK: - Local UI state
     @State private var showBriefing = true
     @State private var isFirstQuestion = true
     @State private var showOptions = false
     @State private var selectedOptionID: String? = nil
-
-    // Track question identity so we can reset showOptions between questions
     @State private var currentQuestionID: String = ""
 
     var body: some View {
         GeometryReader { geo in
             ZStack {
-                Color.red.opacity(0.001)
-                    .ignoresSafeArea()
-                    .onTapGesture {
-                        print("ROOT TAP HIT")
-                    }
-                // MARK: Background
-//                Color("Beige3")
-//                    .ignoresSafeArea()
-
-                // MARK: Door shape — always static, never animates
+                Color("Beige3").ignoresSafeArea()
                 doorShape(in: geo)
 
-                // MARK: Game content inside door
                 if !showBriefing {
                     gameContent(in: geo)
                 }
 
-                // MARK: Mission briefing overlay
                 if showBriefing {
                     MissionBriefingOverlay(
                         scenario: engine.scenario,
@@ -52,23 +30,17 @@ struct GameView: View {
                             }
                             engine.start()
                         },
-                        onRetreat: {
-                            dismiss()
-                        }
+                        onRetreat: { dismiss() }
                     )
                 }
             }
         }
         .navigationBarHidden(true)
-        // Watch for question changes to reset options visibility
         .onChange(of: engine.currentQuestion?.id) { newID in
-            guard let id = newID else { return }
-            if id != currentQuestionID {
-                currentQuestionID = id
-                showOptions = false
-                selectedOptionID = nil
-                // isFirstQuestion only true once per game session
-            }
+            guard let id = newID, id != currentQuestionID else { return }
+            currentQuestionID = id
+            showOptions = false
+            selectedOptionID = nil
         }
     }
 
@@ -80,10 +52,9 @@ struct GameView: View {
         let doorHeight = geo.size.height * 0.82
 
         DoorShape()
-            .fill(Color.clear)          // transparent fill — image sits inside
+            .fill(Color.clear)
             .frame(width: doorWidth, height: doorHeight)
             .overlay(
-                // Banana leaf image clipped to door shape
                 Image("BananaLeaf")
                     .resizable()
                     .scaledToFill()
@@ -91,72 +62,92 @@ struct GameView: View {
                     .clipShape(DoorShape())
             )
             .overlay(
-                // Gold3 border
-                DoorShape()
-                    .stroke(Color("Gold3"), lineWidth: 3)
+                DoorShape().stroke(Color("Gold3"), lineWidth: 4)
             )
     }
 
-    // MARK: - Game content (question panel + option cards)
+    // MARK: - Game content
 
     @ViewBuilder
     private func gameContent(in geo: GeometryProxy) -> some View {
         let doorWidth = min(geo.size.width * 0.82, 380.0)
         let doorHeight = geo.size.height * 0.82
-        // Horizontal padding inside the door
-        let innerPadding: CGFloat = 20
+        let innerPadding: CGFloat = 16
+
+        let doorTop = (geo.size.height - doorHeight) / 2
+
+        // ─── FIXED ANCHORS ─────────────────────────────────────────────────
+        // The arch radius = doorWidth/2. Everything above that Y is the arch.
+        // The flat rectangular body starts at: doorTop + doorWidth/2
+        // We place panels inside the flat rectangular body.
+        let archBottom = doorTop + (doorWidth / 2)   // where the arch ends
+
+        // Question panel: 8pt below where the arch ends
+        let questionPanelTopY = archBottom + 120
+
+        // Options grid: question panel is roughly 90pt tall (dots+divider+text).
+        // Pin options 16pt below that fixed height. Never reacts to actual panel size.
+        let questionPanelReservedHeight: CGFloat = 95
+        let optionGridTopY = questionPanelTopY + questionPanelReservedHeight + 30
 
         if let question = engine.currentQuestion {
-            VStack(spacing: 16) {
+            // Door horizontal center
+            let doorCenterX = geo.size.width / 2
 
-                // MARK: Question panel
+            // MARK: - QUESTION PANEL
+            
+            ZStack(alignment: .top) {
+
                 GameQuestionPanel(
                     questionText: resolvedText(question),
                     timeRemaining: engine.timeRemaining,
                     isFirstQuestion: isFirstQuestion,
                     onTypingComplete: {
-                        // Cards appear only after typewriter finishes
-                        withAnimation(.easeOut(duration: 0.3)) {
+                        withAnimation(.easeOut(duration: 0.4)) {
                             showOptions = true
-                            isFirstQuestion = false   // subsequent panels stay put
+                            isFirstQuestion = false
                         }
                     }
                 )
                 .padding(.horizontal, innerPadding)
+                .frame(width: doorWidth)
+                .id(question.id)
+                .offset(y: questionPanelTopY)
 
-                // MARK: Option cards 2x2 grid
+                // MARK: -OPTIONS GRID
                 if showOptions {
                     optionGrid(question: question, innerPadding: innerPadding)
+                        .frame(width: doorWidth)
+                        .offset(y: optionGridTopY)
+                        .transition(.opacity.combined(with: .move(edge: .bottom)))
                 }
-
-                Spacer()
             }
-            // Constrain content to door width
-            .frame(width: doorWidth)
-            // Push content down past the arch top curve (~12% of door height)
-            .padding(.top, doorHeight * 0.13)
+            // Full screen frame, centered horizontally
+            .frame(width: geo.size.width, height: geo.size.height, alignment: .top)
+            // Shift the ZStack so door center aligns with screen center
+            .position(x: doorCenterX, y: geo.size.height / 2)
+            .animation(nil, value: showOptions)
 
         } else if engine.isComplete {
             reflectionContent(doorWidth: doorWidth, doorHeight: doorHeight)
         }
     }
 
-    // MARK: - Option cards grid
+    // MARK: - Option grid
 
     @ViewBuilder
     private func optionGrid(question: Question, innerPadding: CGFloat) -> some View {
-        let columns = [GridItem(.flexible(), spacing: 12),
-                       GridItem(.flexible(), spacing: 12)]
+        let columns = [GridItem(.flexible(), spacing: 10),
+                       GridItem(.flexible(), spacing: 10)]
 
-        LazyVGrid(columns: columns, spacing: 12) {
+        LazyVGrid(columns: columns, spacing: 10) {
             ForEach(Array(question.options.enumerated()), id: \.element.id) { index, option in
                 GameOptionCard(
                     text: resolvedOptionText(option),
                     isSelected: selectedOptionID == option.id,
                     onSelect: {
-                        guard selectedOptionID == nil else { return }   // prevent double-tap
+                        guard selectedOptionID == nil else { return }
                         selectedOptionID = option.id
-                        // Brief delay so "CHOSEN" state shows before transition
                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.45) {
                             engine.selectOption(option)
                         }
@@ -168,7 +159,7 @@ struct GameView: View {
         .padding(.horizontal, innerPadding)
     }
 
-    // MARK: - Reflection (scenario complete)
+    // MARK: - Reflection
 
     @ViewBuilder
     private func reflectionContent(doorWidth: CGFloat, doorHeight: CGFloat) -> some View {
@@ -203,40 +194,23 @@ struct GameView: View {
     }
 }
 
-// MARK: - Door Shape (arch top, rectangular bottom)
+// MARK: - Door Shape
 
 struct DoorShape: Shape {
     func path(in rect: CGRect) -> Path {
         var path = Path()
-
-        // Arch radius = half the width so it forms a perfect semi-circle top
         let archRadius = rect.width / 2
         let archCenter = CGPoint(x: rect.midX, y: rect.minY + archRadius)
-
-        // Start bottom-left
         path.move(to: CGPoint(x: rect.minX, y: rect.maxY))
-
-        // Left side up to where arch begins
         path.addLine(to: CGPoint(x: rect.minX, y: rect.minY + archRadius))
-
-        // Arch (top semi-circle)
-        path.addArc(
-            center: archCenter,
-            radius: archRadius,
-            startAngle: .degrees(180),
-            endAngle: .degrees(0),
-            clockwise: false
-        )
-
-        // Right side down to bottom-right
+        path.addArc(center: archCenter, radius: archRadius,
+                    startAngle: .degrees(180), endAngle: .degrees(0), clockwise: false)
         path.addLine(to: CGPoint(x: rect.maxX, y: rect.maxY))
-
-        // Bottom
         path.closeSubpath()
-
         return path
     }
 }
+
 // MARK: - Preview
 
 #Preview {
@@ -246,25 +220,18 @@ struct DoorShape: Shape {
         Option(id: "q1_c", textEN: "Document the situation on your phone", textVI: "Ghi lại tình hình", traitTag: "lac_quan", nextQuestionID: nil),
         Option(id: "q1_d", textEN: "Wait for official instructions from authorities", textVI: "Đợi hướng dẫn chính thức", traitTag: "than_trong", nextQuestionID: nil)
     ]
-
     let sampleQuestion = Question(
         id: "q1",
-        textEN: "Water is rising fast outside your building. You have 5 minutes before the ground floor floods. What do you do first?",
+        textEN: "Water is rising fast outside your building. What do you do first?",
         textVI: "Nước đang dâng nhanh bên ngoài tòa nhà của bạn. Bạn làm gì đầu tiên?",
-        timer: 25,
-        options: sampleOptions
+        timer: 25, options: sampleOptions
     )
-
     let sampleScenario = Scenario(
-        id: "north_easy_1",
-        region: "north",
-        titleEN: "Flash Flood in Hanoi",
-        titleVI: "Lũ Quét ở Hà Nội",
-        introEN: "Heavy rain has been falling for 6 hours. The streets are rising.",
-        introVI: "Mưa lớn đã rơi suốt 6 giờ. Mặt đường đang dâng lên.",
-        startQuestionID: "q1",
-        questions: [sampleQuestion]
+        id: "north_easy_1", region: "north",
+        titleEN: "Flash Flood in Hanoi", titleVI: "Lũ Quét ở Hà Nội",
+        introEN: "Heavy rain has been falling for 6 hours.",
+        introVI: "Mưa lớn đã rơi suốt 6 giờ.",
+        startQuestionID: "q1", questions: [sampleQuestion]
     )
-
     GameView(engine: ScenarioEngine(scenario: sampleScenario))
 }
