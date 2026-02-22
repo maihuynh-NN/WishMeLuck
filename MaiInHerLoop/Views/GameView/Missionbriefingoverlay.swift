@@ -121,7 +121,7 @@ struct MissionBriefingOverlay: View {
                                     .multilineTextAlignment(.leading)
                             }
 
-                            // Intro scrollable box — same as StartGameOverlay context box
+                            // Intro scrollable box 
                             ScrollView {
                                 VStack(alignment: .leading, spacing: 10) {
                                     if showTypewriter {
@@ -232,7 +232,7 @@ struct MissionBriefingOverlay: View {
         }
     }
 
-    // MARK: - Corner decoration (copied from StartGameOverlay/DifficultyOverlay)
+    // MARK: - Corner decoration
     @ViewBuilder
     private func cornerMark(top: Bool, left: Bool) -> some View {
         VStack(spacing: 1) {

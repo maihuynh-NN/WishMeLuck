@@ -71,7 +71,7 @@ struct RegionSelectionView: View {
                         .multilineTextAlignment(.center)
                         .lineSpacing(2)
                         .padding(.horizontal, 40)
-                        //.opacity(textOpacity)
+                        .opacity(textOpacity)
                 }
                 .padding(.bottom, 15)
                 

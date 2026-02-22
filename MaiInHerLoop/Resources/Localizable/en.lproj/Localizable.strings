@@ -91,3 +91,6 @@
 "region.central.sections.4.content" = "The wind carries more than rain, it carries warnings. \nSirens howl, flags snap, messengers race along mountain paths. Networks of elders, unions, and fishermen reach every home. \nMiss their call, and the mud and water won't wait.";
 "region.central.sections.4.subtitle" = "Follow the warnings, disaster won't pause for you.";
 
+"scenariolist.region.south" = "South";
+"scenariolist.region.central" = "Central";
+"scenariolist.region.north" = "North";

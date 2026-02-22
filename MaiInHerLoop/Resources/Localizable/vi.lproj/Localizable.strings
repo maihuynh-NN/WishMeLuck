@@ -82,3 +82,7 @@
 "region.central.sections.4.title" = "KHI LỜI CẢNH BÁO ĐI TRƯỚC CƠN BÃO";
 "region.central.sections.4.content" = "Gió mang theo nhiều hơn mưa, nó mang theo cảnh báo. \nCòi hú vang, cờ phất, sứ giả chạy dọc các con đường núi. Mạng lưới các bậc trưởng lão, hội đoàn, và ngư dân tiếp cận từng ngôi nhà. \nBỏ lỡ tiếng gọi của họ, bùn đất và nước sẽ không chờ bạn.";
 "region.central.sections.4.subtitle" = "Hãy theo những cảnh báo đó, thiên tai sẽ không dừng lại vì bạn.";
+
+"scenariolist.region.south" = "Miền Nam";
+"scenariolist.region.central" = "Miền Trung";
+"scenariolist.region.north" = "Miền Bắc";

@@ -14,7 +14,7 @@ struct BlindBoxCard: View {
 
     @State private var pulse = false
 
-    private let cardSize: ComponentSize = .customed(width: 85, height: 85)
+    private let cardSize: ComponentSize = .customed(width: 60, height: 60)
 
     var body: some View {
         Button(action: onTap) {

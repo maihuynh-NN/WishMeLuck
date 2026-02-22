@@ -79,36 +79,40 @@ struct ScenarioListView: View {
 
                     Text("scenariolist.header".lkey)
                         .font(.system(size: 10, weight: .bold, design: .monospaced))
-                        .foregroundColor(Color("Moss").opacity(0.65))
+                        .foregroundColor(Color("Red3").opacity(0.65))
                         .tracking(2)
                         .opacity(textOpacity)
+                        .padding(.vertical, 4)
 
                     Text(regionDisplayName.uppercased())
                         .font(.system(size: 20, weight: .black, design: .monospaced))
-                        .foregroundColor(Color("Moss"))
+                        .foregroundColor(Color("Red3"))
                         .tracking(2)
                         .opacity(headerPulse ? 1.0 : 0.85)
 
+
                     HStack {
-                        Rectangle().fill(Color("Moss").opacity(0.6)).frame(height: 1)
-                        Text("∎").font(.system(size: 8)).foregroundColor(Color("Moss"))
-                        Rectangle().fill(Color("Moss").opacity(0.6)).frame(height: 1)
+                        Rectangle().fill(Color("Red3").opacity(0.6)).frame(height: 1)
+                        Text("∎").font(.system(size: 8)).foregroundColor(Color("Red3"))
+                        Rectangle().fill(Color("Red3").opacity(0.6)).frame(height: 1)
                     }
+
                     .padding(.horizontal, 50)
                     .opacity(textOpacity)
 
                     Text("scenariolist.subheader".lkey)
                         .font(.system(size: 9, weight: .light, design: .monospaced))
-                        .foregroundColor(Color("Moss").opacity(0.55))
+                        .foregroundColor(Color("Red3").opacity(0.55))
                         .tracking(0.5)
                         .italic()
                         .opacity(textOpacity)
+
                 }
-                .padding(.bottom, 28)
+                .padding(.bottom, 30)
 
                 // MARK: - Mission board panel
                 CustomPanel(
-                    backgroundColor: Color("Moss").opacity(0.06),
+                    backgroundColor: Color("Beige3").opacity(0.6),
                     size: .customed(width: 320, height: 220)
                 ) {
                     VStack(spacing: 14) {
@@ -142,8 +146,8 @@ struct ScenarioListView: View {
                     }
                 }
                 .customedBorder(
-                    borderShape: "panel-border-003",
-                    borderColor: Color("Moss").opacity(0.45),
+                    borderShape: "panel-border-030",
+                    borderColor: Color("Gold3"),
                     buttonType: .customed(width: 320, height: 220)
                 )
 
@@ -154,7 +158,7 @@ struct ScenarioListView: View {
                     HStack(spacing: 6) {
                         ForEach(0..<9, id: \.self) { _ in
                             Circle()
-                                .fill(Color("Moss").opacity(0.4))
+                                .fill(Color("Red3"))
                                 .frame(width: 3, height: 3)
                         }
                     }
@@ -166,14 +170,14 @@ struct ScenarioListView: View {
 
                     CustomButton(
                         title: "scenariolist.diary".lkey,
-                        textColor: Color("Moss"),
-                        buttonColor: Color("Gold")
+                        textColor: Color("Beige3"),
+                        buttonColor: Color("Red")
                     ) {
                         navigateToDiary = true
                     }
                     .customedBorder(
                         borderShape: "panel-border-003",
-                        borderColor: Color("Moss"),
+                        borderColor: Color("Gold3"),
                         buttonType: .mainButton
                     )
 
@@ -190,9 +194,9 @@ struct ScenarioListView: View {
         }
         .navigationBarHidden(true)
         .onAppear {
-//            withAnimation(Animation.easeInOut(duration: 2.0).repeatForever(autoreverses: true)) {
-//                headerPulse = true
-//            }
+            withAnimation(Animation.easeInOut(duration: 2.0).repeatForever(autoreverses: true)) {
+                headerPulse = true
+            }
             withAnimation(.easeIn(duration: 1.0).delay(0.4)) {
                 textOpacity = 1.0
             }
