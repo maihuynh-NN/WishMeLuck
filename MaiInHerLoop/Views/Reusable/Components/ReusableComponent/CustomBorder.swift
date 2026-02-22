@@ -4,25 +4,25 @@ struct CustomedBorder: ViewModifier {
     let borderShape: String
     let borderColor: Color
     let buttonType: ComponentSize
-    
+
     func body(content: Content) -> some View {
         let (width, height) = buttonType.size
-        
+
         content
             .frame(width: width, height: height)
             .overlay(
-                Image(borderShape)
-                    .resizable(
-                        capInsets: EdgeInsets(
-                            top: 8,
-                            leading: 8,
-                            bottom: 8,
-                            trailing: 8
-                        ),
-                        resizingMode: .stretch
-                    )
-                    .renderingMode(.template)
-                    .foregroundStyle(borderColor)
+                Group {
+                    if UIImage(named: borderShape) != nil {
+                        Image(borderShape)
+                            .resizable(
+                                capInsets: EdgeInsets(top: 8, leading: 8, bottom: 8, trailing: 8),
+                                resizingMode: .stretch
+                            )
+                            .renderingMode(.template)
+                            .foregroundStyle(borderColor)
+                            .allowsHitTesting(false)  // ← KEY FIX: overlay never blocks taps
+                    }
+                }
             )
     }
 }
@@ -32,10 +32,10 @@ extension View {
         self.modifier(CustomedBorder(
             borderShape: borderShape,
             borderColor: borderColor,
-            buttonType: buttonType))
+            buttonType: buttonType
+        ))
     }
 }
-
 #Preview {
     CustomPanel(
         backgroundColor: Color(.white),

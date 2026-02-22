@@ -21,7 +21,7 @@ struct RegionSelectionView: View {
         ZStack {
             
             // Background layer
-            NorthernMistBackground()
+            Color.gray.ignoresSafeArea()
             
             VStack(spacing: 0) {
                 // Top spacer for centering
@@ -41,7 +41,7 @@ struct RegionSelectionView: View {
                     .opacity(textOpacity)
                     
                     VStack(spacing: 8) {
-                        Text("region.title".lkey)
+                        Text("region.title".localized)
                         //.font(.system(size: 18, weight: .black, design: .monospaced))
                             .foregroundColor(Color("Red3"))
                             .tracking(2)
@@ -65,7 +65,7 @@ struct RegionSelectionView: View {
                     }
                     .padding(.horizontal, 50)
                     
-                    Text("region.subtitle".lkey)
+                    Text("region.subtitle".localized)
                         //.font(.system(size: 10, weight: .medium))
                         .foregroundColor(Color("Red3"))
                         .multilineTextAlignment(.center)
@@ -120,7 +120,7 @@ struct RegionSelectionView: View {
                     
                     // Action button
                         CustomButton(
-                            title: "region.title".lkey,
+                            title: "region.title".localized,
                             textColor: Color("Beige"),
                             buttonColor: Color("Red3")
                         ) {
@@ -130,7 +130,7 @@ struct RegionSelectionView: View {
                             
                         }
                         .customedBorder(borderShape: "panel-border-003", borderColor: Color("Gold3"), buttonType: .mainButton)
-                        .emergencyPulse()
+                        //.emergencyPulse()
                     }
                 
                 Spacer()

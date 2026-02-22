@@ -24,9 +24,14 @@ struct GameView: View {
     var body: some View {
         GeometryReader { geo in
             ZStack {
-                // MARK: Background
-                Color("Beige3")
+                Color.red.opacity(0.001)
                     .ignoresSafeArea()
+                    .onTapGesture {
+                        print("ROOT TAP HIT")
+                    }
+                // MARK: Background
+//                Color("Beige3")
+//                    .ignoresSafeArea()
 
                 // MARK: Door shape — always static, never animates
                 doorShape(in: geo)

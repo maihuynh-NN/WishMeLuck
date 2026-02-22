@@ -150,7 +150,7 @@ struct RegionDetailPopOver: View {
                             .foregroundColor(Color("Red"))
                         
                         Rectangle()
-                            .fill(Color("GoRedld").opacity(0.6))
+                            .fill(Color("Red").opacity(0.6))
                             .frame(height: 1)
                     }
                     .padding(.horizontal, 50)
@@ -357,7 +357,7 @@ struct RegionDetailPopOver: View {
                             .padding(.top, 8)
                         
                         CustomButton(
-                            title: "ui.enter_region".lkey,
+                            title: "ui.enter_region".localized,
                             textColor: Color("Moss"),
                             buttonColor: Color("Gold")
                         ) {

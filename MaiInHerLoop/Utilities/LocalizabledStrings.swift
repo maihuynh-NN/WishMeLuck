@@ -18,6 +18,6 @@ extension String {
     }
     
     var lkey: LocalizedStringKey {
-        LocalizedStringKey(self.localized)
+        LocalizedStringKey(self)
     }
 }

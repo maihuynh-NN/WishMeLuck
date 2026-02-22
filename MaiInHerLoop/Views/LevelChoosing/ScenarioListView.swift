@@ -169,7 +169,7 @@ struct ScenarioListView: View {
                     }
 
                     CustomButton(
-                        title: "scenariolist.diary".lkey,
+                        title: "scenariolist.diary".localized,
                         textColor: Color("Beige3"),
                         buttonColor: Color("Red")
                     ) {

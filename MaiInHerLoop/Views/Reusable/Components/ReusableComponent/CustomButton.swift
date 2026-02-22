@@ -7,25 +7,22 @@
 import SwiftUI
 
 struct CustomButton: View {
-    let title: LocalizedStringKey
+    let title: String
     let textColor: Color
     let buttonColor: Color
     let action: () -> Void
-    
+
     var body: some View {
         Button(action: action) {
             Text(title)
                 .foregroundStyle(textColor)
-                .frame(width: 155, height: 55)
-                .background(
-                    buttonColor
-                )
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .background(buttonColor)
         }
-        .padding(.horizontal, 40)
 
     }
 }
-    
+
 #Preview {
     ZStack {
         NorthernMistBackground()
@@ -38,8 +35,7 @@ struct CustomButton: View {
         .customedBorder(
             borderShape: "panel-border-003",
             borderColor: Color("Gold3"),
-            buttonType: .mainButton)
-        
+            buttonType: .mainButton
+        )
     }
 }
-

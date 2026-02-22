@@ -56,7 +56,7 @@ struct MissionBriefingOverlay: View {
                             .opacity(textOpacity)
                             .padding(.top, 5)
 
-                            Text("dispatch.incoming".lkey)
+                            Text("dispatch.incoming".localized)
                                 .font(.system(size: 18, weight: .black, design: .monospaced))
                                 .foregroundColor(Color("Moss"))
                                 .multilineTextAlignment(.center)
@@ -88,7 +88,7 @@ struct MissionBriefingOverlay: View {
                                         .font(.system(size: 16, weight: .black, design: .monospaced))
                                         .foregroundColor(Color("Moss"))
 
-                                    Text("dispatch.classified_revealed".lkey)
+                                    Text("dispatch.classified_revealed".localized)
                                         .font(.system(size: 9, weight: .medium, design: .monospaced))
                                         .foregroundColor(Color("Moss").opacity(0.55))
                                         .tracking(0.5)
@@ -121,7 +121,7 @@ struct MissionBriefingOverlay: View {
                                     .multilineTextAlignment(.leading)
                             }
 
-                            // Intro scrollable box 
+                            // Intro scrollable box
                             ScrollView {
                                 VStack(alignment: .leading, spacing: 10) {
                                     if showTypewriter {
@@ -153,7 +153,7 @@ struct MissionBriefingOverlay: View {
                         // MARK: - Actions
                         VStack(spacing: 12) {
                             CustomButton(
-                                title: "dispatch.respond".lkey,
+                                title: "dispatch.respond".localized,
                                 textColor: Color("Gold"),
                                 buttonColor: Color("Moss")
                             ) {
