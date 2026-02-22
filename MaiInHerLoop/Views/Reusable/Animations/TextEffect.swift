@@ -1,5 +1,5 @@
 //
-//  Untitled.swift
+//  TextEffect.swift
 //  MaiInHerLoop
 //
 //  Created by Mai Huynh Ngoc Nhat on 12/2/26.
@@ -20,32 +20,48 @@ struct ChronicleFadeModifier: ViewModifier {
     }
 }
 
+// MARK: - Typewriter — now has optional onComplete callback
 struct TypewriterModifier: ViewModifier {
     let text: String
     let speed: Double
+    var onComplete: (() -> Void)? = nil
+
     @State private var displayedText = ""
     @State private var currentIndex = 0
-    
+
     func body(content: Content) -> some View {
         Text(displayedText)
             .onAppear {
                 startTypewriter()
             }
+            // Re-run when text changes (new question loaded)
+            .onChange(of: text) { newText in
+                restartTypewriter(for: newText)
+            }
     }
-    
+
     private func startTypewriter() {
         displayedText = ""
         currentIndex = 0
         typeNextCharacter()
     }
-    
+
+    private func restartTypewriter(for newText: String) {
+        displayedText = ""
+        currentIndex = 0
+        typeNextCharacter()
+    }
+
     private func typeNextCharacter() {
-        guard currentIndex < text.count else { return }
-        
+        guard currentIndex < text.count else {
+            onComplete?()
+            return
+        }
+
         let index = text.index(text.startIndex, offsetBy: currentIndex)
         displayedText += String(text[index])
         currentIndex += 1
-        
+
         DispatchQueue.main.asyncAfter(deadline: .now() + speed) {
             typeNextCharacter()
         }
@@ -54,7 +70,7 @@ struct TypewriterModifier: ViewModifier {
 
 struct TextHighlightModifier: ViewModifier {
     @State private var isHighlighted = false
-    
+
     func body(content: Content) -> some View {
         content
             .background(
@@ -76,19 +92,28 @@ struct TextHighlightModifier: ViewModifier {
 
 // MARK: - View Extensions
 extension View {
-    
+
     func chronicleFade() -> some View {
         modifier(ChronicleFadeModifier())
     }
-    
+
+    /// Basic typewriter with no completion callback
     func typewriter(_ text: String, speed: Double = AppAnimations.typewriterSpeed) -> some View {
         modifier(TypewriterModifier(text: text, speed: speed))
     }
-    
+
+    /// Typewriter with completion callback — use this in GameView
+    func typewriter(
+        _ text: String,
+        speed: Double = AppAnimations.typewriterSpeed,
+        onComplete: @escaping () -> Void
+    ) -> some View {
+        modifier(TypewriterModifier(text: text, speed: speed, onComplete: onComplete))
+    }
+
     func textHighlight() -> some View {
         modifier(TextHighlightModifier())
     }
-    
 }
 
 // MARK: - Text Effect Preview
