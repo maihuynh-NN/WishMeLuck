@@ -6,7 +6,7 @@ struct CustomedBorder: ViewModifier {
     let buttonType: ComponentSize
 
     func body(content: Content) -> some View {
-        let (width, height) = buttonType.size
+        let (width, height) = buttonType.size 
 
         content
             .frame(

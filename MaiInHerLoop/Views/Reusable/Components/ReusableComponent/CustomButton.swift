@@ -6,6 +6,16 @@
 //
 import SwiftUI
 
+// MARK: - Press feedback style (shared, can move to its own file later)
+struct ScaleButtonStyle: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .scaleEffect(configuration.isPressed ? 0.96 : 1.0)
+            .animation(.easeOut(duration: 0.15), value: configuration.isPressed)
+    }
+}
+
+// MARK: - CustomButton
 struct CustomButton: View {
     let title: String
     let textColor: Color
@@ -15,11 +25,12 @@ struct CustomButton: View {
     var body: some View {
         Button(action: action) {
             Text(title)
+                .font(.system(.body).weight(.medium))
                 .foregroundStyle(textColor)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background(buttonColor)
         }
-
+        .buttonStyle(ScaleButtonStyle())                
     }
 }
 
@@ -33,8 +44,8 @@ struct CustomButton: View {
             action: {}
         )
         .customedBorder(
-            borderShape: "panel-border-003",
-            borderColor: Color("Gold3"),
+            borderShape: "panel-border-005",
+            borderColor: Color("Gold"),
             buttonType: .mainButton
         )
     }

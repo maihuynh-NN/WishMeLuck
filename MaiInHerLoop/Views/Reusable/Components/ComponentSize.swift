@@ -18,7 +18,7 @@ enum ComponentSize {
         case .mainButton:
             return isIPad ? (220, 60) : (150, 50)
         case .miniButton:
-            return isIPad ? (44, 44) : (30, 30)  // 44pt = Apple HIG minimum tap target
+            return isIPad ? (44, 44) : (44, 44)  // 44pt = Apple HIG minimum tap target
         case .customed(let width, let height):
             return (width, height)
         case .flexible(let height):
