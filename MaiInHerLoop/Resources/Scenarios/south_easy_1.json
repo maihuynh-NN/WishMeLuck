@@ -10,7 +10,7 @@
   "questions": [
     {
       "id": "q1",
-      "text_en": "[Name] rents a room on the 18th floor, where [Name] can sip red wine from the balcony and view the Bitexco Tower. 11pm — you are busy reminiscing your glorious time in Melbourne. A faint smell reaches you. Something chemical, faintly burnt. Could be a neighbor cooking. Could be nothing.",
+      "text_en": "11 pm, [Name] sip red wine from the balcony and view the Bitexco Tower, reminisce your glorious time in Melbourne. A faint smell reaches you, faintly burnt. Could be a neighbor cooking. Could be nothing.",
       "text_vi": "[Name] thuê một căn hộ ấm cúng ở tầng 18, nơi [Name] có thể đứng bên ban công vừa nhâm nhi rượu vang đỏ, vừa nhìn ra tòa nhà Bitexco. 11 giờ đêm, bạn đang hoài niệm về những ngày sung túc ở Melbourne, bỗng một mùi lạ thoảng đến. Một mùi rất hoá chất, hơi khét nhẹ. Có lẽ ai đó rán cá quá lửa, hoặc cuộc đời bạn quá khét.",
       "timer": 25,
       "options": [
@@ -82,28 +82,28 @@
     },
     {
       "id": "q3",
-      "text_en": "Smoke is now visible rising from the stairwell. Perhaps not someone filming a TikTok with that much mist? The hallway is still in silence. You — in your $1,000 bathrobe — are standing next to the elevator. Someone is already pressing the button. The door opens in front of you.",
+      "text_en": "Smoke is now visible rising from the stairwell. The hallway is still in silence. You — in your $1,000 bathrobe — are standing next to the elevator. Someone is already pressing the button, the door opens in front of you.",
       "text_vi": "Khói đã hiện diện rõ từ cầu thang, có lẽ không phải ai đó quay TikTok với nhiều khói như vậy? Nhưng hành lang vẫn im lặng. Bạn, vẫn trong chiếc áo choàng tắm 1.000 đô, đang đứng cạnh thang máy. Hẳn ai đó đã nhấn nút trước, nên cửa thang máy mở ra trước mắt bạn.",
       "timer": 20,
       "options": [
         {
           "id": "q3_a",
-          "text_en": "Might be an overthinker, but take the stairs immediately — my bathrobe looks fine either way",
-          "text_vi": "Có thể là lo xa, nhưng xuống cầu thang ngay thôi. Ao choàng tắm trông vẫn ổn mà",
+          "text_en": "Might be an overthinker, but take the stairs immediately",
+          "text_vi": "Có thể là lo xa, nhưng xuống cầu thang ngay thôi",
           "trait_tag": "risk_recognition",
           "next_question": "q4a"
         },
         {
           "id": "q3_b",
-          "text_en": "Wait — the smoke isn't that bad compared to my life. Just take the elevator to the reception",
-          "text_vi": "Thôi kệ, khói đã tệ bằng cuộc đời mình đâu. Xuống thang máy ra sảnh cho nhanh",
+          "text_en": "The smoke isn't that bad. Elevator to the reception real quick",
+          "text_vi": "Khói đã tệ lắm đâu. Xuống thang máy ra sảnh cho nhanh",
           "trait_tag": "information_first",
           "next_question": "q4b"
         },
         {
           "id": "q3_c",
-          "text_en": "Go back to your room and start packing devices and cash — you still have bills no matter what",
-          "text_vi": "Vội vã vào phòng thu dọn giấy tờ và đồ điện tử, dù thế nào hóa đơn vẫn phải trả",
+          "text_en": "Start packing devices and cash, you still have bills no matter what",
+          "text_vi": "Thu dọn giấy tờ và đồ điện tử, dù thế nào hóa đơn vẫn phải trả",
           "trait_tag": "self_reliance",
           "next_question": "q4a"
         },
@@ -118,7 +118,7 @@
     },
     {
       "id": "q4a",
-      "text_en": "Smoke blankets the stairwell faster than expected. The fire alarm is deafening, people are shouting chaotically, your eyes sting. [Name] is running like an athlete and already reaches the third floor — then an elderly woman falls and blocks your path. She is heavier than she looks. Both of you are two floors from the exit. You clearly hear the fire roar and iron bars collapsing from below.",
+      "text_en": "Suddenly the fire alarm is deafening, people starts shouting chaotically, your eyes gets sting. [Name] run and already reaches the third floor, an elderly woman falls and blocks your path. She is heavier than she looks. You clearly hear the fire roar and iron bars collapsing from behind.",
       "text_vi": "Khói phủ kín cầu thang nhanh hơn dự kiến. Chuông báo cháy chát chúa, mọi người hét loạn xạ, mắt bạn cay xè vì khói. [Name] chạy như một vận động viên và đã đến tầng ba — thì một bà cụ ngã xuống chặn đường bạn. Bà nặng hơn vẻ ngoài. Cả hai còn hai tầng nữa là tới lối ra. Bạn nghe rõ tiếng lửa gầm và thanh sắt sập từ bên dưới.",
       "timer": 20,
       "options": [
