@@ -111,6 +111,6 @@ private struct CardTapStyle: ButtonStyle {
             onSelect: {}
         )
     }
-    .padding()
+    .padding(.top, 20)
     .background(Color("Beige3"))
 }

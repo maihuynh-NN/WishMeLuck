@@ -5,13 +5,13 @@
   "title_en": "The 18th Floor",
   "title_vi": "Tầng 18",
   "intro_en": "In Vietnam, some tube houses or high-rise apartments are built for living, not for escaping.\n\nThe 2023 Khương Hạ apartment fire in Hanoi killed 56 people in one building. The 2024 Trung Kính fire killed 14. These happen multiple times per year and the death toll per incident is high specifically because of architectural trapping.\n\n[Name] rents on the 18th floor. On a regular Tuesday night, [Name]'s mind drifts to the idea of starting your life from scratch, and chasing million-dollar investments in Vietnam.",
-  "intro_vi": "Ở Việt Nam, một số nhà ống hay chung cư cao tầng được xây để ở, không phải để thoát hiểm.\n\nVụ cháy chung cư Khương Hạ năm 2023 tại Hà Nội khiến 56 người thiệt mạng trong một tòa nhà. Vụ cháy Trung Kính năm 2024 cướp đi 14 sinh mạng. Những vụ như thế này xảy ra nhiều lần mỗi năm, và số người chết cao đặc biệt vì kiến trúc bẫy người.\n\n[Name] thuê căn hộ tầng 18. Vào một tối thứ Ba bình thường, [Name] đang mơ về việc làm lại từ đầu và theo đuổi những khoản đầu tư triệu đô ở Việt Nam.",
+  "intro_vi": "Ở Việt Nam, một số nhà ống hay chung cư cao tầng được xây để ở, không phải để thoát hiểm.\n\nVụ cháy chung cư Khương Hạ năm 2023 tại Hà Nội khiến 56 người thiệt mạng trong một tòa nhà. Vụ cháy Trung Kính năm 2024 cướp đi 14 sinh mạng. Những vụ như thế này xảy ra nhiều lần mỗi năm, và số người chết cao vì kiến trúc bẫy người.\n\n[Name] thuê căn hộ tầng 18. Vào một tối thứ Ba bình thường, [Name] đang mơ về việc làm lại từ đầu và theo đuổi những khoản đầu tư triệu đô ở Việt Nam.",
   "start_question": "q1",
   "questions": [
     {
       "id": "q1",
-      "text_en": "[Name] rents a cozy apartment on the 18th floor, where you can sip red wine from the balcony and view the Bitexco Tower. 11pm — you are busy reminiscing your glorious time in Melbourne. A faint smell reaches you. Something chemical, faintly burnt. Could be a neighbor cooking. Could be nothing.",
-      "text_vi": "[Name] thuê một căn hộ ấm cúng ở tầng 18, nơi bạn có thể nhâm nhi rượu vang đỏ trên ban công nhìn ra tòa nhà Bitexco. 11 giờ đêm — bạn đang mải hoài niệm về những ngày huy hoàng ở Melbourne. Một mùi lạ thoang thoảng đến. Hóa chất gì đó, khét nhẹ. Có thể hàng xóm đang nấu ăn. Có thể chẳng là gì.",
+      "text_en": "[Name] rents a room on the 18th floor, where [Name] can sip red wine from the balcony and view the Bitexco Tower. 11pm — you are busy reminiscing your glorious time in Melbourne. A faint smell reaches you. Something chemical, faintly burnt. Could be a neighbor cooking. Could be nothing.",
+      "text_vi": "[Name] thuê một căn hộ ấm cúng ở tầng 18, nơi [Name] có thể đứng bên ban công vừa nhâm nhi rượu vang đỏ, vừa nhìn ra tòa nhà Bitexco. 11 giờ đêm, bạn đang hoài niệm về những ngày sung túc ở Melbourne, bỗng một mùi lạ thoảng đến. Một mùi rất hoá chất, hơi khét nhẹ. Có lẽ ai đó rán cá quá lửa, hoặc cuộc đời bạn quá khét.",
       "timer": 25,
       "options": [
         {
@@ -31,7 +31,7 @@
         {
           "id": "q1_c",
           "text_en": "Ignore it and keep reminiscing your glorious time nostalgically",
-          "text_vi": "Bỏ qua và tiếp tục hoài niệm về quá khứ huy hoàng",
+          "text_vi": "Khẽ khép bờ mi, tiếp tục đắm chìm trong dòng chảy huy hoàng",
           "trait_tag": "self_reliance",
           "next_question": "q2"
         },
@@ -47,7 +47,7 @@
     {
       "id": "q2",
       "text_en": "You decide to check the hallway. An atmospheric mist fills at ankle level — maybe someone is filming a TikTok trend? From the stairwell, you hear someone shouting one floor below.",
-      "text_vi": "Bạn quyết định ra hành lang kiểm tra. Một lớp sương mỏng đang lan ở tầm mắt cá chân — có thể ai đó đang quay TikTok trend? Từ cầu thang, bạn nghe tiếng ai đó la hét ở tầng dưới.",
+      "text_vi": "Bạn quyết định ra hành lang kiểm tra. Một lớp sương mỏng đang lan ở tầm mắt cá chân — có thể ai đó đang quay TikTok trend? Từ cầu thang, bạn nghe tiếng ai đó hô hào ở tầng dưới.",
       "timer": 25,
       "options": [
         {
@@ -67,14 +67,14 @@
         {
           "id": "q2_c",
           "text_en": "Start banging on doors on your floor to warn neighbors",
-          "text_vi": "Bắt đầu đập cửa các phòng trên tầng để cảnh báo hàng xóm",
+          "text_vi": "Bắt đầu đập cửa các phòng cùng tầng để cảnh báo hàng xóm",
           "trait_tag": "immediate_action",
           "next_question": "q3"
         },
         {
           "id": "q2_d",
           "text_en": "It's a sign from the universe — grab your bag and prepare to leave",
-          "text_vi": "Đây là dấu hiệu từ vũ trụ — lấy túi và chuẩn bị rời đi",
+          "text_vi": "Đây là tín hiệu từ vũ trụ, bạn quay vào phòng và soạn vật dụng để phòng hờ",
           "trait_tag": "self_reliance",
           "next_question": "q3"
         }
@@ -83,34 +83,34 @@
     {
       "id": "q3",
       "text_en": "Smoke is now visible rising from the stairwell. Perhaps not someone filming a TikTok with that much mist? The hallway is still in silence. You — in your $1,000 bathrobe — are standing next to the elevator. Someone is already pressing the button. The door opens in front of you.",
-      "text_vi": "Khói đã nhìn thấy rõ từ cầu thang. Có lẽ không phải ai đó quay TikTok với nhiều khói đến vậy? Hành lang vẫn im lặng. Bạn — trong chiếc áo choàng tắm trị giá 1.000 đô — đứng cạnh thang máy. Ai đó đã nhấn nút. Cửa thang máy mở ra trước mặt bạn.",
+      "text_vi": "Khói đã hiện diện rõ từ cầu thang, có lẽ không phải ai đó quay TikTok với nhiều khói như vậy? Nhưng hành lang vẫn im lặng. Bạn, vẫn trong chiếc áo choàng tắm 1.000 đô, đang đứng cạnh thang máy. Hẳn ai đó đã nhấn nút trước, nên cửa thang máy mở ra trước mắt bạn.",
       "timer": 20,
       "options": [
         {
           "id": "q3_a",
           "text_en": "Might be an overthinker, but take the stairs immediately — my bathrobe looks fine either way",
-          "text_vi": "Có thể là lo xa, nhưng xuống cầu thang ngay thôi — áo choàng tắm trông vẫn ổn mà",
+          "text_vi": "Có thể là lo xa, nhưng xuống cầu thang ngay thôi. Ao choàng tắm trông vẫn ổn mà",
           "trait_tag": "risk_recognition",
           "next_question": "q4a"
         },
         {
           "id": "q3_b",
           "text_en": "Wait — the smoke isn't that bad compared to my life. Just take the elevator to the reception",
-          "text_vi": "Thôi kệ — khói chưa tệ bằng cuộc đời mình. Xuống thang máy ra sảnh thôi",
+          "text_vi": "Thôi kệ, khói đã tệ bằng cuộc đời mình đâu. Xuống thang máy ra sảnh cho nhanh",
           "trait_tag": "information_first",
           "next_question": "q4b"
         },
         {
           "id": "q3_c",
           "text_en": "Go back to your room and start packing devices and cash — you still have bills no matter what",
-          "text_vi": "Quay vào phòng thu dọn đồ điện tử và tiền mặt — hóa đơn vẫn phải trả dù thế nào",
+          "text_vi": "Vội vã vào phòng thu dọn giấy tờ và đồ điện tử, dù thế nào hóa đơn vẫn phải trả",
           "trait_tag": "self_reliance",
           "next_question": "q4a"
         },
         {
           "id": "q3_d",
           "text_en": "Spend a few more minutes to observe the phenomenon",
-          "text_vi": "Dành thêm vài phút quan sát hiện tượng này",
+          "text_vi": "Dành thêm vài phút quan sát xung quanh có động tĩnh gì không",
           "trait_tag": "immediate_action",
           "next_question": "q4b"
         }
@@ -119,7 +119,7 @@
     {
       "id": "q4a",
       "text_en": "Smoke blankets the stairwell faster than expected. The fire alarm is deafening, people are shouting chaotically, your eyes sting. [Name] is running like an athlete and already reaches the third floor — then an elderly woman falls and blocks your path. She is heavier than she looks. Both of you are two floors from the exit. You clearly hear the fire roar and iron bars collapsing from below.",
-      "text_vi": "Khói phủ kín cầu thang nhanh hơn dự kiến. Chuông báo cháy chát chúa, mọi người hét loạn xạ, mắt bạn cay xè. [Name] chạy như vận động viên và đã đến tầng ba — thì một bà cụ ngã xuống chặn đường bạn. Bà nặng hơn vẻ ngoài. Cả hai còn hai tầng nữa là tới lối ra. Bạn nghe rõ tiếng lửa gầm và thanh sắt sập từ bên dưới.",
+      "text_vi": "Khói phủ kín cầu thang nhanh hơn dự kiến. Chuông báo cháy chát chúa, mọi người hét loạn xạ, mắt bạn cay xè vì khói. [Name] chạy như một vận động viên và đã đến tầng ba — thì một bà cụ ngã xuống chặn đường bạn. Bà nặng hơn vẻ ngoài. Cả hai còn hai tầng nữa là tới lối ra. Bạn nghe rõ tiếng lửa gầm và thanh sắt sập từ bên dưới.",
       "timer": 20,
       "options": [
         {
@@ -191,7 +191,7 @@
     {
       "id": "q5",
       "text_en": "[Name] makes it outside — a third life earned, though you look like a burning toast. The street is chaos: residents, fire trucks, and reporters pushing through the crowd. Your phone is at 11%. You don't see two of your neighbors from your floor — the ones who shared a bowl of phở with you on your first day in Vietnam.",
-      "text_vi": "[Name] thoát ra ngoài được — thêm một mạng nữa, dù trông bạn như cái bánh mì cháy. Ngoài đường hỗn loạn: cư dân, xe cứu hỏa, phóng viên chen nhau. Điện thoại còn 11%. Bạn không thấy hai người hàng xóm cùng tầng — những người đã mời bạn một tô phở ngày đầu tiên đến Việt Nam.",
+      "text_vi": "[Name] thoát ra ngoài được — thêm một mạng nữa, dù trông bạn như cái bánh mì cháy. Ngoài đường hỗn loạn: cư dân, xe cứu hỏa, phóng viên chen nhau. Điện thoại còn 11%. Bạn giật mình vì chưa thấy hai hàng xóm 'cốt' cùng tầng — những người đã mời bạn tô phở ấm nóng vào ngày đầu tiên bạn dọn đến chung cư.",
       "timer": 20,
       "options": [
         {
@@ -227,7 +227,7 @@
     {
       "id": "q6",
       "text_en": "One of your neighbors made it out. The other didn't. Firefighters are telling everyone to move back. Your phone dies — because you were scrolling Facebook trying to spot yourself in someone else's footage. A stranger hands you their phone: 'Call whoever you need to.' You have 30 seconds before they need it back.",
-      "text_vi": "Một trong hai hàng xóm của bạn đã ra được. Người còn lại thì không. Lính cứu hỏa yêu cầu mọi người lùi ra. Điện thoại bạn chết — vì bạn đang lướt Facebook tìm mình trong video của người khác. Một người lạ đưa điện thoại cho bạn: 'Gọi cho ai cần gọi đi.' Bạn có 30 giây trước khi họ cần lại.",
+      "text_vi": "Một trong hai hàng xóm của bạn đã ra được. Người còn lại thì không. Lính cứu hỏa yêu cầu mọi người lùi ra. Điện thoại bạn hết pin, vì bạn mãi lướt Facebook để hóng mình trong video của người khác. Một người lạ bí ẩn đưa điện thoại cho bạn: 'Gọi cho ai cần gọi đi.' Bạn có 30 giây trước khi vị bụt này cần lại.",
       "timer": 15,
       "options": [
         {
@@ -264,7 +264,7 @@
       "id": "q7a",
       "text_en": "The firefighters have the room number. They go back in. You stand outside in the crowd, not knowing. The building is still burning on lower floors. Around you, people are calling family, crying, sitting on the curb.\n\n[Name] stands alone. The noise fading. With no name to dial.",
       "text_vi": "Lính cứu hỏa đã có số phòng. Họ quay vào. Bạn đứng ngoài đám đông, không biết gì thêm. Tòa nhà vẫn còn cháy ở các tầng dưới. Xung quanh, mọi người đang gọi điện cho gia đình, khóc, ngồi bệt xuống vỉa hè.\n\n[Name] đứng một mình. Tiếng ồn dần tắt. Không có tên nào để gọi.",
-      "timer": 15,
+      "timer": 30,
       "options": [
         {
           "id": "q7a_a",

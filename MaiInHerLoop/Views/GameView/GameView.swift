@@ -9,6 +9,7 @@ struct GameView: View {
     @State private var showOptions = false
     @State private var selectedOptionID: String? = nil
     @State private var currentQuestionID: String = ""
+    @State private var panelHeight: CGFloat = 0
 
     var body: some View {
         GeometryReader { geo in
@@ -75,27 +76,12 @@ struct GameView: View {
         let innerPadding: CGFloat = 16
 
         let doorTop = (geo.size.height - doorHeight) / 2
-
-        // ─── FIXED ANCHORS ─────────────────────────────────────────────────
-        // The arch radius = doorWidth/2. Everything above that Y is the arch.
-        // The flat rectangular body starts at: doorTop + doorWidth/2
-        // We place panels inside the flat rectangular body.
-        let archBottom = doorTop + (doorWidth / 2)   // where the arch ends
-
-        // Question panel: 8pt below where the arch ends
-        let questionPanelTopY = archBottom + 120
-
-        // Options grid: question panel is roughly 90pt tall (dots+divider+text).
-        // Pin options 16pt below that fixed height. Never reacts to actual panel size.
-        let questionPanelReservedHeight: CGFloat = 95
-        let optionGridTopY = questionPanelTopY + questionPanelReservedHeight + 30
+        let archBottom = doorTop + (doorWidth / 2)
+        let questionPanelTopY = archBottom + 70
 
         if let question = engine.currentQuestion {
-            // Door horizontal center
             let doorCenterX = geo.size.width / 2
 
-            // MARK: - QUESTION PANEL
-            
             ZStack(alignment: .top) {
 
                 GameQuestionPanel(
@@ -113,18 +99,23 @@ struct GameView: View {
                 .frame(width: doorWidth)
                 .id(question.id)
                 .offset(y: questionPanelTopY)
+                .background(
+                    GeometryReader { g in
+                        Color.clear
+                            .onAppear { panelHeight = g.size.height }
+                            .onChange(of: g.size.height) { panelHeight = $0 }
+                    }
+                    .offset(y: questionPanelTopY)
+                )
 
-                // MARK: -OPTIONS GRID
                 if showOptions {
                     optionGrid(question: question, innerPadding: innerPadding)
                         .frame(width: doorWidth)
-                        .offset(y: optionGridTopY)
+                        .offset(y: questionPanelTopY + panelHeight + 16)
                         .transition(.opacity.combined(with: .move(edge: .bottom)))
                 }
             }
-            // Full screen frame, centered horizontally
             .frame(width: geo.size.width, height: geo.size.height, alignment: .top)
-            // Shift the ZStack so door center aligns with screen center
             .position(x: doorCenterX, y: geo.size.height / 2)
             .animation(nil, value: showOptions)
 
@@ -222,8 +213,8 @@ struct DoorShape: Shape {
     ]
     let sampleQuestion = Question(
         id: "q1",
-        textEN: "Water is rising fast outside your building. What do you do first?",
-        textVI: "Nước đang dâng nhanh bên ngoài tòa nhà của bạn. Bạn làm gì đầu tiên?",
+        textEN: "Water is rising fast outside your building. What do you do first? Water is rising fast outside your building. What do you do first? Water is rising fast outside your building. What do you do first?",
+        textVI: " Bạn làm gì đầu tiên? Bạn làm gì đầu tiên? Nước đang dâng nhanh bên ngoài tòa nhà của bạn. Bạn làm gì đầu tiên? ",
         timer: 25, options: sampleOptions
     )
     let sampleScenario = Scenario(
