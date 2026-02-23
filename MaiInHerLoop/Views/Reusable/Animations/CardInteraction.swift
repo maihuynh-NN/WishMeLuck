@@ -6,16 +6,22 @@
 //
 import SwiftUI
 
+// MARK: - Staggered Appear
 struct StaggeredAppearModifier: ViewModifier {
     let delay: Double
     @State private var opacity: Double = 0
     @State private var yOffset: CGFloat = 20
-    
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+
     func body(content: Content) -> some View {
         content
             .opacity(opacity)
-            .offset(y: yOffset)
+            .offset(y: reduceMotion ? 0 : yOffset)
             .onAppear {
+                if reduceMotion {
+                    opacity = 1.0
+                    return
+                }
                 DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
                     withAnimation(.easeOut(duration: 0.6)) {
                         opacity = 1.0
@@ -26,36 +32,34 @@ struct StaggeredAppearModifier: ViewModifier {
     }
 }
 
-struct CardSelectModifier: ViewModifier {
-    @State private var bounceScale: CGFloat = 1.0
-    
-    func body(content: Content) -> some View {
-        content
-            .scaleEffect(bounceScale)
-            .onTapGesture {
-                withAnimation(.easeOut(duration: 0.15)) {
-                    bounceScale = 0.8
-                }
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                    withAnimation(.easeOut(duration: 0.25)) {
-                        bounceScale = 1.0
-                    }
-                }
-            }
+// MARK: - Card Select (ButtonStyle — replaces onTapGesture version)
+struct CardSelectStyle: ButtonStyle {
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .scaleEffect(configuration.isPressed && !reduceMotion ? 0.95 : 1.0)
+            .animation(.easeOut(duration: 0.15), value: configuration.isPressed)
     }
 }
 
+// MARK: - Card Submit
 struct CardSubmitModifier: ViewModifier {
     @State private var isSubmitted = false
-    
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+
     func body(content: Content) -> some View {
         content
-            .scaleEffect(isSubmitted ? 0.95 : 1.0)
+            .scaleEffect(isSubmitted && !reduceMotion ? 0.95 : 1.0)
             .background(
-                Color("Background")
+                Color("Beige")
                     .opacity(isSubmitted ? 1.0 : 0)
             )
             .onAppear {
+                guard !reduceMotion else {
+                    isSubmitted = true
+                    return
+                }
                 withAnimation(AppAnimations.cardSubmit) {
                     isSubmitted = true
                 }
@@ -63,21 +67,16 @@ struct CardSubmitModifier: ViewModifier {
     }
 }
 
+// MARK: - View Extensions
 extension View {
-    // Card/Interactive
-    func cardSelect() -> some View {
-        modifier(CardSelectModifier())
-    }
-    
     func cardSubmit() -> some View {
         modifier(CardSubmitModifier())
     }
-    
+
     func staggeredAppear(delay: Double) -> some View {
         modifier(StaggeredAppearModifier(delay: delay))
     }
 }
-
 
 // MARK: - Preview for Custom Modifiers
 struct CustomModifiersPreview: View {

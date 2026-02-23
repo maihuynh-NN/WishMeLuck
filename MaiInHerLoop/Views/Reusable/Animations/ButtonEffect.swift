@@ -8,12 +8,14 @@ import SwiftUI
 
 struct EmergencyPulseModifier: ViewModifier {
     @State private var isPulsing = false
-    
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+
     func body(content: Content) -> some View {
         content
             .scaleEffect(isPulsing ? 1.05 : 1.0)
             .opacity(isPulsing ? 0.7 : 1.0)
             .onAppear {
+                guard !reduceMotion else { return }
                 withAnimation(AppAnimations.emergencyPulse) {
                     isPulsing = true
                 }
@@ -23,11 +25,13 @@ struct EmergencyPulseModifier: ViewModifier {
 
 struct WarningFlashModifier: ViewModifier {
     @State private var isFlashing = false
-    
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+
     func body(content: Content) -> some View {
         content
             .foregroundColor(isFlashing ? .orange : .yellow)
             .onAppear {
+                guard !reduceMotion else { return }
                 withAnimation(AppAnimations.warningFlash) {
                     isFlashing = true
                 }
@@ -36,15 +40,13 @@ struct WarningFlashModifier: ViewModifier {
 }
 
 extension View {
-    // Emergency/Alert
     func emergencyPulse() -> some View {
         modifier(EmergencyPulseModifier())
     }
-    
+
     func warningFlash() -> some View {
         modifier(WarningFlashModifier())
     }
-    
 }
 
 // MARK: - Button Effect Preview
