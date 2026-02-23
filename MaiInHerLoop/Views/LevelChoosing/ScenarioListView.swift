@@ -176,7 +176,7 @@ struct ScenarioListView: View {
                         }
                     }
                     .customedBorder(
-                        borderShape: "panel-border-030",
+                        borderShape: "panel-border-028",
                         borderColor: Color("Gold3"),
                         buttonType: .customed(width: panelWidth, height: panelHeight)
                     )
