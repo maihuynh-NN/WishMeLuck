@@ -14,7 +14,7 @@ struct ScenarioListView: View {
     @Environment(\.dismiss) private var dismiss
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
-    @State private var scenarios: [Scenario]
+    @State private var scenarios: [Scenario] = []
     @State private var headerPulse = false
     @State private var completedIDs: Set<String> = []
     @State private var navigateToDiary = false
@@ -68,17 +68,10 @@ struct ScenarioListView: View {
 
                     // MARK: - Header
                     VStack(spacing: 12) {
-                        // Decorative bar — hidden from VoiceOver
-                        HStack(spacing: 4) {
-                            ForEach(0..<7, id: \.self) { _ in
-                                Rectangle()
-                                    .fill(Color("Red3").opacity(0.7))
-                                    .frame(width: 3, height: 12)
-                            }
-                        }
-                        .accessibilityHidden(true)
-                        .chronicleFade()
-                        .padding(.top, 24)
+                        // Rule 2: decorative → accessibilityHidden. Uses reusable BarRow.
+                        BarRow(color: Color("Red3").opacity(0.7))
+                            .chronicleFade()
+                            .padding(.top, 24)
 
                         Text("scenariolist.header".lkey)
                             .font(.system(.caption2, design: .monospaced).weight(.bold))
@@ -93,16 +86,12 @@ struct ScenarioListView: View {
                             .tracking(2)
                             .opacity(headerPulse ? 1.0 : 0.85)
                             .chronicleFade()
+                            .accessibilityAddTraits(.isHeader)      // Rule 2: screen title
 
-                        // Decorative divider — hidden from VoiceOver
-                        HStack {
-                            Rectangle().fill(Color("Red3").opacity(0.6)).frame(height: 1)
-                            Text("∎").font(.system(size: 8)).foregroundColor(Color("Red3"))
-                            Rectangle().fill(Color("Red3").opacity(0.6)).frame(height: 1)
-                        }
-                        .padding(.horizontal, 50)
-                        .chronicleFade()
-                        .accessibilityHidden(true)
+                        // Uses reusable SquareDivider
+                        SquareDivider(color: Color("Red3"))
+                            .padding(.horizontal, 50)
+                            .chronicleFade()
 
                         Text("scenariolist.subheader".lkey)
                             .font(.system(.caption2, design: .monospaced).weight(.light))
@@ -114,9 +103,12 @@ struct ScenarioListView: View {
                     .padding(.bottom, 30)
 
                     // MARK: - Mission board panel
-                    // Width adapts to screen: 92% of screen width, capped at 400
-                    let panelWidth = min(geo.size.width * 0.92, 400)
-                    let panelHeight: CGFloat = 260
+                    let isIPad = UIDevice.current.userInterfaceIdiom == .pad
+                    let panelWidth = isIPad ? geo.size.width * 0.60 : geo.size.width * 0.8
+                    let panelHeight: CGFloat = 380
+
+                    let cardSquare: CGFloat = 50
+                    let computedCardSize = ComponentSize.customed(width: cardSquare, height: cardSquare)
 
                     CustomPanel(
                         backgroundColor: Color("Beige3").opacity(0.6),
@@ -132,9 +124,8 @@ struct ScenarioListView: View {
                                         BlindBoxCard(
                                             index: index,
                                             isCompleted: completedIDs.contains(scenario.id),
-                                            onTap: {
-                                                activeScenarioIndex = index
-                                            }
+                                            onTap: { activeScenarioIndex = index },
+                                            cardSize: computedCardSize
                                         )
                                         .staggeredAppear(delay: reduceMotion ? 0 : Double(index) * 0.12)
                                     }
@@ -146,9 +137,8 @@ struct ScenarioListView: View {
                                         BlindBoxCard(
                                             index: index + 3,
                                             isCompleted: completedIDs.contains(scenario.id),
-                                            onTap: {
-                                                activeScenarioIndex = index + 3
-                                            }
+                                            onTap: { activeScenarioIndex = index + 3 },
+                                            cardSize: computedCardSize
                                         )
                                         .staggeredAppear(delay: reduceMotion ? 0 : Double(index + 3) * 0.12)
                                     }
@@ -157,30 +147,29 @@ struct ScenarioListView: View {
 
                             Spacer()
 
-                            // ── Coming soon footer ─────────────────────────
+                            // Coming soon footer — purely decorative
                             VStack(spacing: 6) {
                                 Rectangle()
-                                    .fill(Color("Gold3").opacity(0.35))
+                                    .fill(Color("Red3").opacity(0.35))
                                     .frame(height: 0.5)
-                                    .padding(.horizontal, 20)
+                                    .padding(.horizontal, 60)
                                     .accessibilityHidden(true)
 
                                 Text("· more scenarios coming soon ·")
                                     .font(.system(.caption2, design: .monospaced).weight(.light))
-                                    .foregroundColor(Color("Gold3").opacity(0.5))
+                                    .foregroundColor(Color("Red3").opacity(0.5))
                                     .tracking(1)
                                     .italic()
-                                    .accessibilityHidden(true) // not actionable info
+                                    .accessibilityHidden(true)
                             }
                             .padding(.bottom, 12)
                         }
                     }
                     .customedBorder(
-                        borderShape: "panel-border-028",
+                        borderShape: "panel-border-030",
                         borderColor: Color("Gold3"),
                         buttonType: .customed(width: panelWidth, height: panelHeight)
                     )
-                    // Accessibility group: the whole board described as a unit
                     .accessibilityElement(children: .contain)
                     .accessibilityLabel("Mission board for \(regionDisplayName)")
 
@@ -188,16 +177,9 @@ struct ScenarioListView: View {
 
                     // MARK: - Bottom actions
                     VStack(spacing: 14) {
-                        // Decorative dots — hidden from VoiceOver
-                        HStack(spacing: 6) {
-                            ForEach(0..<9, id: \.self) { _ in
-                                Circle()
-                                    .fill(Color("Red3"))
-                                    .frame(width: 3, height: 3)
-                            }
-                        }
-                        .accessibilityHidden(true)
-                        .chronicleFade()
+                        // Uses reusable DotRow
+                        DotRow(color: Color("Red3"))
+                            .chronicleFade()
 
                         NavigationLink(destination: DiaryListView(), isActive: $navigateToDiary) {
                             EmptyView()
@@ -218,12 +200,15 @@ struct ScenarioListView: View {
                             buttonType: .mainButton
                         )
 
+                        // Rule 1: 44×44 tap target on text-only button
                         Button(action: { dismiss() }) {
                             Text("scenariolist.back".lkey)
                                 .font(.system(.caption2, design: .monospaced).weight(.light))
                                 .foregroundColor(Color("Moss").opacity(0.55))
                                 .tracking(0.5)
                                 .underline()
+                                .frame(minWidth: 44, minHeight: 44)
+                                .contentShape(Rectangle())
                         }
                         .accessibilityLabel("Go back")
                         .accessibilityHint("Return to region selection")
@@ -234,7 +219,7 @@ struct ScenarioListView: View {
         }
         .navigationBarHidden(true)
         .onAppear {
-            guard !reduceMotion else { return }
+            guard !reduceMotion else { return }                     // Rule 6
             withAnimation(Animation.easeInOut(duration: 2.0).repeatForever(autoreverses: true)) {
                 headerPulse = true
             }

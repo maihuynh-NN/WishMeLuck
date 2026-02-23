@@ -130,7 +130,6 @@ struct RegionSelectionView: View {
                             
                         }
                         .customedBorder(borderShape: "panel-border-003", borderColor: Color("Gold3"), buttonType: .mainButton)
-                        //.emergencyPulse()
                     }
                 
                 Spacer()
@@ -156,10 +155,6 @@ struct RegionSelectionView: View {
             )
         }
         .onAppear {
-            withAnimation(Animation.easeInOut(duration: 2.0).repeatForever(autoreverses: true)) {
-                headerPulse = true
-            }
-            
             withAnimation(.easeIn(duration: 1.2).delay(0.5)) {
                 textOpacity = 1.0
             }

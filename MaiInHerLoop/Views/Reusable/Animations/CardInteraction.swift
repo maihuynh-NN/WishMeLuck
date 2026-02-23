@@ -167,39 +167,13 @@ struct CustomModifiersPreview: View {
                         .font(.title2)
                         .fontWeight(.semibold)
                         .padding(.horizontal)
-                    
+
                     Text("Tap to see bounce effect")
                         .font(.caption)
                         .foregroundColor(.secondary)
                         .padding(.horizontal)
-                    
-                    HStack(spacing: 16) {
-                        ForEach(0..<2) { index in
-                            VStack {
-                                Image(systemName: index == 0 ? "star.fill" : "heart.fill")
-                                    .font(.system(size: 40))
-                                    .foregroundColor(.white)
-                                Text("Option \(index + 1)")
-                                    .font(.headline)
-                                    .foregroundColor(.white)
-                            }
-                            .frame(maxWidth: .infinity)
-                            .padding(.vertical, 40)
-                            .background(
-                                LinearGradient(
-                                    colors: [
-                                        index == 0 ? Color.orange : Color.pink,
-                                        index == 0 ? Color.red : Color.purple
-                                    ],
-                                    startPoint: .topLeading,
-                                    endPoint: .bottomTrailing
-                                )
-                            )
-                            .cornerRadius(16)
-                            .cardSelect()
-                        }
-                    }
-                    .padding(.horizontal)
+
+                    cardSelectCards
                 }
                 
                 Spacer(minLength: 40)
@@ -242,7 +216,7 @@ struct CustomModifiersPreview: View {
                 Image(systemName: "checkmark.circle.fill")
                     .font(.title)
                     .foregroundColor(.green)
-                
+
                 VStack(alignment: .leading) {
                     Text("Submission Complete")
                         .font(.headline)
@@ -250,7 +224,7 @@ struct CustomModifiersPreview: View {
                         .font(.caption)
                         .foregroundColor(.secondary)
                 }
-                
+
                 Spacer()
             }
             .padding()
@@ -260,6 +234,40 @@ struct CustomModifiersPreview: View {
         }
         .padding(.horizontal)
         .cardSubmit()
+    }
+
+    private var cardSelectCards: some View {
+        let options: [(icon: String, colors: (Color, Color))] = [
+            ("star.fill", (Color.orange, Color.red)),
+            ("heart.fill", (Color.pink, Color.purple))
+        ]
+        return HStack(spacing: 16) {
+            ForEach(options.indices, id: \.self) { index in
+                let item = options[index]
+                Button(action: {}) {
+                    VStack {
+                        Image(systemName: item.icon)
+                            .font(.system(size: 40))
+                            .foregroundColor(.white)
+                        Text("Option \(index + 1)")
+                            .font(.headline)
+                            .foregroundColor(.white)
+                    }
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, 40)
+                    .background(
+                        LinearGradient(
+                            colors: [item.colors.0, item.colors.1],
+                            startPoint: .topLeading,
+                            endPoint: .bottomTrailing
+                        )
+                    )
+                    .cornerRadius(16)
+                }
+                .buttonStyle(CardSelectStyle())
+            }
+        }
+        .padding(.horizontal)
     }
 }
 

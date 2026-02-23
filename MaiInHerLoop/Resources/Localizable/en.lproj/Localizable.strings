@@ -86,3 +86,6 @@
 "scenariolist.region.south" = "South";
 "scenariolist.region.central" = "Central";
 "scenariolist.region.north" = "North";
+
+"mission.classified" = "Not Done";
+"mission.responded" = "Done";
