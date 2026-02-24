@@ -15,37 +15,9 @@
 		D3AC34C72F35FD2B008CE481 /* DiaryModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DiaryModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		9603FC202F4625D0001B85B8 /* Exceptions for "MaiInHerLoop" folder in "MaiInHerLoop" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Resources/Scenarios/central_easy_5.json,
-				Resources/Scenarios/north_easy_4.json,
-				Resources/Scenarios/north_easy_5.json,
-			);
-			target = D3379A252F335FD70044E4D3 /* MaiInHerLoop */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
-		9603FC212F4625D0001B85B8 /* Exceptions for "MaiInHerLoop" folder in "Compile Sources" phase from "MaiInHerLoop" target */ = {
-			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
-			buildPhase = D3379A222F335FD70044E4D3 /* Sources */;
-			membershipExceptions = (
-				Resources/Scenarios/central_easy_5.json,
-				Resources/Scenarios/north_easy_4.json,
-				Resources/Scenarios/north_easy_5.json,
-			);
-		};
-/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
-
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		D3379A282F335FD70044E4D3 /* MaiInHerLoop */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				9603FC202F4625D0001B85B8 /* Exceptions for "MaiInHerLoop" folder in "MaiInHerLoop" target */,
-				9603FC212F4625D0001B85B8 /* Exceptions for "MaiInHerLoop" folder in "Compile Sources" phase from "MaiInHerLoop" target */,
-			);
 			path = MaiInHerLoop;
 			sourceTree = "<group>";
 		};

@@ -14,10 +14,16 @@ struct MissionBriefingOverlay: View {
     let onRetreat: () -> Void
 
     @AppStorage("selectedLanguage") private var language = "en"
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+
     @State private var pulseAnimation = false
-    @State private var textOpacity = 0.0
-    @State private var borderPulse = false
-    @State private var showTypewriter = false
+    @State private var borderPulse    = false
+
+    // MARK: - Responsive sizing (same pattern as ComponentSize.swift)
+    private var isIPad: Bool { UIDevice.current.userInterfaceIdiom == .pad }
+    private var panelWidth:  CGFloat { isIPad ? 480 : 340 }
+    private var panelHeight: CGFloat { isIPad ? 640 : 520 }
+    private var hPad:        CGFloat { isIPad ? 35 : 30 }
 
     private var title: String {
         language == "vi" ? scenario.titleVI : scenario.titleEN
@@ -26,172 +32,169 @@ struct MissionBriefingOverlay: View {
         language == "vi" ? scenario.introVI : scenario.introEN
     }
 
+    // MARK: - Body
+
     var body: some View {
         ZStack {
-            // Dimmed background — no tap dismiss
-            Color("Moss").opacity(0.6)
+            Color(.black).opacity(0.7)
                 .ignoresSafeArea(.all)
+                .accessibilityHidden(true)
 
             CustomPanel(
                 backgroundColor: Color.clear,
-                size: .customed(width: 340, height: 480)
+                size: .customed(width: panelWidth, height: panelHeight)
             ) {
                 ZStack {
-                    // Panel fill
                     RoundedRectangle(cornerRadius: 12)
-                        .fill(Color("Gold"))
-                        .frame(width: 335, height: 475)
+                        .fill(Color("Beige3"))
+                        .frame(width: panelWidth - 5, height: panelHeight - 5)
+                        .accessibilityHidden(true)
 
                     VStack(spacing: 0) {
 
                         // MARK: - Header
                         VStack(spacing: 8) {
-                            HStack(spacing: 4) {
-                                ForEach(0..<7, id: \.self) { _ in
-                                    Rectangle()
-                                        .fill(Color("Moss").opacity(0.7))
-                                        .frame(width: 3, height: 12)
-                                }
-                            }
-                            .opacity(textOpacity)
-                            .padding(.top, 5)
+                            // Patterns2: BarRow
+                            BarRow(color: Color("Red3"))
+                                .chronicleFade()
+                                .padding(.top, 10)
 
-                            Text("dispatch.incoming".localized)
-                                .font(.system(size: 18, weight: .black, design: .monospaced))
+                            Text(title)
+                                .font(.system(.title3, design: .monospaced).weight(.black))
                                 .foregroundColor(Color("Moss"))
                                 .multilineTextAlignment(.center)
                                 .tracking(1.5)
                                 .opacity(pulseAnimation ? 1.0 : 0.8)
-                                .padding(.horizontal, 10)
+                                .accessibilityAddTraits(.isHeader)
+                                .padding(.top, 10)
 
-                            HStack {
-                                Rectangle()
-                                    .fill(Color("Moss").opacity(0.6))
-                                    .frame(height: 1)
-                                Text("∎")
-                                    .font(.system(size: 8))
-                                    .foregroundColor(Color("Moss"))
-                                Rectangle()
-                                    .fill(Color("Moss").opacity(0.6))
-                                    .frame(height: 1)
-                            }
-                            .padding(.horizontal, 60)
+                            // Patterns2: SquareDivider
+                            SquareDivider(color: Color("Red3"))
+                                .padding(.horizontal, isIPad ? 100 : 60)
                         }
                         .padding(.top, 20)
                         .padding(.bottom, 16)
+                        .chronicleFade()
 
-                        // MARK: - Mission number + reveal label
-                        VStack(spacing: 6) {
-                            HStack {
-                                VStack(alignment: .leading, spacing: 4) {
-                                    Text(String(format: "MISSION %02d", missionIndex + 1))
-                                        .font(.system(size: 16, weight: .black, design: .monospaced))
-                                        .foregroundColor(Color("Moss"))
+                        // MARK: - Threat Level Row (label + bars on same line)
+                        HStack(alignment: .center, spacing: 8) {
+                            Text("threat.level".localized)
+                                .font(.system(.callout, design: .monospaced).weight(.black))
+                                .foregroundColor(Color("Red3"))
+                                .fixedSize(horizontal: true, vertical: false)
 
-                                    Text("dispatch.classified_revealed".localized)
-                                        .font(.system(size: 9, weight: .medium, design: .monospaced))
-                                        .foregroundColor(Color("Moss").opacity(0.55))
-                                        .tracking(0.5)
-                                }
+                            Spacer()
 
-                                Spacer()
-
-                                // Threat bar visual — 5 bars, all filled (disaster = max urgency)
-                                HStack(spacing: 3) {
-                                    ForEach(1...5, id: \.self) { _ in
-                                        Rectangle()
-                                            .fill(Color("Moss"))
-                                            .frame(width: 10, height: 18)
-                                            .scaleEffect(pulseAnimation ? 1.05 : 1.0)
-                                    }
+                            HStack(spacing: 4) {
+                                ForEach(1...5, id: \.self) { level in
+                                    let filled = level <= scenario.danger
+                                    Rectangle()
+                                        .fill(filled ? Color("Red3").opacity(0.8) : Color("Red3").opacity(0.5))
+                                        .frame(width: isIPad ? 14 : 10, height: isIPad ? 22 : 18)
+                                        .overlay(
+                                            Rectangle()
+                                                .stroke(Color("Red3").opacity(0.5), lineWidth: 1.5)
+                                        )
+                                        .scaleEffect(pulseAnimation && filled ? 1.08 : 1.0)
                                 }
                             }
-                            .padding(.horizontal, 25)
-                            .padding(.bottom, 3)
-                        }
-
-                        // MARK: - Revealed title
-                        VStack(alignment: .leading, spacing: 10) {
-                            if showTypewriter {
-                                Text("")
-                                    .typewriter(title, speed: 0.045)
-                                    .font(.system(size: 15, weight: .black, design: .monospaced))
-                                    .foregroundColor(Color("Moss"))
-                                    .lineLimit(2)
-                                    .multilineTextAlignment(.leading)
-                            }
-
-                            // Intro scrollable box
-                            ScrollView {
-                                VStack(alignment: .leading, spacing: 10) {
-                                    if showTypewriter {
-                                        Text("")
-                                            .typewriter(intro, speed: 0.025)
-                                            .font(.system(size: 11, weight: .medium))
-                                            .foregroundColor(Color("Moss").opacity(0.8))
-                                            .lineSpacing(3)
-                                            .multilineTextAlignment(.leading)
-                                    }
-                                }
-                                .padding(10)
-                            }
-                            .frame(height: 90)
-                            .background(
-                                RoundedRectangle(cornerRadius: 8)
-                                    .fill(Color("Moss").opacity(0.06))
-                                    .overlay(
-                                        RoundedRectangle(cornerRadius: 8)
-                                            .stroke(Color("Moss").opacity(borderPulse ? 0.5 : 0.25), lineWidth: 1.5)
-                                    )
+                            .accessibilityElement(children: .ignore)
+                            .accessibilityLabel(
+                                String(
+                                    format: NSLocalizedString("threat.level.accessibility", comment: ""),
+                                    scenario.danger, 5
+                                )
                             )
                         }
-                        .padding(.horizontal, 20)
-                        .padding(.bottom, 10)
+                        .padding(.horizontal, hPad)
+                        .padding(.bottom, 15)
+                        .chronicleFade()
 
-                        Spacer(minLength: 12)
+
+                        // MARK: - Scenario title (static, no typewriter)
+                        Text("dispatch.incoming".localized)
+                            .font(.system(.subheadline, design: .monospaced))
+                            .foregroundColor(Color("Moss"))
+                            .lineLimit(2)
+                            .multilineTextAlignment(.leading)
+                            .minimumScaleFactor(0.8)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .padding(.horizontal, hPad)
+                            .padding(.bottom, 10)
+                            .chronicleFade()
+
+                        // MARK: - Intro ScrollView (fills remaining space above buttons)
+                        ScrollView(.vertical, showsIndicators: false) {
+                            Text(intro)
+                                .font(.system(.footnote).weight(.medium))
+                                .foregroundColor(Color("Moss"))
+                                .lineSpacing(3)
+                                .multilineTextAlignment(.leading)
+                                .padding(12)
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                        }
+                        .background(
+                            RoundedRectangle(cornerRadius: 8)
+                                .fill(Color("Red3").opacity(0.06))
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 8)
+                                        .stroke(
+                                            Color("Red3").opacity(borderPulse ? 0.5 : 0.25),
+                                            lineWidth: 1.5
+                                        )
+                                )
+                        )
+                        .padding(.horizontal, hPad)
+                        .padding(.bottom, 4)
+                        .chronicleFade()
+
+                        // Scroll hint — decorative, hidden from VoiceOver
+                        Text("dispatch.scroll_guide".lkey)
+                            .font(.system(.caption2).weight(.light))
+                            .foregroundColor(Color("Moss").opacity(0.7))
+                            .padding(.bottom, 10)
+                            .chronicleFade()
+                            .accessibilityHidden(true)
 
                         // MARK: - Actions
-                        VStack(spacing: 12) {
+                        VStack(spacing: 5) {
                             CustomButton(
                                 title: "dispatch.respond".localized,
-                                textColor: Color("Gold"),
-                                buttonColor: Color("Moss")
+                                textColor: Color("Beige3"),
+                                buttonColor: Color("Red3")
                             ) {
                                 onRespond()
                             }
                             .customedBorder(
                                 borderShape: "panel-border-003",
-                                borderColor: Color("Moss"),
+                                borderColor: Color("Gold3"),
                                 buttonType: .mainButton
                             )
                             .scaleEffect(pulseAnimation ? 1.03 : 1.0)
+                            .accessibilityLabel("dispatch.respond".localized)
+                            .accessibilityHint("dispatch.ready_prompt".localized)
 
-                            VStack(spacing: 4) {
-                                Text("dispatch.ready_prompt".lkey)
-                                    .font(.system(size: 9, weight: .medium))
-                                    .foregroundColor(Color("Moss").opacity(0.7))
-                                    .italic()
-
-                                Text("dispatch.decisions_await".lkey)
-                                    .font(.system(size: 8, weight: .light))
-                                    .foregroundColor(Color("Moss").opacity(0.5))
+                            CustomButton(
+                                title: "dispatch.not_ready".localized,
+                                textColor: Color("Beige3"),
+                                buttonColor: Color("Moss")
+                            ) {
+                                onRetreat()
                             }
-                            .opacity(textOpacity)
-
-                            Button(action: onRetreat) {
-                                Text("dispatch.not_ready".lkey)
-                                    .font(.system(size: 11, weight: .light, design: .monospaced))
-                                    .foregroundColor(Color("Moss").opacity(0.6))
-                                    .tracking(0.5)
-                                    .underline()
-                            }
+                            .customedBorder(
+                                borderShape: "panel-border-003",
+                                borderColor: Color("Gold3"),
+                                buttonType: .mainButton
+                            )
+                            .accessibilityLabel("dispatch.not_ready".localized)
+                            .accessibilityHint("dispatch.retreat_hint".localized)
                         }
-                        .padding(.top, 3)
-                        .padding(.bottom, 20)
+                        .chronicleFade()
+                        .padding(.bottom, 25)
                     }
                     .padding(.horizontal, 15)
 
-                    // MARK: - Corner decorations
+                    // MARK: - Corner decorations (decorative only)
                     VStack {
                         HStack {
                             cornerMark(top: true, left: true)
@@ -206,33 +209,30 @@ struct MissionBriefingOverlay: View {
                         }
                     }
                     .padding(12)
-                    .opacity(textOpacity)
+                    .chronicleFade()
+                    .accessibilityHidden(true)
                 }
             }
             .customedBorder(
                 borderShape: "panel-border-003",
                 borderColor: Color("Moss"),
-                buttonType: .customed(width: 340, height: 480)
+                buttonType: .customed(width: panelWidth, height: panelHeight)
             )
             .overlayAppear()
         }
         .onAppear {
+            guard !reduceMotion else { return }
             withAnimation(Animation.easeInOut(duration: 1.8).repeatForever(autoreverses: true)) {
                 pulseAnimation = true
             }
             withAnimation(Animation.easeInOut(duration: 2.2).repeatForever(autoreverses: true).delay(0.3)) {
                 borderPulse = true
             }
-            withAnimation(.easeIn(duration: 1.0).delay(0.4)) {
-                textOpacity = 1.0
-            }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
-                showTypewriter = true
-            }
         }
     }
 
-    // MARK: - Corner decoration
+    // MARK: - Corner decoration helper
+
     @ViewBuilder
     private func cornerMark(top: Bool, left: Bool) -> some View {
         VStack(spacing: 1) {
@@ -280,15 +280,18 @@ struct MissionBriefingOverlay: View {
     }
 }
 
+// MARK: - Preview
+
 #Preview {
     MissionBriefingOverlay(
         scenario: Scenario(
-            id: "north_easy_1",
-            region: "north",
-            titleEN: "Flash Flood in Hanoi",
-            titleVI: "Lũ Quét ở Hà Nội",
-            introEN: "Heavy rain has been falling for 6 hours. The streets are rising. You are inside.",
-            introVI: "Mưa lớn đã rơi suốt 6 giờ. Mặt đường đang dâng lên.",
+            id: "south_fire_1",
+            region: "south",
+            danger: 2,
+            titleEN: "The 18th Floor",
+            titleVI: "Tầng 18",
+            introEN: "Heavy rain has been falling for 6 hours. The streets are rising. You are inside a building with no clear escape route and the water is still coming.",
+            introVI: "Mưa lớn đã rơi suốt 6 giờ. Mặt đường đang dâng lên. Bạn đang ở trong tòa nhà.",
             startQuestionID: "q1",
             questions: []
         ),
