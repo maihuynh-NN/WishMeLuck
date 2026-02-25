@@ -56,7 +56,7 @@ struct DiaryEntryRow: View {
             VStack(alignment: .leading, spacing: 3) {
                 Text(titleText)
                     .font(.system(.footnote, design: .serif).weight(.semibold))
-                    .foregroundColor(Color("Ink"))
+                    .foregroundColor(Color("Moss"))
                     .lineLimit(1)
 
                 Text("\(regionLabel)  ·  \(dateLabel)")

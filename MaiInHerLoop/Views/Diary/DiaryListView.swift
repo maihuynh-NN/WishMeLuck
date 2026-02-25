@@ -79,7 +79,7 @@ struct DiaryListView: View {
         VStack(alignment: .leading, spacing: 4) {
             Text(language == "vi" ? "NHẬT KÝ" : "DIARY")
                 .font(.system(.title2, design: .monospaced).weight(.black))
-                .foregroundColor(Color("Ink"))
+                .foregroundColor(Color("Moss"))
                 .tracking(3)
                 .accessibilityAddTraits(.isHeader)
 

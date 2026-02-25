@@ -284,7 +284,7 @@ struct MissionBriefingOverlay: View {
 #Preview {
     MissionBriefingOverlay(
         scenario: Scenario(
-            id: "south_fire_1",
+            id: "south_easy_1",
             region: "south",
             danger: 2,
             titleEN: "The 18th Floor",

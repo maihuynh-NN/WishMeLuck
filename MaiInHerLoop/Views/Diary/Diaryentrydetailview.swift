@@ -96,11 +96,10 @@ struct DiaryEntryDetailView: View {
 
     // MARK: - Tile column
     private func tileColumn(width: CGFloat, height: CGFloat) -> some View {
-        // Stack tiles vertically to fill height without stretching
-        let tileSize = width // tiles are square
-        let count = Int(ceil(height / tileSize)) + 1
+        let tileSize = max(width, 1) // guard: never zero or NaN
+        let count = height > 0 ? Int(ceil(height / tileSize)) + 1 : 2
 
-        return ScrollView([]) { // non-interactive, purely visual
+        return ScrollView([]) {
             VStack(spacing: 0) {
                 ForEach(0..<count, id: \.self) { _ in
                     Image(tileName)
@@ -236,6 +235,34 @@ struct DiaryEntryDetailView: View {
         .padding(.leading, 4)
     }
 }
+
+// MARK: - Preview
+private func mockEntry(context: NSManagedObjectContext) -> DiaryEntry {
+    let e = DiaryEntry(context: context)
+    e.id = UUID()
+    e.date = Date()
+    e.scenarioID = "south_easy_1"
+    e.archetypeID = "immediate_action"
+    return e
+}
+
+#Preview("Entry Detail — EN") {
+    let ctx = PersistenceController(inMemory: true).container.viewContext
+    NavigationStack {
+        DiaryEntryDetailView(entry: mockEntry(context: ctx))
+            .environment(\.managedObjectContext, ctx)
+    }
+}
+
+#Preview("Entry Detail — VI") {
+    let ctx = PersistenceController(inMemory: true).container.viewContext
+    NavigationStack {
+        DiaryEntryDetailView(entry: mockEntry(context: ctx))
+            .environment(\.managedObjectContext, ctx)
+            .onAppear { UserDefaults.standard.set("vi", forKey: "selectedLanguage") }
+    }
+}
+
 // MARK: - Preview
 #Preview("Detail — EN") {
     let context = PersistenceController(inMemory: true).container.viewContext
