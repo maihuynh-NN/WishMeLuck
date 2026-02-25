@@ -13,7 +13,7 @@ struct ArchetypeRepository {
         // MARK: - risk_recognition → Dây thun
         "risk_recognition": Archetype(
             id: "risk_recognition",
-            objectImageName: "obj_daythun",
+            objectImageName: "rubber",
             teaserEN: "Tight before it snaps.",
             teaserVI: "Căng trước khi đứt.",
             mirrorEN: "You felt something was wrong before anyone else noticed anything.",
@@ -30,7 +30,7 @@ struct ArchetypeRepository {
         // MARK: - information_first → Giỏ nhựa
         "information_first": Archetype(
             id: "information_first",
-            objectImageName: "obj_giohnhua",
+            objectImageName: "basket",
             teaserEN: "Never leaves empty.",
             teaserVI: "Không đi tay không.",
             mirrorEN: "You don't leave until you know what you're going back for.",
@@ -47,7 +47,7 @@ struct ArchetypeRepository {
         // MARK: - immediate_action → Dép tổ ong
         "immediate_action": Archetype(
             id: "immediate_action",
-            objectImageName: "obj_deptoong",
+            objectImageName: "slipper",
             teaserEN: "Already moving.",
             teaserVI: "Đã đi là đi.",
             mirrorEN: "When things went wrong, you were already moving.",
@@ -64,7 +64,7 @@ struct ArchetypeRepository {
         // MARK: - self_reliance → Cục gạch
         "self_reliance": Archetype(
             id: "self_reliance",
-            objectImageName: "obj_cucgach",
+            objectImageName: "brick",
             teaserEN: "Needs nothing else.",
             teaserVI: "Không cần thêm gì.",
             mirrorEN: "You didn't wait for anyone to tell you what to do.",

@@ -157,15 +157,20 @@ struct GameView: View {
         if let archetype = ArchetypeRepository.archetype(for: engine.dominantTrait()) {
             let snapshot = ReflectionSnapshot(
                 archetypeID: archetype.id,
-                recognitionText: archetype.recognitionEN,
-                bullets: archetype.bulletsEN,
-                strength: archetype.strengthEN,
-                blindSpot: archetype.blindSpotEN,
-                direction: archetype.directionEN,
+                recognitionText: "",
+                bullets: [],
+                strength: "",
+                blindSpot: "",
+                direction: "",
                 scenarioID: engine.scenarioID
             )
-            ReflectionResultView(snapshot: snapshot, shouldPersist: true)
-                .frame(width: doorWidth)
+            ReflectionResultView(
+                snapshot: snapshot,
+                shouldPersist: true,
+                onGoToDiary: { /* TODO: navigate to DiaryListView */ },
+                onGoToScenarios: { dismiss() }
+            )
+            .frame(width: doorWidth)
         } else {
             Text("Reflection unavailable")
                 .foregroundColor(Color("Secondary"))

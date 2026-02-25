@@ -10,26 +10,26 @@ import Foundation
 struct Archetype: Codable, Identifiable {
     let id: String
 
-    // Object image asset name (in xcassets)
+    // Object asset name (xcassets)
     let objectImageName: String
 
-    // Object teaser — 2–3 words shown under the image before explanation
+    // Teaser — 2–3 words under the image
     let teaserEN: String
     let teaserVI: String
 
-    // Mirror sentence — 1 oddly specific line that names the tendency
+    // Mirror sentence — 1 line, oddly specific
     let mirrorEN: String
     let mirrorVI: String
 
-    // Object explanation — 1–2 sentences, local cultural layer
+    // Object explanation — local cultural layer
     let objectExplanationEN: String
     let objectExplanationVI: String
 
-    // Trade-off — 1 honest sentence, no moralizing
+    // Trade-off — 1 honest sentence
     let tradeoffEN: String
     let tradeoffVI: String
 
-    // Legacy fields kept for DiaryListView and backward compat
+    // Kept for DiaryListView display
     let nameEN: String
     let nameVI: String
     let imageName: String
