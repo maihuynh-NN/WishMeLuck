@@ -8,10 +8,5 @@
 struct ReflectionSnapshot {
 
     let archetypeID: String
-    let recognitionText: String
-    let bullets: [String]
-    let strength: String
-    let blindSpot: String
-    let direction: String
     let scenarioID: String
 }

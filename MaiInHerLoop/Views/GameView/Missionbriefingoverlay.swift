@@ -289,8 +289,10 @@ struct MissionBriefingOverlay: View {
             danger: 2,
             titleEN: "The 18th Floor",
             titleVI: "Tầng 18",
-            introEN: "Heavy rain has been falling for 6 hours. The streets are rising. You are inside a building with no clear escape route and the water is still coming.",
-            introVI: "Mưa lớn đã rơi suốt 6 giờ. Mặt đường đang dâng lên. Bạn đang ở trong tòa nhà.",
+            introEN: "",
+            introVI: "",
+            insightEN: "Heavy rain has been falling for 6 hours. The streets are rising. You are inside a building with no clear escape route and the water is still coming.",
+            insightVI: "Mưa lớn đã rơi suốt 6 giờ. Mặt đường đang dâng lên. Bạn đang ở trong tòa nhà.",
             startQuestionID: "q1",
             questions: []
         ),

@@ -278,11 +278,6 @@ struct ReflectionResultView: View {
     ReflectionResultView(
         snapshot: ReflectionSnapshot(
             archetypeID: "immediate_action",
-            recognitionText: "",
-            bullets: [],
-            strength: "",
-            blindSpot: "",
-            direction: "",
             scenarioID: "south_easy_1"
         ),
         shouldPersist: false,
@@ -295,11 +290,6 @@ struct ReflectionResultView: View {
     ReflectionResultView(
         snapshot: ReflectionSnapshot(
             archetypeID: "self_reliance",
-            recognitionText: "",
-            bullets: [],
-            strength: "",
-            blindSpot: "",
-            direction: "",
             scenarioID: "north_easy_1"
         ),
         shouldPersist: false,

@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="23788.4" systemVersion="24F74" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="24512" systemVersion="25D125" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
     <entity name="DiaryEntry" representedClassName="DiaryEntry" syncable="YES" codeGenerationType="class">
         <attribute name="archetypeID" optional="YES" attributeType="String"/>
-        <attribute name="blindSpot" optional="YES" attributeType="String"/>
-        <attribute name="bullets" attributeType="Transformable" valueTransformerName="NSSecureUnarchiveFromData" customClassName="NSArray"/>
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
-        <attribute name="direction" optional="YES" attributeType="String"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
-        <attribute name="recognitionText" optional="YES" attributeType="String"/>
         <attribute name="scenarioID" optional="YES" attributeType="String"/>
-        <attribute name="strength" optional="YES" attributeType="String"/>
     </entity>
 </model>

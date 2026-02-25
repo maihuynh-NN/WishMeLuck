@@ -1,10 +1,3 @@
-//
-//  Localizable.strings
-//  MaiInHerLoop
-//
-//  Created by Huynh Ngoc Nhat Mai on 16/2/26.
-//
-
 // MARK: - UI Generic
 "ui.landing_on" = "LANDING ON";
 "ui.survival_orientation_manual" = "Survival Orientation Manual";
@@ -89,3 +82,7 @@
 
 "mission.classified" = "Not Done";
 "mission.responded" = "Done";
+
+"diary.back" = "aa";
+"diary.back.hint" = "aa";
+"diary.entry.hint" = "aa";
