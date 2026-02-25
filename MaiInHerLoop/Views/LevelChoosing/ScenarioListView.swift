@@ -166,7 +166,7 @@ struct ScenarioListView: View {
                         }
                     }
                     .customedBorder(
-                        borderShape: "panel-border-030",
+                        borderShape: "panel-border-006",
                         borderColor: Color("Gold3"),
                         buttonType: .customed(width: panelWidth, height: panelHeight)
                     )
@@ -177,9 +177,10 @@ struct ScenarioListView: View {
 
                     // MARK: - Bottom actions
                     VStack(spacing: 14) {
-                        // Uses reusable DotRow
                         DotRow(color: Color("Red3"))
                             .chronicleFade()
+                        
+                        
 
                         NavigationLink(destination: DiaryListView(), isActive: $navigateToDiary) {
                             EmptyView()
@@ -195,12 +196,11 @@ struct ScenarioListView: View {
                         .accessibilityLabel("Open diary")
                         .accessibilityHint("View your reflections from completed missions")
                         .customedBorder(
-                            borderShape: "panel-border-003",
+                            borderShape: "panel-border-008",
                             borderColor: Color("Gold3"),
                             buttonType: .mainButton
                         )
 
-                        // Rule 1: 44×44 tap target on text-only button
                         Button(action: { dismiss() }) {
                             Text("scenariolist.back".lkey)
                                 .font(.system(.caption2, design: .monospaced).weight(.light))

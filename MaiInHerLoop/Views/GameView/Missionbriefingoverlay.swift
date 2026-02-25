@@ -148,7 +148,6 @@ struct MissionBriefingOverlay: View {
                         .padding(.bottom, 4)
                         .chronicleFade()
 
-                        // Scroll hint — decorative, hidden from VoiceOver
                         Text("dispatch.scroll_guide".lkey)
                             .font(.system(.caption2).weight(.light))
                             .foregroundColor(Color("Moss").opacity(0.7))
@@ -166,7 +165,7 @@ struct MissionBriefingOverlay: View {
                                 onRespond()
                             }
                             .customedBorder(
-                                borderShape: "panel-border-003",
+                                borderShape: "panel-border-008",
                                 borderColor: Color("Gold3"),
                                 buttonType: .mainButton
                             )
@@ -182,7 +181,7 @@ struct MissionBriefingOverlay: View {
                                 onRetreat()
                             }
                             .customedBorder(
-                                borderShape: "panel-border-003",
+                                borderShape: "panel-border-008",
                                 borderColor: Color("Gold3"),
                                 buttonType: .mainButton
                             )

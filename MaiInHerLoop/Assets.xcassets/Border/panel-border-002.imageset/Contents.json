@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "panel-border-012.png",
+      "filename" : "panel-border-004.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "panel-border-012@2x.png",
+      "filename" : "panel-border-004@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "panel-border-012@3x.png",
+      "filename" : "panel-border-004@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
