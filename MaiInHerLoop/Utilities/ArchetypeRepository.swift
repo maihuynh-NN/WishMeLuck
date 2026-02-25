@@ -7,134 +7,78 @@
 import Foundation
 
 struct ArchetypeRepository {
-    
+
     static let archetypes: [String: Archetype] = [
-        
-        // ARCHETYPE 1: Risk Recognition
+
+        // MARK: - risk_recognition → Dây thun
         "risk_recognition": Archetype(
             id: "risk_recognition",
+            objectImageName: "obj_daythun",
+            teaserEN: "Tight before it snaps.",
+            teaserVI: "Căng trước khi đứt.",
+            mirrorEN: "You felt something was wrong before anyone else noticed anything.",
+            mirrorVI: "Bạn biết có gì đó không ổn trước khi người khác kịp nhận ra.",
+            objectExplanationEN: "Rubber bands are everywhere in Vietnam — bundling cash at the bank, holding vegetables at the wet market, looped on doorknobs waiting to be useful. People collect them without meaning to. They stretch quietly until something finally snaps.",
+            objectExplanationVI: "Dây thun có mặt ở khắp nơi — buộc tiền ở ngân hàng, buộc rau ở chợ, quấn quanh tay nắm cửa chờ lúc cần. Người ta nhặt về mà không biết từ khi nào. Căng thầm lặng — cho đến khi đứt.",
+            tradeoffEN: "Not every tension means something is about to break.",
+            tradeoffVI: "Không phải lần nào căng cũng là sắp đứt.",
             nameEN: "Early Signal Reader",
-            nameVI: "Người Nhận Diện Sớm", // [VI_NEEDED]
-            definitionEN: "Acts on early warning signals before danger becomes obvious",
-            definitionVI: "[VI_NEEDED] Hành động khi có tín hiệu cảnh báo sớm trước khi nguy hiểm rõ ràng",
-            imageName: "eye.circle.fill",
-            
-            recognitionEN: "You reacted when the situation still felt uncertain, before it clearly became dangerous.",
-            recognitionVI: "[VI_NEEDED] Bạn phản ứng khi tình huống còn không chắc chắn, trước khi nó rõ ràng trở nên nguy hiểm.",
-            
-            bulletsEN: [
-                "You treated small changes as meaningful",
-                "You didn't wait for confirmation to take risk seriously"
-            ],
-            bulletsVI: [
-                "[VI_NEEDED] Bạn coi những thay đổi nhỏ là có ý nghĩa",
-                "[VI_NEEDED] Bạn không đợi xác nhận để coi nguy cơ là nghiêm trọng"
-            ],
-            
-            strengthEN: "Early movement prevents being trapped by fast-changing conditions.",
-            strengthVI: "[VI_NEEDED] Di chuyển sớm ngăn bị mắc kẹt bởi điều kiện thay đổi nhanh.",
-            
-            blindSpotEN: "Unclear signals turn out to be noise rather than real escalation.",
-            blindSpotVI: "[VI_NEEDED] Tín hiệu không rõ ràng có thể chỉ là nhiễu thay vì leo thang thực sự.",
-            
-            directionEN: "Trust your instinct, but verify when time allows.",
-            directionVI: "[VI_NEEDED] Tin vào trực giác, nhưng xác minh khi có thời gian."
+            nameVI: "Người Nhận Diện Sớm",
+            imageName: "rubber"
         ),
-        
-        // ARCHETYPE 2: Information First
+
+        // MARK: - information_first → Giỏ nhựa
         "information_first": Archetype(
             id: "information_first",
+            objectImageName: "obj_giohnhua",
+            teaserEN: "Never leaves empty.",
+            teaserVI: "Không đi tay không.",
+            mirrorEN: "You don't leave until you know what you're going back for.",
+            mirrorVI: "Bạn không ra đi khi chưa biết mình cần mang về thứ gì.",
+            objectExplanationEN: "The plastic market basket doesn't go to the market empty and come back full by accident. It has compartments. It knows what's missing before you do. Your mom's version of this basket has seen more crises than most emergency kits.",
+            objectExplanationVI: "Cái giỏ chợ không tự nhiên ra đi tay không rồi về đầy. Nó có ngăn, có chỗ. Nó biết thứ gì còn thiếu trước khi bạn nghĩ ra. Cái giỏ của mẹ bạn đã trải qua nhiều khủng hoảng hơn bất kỳ túi cứu trợ nào.",
+            tradeoffEN: "A full basket takes time — and sometimes you need to go before it's ready.",
+            tradeoffVI: "Giỏ đầy cần thời gian — mà đôi khi không có thời gian để đợi đầy.",
             nameEN: "Deliberate Analyst",
-            nameVI: "Người Phân Tích Thận Trọng", // [VI_NEEDED]
-            definitionEN: "Prioritizes understanding the situation before committing to action",
-            definitionVI: "[VI_NEEDED] Ưu tiên hiểu tình huống trước khi cam kết hành động",
-            imageName: "chart.bar.doc.horizontal.fill",
-            
-            recognitionEN: "You slowed yourself down to understand what was happening before committing to action.",
-            recognitionVI: "[VI_NEEDED] Bạn làm chậm lại để hiểu điều gì đang xảy ra trước khi cam kết hành động.",
-            
-            bulletsEN: [
-                "You checked for signals, updates, or patterns",
-                "You avoided acting on impulse"
-            ],
-            bulletsVI: [
-                "[VI_NEEDED] Bạn kiểm tra tín hiệu, cập nhật, hoặc mô hình",
-                "[VI_NEEDED] Bạn tránh hành động theo bản năng"
-            ],
-            
-            strengthEN: "Good information meaningfully changes the safest next step.",
-            strengthVI: "[VI_NEEDED] Thông tin tốt thay đổi đáng kể bước tiếp theo an toàn nhất.",
-            
-            blindSpotEN: "Waiting for certainty costs time you don't actually have.",
-            blindSpotVI: "[VI_NEEDED] Đợi sự chắc chắn tốn thời gian bạn không thực sự có.",
-            
-            directionEN: "Balance gathering information with readiness to move.",
-            directionVI: "[VI_NEEDED] Cân bằng thu thập thông tin với sẵn sàng di chuyển."
+            nameVI: "Người Phân Tích Thận Trọng",
+            imageName: "basket"
         ),
-        
-        // ARCHETYPE 3: Immediate Action
+
+        // MARK: - immediate_action → Dép tổ ong
         "immediate_action": Archetype(
             id: "immediate_action",
+            objectImageName: "obj_deptoong",
+            teaserEN: "Already moving.",
+            teaserVI: "Đã đi là đi.",
+            mirrorEN: "When things went wrong, you were already moving.",
+            mirrorVI: "Khi có chuyện, bạn đã đi rồi.",
+            objectExplanationEN: "The foam slipper doesn't care about terrain. It has been spotted in flood footage floating down Mekong tributaries, surviving better than most things. Its official use is for walking. Its actual use is for everything. It's the footwear equivalent of not overthinking.",
+            objectExplanationVI: "Dép tổ ong không quan tâm đường xá ra sao. Nó đã từng được nhìn thấy trôi bồng bềnh trên kênh mùa lũ miền Tây — và vẫn còn nguyên. Nó được tạo ra để đi. Thực ra nó được dùng cho mọi thứ. Đây là chiếc dép của người không có thời gian suy nghĩ nhiều.",
+            tradeoffEN: "Moving fast gets you out — but sometimes the people behind you don't know why they're running.",
+            tradeoffVI: "Đi nhanh giúp bạn thoát — nhưng đôi khi người đằng sau không biết tại sao mình đang chạy.",
             nameEN: "Decisive Mover",
-            nameVI: "Người Hành Động Quyết Đoán", // [VI_NEEDED]
-            definitionEN: "Moves quickly with available information rather than waiting for perfect options",
-            definitionVI: "[VI_NEEDED] Di chuyển nhanh với thông tin có sẵn thay vì đợi lựa chọn hoàn hảo",
-            imageName: "figure.run.circle.fill",
-            
-            recognitionEN: "You moved with what you had instead of waiting for better options.",
-            recognitionVI: "[VI_NEEDED] Bạn di chuyển với những gì bạn có thay vì đợi lựa chọn tốt hơn.",
-            
-            bulletsEN: [
-                "You accepted imperfect choices",
-                "You prioritized momentum over completeness"
-            ],
-            bulletsVI: [
-                "[VI_NEEDED] Bạn chấp nhận lựa chọn không hoàn hảo",
-                "[VI_NEEDED] Bạn ưu tiên động lực hơn sự hoàn chỉnh"
-            ],
-            
-            strengthEN: "Delay increases danger more than imperfect action.",
-            strengthVI: "[VI_NEEDED] Trì hoãn tăng nguy hiểm hơn hành động không hoàn hảo.",
-            
-            blindSpotEN: "Situations require coordination instead of speed.",
-            blindSpotVI: "[VI_NEEDED] Tình huống yêu cầu phối hợp thay vì tốc độ.",
-            
-            directionEN: "Your speed is valuable—use it to help others organize.",
-            directionVI: "[VI_NEEDED] Tốc độ của bạn có giá trị—dùng nó để giúp người khác tổ chức."
+            nameVI: "Người Hành Động Quyết Đoán",
+            imageName: "slipper"
         ),
-        
-        // ARCHETYPE 4: Self-Reliance
+
+        // MARK: - self_reliance → Cục gạch
         "self_reliance": Archetype(
             id: "self_reliance",
+            objectImageName: "obj_cucgach",
+            teaserEN: "Needs nothing else.",
+            teaserVI: "Không cần thêm gì.",
+            mirrorEN: "You didn't wait for anyone to tell you what to do.",
+            mirrorVI: "Bạn không đợi ai nói phải làm gì.",
+            objectExplanationEN: "Bricks hold down tarp during storms. They prop open gates. In Central Vietnam, they sit on rooftops not as decoration, but as weight — quiet, functional, asking nothing from anyone. The brick doesn't need instructions. It just does its job.",
+            objectExplanationVI: "Gạch được dùng để chặn bạt mái khi bão. Chặn cửa. Đặt trên mái nhà miền Trung không phải để trang trí — mà để giữ mái khỏi bay. Cục gạch không cần ai chỉ dẫn. Nó chỉ làm việc của nó.",
+            tradeoffEN: "A brick alone holds weight — but it can't bend, and it can't ask for help.",
+            tradeoffVI: "Một mình thì vững — nhưng không thể uốn, và không biết kêu ai.",
             nameEN: "Independent Operator",
-            nameVI: "Người Tự Chủ", // [VI_NEEDED]
-            definitionEN: "Trusts personal judgment and acts without waiting for external direction",
-            definitionVI: "[VI_NEEDED] Tin vào phán đoán cá nhân và hành động mà không đợi chỉ đạo bên ngoài",
-            imageName: "person.circle.fill",
-            
-            recognitionEN: "You trusted your own judgment and acted without waiting for direction.",
-            recognitionVI: "[VI_NEEDED] Bạn tin vào phán đoán của mình và hành động mà không đợi chỉ đạo.",
-            
-            bulletsEN: [
-                "You relied on personal assessment",
-                "You stayed active while others waited"
-            ],
-            bulletsVI: [
-                "[VI_NEEDED] Bạn dựa vào đánh giá cá nhân",
-                "[VI_NEEDED] Bạn duy trì hoạt động trong khi người khác chờ đợi"
-            ],
-            
-            strengthEN: "Systems fail, communication breaks, or help arrives late.",
-            strengthVI: "[VI_NEEDED] Hệ thống thất bại, giao tiếp bị gián đoạn, hoặc sự giúp đỡ đến muộn.",
-            
-            blindSpotEN: "Shared decisions reduce risk better than acting alone.",
-            blindSpotVI: "[VI_NEEDED] Quyết định chung giảm rủi ro tốt hơn hành động một mình.",
-            
-            directionEN: "Your self-sufficiency is a resource others can learn from.",
-            directionVI: "[VI_NEEDED] Sự tự cung tự cấp của bạn là nguồn lực người khác có thể học hỏi."
+            nameVI: "Người Tự Chủ",
+            imageName: "brick"
         )
     ]
-    
+
     static func archetype(for trait: String) -> Archetype? {
         archetypes[trait]
     }
