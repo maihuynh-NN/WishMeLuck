@@ -8,28 +8,29 @@
 import SwiftUI
 
 struct SplashScreenView: View {
-    
+
     // MARK: - Persisted State
     @AppStorage("playerName") private var playerName = ""
-    
+    @AppStorage("hasSeenOnboarding") private var hasSeenOnboarding = false
+
     // MARK: - Local State
     @State private var nameInput = ""
     @State private var showButton = false
-    @State private var navigateToRegion = false
-    
+    @State private var navigateToStory = false
+
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
     @FocusState private var isNameFieldFocused: Bool
-    
+
     // MARK: - Responsive (same pattern as MissionBriefingOverlay)
     private var isIPad: Bool { UIDevice.current.userInterfaceIdiom == .pad }
     private var panelWidth: CGFloat { isIPad ? 420 : 320 }
     private var panelHeight: CGFloat { isIPad ? 420 : 360 }
-    
+
     // MARK: - Computed
     private var canProceed: Bool {
         !nameInput.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
     }
-    
+
     // MARK: - Body
     var body: some View {
         ZStack {
@@ -38,13 +39,13 @@ struct SplashScreenView: View {
                 .resizable()
                 .scaledToFill()
                 .ignoresSafeArea()
-            
+
             VStack {
                 Spacer()
-                
+
                 panelContent
                     .chronicleFade()
-                
+
                 Spacer()
             }
         }
@@ -52,11 +53,13 @@ struct SplashScreenView: View {
             nameInput = playerName
             showButton = !nameInput.isEmpty
         }
-        .navigationDestination(isPresented: $navigateToRegion) {
-            RegionSelectionView()
+        .navigationBarHidden(true)
+        .navigationDestination(isPresented: $navigateToStory) {
+            StoryView()
+                .onAppear { hasSeenOnboarding = true }
         }
     }
-    
+
     // MARK: - Panel Content
     private var panelContent: some View {
         CustomPanel(
@@ -69,13 +72,13 @@ struct SplashScreenView: View {
                     .fill(Color("Beige3").opacity(0.6))
                     .frame(width: panelWidth - 5, height: panelHeight - 5)
                     .accessibilityHidden(true)
-                
+
                 VStack(spacing: 16) {
-                    
+
                     // Top ornament
                     BarRow(color: Color("Moss"), count: 7)
                         .padding(.top, 24)
-                    
+
                     // MARK: - Welcome Text
                     Text("splash.welcome_message".localized)
                         .font(.system(.subheadline, design: .serif).weight(.medium))
@@ -84,18 +87,18 @@ struct SplashScreenView: View {
                         .lineSpacing(3)
                         .padding(.horizontal, 24)
                         .frame(minHeight: 50)
-                    
+
                     // Divider
                     DiamondDivider(color: Color("Moss"))
                         .padding(.horizontal, 40)
-                    
+
                     // MARK: - Name Input
                     VStack(spacing: 12) {
                         Text("splash.enter_name".localized)
                             .font(.system(.caption, design: .monospaced).weight(.medium))
                             .foregroundColor(Color("Moss").opacity(0.7))
                             .tracking(1)
-                        
+
                         TextField("splash.name_placeholder".localized, text: $nameInput)
                             .font(.system(.body, design: .serif))
                             .foregroundColor(Color("Moss"))
@@ -124,7 +127,7 @@ struct SplashScreenView: View {
                                 }
                             }
                     }
-                    
+
                     // MARK: - Proceed Button
                     if showButton && canProceed {
                         CustomButton(
@@ -141,7 +144,7 @@ struct SplashScreenView: View {
                         )
                         .accessibilityLabel("splash.begin_accessibility".localized)
                     }
-                    
+
                     // Bottom ornament
                     DotRow(color: Color("Moss"), count: 9, dotSize: 3)
                         .padding(.bottom, 20)
@@ -154,14 +157,14 @@ struct SplashScreenView: View {
             buttonType: .customed(width: panelWidth, height: panelHeight)
         )
     }
-    
+
     // MARK: - Actions
     private func proceed() {
         let trimmed = nameInput.trimmingCharacters(in: .whitespacesAndNewlines)
         guard !trimmed.isEmpty else { return }
         playerName = trimmed
         isNameFieldFocused = false
-        navigateToRegion = true
+        navigateToStory = true
     }
 }
 
