@@ -1,9 +1,3 @@
-//
-//  CustomePanel.swift
-//  MaiInHerLoop
-//
-//  Created by Huynh Ngoc Nhat Mai on 15/2/26.
-//
 import SwiftUI
 
 struct CustomPanel<Content: View>: View {
@@ -31,7 +25,6 @@ struct CustomPanel<Content: View>: View {
 
 #Preview {
     VStack(spacing: 20) {
-        // Fixed size — existing behaviour unchanged
         CustomPanel(
             backgroundColor: Color("Moss"),
             size: .customed(width: 300, height: 200)

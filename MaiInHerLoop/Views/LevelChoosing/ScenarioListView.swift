@@ -51,8 +51,9 @@ struct ScenarioListView: View {
                 // MARK: - Background
                 Image("Background")
                     .resizable()
-                    .scaledToFill()
-                    .ignoresSafeArea()
+                    .frame(width: .infinity, height: .infinity)
+                    .clipped()
+                    .ignoresSafeArea(edges: .vertical)
                     .accessibilityHidden(true)
 
                 // Hidden NavigationLinks
@@ -117,7 +118,7 @@ struct ScenarioListView: View {
                     let computedCardSize = ComponentSize.customed(width: cardSquare, height: cardSquare)
 
                     CustomPanel(
-                        backgroundColor: Color("Beige3").opacity(0.6),
+                        backgroundColor: Color("Beige3"),
                         size: .customed(width: panelWidth, height: panelHeight)
                     ) {
                         VStack(spacing: 0) {
@@ -205,23 +206,23 @@ struct ScenarioListView: View {
                             buttonType: .mainButton
                         )
 
-                        Button(action: { dismiss() }) {
-                            Text("scenariolist.back".localized)
-                                .font(.system(.caption2, design: .monospaced).weight(.regular))
-                                .foregroundColor(Color("Moss").opacity(0.55))
-                                .tracking(0.5)
-                                .underline()
-                                .frame(minWidth: 44, minHeight: 44)
-                                .contentShape(Rectangle())
+                        CustomButton(
+                            title: "scenariolist.back".localized,
+                            textColor: Color("Beige3"),
+                            buttonColor: Color("Moss")
+                        ) {
+                            dismiss()
                         }
+                        .customedBorder(
+                            borderShape: "panel-border-008",
+                            borderColor: Color("Gold3"),
+                            buttonType: .mainButton
+                        )
                         .accessibilityLabel("scenariolist.back.a11y".localized)
                         .accessibilityHint("scenariolist.back.a11y.hint".localized)
                     }
                     .padding(.bottom, 36)
                 }
-
-                // MARK: - Back Button (top left)
-                BackButton(iconColor: Color("Red3"), borderColor: Color("Gold3"))
 
                 // MARK: - Settings Button (top right)
                 SettingsButton()

@@ -23,6 +23,7 @@ struct GameView: View {
             ZStack {
                 Color("Beige3").ignoresSafeArea()
                 doorShape(in: geo)
+                    .accessibilityHidden(true)
 
                 if !showBriefing {
                     gameContent(in: geo)

@@ -1,9 +1,3 @@
-//
-//  RegionDetailPopOver.swift
-//  MaiInHerLoop
-//
-//  Created by Huynh Ngoc Nhat Mai on 17/2/26.
-//
 import SwiftUI
 
 struct RegionDetailPopOver: View {
@@ -68,7 +62,7 @@ struct RegionDetailPopOver: View {
     
     private var theRegionText: String {
         String(
-            format: "ui.the_region".localized, 
+            format: "ui.the_region".localized,
             localizedRegionName.uppercased(with: Locale.current)
         )
     }
@@ -99,6 +93,7 @@ struct RegionDetailPopOver: View {
                         }
                         .padding(.bottom, 10)
                         .chronicleFade()
+                        .accessibilityHidden(true)
                         
                         // MARK: - Top Image with Text
                         ZStack {
@@ -112,18 +107,18 @@ struct RegionDetailPopOver: View {
                                 HStack {
                                     VStack(alignment: .leading, spacing: 4) {
                                         Text("ui.landing_on".localized)
-                                            //.font(.system(size: 10, weight: .bold, design: .monospaced))
+                                            .font(.system(.caption2, design: .monospaced).weight(.bold))
                                             .foregroundColor(.white)
                                             .tracking(1)
                                         
                                         Text(theRegionText)
-                                            //.font(AppFontStyle.secondTitle.font)
+                                            .font(.system(.subheadline, design: .monospaced).weight(.black))
                                             .foregroundColor(.white)
                                             .tracking(1.5)
                                             .opacity(headerPulse ? 1.0 : 0.8)
                                         
                                         Text("ui.survival_orientation_manual".localized)
-                                            //.font(.system(size: 9, weight: .medium, design: .monospaced))
+                                            .font(.system(.caption2, design: .monospaced).weight(.medium))
                                             .foregroundColor(.white.opacity(0.9))
                                             .tracking(0.5)
                                     }
@@ -146,8 +141,9 @@ struct RegionDetailPopOver: View {
                             .frame(height: 1)
                         
                         Text("◆")
-                            .font(.system(size: 10))
+                            .font(.system(.caption2))
                             .foregroundColor(Color("Red"))
+                            .accessibilityHidden(true)
                         
                         Rectangle()
                             .fill(Color("Red").opacity(0.6))
@@ -155,13 +151,14 @@ struct RegionDetailPopOver: View {
                     }
                     .padding(.horizontal, 50)
                     .opacity(textOpacity)
+                    .accessibilityHidden(true)
                     
                     // MARK: - Risk Briefing with Typewriter Effect
                     VStack(spacing: 12) {
                         if showRiskBriefing {
                             Text("")
-                                .typewriter(riskBriefingText, speed: 0.04) 
-                                //.font(.system(size: 11, weight: .medium, design: .serif))
+                                .typewriter(riskBriefingText, speed: 0.04)
+                                .font(.system(.caption, design: .serif).weight(.medium))
                                 .foregroundColor(Color("Red"))
                                 .italic()
                                 .multilineTextAlignment(.center)
@@ -178,6 +175,7 @@ struct RegionDetailPopOver: View {
                                     .frame(width: 3, height: 3)
                             }
                         }
+                        .accessibilityHidden(true)
                     }
                     .padding(.vertical, 10)
                      
@@ -187,7 +185,7 @@ struct RegionDetailPopOver: View {
                             .frame(height: 1)
                         
                         Text("◆")
-                            .font(.system(size: 10))
+                            .font(.system(.caption2))
                             .foregroundColor(Color("Red"))
                         
                         Rectangle()
@@ -196,16 +194,17 @@ struct RegionDetailPopOver: View {
                     }
                     .padding(.horizontal, 50)
                     .opacity(textOpacity)
+                    .accessibilityHidden(true)
                     
                     // MARK: - Chronicle Header with Traditional Pattern
                     VStack(spacing: 8) {
                         Text("ui.chronicles.title".localized)
-                            .font(.system(size: 12, weight: .bold, design: .monospaced))
+                            .font(.system(.caption, design: .monospaced).weight(.bold))
                             .foregroundColor(Color("Red"))
                             .tracking(2)
                             .opacity(textOpacity)
                         
-                        // Chevron pattern
+                        // Chevron pattern — decorative
                         HStack(spacing: 2) {
                             ForEach(0..<8, id: \.self) { _ in
                                 Image(systemName: "chevron.right")
@@ -214,13 +213,14 @@ struct RegionDetailPopOver: View {
                             }
                         }
                         .opacity(textOpacity)
+                        .accessibilityHidden(true)
                     }
                     .padding(.top, 10)
                     
                     // MARK: - Survival Sections
                     VStack(spacing: 25) {
                         ForEach(Array(survivalGuide.survivalSections.enumerated()), id: \.offset) { index, section in
-                            let idx = index + 1 // 1-based cho key
+                            let idx = index + 1
                             HStack {
                                 if index % 2 == 0 {
                                     VStack(alignment: .leading, spacing: 8) {
@@ -239,27 +239,26 @@ struct RegionDetailPopOver: View {
                                                 Rectangle()
                                                     .frame(width: 4, height: 2)
                                             }
+                                            .accessibilityHidden(true)
                                             
                                             VStack(alignment: .leading, spacing: 6) {
                                                 Text(sectionKey(idx, "title"))
-                                                    .font(.system(size: 12, weight: .bold, design: .monospaced))
+                                                    .font(.system(.caption, design: .monospaced).weight(.bold))
                                                     .foregroundColor(Color("Gold"))
                                                     .tracking(0.8)
                                                 
                                                 Text(sectionKey(idx, "content"))
-                                                    .font(.system(size: 10, weight: .medium, design: .serif))
+                                                    .font(.system(.caption2, design: .serif).weight(.medium))
                                                     .foregroundColor(Color("Gold"))
                                                     .multilineTextAlignment(.leading)
                                                     .lineSpacing(1.5)
                                                 
                                                 Text(sectionKey(idx, "subtitle"))
-                                                    .font(.system(size: 9, weight: .medium, design: .serif))
+                                                    .font(.system(.caption2, design: .serif).weight(.semibold))
                                                     .foregroundColor(Color("Gold").opacity(0.8))
                                                     .italic()
                                                     .multilineTextAlignment(.leading)
                                                     .padding(.top, 4)
-                                                    .bold()
-                                                    .italic()
                                             }
                                         }
                                     }
@@ -275,22 +274,21 @@ struct RegionDetailPopOver: View {
                                         HStack(spacing: 12) {
                                             VStack(alignment: .trailing, spacing: 6) {
                                                 Text(sectionKey(idx, "title"))
-                                                    .font(.system(size: 12, weight: .bold, design: .monospaced))
+                                                    .font(.system(.caption, design: .monospaced).weight(.bold))
                                                     .foregroundColor(Color("Gold"))
                                                     .tracking(0.8)
                                                 
                                                 Text(sectionKey(idx, "content"))
-                                                    .font(.system(size: 10, weight: .medium, design: .serif))
+                                                    .font(.system(.caption2, design: .serif).weight(.medium))
                                                     .foregroundColor(Color("Gold"))
                                                     .multilineTextAlignment(.trailing)
                                                     .lineSpacing(1.5)
                                                 
                                                 Text(sectionKey(idx, "subtitle"))
-                                                    .font(.system(size: 9, weight: .medium, design: .serif))
+                                                    .font(.system(.caption2, design: .serif).weight(.semibold))
                                                     .foregroundColor(Color("Gold").opacity(0.8))
                                                     .multilineTextAlignment(.trailing)
                                                     .padding(.top, 4)
-                                                    .bold()
                                                     .italic()
                                             }
                                             
@@ -308,6 +306,7 @@ struct RegionDetailPopOver: View {
                                                     .fill(Color("Gold").opacity(0.3))
                                                     .frame(width: 4, height: 2)
                                             }
+                                            .accessibilityHidden(true)
                                         }
                                     }
                                     .frame(maxWidth: 230)
@@ -321,7 +320,6 @@ struct RegionDetailPopOver: View {
                     
                     // MARK: - Final Ceremonial Pattern
                     VStack(spacing: 12) {
-                        //  pattern threat bars
                         VStack(spacing: 8) {
                             HStack(spacing: 3) {
                                 ForEach(0..<5, id: \.self) { i in
@@ -330,6 +328,7 @@ struct RegionDetailPopOver: View {
                                         .frame(width: 16, height: 24)
                                 }
                             }
+                            .accessibilityHidden(true)
                             
                             HStack {
                                 Rectangle()
@@ -337,7 +336,7 @@ struct RegionDetailPopOver: View {
                                     .frame(height: 1)
                                 
                                 Text("∎")
-                                    .font(.system(size: 10))
+                                    .font(.system(.caption2))
                                     .foregroundColor(Color("Gold"))
                                 
                                 Rectangle()
@@ -345,12 +344,13 @@ struct RegionDetailPopOver: View {
                                     .frame(height: 1)
                             }
                             .padding(.horizontal, 60)
+                            .accessibilityHidden(true)
 
                         }
                         .opacity(textOpacity)
                         
                         Text(readyTrialsText)
-                            .font(.system(size: 11, weight: .medium, design: .serif))
+                            .font(.system(.caption, design: .serif).weight(.medium))
                             .foregroundColor(Color("Gold"))
                             .italic()
                             .opacity(textOpacity)
@@ -364,15 +364,16 @@ struct RegionDetailPopOver: View {
                             onNavigate()
                         }
                         .customedBorder(borderShape: "panel-border-003", borderColor: Color("Gold"), buttonType: .mainButton)
-                        //.buttonPress()
                         .padding(.top, 5)
                         
                         Button(action: onClose) {
                             Text("ui.study_others_first".localized)
-                                .font(.system(size: 9, weight: .light, design: .monospaced))
+                                .font(.system(.caption2, design: .monospaced).weight(.regular))
                                 .foregroundColor(Color("Gold").opacity(0.7))
                                 .tracking(0.5)
                                 .underline()
+                                .frame(minWidth: 44, minHeight: 44)
+                                .contentShape(Rectangle())
                         }
                     }
                     .padding(.bottom, 30)
