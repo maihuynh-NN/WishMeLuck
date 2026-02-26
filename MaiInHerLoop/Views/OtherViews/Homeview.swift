@@ -17,6 +17,9 @@ struct HomeView: View {
     @State private var navigateToRegion = false
     @State private var navigateToDiary = false
 
+    // MARK: - Settings State
+    @State private var showSettings = false
+
     // MARK: - Animation State
     @State private var showContent = false
 
@@ -49,7 +52,7 @@ struct HomeView: View {
                 Spacer()
             }
 
-            // MARK: - Buttons (bottom left)
+            // MARK: - Buttons + Settings mini-button (bottom left)
             VStack {
                 Spacer()
 
@@ -64,8 +67,12 @@ struct HomeView: View {
             }
             .padding(.bottom, 34)               // HIG Rule 7: home indicator clearance
 
-            // MARK: - Settings (top right, layered above title)
-            SettingsButton()
+            // MARK: - Settings Modal Overlay
+            if showSettings {
+                SettingsModal(isPresented: $showSettings)
+                    .transition(.opacity)
+                    .zIndex(10)
+            }
 
             // MARK: - Hidden NavigationLinks
             navigationDestinations
@@ -96,7 +103,7 @@ struct HomeView: View {
                 .ignoresSafeArea()
                 .accessibilityHidden(true)
 
-            // Gradient overlay — very light top, moderate bottom for button legibility
+  
             LinearGradient(
                 stops: [
                     .init(color: Color.black.opacity(0.0),  location: 0.0),
@@ -112,17 +119,15 @@ struct HomeView: View {
         }
     }
 
-    // MARK: - Title Section (top right, with text shadow for legibility)
+    // MARK: - Title Section
     private var titleSection: some View {
         VStack(alignment: .trailing, spacing: 2) {
-            // "RED" — smaller than EMBERS
             Text("home.title.red".localized)
                 .font(.system(.title2, design: .serif).weight(.bold))
                 .foregroundColor(Color("Beige2"))
                 .tracking(4)
                 .shadow(color: Color.black.opacity(0.7), radius: 6)
 
-            // "EMBERS" — hero text
             Text("home.title.embers".localized)
                 .font(.system(.largeTitle, design: .serif).weight(.black))
                 .foregroundColor(Color("Beige2"))
@@ -130,89 +135,89 @@ struct HomeView: View {
                 .shadow(color: Color.black.opacity(0.7), radius: 6)
                 .minimumScaleFactor(typeSize >= .accessibility1 ? 0.7 : 1.0)
 
-            // "THAN HỒNG" — much smaller, subtle
             Text("home.title.vi".localized)
                 .font(.system(.caption, design: .serif).weight(.medium))
-                .foregroundColor(Color("Beige2").opacity(0.75))
+                .foregroundColor(Color("Beige2"))
                 .tracking(2)
                 .shadow(color: Color.black.opacity(0.5), radius: 4)
                 .padding(.top, 2)
         }
         .padding(.trailing, isIPad ? 50 : 28)
-        .padding(.top, isIPad ? 70 : 55)
+        .padding(.top, isIPad ? 135 : 120)
         .accessibilityElement(children: .combine)
         .accessibilityAddTraits(.isHeader)
         .accessibilityLabel("Red Embers — Than Hồng")
     }
 
-    // MARK: - Button Stack (bottom left, staggered cascade with rotation)
+    // MARK: - Button Stack
     private var buttonStack: some View {
         VStack(alignment: .leading, spacing: buttonSpacing) {
 
-            // Button 1: Start Game — leftmost, slight counter-clockwise tilt
             homeButton(
                 title: "home.start_game".localized,
                 textColor: Color("Beige2"),
-                buttonColor: Color("Red").opacity(0.8),
-                borderColor: Color("Gold").opacity(0.7),
-                rotation: -2,
-                staggerDelay: 0.2,
-                leadingOffset: 0
+                buttonColor: Color("Red3"),
+                borderColor: Color("Gold3"),
+                rotation: -3,
+                staggerDelay: 0.2
             ) {
                 navigateToScenarioList = true
             }
 
-            // Button 2: Visit Regions — indented, slight clockwise
+            // Button 2: Visit Regions
             homeButton(
                 title: "home.visit_regions".localized,
                 textColor: Color("Beige2"),
                 buttonColor: Color("Moss").opacity(0.75),
                 borderColor: Color("Gold").opacity(0.6),
-                rotation: 1,
-                staggerDelay: 0.4,
-                leadingOffset: isIPad ? 35 : 22
+                rotation: 1.5,
+                staggerDelay: 0.4
             ) {
                 navigateToRegion = true
             }
 
-            // Button 3: Diary — most indented, slight counter-clockwise
+            // Button 3: Diary
             homeButton(
                 title: "home.diary".localized,
                 textColor: Color("Beige2"),
-                buttonColor: Color("Red").opacity(0.75),
-                borderColor: Color("Gold").opacity(0.6),
-                rotation: -1,
-                staggerDelay: 0.6,
-                leadingOffset: isIPad ? 70 : 44
+                buttonColor: Color("Red3"),
+                borderColor: Color("Gold3"),
+                rotation: -2,
+                staggerDelay: 0.6
             ) {
                 navigateToDiary = true
             }
 
-            // Mini-button — continues the cascade
-            HStack(spacing: 10) {
-                CustomMiniButton(
-                    systemIcon: "book.fill",
-                    buttonColor: Color("Beige2"),
-                    action: { /* TODO: How-to-play or about */ }
-                )
-                .customedBorder(
-                    borderShape: "panel-border-004",
-                    borderColor: Color("Beige2").opacity(0.6),
-                    buttonType: .miniButton
-                )
-                .modifier(ShadowModifier(color: Color.black.opacity(0.3)))
-                .rotationEffect(.degrees(2))
-                .accessibilityLabel("home.howtoplay".localized)
-                .accessibilityHint("home.howtoplay.hint".localized)
-            }
-            .padding(.leading, isIPad ? 105 : 66)
-            .padding(.top, 5)
+            // MARK: - Settings mini-button (below the 3 main buttons)
+            CustomMiniButton(
+                systemIcon: "gearshape.fill",
+                buttonColor: Color("Beige2"),
+                action: {
+                    if reduceMotion {
+                        showSettings = true
+                        return
+                    }
+                    withAnimation(AppAnimations.overlayFade) {
+                        showSettings = true
+                    }
+                }
+            )
+            .customedBorder(
+                borderShape: "panel-border-004",
+                borderColor: Color("Beige2").opacity(0.6),
+                buttonType: .miniButton
+            )
+            .modifier(ShadowModifier(color: Color.black.opacity(0.3)))
+            .rotationEffect(.degrees(2))
             .staggeredAppear(delay: 0.8)
+            .padding(.top, 5)
+            .accessibilityLabel("settings.button".localized)
+            .accessibilityHint("settings.button.hint".localized)
         }
         .padding(.leading, buttonLeading)
     }
 
-    // MARK: - Single Home Button (reusable builder)
+    // MARK: - Single Home Button
     private func homeButton(
         title: String,
         textColor: Color,
@@ -220,7 +225,6 @@ struct HomeView: View {
         borderColor: Color,
         rotation: Double,
         staggerDelay: Double,
-        leadingOffset: CGFloat,
         action: @escaping () -> Void
     ) -> some View {
         CustomButton(
@@ -238,7 +242,6 @@ struct HomeView: View {
         .modifier(ShadowModifier(color: Color.black.opacity(0.35)))
         .rotationEffect(.degrees(rotation))
         .staggeredAppear(delay: staggerDelay)
-        .padding(.leading, leadingOffset)
     }
 
     // MARK: - Navigation Destinations
