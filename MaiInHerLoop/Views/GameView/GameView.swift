@@ -162,13 +162,13 @@ struct GameView: View {
             ReflectionResultView(
                 snapshot: snapshot,
                 shouldPersist: true,
-                onGoToDiary: { /* TODO: navigate to DiaryListView */ },
+                onGoToDiary: { DiaryListView() },
                 onGoToScenarios: { dismiss() }
             )
             .frame(width: doorWidth)
         } else {
-            Text("Reflection unavailable")
-                .foregroundColor(Color("Secondary"))
+            Text("game.reflection_unavailable".localized)
+                .foregroundColor(Color("Moss"))
         }
     }
 

@@ -155,7 +155,7 @@ struct ScenarioListView: View {
                                     .padding(.horizontal, 60)
                                     .accessibilityHidden(true)
 
-                                Text("· more scenarios coming soon ·")
+                                Text("scenariolist.coming_soon".localized)
                                     .font(.system(.caption2, design: .monospaced).weight(.light))
                                     .foregroundColor(Color("Red3").opacity(0.5))
                                     .tracking(1)
@@ -171,7 +171,7 @@ struct ScenarioListView: View {
                         buttonType: .customed(width: panelWidth, height: panelHeight)
                     )
                     .accessibilityElement(children: .contain)
-                    .accessibilityLabel("Mission board for \(regionDisplayName)")
+                    .accessibilityLabel(String(format: "scenariolist.board.a11y".localized, regionDisplayName))
 
                     Spacer()
 
@@ -193,8 +193,8 @@ struct ScenarioListView: View {
                         ) {
                             navigateToDiary = true
                         }
-                        .accessibilityLabel("Open diary")
-                        .accessibilityHint("View your reflections from completed missions")
+                        .accessibilityLabel("scenariolist.diary.a11y".localized)
+                        .accessibilityHint("scenariolist.diary.a11y.hint".localized)
                         .customedBorder(
                             borderShape: "panel-border-008",
                             borderColor: Color("Gold3"),
@@ -210,8 +210,8 @@ struct ScenarioListView: View {
                                 .frame(minWidth: 44, minHeight: 44)
                                 .contentShape(Rectangle())
                         }
-                        .accessibilityLabel("Go back")
-                        .accessibilityHint("Return to region selection")
+                        .accessibilityLabel("scenariolist.back.a11y".localized)
+                        .accessibilityHint("scenariolist.back.a11y.hint".localized)
                     }
                     .padding(.bottom, 36)
                 }

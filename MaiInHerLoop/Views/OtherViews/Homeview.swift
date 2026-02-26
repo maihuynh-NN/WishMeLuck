@@ -146,7 +146,7 @@ struct HomeView: View {
         .padding(.top, isIPad ? 135 : 120)
         .accessibilityElement(children: .combine)
         .accessibilityAddTraits(.isHeader)
-        .accessibilityLabel("Red Embers — Than Hồng")
+        .accessibilityLabel("home.title.a11y".localized)
     }
 
     // MARK: - Button Stack

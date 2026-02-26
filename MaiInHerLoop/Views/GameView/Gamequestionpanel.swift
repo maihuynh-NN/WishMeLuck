@@ -7,11 +7,6 @@
 
 import SwiftUI
 
-/// The question panel inside the door shape.
-/// - Auto-sizes its height to fit any question length.
-/// - Runs the typewriter and fires `onTypingComplete` when done.
-/// - Shows `GameTimerBadge` top-right at the same time typing starts.
-/// - `isFirstQuestion` controls whether GameStartModifier slide-in plays.
 struct GameQuestionPanel: View {
     let questionText: String
     let timeRemaining: Int

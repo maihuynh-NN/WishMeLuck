@@ -28,8 +28,7 @@ struct DiaryCollectionPanel: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
             // Header
-            Text(language == "vi" ? "BỘ SƯU TẬP" : "YOUR COLLECTION")
-                .font(.system(.caption2, design: .monospaced).weight(.bold))
+            Text("diary.collection.title".localized)                .font(.system(.caption2, design: .monospaced).weight(.bold))
                 .foregroundColor(Color("Moss"))
                 .tracking(2)
                 .padding(.horizontal, 20)
@@ -108,9 +107,7 @@ struct DiaryCollectionPanel: View {
 
     // MARK: - Empty state
     private var emptyState: some View {
-        Text(language == "vi"
-             ? "Chưa có vật phẩm. Hãy chơi một tình huống."
-             : "No objects yet. Play a scenario first.")
+        Text("diary.collection.empty".localized)
             .font(.system(.caption, design: .serif).italic())
             .foregroundColor(Color("Moss").opacity(0.6))
             .multilineTextAlignment(.center)

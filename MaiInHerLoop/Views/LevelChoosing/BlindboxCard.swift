@@ -61,8 +61,8 @@ struct BlindBoxCard: View {
                 }
             }
             .buttonStyle(CardSelectStyle())
-            .accessibilityLabel("Mission \(index + 1), \(isCompleted ? "completed" : "locked")")
-            .accessibilityHint(isCompleted ? "Double tap to replay" : "Double tap to start this mission")
+            .accessibilityLabel(String(format: "mission.a11y.label".localized, index + 1, isCompleted ? "mission.a11y.completed".localized : "mission.a11y.locked".localized))
+            .accessibilityHint(isCompleted ? "mission.a11y.hint.replay".localized : "mission.a11y.hint.start".localized)
             .customedBorder(
                 borderShape: "panel-border-005",
                 borderColor: isCompleted ? Color("Gold3") : Color("Gold3").opacity(pulse ? 0.9 : 0.65),

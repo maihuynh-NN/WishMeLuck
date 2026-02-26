@@ -44,7 +44,7 @@ struct RegionCard: View {
                         .lineLimit(3)
                         .fixedSize(horizontal: false, vertical: true)
                     
-                    Text("Tap to explore ›")
+                    Text("region.tap_to_explore".localized)
                         .font(.footnote)
                         .multilineTextAlignment(.center)
                         .foregroundColor(.white.opacity(0.7))

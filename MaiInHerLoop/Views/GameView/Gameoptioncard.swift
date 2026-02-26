@@ -26,7 +26,7 @@ struct GameOptionCard: View {
                         ForEach(0..<5, id: \.self) { _ in
                             Image(systemName: "chevron.right")
                                 .font(.system(size: 4, weight: .bold))
-                                .foregroundColor(isSelected ? Color("Gold").opacity(0.7) : Color("Moss").opacity(0.5))
+                                .foregroundColor(isSelected ? Color("Beige").opacity(0.7) : Color("Moss").opacity(0.5))
                         }
                     }
                 }
@@ -47,8 +47,7 @@ struct GameOptionCard: View {
 
                 // Bottom label
                 if isSelected {
-                    Text("CHOSEN")
-                        .font(.system(size: 8, weight: .black, design: .monospaced))
+                    Text("game.chosen".localized)                        .font(.system(size: 8, weight: .black, design: .monospaced))
                         .foregroundColor(Color("Gold"))
                         .tracking(1)
                         .padding(.bottom, 6)

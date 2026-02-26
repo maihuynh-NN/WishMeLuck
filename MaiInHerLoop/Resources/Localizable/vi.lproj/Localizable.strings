@@ -136,3 +136,47 @@
  "scenariolist.header" = "BẢNG NHIỆM VỤ";
  "scenariolist.subheader" = "Chọn nhiệm vụ của bạn";
  "scenariolist.back" = "quay lại chọn vùng";
+
+ "game.reflection_unavailable" = "Không thể hiển thị kết quả";
+ "game.chosen" = "ĐÃ CHỌN";
+
+// MARK: - Region Card
+ "region.tap_to_explore" = "Chạm để khám phá ›";
+
+// MARK: - Scenario List
+ "scenariolist.coming_soon" = "· sắp có thêm tình huống ·";
+
+// MARK: - Diary Collection Panel
+ "diary.collection.title" = "BỘ SƯU TẬP";
+ "diary.collection.empty" = "Chưa có vật phẩm. Hãy chơi một tình huống.";
+
+// MARK: - Diary List
+ "diary.title" = "NHẬT KÝ";
+ "diary.subtitle" = "Hành trình thích nghi của bạn.";
+ "diary.past_scenarios" = "CÁC TÌNH HUỐNG ĐÃ QUA";
+
+// MARK: - BlindboxCard Accessibility
+ "mission.a11y.label" = "Nhiệm vụ %d, %@";
+ "mission.a11y.completed" = "đã hoàn thành";
+ "mission.a11y.locked" = "chưa mở";
+ "mission.a11y.hint.replay" = "Nhấn đúp để chơi lại";
+ "mission.a11y.hint.start" = "Nhấn đúp để bắt đầu nhiệm vụ";
+
+// MARK: - Home Accessibility
+ "home.title.a11y" = "Red Embers — Than Hồng";
+
+// MARK: - Scenario List Accessibility
+ "scenariolist.board.a11y" = "Bảng nhiệm vụ cho %@";
+ "scenariolist.diary.a11y" = "Mở nhật ký";
+ "scenariolist.diary.a11y.hint" = "Xem lại các kết quả từ nhiệm vụ đã hoàn thành";
+ "scenariolist.back.a11y" = "Quay lại";
+ "scenariolist.back.a11y.hint" = "Quay về chọn vùng";
+
+// MARK: - Story View
+ "story.skip" = "Bỏ qua";
+ "story.skip.a11y" = "Bỏ qua phần giới thiệu";
+ "story.skip.a11y.hint" = "Chuyển thẳng đến chọn vùng";
+ "story.enter" = "Bắt Đầu  ▶";
+ "story.enter.a11y" = "Bắt đầu khám phá vùng đất";
+ "story.nav.next" = "Phần tiếp theo";
+ "story.nav.previous" = "Phần trước";

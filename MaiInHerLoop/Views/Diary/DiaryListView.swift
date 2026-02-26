@@ -42,7 +42,7 @@ struct DiaryListView: View {
 
                     // ── Entry list section label
                     if !entries.isEmpty {
-                        Text(language == "vi" ? "CÁC TÌNH HUỐNG ĐÃ QUA" : "PAST SCENARIOS")
+                        Text("diary.past_scenarios".localized)
                             .font(.system(.caption2, design: .monospaced).weight(.bold))
                             .foregroundColor(Color("Moss"))
                             .tracking(2)
@@ -77,15 +77,13 @@ struct DiaryListView: View {
     // MARK: - Screen title
     private var screenTitle: some View {
         VStack(alignment: .leading, spacing: 4) {
-            Text(language == "vi" ? "NHẬT KÝ" : "DIARY")
+            Text("diary.title".localized)
                 .font(.system(.title2, design: .monospaced).weight(.black))
                 .foregroundColor(Color("Moss"))
                 .tracking(3)
                 .accessibilityAddTraits(.isHeader)
 
-            Text(language == "vi"
-                 ? "Hành trình thích nghi của bạn."
-                 : "Your adaptation journey.")
+            Text("diary.subtitle".localized)
                 .font(.system(.caption, design: .serif).italic())
                 .foregroundColor(Color("Moss").opacity(0.75))
         }

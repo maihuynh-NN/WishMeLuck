@@ -145,3 +145,49 @@
  "scenariolist.header" = "MISSION BOARD";
  "scenariolist.subheader" = "Choose your mission";
  "scenariolist.back" = "back to regions";
+
+// MARK: - Game
+ "game.reflection_unavailable" = "Reflection unavailable";
+ "game.chosen" = "CHOSEN";
+
+// MARK: - Region Card
+ "region.tap_to_explore" = "Tap to explore ›";
+
+// MARK: - Scenario List
+ "scenariolist.coming_soon" = "· more scenarios coming soon ·";
+
+// MARK: - Diary Collection Panel
+ "diary.collection.title" = "YOUR COLLECTION";
+ "diary.collection.empty" = "No objects yet. Play a scenario first.";
+
+// MARK: - Diary List (these were in Batch 1 keys, verify they exist)
+ "diary.title" = "DIARY";
+ "diary.subtitle" = "Your adaptation journey.";
+ "diary.past_scenarios" = "PAST SCENARIOS";
+
+
+// MARK: - BlindboxCard Accessibility
+ "mission.a11y.label" = "Mission %d, %@";
+ "mission.a11y.completed" = "completed";
+ "mission.a11y.locked" = "locked";
+ "mission.a11y.hint.replay" = "Double tap to replay";
+ "mission.a11y.hint.start" = "Double tap to start this mission";
+
+// MARK: - Home Accessibility
+ "home.title.a11y" = "Red Embers — Than Hồng";
+
+// MARK: - Scenario List Accessibility
+ "scenariolist.board.a11y" = "Mission board for %@";
+ "scenariolist.diary.a11y" = "Open diary";
+ "scenariolist.diary.a11y.hint" = "View your reflections from completed missions";
+ "scenariolist.back.a11y" = "Go back";
+ "scenariolist.back.a11y.hint" = "Return to region selection";
+
+// MARK: - Story View
+ "story.skip" = "Skip";
+ "story.skip.a11y" = "Skip introduction";
+ "story.skip.a11y.hint" = "Go directly to region selection";
+ "story.enter" = "Enter  ▶";
+ "story.enter.a11y" = "Begin region exploration";
+ "story.nav.next" = "Next section";
+ "story.nav.previous" = "Previous section";

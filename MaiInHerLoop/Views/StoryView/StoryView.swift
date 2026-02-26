@@ -165,21 +165,21 @@ struct StoryView: View {
     // min 44×44 contentShape satisfies HIG Rule 1 without inflating visual size.
     private var skipButton: some View {
         Button { navigateToRegion = true } label: {
-            Text(language == "vi" ? "Bỏ qua" : "Skip")
+            Text("story.skip".localized)
                 .font(.system(size: 12, weight: .light, design: .monospaced))
                 .foregroundColor(Color("Moss").opacity(0.55))
                 .underline()
                 .frame(minWidth: 44, minHeight: 44)
                 .contentShape(Rectangle())
         }
-        .accessibilityLabel(language == "vi" ? "Bỏ qua phần giới thiệu" : "Skip introduction")
-        .accessibilityHint(language == "vi" ? "Chuyển thẳng đến chọn vùng" : "Go directly to region selection")
+        .accessibilityLabel("story.skip.a11y".localized)
+        .accessibilityHint("story.skip.a11y.hint".localized)
     }
 
     // MARK: - Enter / Finish button (last beat, post-typewriter)
     private var enterButton: some View {
         CustomButton(
-            title: language == "vi" ? "Bắt Đầu  ▶" : "Enter  ▶",
+            title: "story.enter".localized,
             textColor: Color("Beige3"),
             buttonColor: Color("Red3")
         ) {
@@ -190,7 +190,7 @@ struct StoryView: View {
             borderColor: Color("Gold3"),
             buttonType: .mainButton
         )
-        .accessibilityLabel(language == "vi" ? "Bắt đầu khám phá vùng đất" : "Begin region exploration")
+        .accessibilityLabel("story.enter.a11y".localized)
     }
 
     // MARK: - Nav mini button
@@ -213,8 +213,8 @@ struct StoryView: View {
             buttonType: .miniButton
         )
         .accessibilityLabel(direction == .forward
-            ? (language == "vi" ? "Phần tiếp theo" : "Next section")
-            : (language == "vi" ? "Phần trước"    : "Previous section"))
+               ? "story.nav.next".localized
+               : "story.nav.previous".localized)
     }
 
     // MARK: - Navigation actions
