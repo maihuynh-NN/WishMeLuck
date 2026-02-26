@@ -21,7 +21,10 @@ struct RegionSelectionView: View {
         ZStack {
             
             // Background layer
-            Color.gray.ignoresSafeArea()
+            Image("Background")
+                .resizable()
+                .scaledToFill()
+                .ignoresSafeArea()
             
             VStack(spacing: 0) {
                 // Top spacer for centering

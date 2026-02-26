@@ -5,6 +5,7 @@
 //  Created by Mai Huynh Ngoc Nhat on 25/2/26.
 //
 import SwiftUI
+import CoreData
 
 struct DiaryEntryDetailView: View {
     let entry: DiaryEntry
@@ -57,6 +58,7 @@ struct DiaryEntryDetailView: View {
                 HStack(spacing: 0) {
                     // ── LEFT: Tile column — decorative, full height, fixed width
                     tileColumn(width: geo.size.width * tileRatio, height: geo.size.height)
+                        .ignoresSafeArea()
                         .accessibilityHidden(true)
 
                     // ── RIGHT: Scrollable diary content
@@ -261,34 +263,4 @@ private func mockEntry(context: NSManagedObjectContext) -> DiaryEntry {
             .environment(\.managedObjectContext, ctx)
             .onAppear { UserDefaults.standard.set("vi", forKey: "selectedLanguage") }
     }
-}
-
-// MARK: - Preview
-#Preview("Detail — EN") {
-    let context = PersistenceController(inMemory: true).container.viewContext
-    let e = DiaryEntry(context: context)
-    e.id = UUID()
-    e.archetypeID = "risk_recognition"
-    e.scenarioID = "south_easy_1"
-    e.date = Date()
-
-    return NavigationStack {
-        DiaryEntryDetailView(entry: e)
-    }
-    .environment(\.managedObjectContext, context)
-}
-
-#Preview("Detail — VI") {
-    let context = PersistenceController(inMemory: true).container.viewContext
-    let e = DiaryEntry(context: context)
-    e.id = UUID()
-    e.archetypeID = "self_reliance"
-    e.scenarioID = "south_easy_1"
-    e.date = Date()
-
-    return NavigationStack {
-        DiaryEntryDetailView(entry: e)
-    }
-    .environment(\.managedObjectContext, context)
-    .onAppear { UserDefaults.standard.set("vi", forKey: "selectedLanguage") }
 }

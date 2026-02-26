@@ -47,8 +47,11 @@ struct ScenarioListView: View {
     var body: some View {
         GeometryReader { geo in
             ZStack {
-                Color("Beige3").ignoresSafeArea()
-
+                
+                Image("Background")
+                    .resizable()
+                    .scaledToFill()
+                    .ignoresSafeArea()
                 // Hidden NavigationLinks
                 VStack {
                     ForEach(scenarios.indices, id: \.self) { i in
