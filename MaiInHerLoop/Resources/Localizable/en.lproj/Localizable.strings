@@ -138,3 +138,10 @@
 "diary.back" = "Back";
 "diary.back.hint" = "Return to previous screen";
 "diary.entry.hint" = "Open diary entry";
+
+ "dispatch.scroll_guide" = "scroll to read the briefing";
+ "reflection.result.header" = "YOUR ARCHETYPE";
+ "ui.chronicles.title" = "CHRONICLES";
+ "scenariolist.header" = "MISSION BOARD";
+ "scenariolist.subheader" = "Choose your mission";
+ "scenariolist.back" = "back to regions";

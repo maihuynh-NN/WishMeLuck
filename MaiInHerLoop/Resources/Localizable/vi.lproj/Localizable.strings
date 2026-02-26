@@ -129,3 +129,10 @@
 "diary.back" = "Quay lại";
 "diary.back.hint" = "Quay về màn hình trước";
 "diary.entry.hint" = "Mở mục nhật ký";
+
+ "dispatch.scroll_guide" = "cuộn để đọc bản tin";
+ "reflection.result.header" = "MẪU HÌNH CỦA BẠN";
+ "ui.chronicles.title" = "BIÊN NIÊN SỬ";
+ "scenariolist.header" = "BẢNG NHIỆM VỤ";
+ "scenariolist.subheader" = "Chọn nhiệm vụ của bạn";
+ "scenariolist.back" = "quay lại chọn vùng";

@@ -150,7 +150,7 @@ struct ReflectionResultView: View {
     private var archetypeLabel: some View {
         if let a = archetype {
             VStack(spacing: 4) {
-                Text("reflection.result.header".lkey)
+                Text("reflection.result.header".localized)
                     .font(.system(.caption2, design: .monospaced).weight(.medium))
                     .foregroundColor(Color("Moss").opacity(0.6))
                     .tracking(2)

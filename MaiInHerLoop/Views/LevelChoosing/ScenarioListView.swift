@@ -73,7 +73,7 @@ struct ScenarioListView: View {
                             .chronicleFade()
                             .padding(.top, 24)
 
-                        Text("scenariolist.header".lkey)
+                        Text("scenariolist.header".localized)
                             .font(.system(.caption2, design: .monospaced).weight(.bold))
                             .foregroundColor(Color("Red3").opacity(0.65))
                             .tracking(2)
@@ -93,7 +93,7 @@ struct ScenarioListView: View {
                             .padding(.horizontal, 50)
                             .chronicleFade()
 
-                        Text("scenariolist.subheader".lkey)
+                        Text("scenariolist.subheader".localized)
                             .font(.system(.caption2, design: .monospaced).weight(.light))
                             .foregroundColor(Color("Red3").opacity(0.55))
                             .tracking(0.5)
@@ -202,7 +202,7 @@ struct ScenarioListView: View {
                         )
 
                         Button(action: { dismiss() }) {
-                            Text("scenariolist.back".lkey)
+                            Text("scenariolist.back".localized)
                                 .font(.system(.caption2, design: .monospaced).weight(.light))
                                 .foregroundColor(Color("Moss").opacity(0.55))
                                 .tracking(0.5)

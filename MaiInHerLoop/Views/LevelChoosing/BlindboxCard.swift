@@ -69,7 +69,7 @@ struct BlindBoxCard: View {
                 buttonType: cardSize
             )
 
-            Text(isCompleted ? "mission.responded".lkey : "mission.classified".lkey)
+            Text(isCompleted ? "mission.responded".localized : "mission.classified".localized)
                 .font(.system(.caption2, design: .monospaced).weight(.medium))
                 .foregroundColor(Color("Red3"))
                 .tracking(0.5)

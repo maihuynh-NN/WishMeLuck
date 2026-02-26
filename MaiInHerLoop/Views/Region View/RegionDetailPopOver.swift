@@ -56,15 +56,15 @@ struct RegionDetailPopOver: View {
         }
     }
     
-    private func sectionKey(_ index: Int, _ field: String) -> LocalizedStringKey {
-        let section = survivalGuide.survivalSections[index - 1]
-        switch field {
-        case "title":    return section.titleKey.lkey
-        case "content":  return section.contentKey.lkey
-        case "subtitle": return section.subtitleKey.lkey
-        default:         return LocalizedStringKey("")
-        }
-    }
+    private func sectionKey(_ index: Int, _ field: String) -> String {
+           let section = survivalGuide.survivalSections[index - 1]
+           switch field {
+           case "title":    return section.titleKey.localized
+           case "content":  return section.contentKey.localized
+           case "subtitle": return section.subtitleKey.localized
+           default:         return ""
+           }
+       }
     
     private var theRegionText: String {
         String(
@@ -111,7 +111,7 @@ struct RegionDetailPopOver: View {
                             VStack {
                                 HStack {
                                     VStack(alignment: .leading, spacing: 4) {
-                                        Text("ui.landing_on".lkey)
+                                        Text("ui.landing_on".localized)
                                             //.font(.system(size: 10, weight: .bold, design: .monospaced))
                                             .foregroundColor(.white)
                                             .tracking(1)
@@ -122,7 +122,7 @@ struct RegionDetailPopOver: View {
                                             .tracking(1.5)
                                             .opacity(headerPulse ? 1.0 : 0.8)
                                         
-                                        Text("ui.survival_orientation_manual".lkey)
+                                        Text("ui.survival_orientation_manual".localized)
                                             //.font(.system(size: 9, weight: .medium, design: .monospaced))
                                             .foregroundColor(.white.opacity(0.9))
                                             .tracking(0.5)
@@ -199,7 +199,7 @@ struct RegionDetailPopOver: View {
                     
                     // MARK: - Chronicle Header with Traditional Pattern
                     VStack(spacing: 8) {
-                        Text("ui.chronicles.title".lkey)
+                        Text("ui.chronicles.title".localized)
                             .font(.system(size: 12, weight: .bold, design: .monospaced))
                             .foregroundColor(Color("Red"))
                             .tracking(2)
@@ -368,7 +368,7 @@ struct RegionDetailPopOver: View {
                         .padding(.top, 5)
                         
                         Button(action: onClose) {
-                            Text("ui.study_others_first".lkey)
+                            Text("ui.study_others_first".localized)
                                 .font(.system(size: 9, weight: .light, design: .monospaced))
                                 .foregroundColor(Color("Gold").opacity(0.7))
                                 .tracking(0.5)
