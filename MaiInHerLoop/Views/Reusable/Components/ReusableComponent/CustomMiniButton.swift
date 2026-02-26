@@ -1,10 +1,3 @@
-//
-//  CustomMiniButton.swift
-//  MaiInHerLoop
-//
-//  Created by Huynh Ngoc Nhat Mai on 15/2/26.
-//
-
 import SwiftUI
 
 struct CustomMiniButton: View {
@@ -18,14 +11,14 @@ struct CustomMiniButton: View {
         case sfSymbol(String)
     }
 
-    // MARK: - Original asset-image initializer (unchanged)
+    // MARK: - Original asset-image initializer
     init(icon: String, buttonColor: Color, action: @escaping () -> Void) {
         self.iconType = .asset(icon)
         self.buttonColor = buttonColor
         self.action = action
     }
 
-    // MARK: - New SF Symbol initializer
+    // MARK: - SF Symbol initializer
     init(systemIcon: String, buttonColor: Color, action: @escaping () -> Void) {
         self.iconType = .sfSymbol(systemIcon)
         self.buttonColor = buttonColor
@@ -54,7 +47,7 @@ struct CustomMiniButton: View {
             .frame(width: 30, height: 30)
             .background(buttonColor.opacity(0.4))
         }
-        .frame(minWidth: 44, minHeight: 44)   // HIG Rule 1: 44pt touch target
+        .frame(minWidth: 44, minHeight: 44)
         .contentShape(Rectangle())
     }
 }
@@ -82,7 +75,7 @@ struct CustomMiniButton: View {
                 buttonType: .miniButton
             )
 
-            // New SF Symbol icon
+            // SF Symbol icon
             CustomMiniButton(
                 systemIcon: "gearshape.fill",
                 buttonColor: Color("Beige"),

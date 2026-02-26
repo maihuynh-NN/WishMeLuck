@@ -21,7 +21,6 @@ struct RegionSelectionView: View {
                 
                 Image("Background")
                     .resizable()
-                    .frame(width: .infinity, height: .infinity)
                     .clipped()
                     .ignoresSafeArea(edges: .vertical)
                     .accessibilityHidden(true)
@@ -29,9 +28,8 @@ struct RegionSelectionView: View {
                 VStack(spacing: 0) {
                     Spacer().frame(maxHeight: isWide ? 10 : .infinity)
                     
-                    // MARK: - Cultural Header
+                    // MARK: - Header
                     VStack(spacing: 15) {
-                        // Traditional pattern line
                         HStack(spacing: 4) {
                             ForEach(0..<7, id: \.self) { _ in
                                 Rectangle()
@@ -136,10 +134,10 @@ struct RegionSelectionView: View {
                     .padding(.bottom, 50)
                 }
                 
-                // MARK: - Back Button (top left) — overlay
+                // MARK: - Back Button
                 BackButton(iconColor: Color("Red3"), borderColor: Color("Gold3"))
                 
-                // MARK: - Settings Button (top right) — overlay
+                // MARK: - Settings Button 
                 SettingsButton()
             }
         }

@@ -1,10 +1,3 @@
-//
-//  MissionBriefingOverlay.swift
-//  MaiInHerLoop
-//
-//  Created by Mai Huynh Ngoc Nhat on 18/2/26.
-//
-
 import SwiftUI
 
 struct MissionBriefingOverlay: View {
@@ -19,7 +12,7 @@ struct MissionBriefingOverlay: View {
     @State private var pulseAnimation = false
     @State private var borderPulse    = false
 
-    // MARK: - Responsive sizing (same pattern as ComponentSize.swift)
+    // MARK: - Responsive sizing
     private var isIPad: Bool { UIDevice.current.userInterfaceIdiom == .pad }
     private var panelWidth:  CGFloat { isIPad ? 480 : 340 }
     private var panelHeight: CGFloat { isIPad ? 640 : 520 }
@@ -54,7 +47,6 @@ struct MissionBriefingOverlay: View {
 
                         // MARK: - Header
                         VStack(spacing: 8) {
-                            // Patterns2: BarRow
                             BarRow(color: Color("Red3"))
                                 .chronicleFade()
                                 .padding(.top, 10)
@@ -68,7 +60,6 @@ struct MissionBriefingOverlay: View {
                                 .accessibilityAddTraits(.isHeader)
                                 .padding(.top, 10)
 
-                            // Patterns2: SquareDivider
                             SquareDivider(color: Color("Red3"))
                                 .padding(.horizontal, isIPad ? 100 : 60)
                         }
@@ -111,7 +102,7 @@ struct MissionBriefingOverlay: View {
                         .chronicleFade()
 
 
-                        // MARK: - Scenario title (static, no typewriter)
+                        // MARK: - Scenario title 
                         Text("dispatch.incoming".localized)
                             .font(.system(.subheadline, design: .monospaced))
                             .foregroundColor(Color("Moss"))

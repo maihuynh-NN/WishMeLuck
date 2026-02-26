@@ -1,9 +1,3 @@
-//
-//  Question.swift
-//  MaiInHerLoop
-//
-//  Created by Mai Huynh Ngoc Nhat on 4/2/26.
-//
 import Foundation
 
 struct Question: Codable, Hashable {
@@ -19,7 +13,6 @@ struct Question: Codable, Hashable {
         case textVI = "text_vi"
     }
     
-    // Hashable conformance
     func hash(into hasher: inout Hasher) {
         hasher.combine(id)
     }

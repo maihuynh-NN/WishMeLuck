@@ -1,9 +1,3 @@
-//
-//  ComponentSize.swift
-//  MaiInHerLoop
-//
-//  Created by Huynh Ngoc Nhat Mai on 15/2/26.
-//
 import SwiftUI
 
 enum ComponentSize {

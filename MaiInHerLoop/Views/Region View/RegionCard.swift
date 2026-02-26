@@ -1,10 +1,3 @@
-//
-//  RegionCard.swift
-//  MaiInHerLoop
-//
-//  Created by Huynh Ngoc Nhat Mai on 16/2/26.
-//
-
 import SwiftUI
 
 struct RegionCard: View {

@@ -1,10 +1,3 @@
-//
-//  ScenarioListView.swift
-//  MaiInHerLoop
-//
-//  Created by Mai Huynh Ngoc Nhat on 9/2/26.
-//
-
 import SwiftUI
 
 struct ScenarioListView: View {
@@ -51,7 +44,6 @@ struct ScenarioListView: View {
                 // MARK: - Background
                 Image("Background")
                     .resizable()
-                    .frame(width: .infinity, height: .infinity)
                     .clipped()
                     .ignoresSafeArea(edges: .vertical)
                     .accessibilityHidden(true)
@@ -75,7 +67,6 @@ struct ScenarioListView: View {
 
                     // MARK: - Header
                     VStack(spacing: 12) {
-                        // Rule 2: decorative → accessibilityHidden. Uses reusable BarRow.
                         BarRow(color: Color("Red3").opacity(0.7))
                             .chronicleFade()
                             .padding(.top, 24)
@@ -95,7 +86,6 @@ struct ScenarioListView: View {
                             .chronicleFade()
                             .accessibilityAddTraits(.isHeader)
 
-                        // Uses reusable SquareDivider
                         SquareDivider(color: Color("Red3"))
                             .padding(.horizontal, 50)
                             .chronicleFade()
@@ -154,7 +144,6 @@ struct ScenarioListView: View {
 
                             Spacer()
 
-                            // Coming soon footer — purely decorative
                             VStack(spacing: 6) {
                                 Rectangle()
                                     .fill(Color("Red3").opacity(0.35))

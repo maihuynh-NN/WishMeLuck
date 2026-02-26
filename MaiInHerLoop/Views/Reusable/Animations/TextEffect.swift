@@ -1,9 +1,3 @@
-//
-//  TextEffect.swift
-//  MaiInHerLoop
-//
-//  Created by Mai Huynh Ngoc Nhat on 12/2/26.
-//
 import SwiftUI
 
 // MARK: - Chronicle Fade

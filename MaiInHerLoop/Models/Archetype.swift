@@ -1,16 +1,9 @@
-//
-//  Archetype.swift
-//  MaiInHerLoop
-//
-//  Created by Mai Huynh Ngoc Nhat on 6/2/26.
-//
-
 import Foundation
 
 struct Archetype: Codable, Identifiable {
     let id: String
 
-    // Object asset name (xcassets)
+    // Object asset
     let objectImageName: String
 
     // Teaser — 2–3 words under the image

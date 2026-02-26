@@ -1,5 +1,3 @@
-//
-//  BackButton.swift
 import SwiftUI
 
 struct BackButton: View {

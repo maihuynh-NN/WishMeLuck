@@ -1,10 +1,3 @@
-//
-//  GameOptionCard.swift
-//  MaiInHerLoop
-//
-//  Created by Mai Huynh Ngoc Nhat on 21/2/26.
-//
-
 import SwiftUI
 
 struct GameOptionCard: View {
@@ -35,7 +28,6 @@ struct GameOptionCard: View {
 
                 Spacer(minLength: 4)
 
-                // Option text — semantic font, scales on iPad
                 Text(text)
                     .font(.system(isWide ? .subheadline : .caption, design: .monospaced).weight(.medium))
                     .foregroundColor(isSelected ? Color("Gold") : Color("Moss"))
@@ -45,7 +37,6 @@ struct GameOptionCard: View {
 
                 Spacer(minLength: 4)
 
-                // Bottom label
                 if isSelected {
                     Text("game.chosen".localized)
                         .font(.system(.caption2, design: .monospaced).weight(.black))
@@ -53,7 +44,6 @@ struct GameOptionCard: View {
                         .tracking(1)
                         .padding(.bottom, 6)
                 } else {
-                    // Decorative divider
                     HStack(spacing: 3) {
                         Rectangle()
                             .fill(Color("Moss").opacity(0.5))
@@ -69,7 +59,6 @@ struct GameOptionCard: View {
                     .padding(.bottom, 8)
                 }
             }
-            // Height is flexible — grows with text content
             .frame(maxWidth: .infinity, minHeight: isWide ? 100 : 80)
             .background(
                 RoundedRectangle(cornerRadius: 8)
@@ -85,12 +74,12 @@ struct GameOptionCard: View {
             .scaleEffect(isSelected ? 0.96 : 1.0)
             .animation(.easeInOut(duration: 0.2), value: isSelected)
         }
-        .buttonStyle(CardTapStyle())   // handles the CardSelectModifier bounce on tap
+        .buttonStyle(CardTapStyle())// handles the CardSelectModifier bounce on tap
         .accessibilityHint(isSelected ? "" : "game.option.hint".localized)
     }
 }
 
-// MARK: - Button style that applies CardSelectModifier bounce
+// MARK: - Button style that applies CardSelectModifier 
 private struct CardTapStyle: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label

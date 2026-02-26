@@ -1,10 +1,3 @@
-//
-//  Localizable.strings
-//  MaiInHerLoop
-//
-//  Created by Huynh Ngoc Nhat Mai on 16/2/26.
-//
-
 // MARK: - UI Generic
 "ui.landing_on" = "ĐỔ BỘ VÀO";
 "ui.survival_orientation_manual" = "Cẩm Nang Định Hướng Sinh Tồn";

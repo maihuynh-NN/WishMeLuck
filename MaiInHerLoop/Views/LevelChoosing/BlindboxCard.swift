@@ -1,10 +1,3 @@
-//
-//  BlindBoxCard.swift
-//  MaiInHerLoop
-//
-//  Created by Mai Huynh Ngoc Nhat on 18/2/26.
-//
-
 import SwiftUI
 
 struct BlindBoxCard: View {

@@ -1,9 +1,3 @@
-//
-//  ScenarioEngine.swift
-//  MaiInHerLoop
-//
-//  Created by Mai Huynh Ngoc Nhat on 4/2/26.
-//
 import Foundation
 
 @MainActor
@@ -44,11 +38,11 @@ final class ScenarioEngine: ObservableObject {
         if let first = questionMap[scenario.startQuestionID] {
             currentQuestion = first
             timeRemaining = first.timer
-            // DON'T start timer here
+            // no start timer here
         }
     }
     
-    // NEW: Start the game
+    // Start the game
     func start() {
         isActive = true
         startTimer()
@@ -127,7 +121,7 @@ final class ScenarioEngine: ObservableObject {
         guard let current = currentQuestion else { return }
 
         traitCounts["information_first", default: 0] += 1
-        print("⏱️ TIMEOUT: Assigned default trait 'information_first'")
+        print("YO TIMEOUT: Assigned default trait 'information_first'")
 
         // no branching on timeout; assume linear flow
         if let index = scenario.questions.firstIndex(where: { $0.id == current.id }),
@@ -143,6 +137,6 @@ final class ScenarioEngine: ObservableObject {
         currentQuestion = nil
         isComplete = true
         isActive = false
-        print("✅ SCENARIO COMPLETE: Final score: \(score)")
+        print("YO SCENARIO COMPLETE: Final score: \(score)")
     }
 }

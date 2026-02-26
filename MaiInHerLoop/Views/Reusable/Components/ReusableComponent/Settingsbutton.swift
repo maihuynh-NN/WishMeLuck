@@ -1,20 +1,5 @@
-//
-//  SettingsButton.swift
-//  MaiInHerLoop
-//
-//  Created by Huynh Ngoc Nhat Mai on 26/2/26.
-//
-
 import SwiftUI
 
-/// Reusable settings button + modal pair.
-/// Drop into any view's ZStack to get a top-right gear icon that opens the settings overlay.
-///
-/// Usage:
-///   ZStack {
-///       // ... your view content ...
-///       SettingsButton()
-///   }
 struct SettingsButton: View {
 
     @State private var showSettings = false
@@ -27,7 +12,6 @@ struct SettingsButton: View {
 
     var body: some View {
         ZStack {
-            // Gear button — top right
             VStack {
                 HStack {
                     Spacer()

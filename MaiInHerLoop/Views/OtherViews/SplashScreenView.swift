@@ -1,10 +1,3 @@
-//
-//  SplashScreenView.swift
-//  MaiInHerLoop
-//
-//  Created by Huynh Ngoc Nhat Mai on 26/2/26.
-//
-
 import SwiftUI
 
 struct SplashScreenView: View {
@@ -21,7 +14,7 @@ struct SplashScreenView: View {
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
     @FocusState private var isNameFieldFocused: Bool
 
-    // MARK: - Responsive (same pattern as MissionBriefingOverlay)
+    // MARK: - Responsive
     private var isIPad: Bool { UIDevice.current.userInterfaceIdiom == .pad }
     private var panelWidth: CGFloat { isIPad ? 420 : 320 }
     private var panelHeight: CGFloat { isIPad ? 420 : 360 }
@@ -34,7 +27,6 @@ struct SplashScreenView: View {
     // MARK: - Body
     var body: some View {
         ZStack {
-            // Background — full bleed
             Image("Background")
                 .resizable()
                 .scaledToFill()
@@ -67,7 +59,6 @@ struct SplashScreenView: View {
             size: .customed(width: panelWidth, height: panelHeight)
         ) {
             ZStack {
-                // Panel fill — same pattern as MissionBriefingOverlay
                 RoundedRectangle(cornerRadius: 12)
                     .fill(Color("Beige3").opacity(0.6))
                     .frame(width: panelWidth - 5, height: panelHeight - 5)
@@ -75,7 +66,6 @@ struct SplashScreenView: View {
 
                 VStack(spacing: 16) {
 
-                    // Top ornament
                     BarRow(color: Color("Moss"), count: 7)
                         .padding(.top, 24)
 
@@ -88,7 +78,6 @@ struct SplashScreenView: View {
                         .padding(.horizontal, 24)
                         .frame(minHeight: 50)
 
-                    // Divider
                     DiamondDivider(color: Color("Moss"))
                         .padding(.horizontal, 40)
 

@@ -1,9 +1,3 @@
-//
-//  ReflectionResultView.swift
-//  MaiInHerLoop
-//
-//  Created by Mai Huynh Ngoc Nhat on 4/2/26.
-//
 import SwiftUI
 
 struct ReflectionResultView: View {
@@ -17,7 +11,7 @@ struct ReflectionResultView: View {
     var onGoToDiary: (() -> Void)? = nil
     var onGoToScenarios: (() -> Void)? = nil
 
-    // MARK: - Responsive sizing — same pattern as StoryView / MissionBriefingOverlay
+    // MARK: - Responsive sizing
     private var isIPad: Bool { UIDevice.current.userInterfaceIdiom == .pad }
     private var panelWidth:  CGFloat { isIPad ? 500 : 340 }
     private var panelHeight: CGFloat { isIPad ? 680 : 560 }
@@ -27,7 +21,7 @@ struct ReflectionResultView: View {
         ArchetypeRepository.archetype(for: snapshot.archetypeID)
     }
 
-    // Archetype fields are already bilingual structs — resolve by language directly
+
     private func archetypeName(_ a: Archetype) -> String {
         language == "vi" ? a.nameVI : a.nameEN
     }
@@ -67,8 +61,6 @@ struct ReflectionResultView: View {
     }
 
     // MARK: - Main Panel
-    // Same structure as StoryView and MissionBriefingOverlay:
-    // CustomPanel(.clear) + inner RoundedRectangle + fixed customed(width:height:) border
     private var resultPanel: some View {
         CustomPanel(
             backgroundColor: .clear,
@@ -82,54 +74,45 @@ struct ReflectionResultView: View {
 
                 VStack(spacing: 0) {
 
-                    // ── Header ornament ──
                     BarRow(color: Color("Moss"))
                         .padding(.top, 18)
                         .chronicleFade()
                         .accessibilityHidden(true)
 
-                    // ── Archetype name ──
                     archetypeLabel
                         .chronicleFade()
 
-                    // ── Divider ──
                     DiamondDivider(color: Color("Gold3"))
                         .padding(.horizontal, hPad)
                         .padding(.top, 6)
                         .chronicleFade()
                         .accessibilityHidden(true)
 
-                    // ── Object image + teaser ──
                     objectBlock
                         .staggeredAppear(delay: 0.1)
 
-                    // ── Mirror sentence ──
                     mirrorSentence
                         .padding(.horizontal, hPad)
                         .staggeredAppear(delay: 0.18)
 
-                    // ── Divider ──
                     DiamondDivider(color: Color("Moss"))
                         .padding(.horizontal, hPad)
                         .padding(.vertical, 6)
                         .chronicleFade()
                         .accessibilityHidden(true)
 
-                    // ── Scrollable explanation + tradeoff ──
                     ScrollView(.vertical, showsIndicators: false) {
                         explanationAndTradeoff
                             .padding(.horizontal, hPad)
                     }
                     .frame(maxHeight: .infinity)
 
-                    // ── Bottom divider ──
                     SquareDivider(color: Color("Moss"))
                         .padding(.horizontal, hPad)
                         .padding(.top, 8)
                         .chronicleFade()
                         .accessibilityHidden(true)
 
-                    // ── Actions ──
                     navigationButtons
                         .padding(.horizontal, hPad)
                         .padding(.top, 12)

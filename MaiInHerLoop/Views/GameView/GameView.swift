@@ -1,10 +1,3 @@
-//
-//  GameView.swift
-//  MaiInHerLoop
-//
-//  Created by Mai Huynh Ngoc Nhat on 21/2/26.
-//
-
 import SwiftUI
 
 struct GameView: View {

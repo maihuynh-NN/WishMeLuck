@@ -1,9 +1,3 @@
-//
-//  DiaryCollectionPanel.swift
-//  MaiInHerLoop
-//
-//  Created by Mai Huynh Ngoc Nhat on 25/2/26.
-//
 import SwiftUI
 
 struct DiaryCollectionPanel: View {
@@ -27,7 +21,7 @@ struct DiaryCollectionPanel: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
-            // Header
+
             Text("diary.collection.title".localized)                .font(.system(.caption2, design: .monospaced).weight(.bold))
                 .foregroundColor(Color("Moss"))
                 .tracking(2)

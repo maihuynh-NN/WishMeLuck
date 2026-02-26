@@ -1,9 +1,3 @@
-//
-//  Scenario.swift
-//  MaiInHerLoop
-//
-//  Created by Mai Huynh Ngoc Nhat on 4/2/26.
-//
 import Foundation
 
 struct Scenario: Codable, Identifiable, Hashable {

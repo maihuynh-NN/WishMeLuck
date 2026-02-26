@@ -1,10 +1,3 @@
-//
-//  GameQuestionPanel.swift
-//  MaiInHerLoop
-//
-//  Created by Mai Huynh Ngoc Nhat on 21/2/26.
-//
-
 import SwiftUI
 
 struct GameQuestionPanel: View {
@@ -28,7 +21,6 @@ struct GameQuestionPanel: View {
 
             // MARK: Top bar: decoration dots + timer
             HStack(alignment: .center) {
-                // Decorative dots row (matches your existing style)
                 HStack(spacing: 5) {
                     ForEach(0..<6, id: \.self) { _ in
                         Circle()
@@ -46,7 +38,6 @@ struct GameQuestionPanel: View {
             .padding(.top, 10)
             .padding(.bottom, 6)
 
-            // MARK: Divider line
             HStack {
                 Rectangle()
                     .fill(Color("Red3").opacity(0.4))

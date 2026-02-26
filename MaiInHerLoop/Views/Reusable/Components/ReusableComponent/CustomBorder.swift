@@ -45,7 +45,6 @@ extension View {
 
 #Preview {
     VStack(spacing: 20) {
-        // Fixed — unchanged
         CustomPanel(
             backgroundColor: Color(.white),
             size: .customed(width: 300, height: 150)
@@ -54,7 +53,6 @@ extension View {
         }
         .customedBorder(borderShape: "panel-border-003", borderColor: Color("Moss"), buttonType: .customed(width: 300, height: 150))
 
-        // Flexible
         CustomPanel(
             backgroundColor: Color(.white),
             size: .flexible(height: 150)

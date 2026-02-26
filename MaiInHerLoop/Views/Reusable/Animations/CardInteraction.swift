@@ -1,9 +1,3 @@
-//
-//  CardInteraction.swift
-//  MaiInHerLoop
-//
-//  Created by Mai Huynh Ngoc Nhat on 12/2/26.
-//
 import SwiftUI
 
 // MARK: - Staggered Appear
@@ -32,7 +26,7 @@ struct StaggeredAppearModifier: ViewModifier {
     }
 }
 
-// MARK: - Card Select (ButtonStyle — replaces onTapGesture version)
+// MARK: - Card Select
 struct CardSelectStyle: ButtonStyle {
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
@@ -117,7 +111,6 @@ struct CustomModifiersPreview: View {
                 Divider()
                     .padding(.horizontal)
                 
-                // 3. Card Submit Modifier
                 VStack(alignment: .leading, spacing: 16) {
                     Text("3. Card Submit")
                         .font(.title2)
@@ -139,7 +132,6 @@ struct CustomModifiersPreview: View {
                 Divider()
                     .padding(.horizontal)
                 
-                // 1. Staggered Appear Modifier
                 VStack(alignment: .leading, spacing: 16) {
                     Text("1. Staggered Appear")
                         .font(.title2)
@@ -161,7 +153,6 @@ struct CustomModifiersPreview: View {
                 Divider()
                     .padding(.horizontal)
                 
-                // 2. Card Select Modifier
                 VStack(alignment: .leading, spacing: 16) {
                     Text("2. Card Select")
                         .font(.title2)

@@ -196,7 +196,7 @@ struct RegionDetailPopOver: View {
                     .opacity(textOpacity)
                     .accessibilityHidden(true)
                     
-                    // MARK: - Chronicle Header with Traditional Pattern
+                    // MARK: - Header with Traditional Pattern
                     VStack(spacing: 8) {
                         Text("ui.chronicles.title".localized)
                             .font(.system(.caption, design: .monospaced).weight(.bold))

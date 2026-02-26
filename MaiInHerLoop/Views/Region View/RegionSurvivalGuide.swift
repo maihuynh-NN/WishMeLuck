@@ -1,15 +1,6 @@
-//
-//  RegionSurvivalGuide.swift
-//  MaiInHerLoop
-//
-//  Created by Huynh Ngoc Nhat Mai on 17/2/26.
-//
 import Foundation
 
-// MARK: - Survival Guide Data
-// All string content has been moved to Localizable.strings (en/vi)
 // Keys follow the pattern: region.{regionKey}.sections.{1-4}.{title|content|subtitle}
-
 struct SurvivalSection {
     let titleKey: String
     let contentKey: String

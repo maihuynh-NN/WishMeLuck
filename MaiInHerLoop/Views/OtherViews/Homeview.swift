@@ -1,10 +1,3 @@
-//
-//  HomeView.swift
-//  MaiInHerLoop
-//
-//  Created by Huynh Ngoc Nhat Mai on 26/2/26.
-//
-
 import SwiftUI
 
 struct HomeView: View {
@@ -38,7 +31,7 @@ struct HomeView: View {
             // MARK: - Background
             backgroundLayer
 
-            // MARK: - Title (top right)
+            // MARK: - Title
             VStack {
                 HStack {
                     Spacer()
@@ -52,7 +45,7 @@ struct HomeView: View {
                 Spacer()
             }
 
-            // MARK: - Buttons + Settings mini-button (bottom left)
+            // MARK: - Buttons + Settings mini-button
             VStack {
                 Spacer()
 
@@ -65,7 +58,7 @@ struct HomeView: View {
                 }
                 .padding(.bottom, isIPad ? 100 : 80)
             }
-            .padding(.bottom, 34)               // HIG Rule 7: home indicator clearance
+            .padding(.bottom, 34)               
 
             // MARK: - Settings Modal Overlay
             if showSettings {

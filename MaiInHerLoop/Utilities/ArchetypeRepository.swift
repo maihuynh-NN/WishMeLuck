@@ -1,9 +1,3 @@
-//
-//  ArchetypeRepository.swift
-//  MaiInHerLoop
-//
-//  Created by Mai Huynh Ngoc Nhat on 6/2/26.
-//
 import Foundation
 
 struct ArchetypeRepository {
@@ -22,8 +16,8 @@ struct ArchetypeRepository {
             objectExplanationVI: "Dây thun có mặt ở khắp nơi — buộc tiền ở ngân hàng, buộc rau ở chợ, quấn quanh tay nắm cửa chờ lúc cần. Người ta nhặt về mà không biết từ khi nào. Căng thầm lặng — cho đến khi đứt.",
             tradeoffEN: "Not every tension means something is about to break.",
             tradeoffVI: "Không phải lần nào căng cũng là sắp đứt.",
-            nameEN: "Early Signal Reader",
-            nameVI: "Người Nhận Diện Sớm",
+            nameEN: "Rubber Bands",
+            nameVI: "Cái Nịt",
             imageName: "rubber"
         ),
 
@@ -39,8 +33,8 @@ struct ArchetypeRepository {
             objectExplanationVI: "Cái giỏ chợ không tự nhiên ra đi tay không rồi về đầy. Nó có ngăn, có chỗ. Nó biết thứ gì còn thiếu trước khi bạn nghĩ ra. Cái giỏ của mẹ bạn đã trải qua nhiều khủng hoảng hơn bất kỳ túi cứu trợ nào.",
             tradeoffEN: "A full basket takes time — and sometimes you need to go before it's ready.",
             tradeoffVI: "Giỏ đầy cần thời gian — mà đôi khi không có thời gian để đợi đầy.",
-            nameEN: "Deliberate Analyst",
-            nameVI: "Người Phân Tích Thận Trọng",
+            nameEN: "Mom's Market Basket",
+            nameVI: "Giỏ Đi Chợ Của Mẹ",
             imageName: "basket"
         ),
 
@@ -57,7 +51,7 @@ struct ArchetypeRepository {
             tradeoffEN: "Moving fast gets you out — but sometimes the people behind you don't know why they're running.",
             tradeoffVI: "Đi nhanh giúp bạn thoát — nhưng đôi khi người đằng sau không biết tại sao mình đang chạy.",
             nameEN: "A HoneyComb Slipper",
-            nameVI: "Một Chiếc Dép Tổ Ong",
+            nameVI: "Dép Tổ Ong",
             imageName: "slipper"
         ),
 
@@ -73,8 +67,8 @@ struct ArchetypeRepository {
             objectExplanationVI: "Gạch được dùng để chặn bạt mái khi bão. Chặn cửa. Đặt trên mái nhà miền Trung không phải để trang trí — mà để giữ mái khỏi bay. Cục gạch không cần ai chỉ dẫn. Nó chỉ làm việc của nó.",
             tradeoffEN: "A brick alone holds weight — but it can't bend, and it can't ask for help.",
             tradeoffVI: "Một mình thì vững — nhưng không thể uốn, và không biết kêu ai.",
-            nameEN: "Independent Operator",
-            nameVI: "Người Tự Chủ",
+            nameEN: "A Brick",
+            nameVI: "Cục Gạch",
             imageName: "brick"
         )
     ]

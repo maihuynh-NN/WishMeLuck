@@ -1,9 +1,3 @@
-//
-//  Patterns2.swift
-//  MaiInHerLoop
-//
-//  Created by Mai Huynh Ngoc Nhat on 12/2/26.
-//
 import SwiftUI
 
 // MARK: - Individual reusable pattern components

@@ -33,7 +33,6 @@ struct CustomPanel<Content: View>: View {
         }
         .customedBorder(borderShape: "panel-border-003", borderColor: Color("Moss"), buttonType: .customed(width: 300, height: 200))
 
-        // Flexible 
         CustomPanel(
             backgroundColor: Color("Moss"),
             size: .flexible(height: 200)

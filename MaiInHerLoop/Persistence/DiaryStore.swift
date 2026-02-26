@@ -1,9 +1,3 @@
-//
-//  DiaryStore.swift
-//  MaiInHerLoop
-//
-//  Created by Mai Huynh Ngoc Nhat on 6/2/26.
-//
 import CoreData
 
 final class DiaryStore {
@@ -20,9 +14,9 @@ final class DiaryStore {
 
         do {
             try context.save()
-            print("🟢 Diary saved — scenario: \(snapshot.scenarioID), archetype: \(snapshot.archetypeID)")
+            print("Diary saved — scenario: \(snapshot.scenarioID), archetype: \(snapshot.archetypeID)")
         } catch {
-            print("❌ Diary save failed: \(error)")
+            print("Diary save failed: \(error)")
         }
     }
 }

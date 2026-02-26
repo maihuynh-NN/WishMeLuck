@@ -1,10 +1,3 @@
-//
-//  GameTimerBadge.swift
-//  MaiInHerLoop
-//
-//  Created by Mai Huynh Ngoc Nhat on 21/2/26.
-//
-
 import SwiftUI
 
 // Small timer badge shown in the top-right corner of the question panel.
@@ -31,13 +24,12 @@ struct GameTimerBadge: View {
                 RoundedRectangle(cornerRadius: 6)
                     .fill(badgeColor.opacity(0.85))
             )
-            // Only apply flash when urgent — avoids perpetual animation overhead
+            // Only apply flash when urgent
             .modifier(TimerFlashModifier(active: isUrgent))
     }
 }
 
 // Conditionally applies WarningFlashModifier logic.
-// Defined here to keep GameTimerBadge self-contained.
 private struct TimerFlashModifier: ViewModifier {
     let active: Bool
     @State private var isFlashing = false

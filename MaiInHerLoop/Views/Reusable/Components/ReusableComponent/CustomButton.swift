@@ -1,12 +1,6 @@
-//
-//  CustomButton.swift
-//  MaiInHerLoop
-//
-//  Created by Huynh Ngoc Nhat Mai on 15/2/26.
-//
 import SwiftUI
 
-// MARK: - Press feedback style (shared, can move to its own file later)
+// MARK: - Press feedback
 struct ScaleButtonStyle: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label

@@ -135,12 +135,12 @@ struct StoryView: View {
         }
     }
 
-    // MARK: - Skip button — semantic font, no .light weight
+    // MARK: - Skip button
     private var skipButton: some View {
         Button { navigateToRegion = true } label: {
             Text("story.skip".localized)
                 .font(.system(.caption2, design: .monospaced).weight(.regular))
-                .foregroundColor(Color("Moss").opacity(0.55))
+                .foregroundColor(Color("Moss"))
                 .underline()
                 .frame(minWidth: 44, minHeight: 44)
                 .contentShape(Rectangle())
@@ -166,7 +166,7 @@ struct StoryView: View {
         .accessibilityLabel("story.enter.a11y".localized)
     }
 
-    // MARK: - Nav mini button — semantic font for chevron
+    // MARK: - Nav mini button 
     private func navMiniButton(direction: NavDirection, action: @escaping () -> Void) -> some View {
         Button(action: action) {
             ZStack {

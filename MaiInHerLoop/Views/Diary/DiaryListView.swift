@@ -1,9 +1,3 @@
-//
-//  DiaryListView.swift
-//  MaiInHerLoop
-//
-//  Created by Mai Huynh Ngoc Nhat on 6/2/26.
-//
 import SwiftUI
 import CoreData
 
@@ -27,12 +21,12 @@ struct DiaryListView: View {
             ScrollView(.vertical, showsIndicators: false) {
                 VStack(alignment: .leading, spacing: 20) {
 
-                    // ── Screen title
+                    // Screen title
                     screenTitle
                         .padding(.horizontal, hPad)
                         .staggeredAppear(delay: 0.05)
 
-                    // ── Collection panel — no tap
+                    // Collection panel
                     DiaryCollectionPanel(
                         entries: Array(entries),
                         language: language
@@ -40,7 +34,7 @@ struct DiaryListView: View {
                     .padding(.horizontal, hPad)
                     .staggeredAppear(delay: 0.12)
 
-                    // ── Entry list section label
+                    // Entry list section label
                     if !entries.isEmpty {
                         Text("diary.past_scenarios".localized)
                             .font(.system(.caption2, design: .monospaced).weight(.bold))
@@ -50,7 +44,7 @@ struct DiaryListView: View {
                             .staggeredAppear(delay: 0.18)
                             .accessibilityAddTraits(.isHeader)
 
-                        // ── Entry rows
+                        // Entry rows
                         entryList
                             .staggeredAppear(delay: 0.22)
                     }
@@ -60,7 +54,6 @@ struct DiaryListView: View {
                 .padding(.top, 24)
             }
 
-            // Back button — fixed top left
             VStack {
                 HStack {
                     backButton
@@ -90,7 +83,7 @@ struct DiaryListView: View {
         }
     }
 
-    // MARK: - Entry list — each row wrapped in NavigationLink
+    // MARK: - Entry list 
     private var entryList: some View {
         VStack(spacing: 0) {
             ForEach(Array(entries.enumerated()), id: \.element.id) { index, entry in

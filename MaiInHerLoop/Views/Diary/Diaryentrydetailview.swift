@@ -1,9 +1,3 @@
-//
-//  DiaryEntryDetailView.swift
-//  MaiInHerLoop
-//
-//  Created by Mai Huynh Ngoc Nhat on 25/2/26.
-//
 import SwiftUI
 import CoreData
 
@@ -57,15 +51,14 @@ struct DiaryEntryDetailView: View {
             Color("Beige3").ignoresSafeArea()
 
             HStack(spacing: 0) {
-                // ── LEFT: Tile column
+                // LEFT: Tile column
                 tileColumn
                     .frame(width: tileColumnWidth)
                     .accessibilityHidden(true)
 
-                // ── RIGHT: Fixed header on top, scrollable insight below
+                // RIGHT: Fixed header on top, scrollable insight below
                 VStack(alignment: .leading, spacing: 0) {
 
-                    // FIXED: header + collected block (does NOT scroll)
                     VStack(alignment: .leading, spacing: 0) {
                         diaryHeader
                             .staggeredAppear(delay: 0.05)
@@ -84,7 +77,7 @@ struct DiaryEntryDetailView: View {
                     .padding(.leading, contentPad)
                     .padding(.trailing, contentPad * 0.8)
 
-                    // SCROLLABLE: scenario title + insight text only
+                    // SCROLLABLE: scenario title + insight text
                     ScrollView(.vertical, showsIndicators: false) {
                         scenarioInsight
                             .staggeredAppear(delay: 0.25)

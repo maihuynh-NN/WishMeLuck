@@ -1,10 +1,3 @@
-//
-//  StoryBeat.swift
-//  MaiInHerLoop
-//
-
-//
-
 import Foundation
 
 struct StoryBeat {
@@ -15,9 +8,6 @@ struct StoryBeat {
         language == "vi" ? vi : en
     }
 }
-
-// MARK: - Story Content
-// 4 temporary beats. Replace copy freely — view adapts automatically.
 
 let storyBeats: [StoryBeat] = [
     StoryBeat(

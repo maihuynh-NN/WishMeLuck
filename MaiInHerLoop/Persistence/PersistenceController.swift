@@ -1,9 +1,3 @@
-//
-//  PersistenceController.swift
-//  MaiInHerLoop
-//
-//  Created by Mai Huynh Ngoc Nhat on 6/2/26.
-//
 import CoreData
 
 struct PersistenceController {

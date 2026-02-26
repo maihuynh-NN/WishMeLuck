@@ -1,10 +1,3 @@
-//
-//  SettingsModal.swift
-//  MaiInHerLoop
-//
-//  Created by Huynh Ngoc Nhat Mai on 26/2/26.
-//
-
 import SwiftUI
 
 struct SettingsModal: View {
@@ -37,7 +30,6 @@ struct SettingsModal: View {
                 size: .customed(width: panelWidth, height: panelHeight)
             ) {
                 ZStack {
-                    // Panel fill (matches MissionBriefingOverlay pattern)
                     RoundedRectangle(cornerRadius: 12)
                         .fill(Color("Beige3").opacity(0.95))
                         .frame(width: panelWidth - 5, height: panelHeight - 5)
@@ -138,7 +130,7 @@ struct SettingsModal: View {
             )
         }
         .buttonStyle(ScaleButtonStyle())
-        .frame(minHeight: 44)                   // HIG Rule 1
+        .frame(minHeight: 44)                  
         .contentShape(Rectangle())
         .accessibilityLabel(label)
         .accessibilityHint(isSelected

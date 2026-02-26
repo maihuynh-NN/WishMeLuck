@@ -1,9 +1,3 @@
-//
-//  OverlayModal.swift
-//  MaiInHerLoop
-//
-//  Created by Mai Huynh Ngoc Nhat on 12/2/26.
-//
 import SwiftUI
 
 // MARK: - Overlay Appear
@@ -89,8 +83,7 @@ extension View {
         modifier(OverlayAppearModifier())
     }
 
-    /// For dismiss animation use .transition(.opacity) at the call site instead.
-    /// Example: if showOverlay { MyView().transition(.opacity) }
+    // For dismiss animation use .transition(.opacity) at the call site instead.
     func overlayFade() -> some View {
         modifier(OverlayFadeModifier())
     }

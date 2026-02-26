@@ -1,9 +1,3 @@
-//
-//  Option.swift
-//  MaiInHerLoop
-//
-//  Created by Mai Huynh Ngoc Nhat on 4/2/26.
-//
 import Foundation
 
 struct Option: Codable, Hashable {
@@ -21,7 +15,6 @@ struct Option: Codable, Hashable {
         case nextQuestionID = "next_question"
     }
     
-    // Hashable conformance
     func hash(into hasher: inout Hasher) {
         hasher.combine(id)
     }

@@ -1,9 +1,3 @@
-//
-//  DiaryEntryRow.swift
-//  MaiInHerLoop
-//
-//  Created by Mai Huynh Ngoc Nhat on 25/2/26.
-//
 import SwiftUI
 
 struct DiaryEntryRow: View {
