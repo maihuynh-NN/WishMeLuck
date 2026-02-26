@@ -98,7 +98,7 @@ struct DiaryEntryDetailView: View {
             .ignoresSafeArea()
 
             // MARK: - Back button (top left)
-            BackButton(iconColor: Color("Moss"), borderColor: Color("Moss"))
+            BackButton(iconColor: Color("Red3"), borderColor: Color("Gold3"))
 
             // MARK: - Settings button (top right)
             SettingsButton()

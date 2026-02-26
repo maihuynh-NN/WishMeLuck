@@ -148,7 +148,7 @@ struct MissionBriefingOverlay: View {
                         .padding(.bottom, 4)
                         .chronicleFade()
 
-                        Text("dispatch.scroll_guide".localized)                  .font(.system(.caption2).weight(.light))
+                        Text("dispatch.scroll_guide".localized)                  .font(.system(.caption2).weight(.regular))
                             .foregroundColor(Color("Moss").opacity(0.7))
                             .padding(.bottom, 10)
                             .chronicleFade()

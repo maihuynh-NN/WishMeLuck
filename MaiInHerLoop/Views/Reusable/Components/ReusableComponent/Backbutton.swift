@@ -5,8 +5,8 @@ import SwiftUI
 struct BackButton: View {
 
     // MARK: - Customisation
-    var iconColor: Color = Color("Moss")
-    var borderColor: Color = Color("Moss")
+    var iconColor: Color = Color("Red3")
+    var borderColor: Color = Color("Gold3")
 
     // MARK: - Environment
     @Environment(\.dismiss) private var dismiss
@@ -26,7 +26,7 @@ struct BackButton: View {
                     action: { dismiss() }
                 )
                 .customedBorder(
-                    borderShape: "panel-border-004",
+                    borderShape: "panel-border-002",
                     borderColor: borderColor,
                     buttonType: .miniButton
                 )
@@ -46,13 +46,6 @@ struct BackButton: View {
 }
 
 // MARK: - Preview
-#Preview("Back Button — Moss") {
-    ZStack {
-        Color("Beige3").ignoresSafeArea()
-        BackButton()
-    }
-}
-
 #Preview("Back Button — Red theme") {
     ZStack {
         Color("Beige3").ignoresSafeArea()
