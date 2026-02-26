@@ -86,3 +86,12 @@
 "diary.back" = "aa";
 "diary.back.hint" = "aa";
 "diary.entry.hint" = "aa";
+
+// MARK: - Splash Screen
+"splash.welcome_message" = "Welcome, survivor.\nBefore you step into the unknown, tell us — who are you?";
+"splash.enter_name" = "YOUR IDENTITY";
+"splash.name_placeholder" = "Enter your name";
+"splash.begin" = "BEGIN";
+"splash.name_accessibility" = "Enter your name";
+"splash.name_hint" = "Type your name to begin the experience";
+"splash.begin_accessibility" = "Begin the experience";

@@ -13,7 +13,7 @@ struct MaiInHerLoopApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationStack {
-                LanguageSelectionView()
+                SplashScreenView()
             }
             .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
