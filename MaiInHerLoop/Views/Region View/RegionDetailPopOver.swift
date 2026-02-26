@@ -158,7 +158,7 @@ struct RegionDetailPopOver: View {
                         if showRiskBriefing {
                             Text("")
                                 .typewriter(riskBriefingText, speed: 0.04)
-                                .font(.system(.caption, design: .serif).weight(.medium))
+                                .font(.system(.caption, design: .monospaced).weight(.medium))
                                 .foregroundColor(Color("Red"))
                                 .italic()
                                 .multilineTextAlignment(.center)
@@ -248,13 +248,13 @@ struct RegionDetailPopOver: View {
                                                     .tracking(0.8)
                                                 
                                                 Text(sectionKey(idx, "content"))
-                                                    .font(.system(.caption2, design: .serif).weight(.medium))
+                                                    .font(.system(.caption2, design: .monospaced).weight(.medium))
                                                     .foregroundColor(Color("Gold"))
                                                     .multilineTextAlignment(.leading)
                                                     .lineSpacing(1.5)
                                                 
                                                 Text(sectionKey(idx, "subtitle"))
-                                                    .font(.system(.caption2, design: .serif).weight(.semibold))
+                                                    .font(.system(.caption2, design: .monospaced).weight(.semibold))
                                                     .foregroundColor(Color("Gold").opacity(0.8))
                                                     .italic()
                                                     .multilineTextAlignment(.leading)
@@ -279,13 +279,13 @@ struct RegionDetailPopOver: View {
                                                     .tracking(0.8)
                                                 
                                                 Text(sectionKey(idx, "content"))
-                                                    .font(.system(.caption2, design: .serif).weight(.medium))
+                                                    .font(.system(.caption2, design: .monospaced).weight(.medium))
                                                     .foregroundColor(Color("Gold"))
                                                     .multilineTextAlignment(.trailing)
                                                     .lineSpacing(1.5)
                                                 
                                                 Text(sectionKey(idx, "subtitle"))
-                                                    .font(.system(.caption2, design: .serif).weight(.semibold))
+                                                    .font(.system(.caption2, design: .monospaced).weight(.semibold))
                                                     .foregroundColor(Color("Gold").opacity(0.8))
                                                     .multilineTextAlignment(.trailing)
                                                     .padding(.top, 4)
@@ -350,7 +350,7 @@ struct RegionDetailPopOver: View {
                         .opacity(textOpacity)
                         
                         Text(readyTrialsText)
-                            .font(.system(.caption, design: .serif).weight(.medium))
+                            .font(.system(.caption, design: .monospaced).weight(.medium))
                             .foregroundColor(Color("Gold"))
                             .italic()
                             .opacity(textOpacity)

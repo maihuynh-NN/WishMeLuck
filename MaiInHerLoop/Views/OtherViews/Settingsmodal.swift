@@ -120,7 +120,7 @@ struct SettingsModal: View {
                     .accessibilityHidden(true)
 
                 Text(label)
-                    .font(.system(.footnote, design: .serif).weight(isSelected ? .bold : .regular))
+                    .font(.system(.footnote, design: .monospaced).weight(isSelected ? .bold : .regular))
                     .foregroundColor(isSelected ? Color("Moss") : Color("Moss").opacity(0.5))
             }
             .frame(maxWidth: .infinity)

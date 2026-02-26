@@ -81,7 +81,7 @@ struct SplashScreenView: View {
 
                     // MARK: - Welcome Text
                     Text("splash.welcome_message".localized)
-                        .font(.system(.subheadline, design: .serif).weight(.medium))
+                        .font(.system(.subheadline, design: .monospaced).weight(.medium))
                         .foregroundColor(Color("Moss"))
                         .multilineTextAlignment(.center)
                         .lineSpacing(3)
@@ -100,7 +100,7 @@ struct SplashScreenView: View {
                             .tracking(1)
 
                         TextField("splash.name_placeholder".localized, text: $nameInput)
-                            .font(.system(.body, design: .serif))
+                            .font(.system(.body, design: .monospaced))
                             .foregroundColor(Color("Moss"))
                             .multilineTextAlignment(.center)
                             .padding(.vertical, 10)

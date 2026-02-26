@@ -131,12 +131,13 @@ struct DiaryEntryDetailView: View {
     private var diaryHeader: some View {
         VStack(alignment: .leading, spacing: 6) {
             Text("diary.detail.greeting".localized)
-                .font(.system(.title, design: .serif).weight(.bold))
+                .font(.system(.title, design: .monospaced).weight(.bold))
                 .foregroundColor(Color("Red3"))
+                .fixedSize(horizontal: false, vertical: true)
                 .accessibilityAddTraits(.isHeader)
 
             Text(String(format: "diary.detail.subtitle".localized, displayName))
-                .font(.system(.body, design: .serif))
+                .font(.system(.body, design: .monospaced))
                 .foregroundColor(Color("Red3").opacity(0.75))
                 .fixedSize(horizontal: false, vertical: true)
 
@@ -156,12 +157,13 @@ struct DiaryEntryDetailView: View {
 
             VStack(alignment: .leading, spacing: 10) {
                 Text("diary.detail.collected".localized)
-                    .font(.system(.body, design: .serif))
+                    .font(.system(.body, design: .monospaced))
+                    .fixedSize(horizontal: false, vertical: true)
                     .foregroundColor(Color("Red3").opacity(0.75))
 
                 HStack(alignment: .center, spacing: 14) {
                     Text(name + "!")
-                        .font(.system(.title3, design: .serif).weight(.bold))
+                        .font(.system(.title3, design: .monospaced).weight(.bold))
                         .foregroundColor(Color("Red3"))
                         .fixedSize(horizontal: false, vertical: true)
                         .minimumScaleFactor(typeSize >= .accessibility1 ? 0.7 : 1.0)
@@ -189,7 +191,7 @@ struct DiaryEntryDetailView: View {
     private var scenarioInsight: some View {
         VStack(alignment: .leading, spacing: 12) {
             Text(titleText)
-                .font(.system(.callout, design: .serif).weight(.bold))
+                .font(.system(.callout, design: .monospaced).weight(.bold))
                 .foregroundColor(Color("Red3"))
                 .fixedSize(horizontal: false, vertical: true)
                 .chronicleFade()
@@ -209,7 +211,7 @@ struct DiaryEntryDetailView: View {
             }
 
             Text("diary.detail.scroll_hint".localized)
-                .font(.system(.caption2, design: .serif).italic())
+                .font(.system(.caption2, design: .monospaced).italic())
                 .foregroundColor(Color("Moss").opacity(0.5))
                 .frame(maxWidth: .infinity, alignment: .center)
                 .padding(.top, 8)

@@ -108,7 +108,7 @@ struct DiaryCollectionPanel: View {
     // MARK: - Empty state
     private var emptyState: some View {
         Text("diary.collection.empty".localized)
-            .font(.system(.caption, design: .serif).italic())
+            .font(.system(.caption, design: .monospaced).italic())
             .foregroundColor(Color("Moss").opacity(0.6))
             .multilineTextAlignment(.center)
             .frame(maxWidth: .infinity)

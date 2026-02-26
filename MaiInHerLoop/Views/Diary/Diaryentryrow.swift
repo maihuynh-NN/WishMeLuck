@@ -55,7 +55,7 @@ struct DiaryEntryRow: View {
 
             VStack(alignment: .leading, spacing: 3) {
                 Text(titleText)
-                    .font(.system(.footnote, design: .serif).weight(.semibold))
+                    .font(.system(.footnote, design: .monospaced).weight(.semibold))
                     .foregroundColor(Color("Moss"))
                     .lineLimit(1)
 

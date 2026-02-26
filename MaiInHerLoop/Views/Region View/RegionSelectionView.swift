@@ -70,7 +70,7 @@ struct RegionSelectionView: View {
                         .accessibilityHidden(true)
                         
                         Text("region.subtitle".localized)
-                            .font(.system(.caption2, design: .serif).weight(.medium))
+                            .font(.system(.caption2, design: .monospaced).weight(.medium))
                             .foregroundColor(Color("Red3"))
                             .multilineTextAlignment(.center)
                             .lineSpacing(2)

@@ -195,7 +195,7 @@ struct ReflectionResultView: View {
     private var mirrorSentence: some View {
         if let a = archetype {
             Text(mirror(a))
-                .font(.system(.callout, design: .serif).weight(.semibold))
+                .font(.system(.callout, design: .monospaced).weight(.semibold))
                 .foregroundColor(Color("Moss"))
                 .multilineTextAlignment(.center)
                 .lineSpacing(4)
@@ -226,7 +226,7 @@ struct ReflectionResultView: View {
                         .accessibilityHidden(true)
 
                     Text(tradeoff(a))
-                        .font(.system(.caption, design: .serif).italic())
+                        .font(.system(.caption, design: .monospaced).italic())
                         .foregroundColor(Color("Moss").opacity(0.75))
                         .lineSpacing(3)
                         .multilineTextAlignment(.leading)

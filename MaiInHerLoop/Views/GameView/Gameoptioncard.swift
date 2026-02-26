@@ -37,7 +37,7 @@ struct GameOptionCard: View {
 
                 // Option text — semantic font, scales on iPad
                 Text(text)
-                    .font(.system(isWide ? .subheadline : .caption, design: .default).weight(.medium))
+                    .font(.system(isWide ? .subheadline : .caption, design: .monospaced).weight(.medium))
                     .foregroundColor(isSelected ? Color("Gold") : Color("Moss"))
                     .multilineTextAlignment(.center)
                     .fixedSize(horizontal: false, vertical: true)

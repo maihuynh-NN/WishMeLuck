@@ -64,7 +64,7 @@ struct GameQuestionPanel: View {
             // MARK: Question text — typewriter, auto-height, semantic font
             Text("")
                 .typewriter(questionText, speed: 0.03, onComplete: onTypingComplete)
-                .font(.system(isWide ? .body : .footnote, design: .default).weight(.medium))
+                .font(.system(isWide ? .body : .footnote, design: .monospaced).weight(.medium))
                 .foregroundColor(Color("Red3"))
                 .multilineTextAlignment(.leading)
                 .lineSpacing(isWide ? 4 : 3)

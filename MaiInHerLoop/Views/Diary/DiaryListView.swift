@@ -85,7 +85,7 @@ struct DiaryListView: View {
                 .accessibilityAddTraits(.isHeader)
 
             Text("diary.subtitle".localized)
-                .font(.system(.caption, design: .serif).italic())
+                .font(.system(.caption, design: .monospaced).italic())
                 .foregroundColor(Color("Moss").opacity(0.75))
         }
     }

@@ -123,20 +123,20 @@ struct HomeView: View {
     private var titleSection: some View {
         VStack(alignment: .trailing, spacing: 2) {
             Text("home.title.red".localized)
-                .font(.system(.title, design: .serif).weight(.bold))
+                .font(.system(.title, design: .monospaced).weight(.bold))
                 .foregroundColor(Color("Beige2"))
                 .tracking(4)
                 .shadow(color: Color.black.opacity(0.7), radius: 6)
 
             Text("home.title.embers".localized)
-                .font(.system(.largeTitle, design: .serif).weight(.black))
+                .font(.system(.largeTitle, design: .monospaced).weight(.black))
                 .foregroundColor(Color("Beige2"))
                 .tracking(5)
                 .shadow(color: Color.black.opacity(0.7), radius: 6)
                 .minimumScaleFactor(typeSize >= .accessibility1 ? 0.7 : 1.0)
 
             Text("home.title.vi".localized)
-                .font(.system(.caption, design: .serif).weight(.medium))
+                .font(.system(.caption, design: .monospaced).weight(.medium))
                 .foregroundColor(Color("Beige2"))
                 .tracking(2)
                 .shadow(color: Color.black.opacity(0.5), radius: 4)
