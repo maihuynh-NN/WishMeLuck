@@ -119,3 +119,22 @@
 "settings.button.hint" = "Opens settings for language and appearance";
 "settings.language.current" = "Currently selected";
 "settings.language.switch" = "Double tap to switch";
+
+// MARK: - Diary Detail View
+"diary.detail.greeting" = "Dear Diary,";
+"diary.detail.subtitle" = "A regular day of %@'s adaptation in Việt Nam.";
+"diary.detail.date" = "Today is %@";
+"diary.detail.collected" = "I have collected a";
+"diary.detail.collected.a11y" = "I have collected a %@";
+"diary.detail.insight_placeholder" = "Insight coming soon.";
+"diary.detail.scroll_hint" = "scroll to read";
+
+// MARK: - Diary List View
+"diary.title" = "DIARY";
+"diary.subtitle" = "Your adaptation journey.";
+"diary.past_scenarios" = "PAST SCENARIOS";
+
+// MARK: - Diary Navigation (REPLACE the "aa" placeholders)
+"diary.back" = "Back";
+"diary.back.hint" = "Return to previous screen";
+"diary.entry.hint" = "Open diary entry";

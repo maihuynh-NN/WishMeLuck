@@ -36,7 +36,6 @@ struct CustomButton: View {
 
 #Preview {
     ZStack {
-        NorthernMistBackground()
         CustomButton(
             title: "How To Play",
             textColor: Color("Beige"),

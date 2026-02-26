@@ -71,11 +71,6 @@ struct SettingsButton: View {
 // MARK: - Preview
 #Preview("Settings Button") {
     ZStack {
-        Image("Background")
-            .resizable()
-            .scaledToFill()
-            .ignoresSafeArea()
-
         SettingsButton()
     }
 }

@@ -56,8 +56,8 @@ struct ArchetypeRepository {
             objectExplanationVI: "Dép tổ ong không quan tâm đường xá ra sao. Nó đã từng được nhìn thấy trôi bồng bềnh trên kênh mùa lũ miền Tây — và vẫn còn nguyên. Nó được tạo ra để đi. Thực ra nó được dùng cho mọi thứ. Đây là chiếc dép của người không có thời gian suy nghĩ nhiều.",
             tradeoffEN: "Moving fast gets you out — but sometimes the people behind you don't know why they're running.",
             tradeoffVI: "Đi nhanh giúp bạn thoát — nhưng đôi khi người đằng sau không biết tại sao mình đang chạy.",
-            nameEN: "Decisive Mover",
-            nameVI: "Người Hành Động Quyết Đoán",
+            nameEN: "A HoneyComb Slipper",
+            nameVI: "Một Chiếc Dép Tổ Ong",
             imageName: "slipper"
         ),
 

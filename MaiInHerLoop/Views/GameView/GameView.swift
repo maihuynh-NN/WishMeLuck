@@ -201,31 +201,3 @@ struct DoorShape: Shape {
         return path
     }
 }
-
-// MARK: - Preview
-
-//#Preview {
-//    let sampleOptions = [
-//        Option(id: "q1_a", textEN: "Move to a higher floor immediately", textVI: "Di chuyển lên tầng cao hơn", traitTag: "than_trong", nextQuestionID: nil),
-//        Option(id: "q1_b", textEN: "Help neighbours evacuate first", textVI: "Giúp hàng xóm sơ tán", traitTag: "tap_the", nextQuestionID: nil),
-//        Option(id: "q1_c", textEN: "Document the situation on your phone", textVI: "Ghi lại tình hình", traitTag: "lac_quan", nextQuestionID: nil),
-//        Option(id: "q1_d", textEN: "Wait for official instructions from authorities", textVI: "Đợi hướng dẫn chính thức", traitTag: "than_trong", nextQuestionID: nil)
-//    ]
-//    let sampleQuestion = Question(
-//        id: "q1",
-//        textEN: "Water is rising fast outside your building. What do you do first? Water is rising fast outside your building. What do you do first? Water is rising fast outside your building. What do you do first?",
-//        textVI: " Bạn làm gì đầu tiên? Bạn làm gì đầu tiên? Nước đang dâng nhanh bên ngoài tòa nhà của bạn. Bạn làm gì đầu tiên? ",
-//        timer: 25, options: sampleOptions
-//    )
-//    let sampleScenario = Scenario(
-//        id: "north_easy_1", region: "north",
-//        danger: "Flash Flood in Hanoi", titleEN: "Lũ Quét ở Hà Nội",
-//        titleVI: "Heavy rain has been falling for 6 hours.",
-//        introEN: "Mưa lớn đã rơi suốt 6 giờ.",
-//        introVI: "q1",
-//        insightEN: "",
-//        insightVI: "",
-//        startQuestionID: [sampleQuestion], questions: [sampleQuestion]
-//    )
-//    GameView(engine: ScenarioEngine(scenario: sampleScenario))
-//}

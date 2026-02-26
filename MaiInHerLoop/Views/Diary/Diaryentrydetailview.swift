@@ -11,6 +11,7 @@ struct DiaryEntryDetailView: View {
     let entry: DiaryEntry
 
     @AppStorage("selectedLanguage") private var language = "en"
+    @AppStorage("playerName") private var playerName = ""
     @Environment(\.dismiss) private var dismiss
     @Environment(\.dynamicTypeSize) private var typeSize
 
@@ -30,6 +31,10 @@ struct DiaryEntryDetailView: View {
         DiaryHelpers.formattedDate(entry.date ?? Date(), language: language)
     }
 
+    private var displayName: String {
+        playerName.isEmpty ? "[Name]" : playerName
+    }
+
     private var titleText: String {
         guard let s = scenario else { return entry.scenarioID ?? "" }
         return language == "vi" ? s.titleVI : s.titleEN
@@ -40,127 +45,133 @@ struct DiaryEntryDetailView: View {
         return language == "vi" ? s.insightVI : s.insightEN
     }
 
-    private var objectName: String {
-        guard let a = archetype else { return "" }
-        return language == "vi" ? a.nameVI : a.nameEN
-    }
-
-    // Tile column: ~22% on iPhone, ~18% on iPad
+    // MARK: - Responsive
     private var isIPad: Bool { UIDevice.current.userInterfaceIdiom == .pad }
-    private var tileRatio: CGFloat { isIPad ? 0.18 : 0.22 }
+    private var tileColumnWidth: CGFloat { isIPad ? 140 : 100 }
+    private var tileSize: CGFloat { isIPad ? 150 : 110 }
     private var contentPad: CGFloat { isIPad ? 32 : 20 }
 
+    // MARK: - Body
     var body: some View {
-        GeometryReader { geo in
-            ZStack(alignment: .topLeading) {
-                Color("Beige3").ignoresSafeArea()
+        ZStack {
+            Color("Beige3").ignoresSafeArea()
 
-                HStack(spacing: 0) {
-                    // ── LEFT: Tile column — decorative, full height, fixed width
-                    tileColumn(width: geo.size.width * tileRatio, height: geo.size.height)
-                        .ignoresSafeArea()
-                        .accessibilityHidden(true)
+            HStack(spacing: 0) {
+                // ── LEFT: Tile column
+                tileColumn
+                    .frame(width: tileColumnWidth)
+                    .accessibilityHidden(true)
 
-                    // ── RIGHT: Scrollable diary content
-                    ScrollView(.vertical, showsIndicators: false) {
-                        VStack(alignment: .leading, spacing: 0) {
-                            diaryHeader
-                                .staggeredAppear(delay: 0.05)
+                // ── RIGHT: Fixed header on top, scrollable insight below
+                VStack(alignment: .leading, spacing: 0) {
 
-                            DiamondDivider(color: Color("Moss"))
-                                .padding(.vertical, 20)
-                                .staggeredAppear(delay: 0.1)
+                    // FIXED: header + collected block (does NOT scroll)
+                    VStack(alignment: .leading, spacing: 0) {
+                        diaryHeader
+                            .staggeredAppear(delay: 0.05)
 
-                            collectedBlock
-                                .staggeredAppear(delay: 0.15)
+                        DiamondDivider(color: Color("Moss"))
+                            .padding(.vertical, 14)
+                            .staggeredAppear(delay: 0.1)
 
-                            DiamondDivider(color: Color("Moss"))
-                                .padding(.vertical, 20)
-                                .staggeredAppear(delay: 0.2)
+                        collectedBlock
+                            .staggeredAppear(delay: 0.15)
 
-                            scenarioInsight
-                                .staggeredAppear(delay: 0.25)
-
-                            // Bottom safe area clearance
-                            Spacer(minLength: 60)
-                        }
-                        .padding(.top, geo.safeAreaInsets.top + 24)
-                        .padding(.horizontal, contentPad)
-                        .padding(.trailing, contentPad * 0.5)
+                        DiamondDivider(color: Color("Moss"))
+                            .padding(.vertical, 14)
+                            .staggeredAppear(delay: 0.2)
                     }
-                    .frame(width: geo.size.width * (1 - tileRatio))
+                    .padding(.leading, contentPad)
+                    .padding(.trailing, contentPad * 0.8)
+
+                    // SCROLLABLE: scenario title + insight text only
+                    ScrollView(.vertical, showsIndicators: false) {
+                        scenarioInsight
+                            .staggeredAppear(delay: 0.25)
+                            .padding(.leading, contentPad)
+                            .padding(.trailing, contentPad * 0.8)
+                            .padding(.bottom, 60)
+                    }
                 }
+                .padding(.top, isIPad ? 60 : 50)
             }
+            .ignoresSafeArea()
+
+            // MARK: - Back button (top left)
+            BackButton(iconColor: Color("Moss"), borderColor: Color("Moss"))
+
+            // MARK: - Settings button (top right)
+            SettingsButton()
         }
         .navigationBarHidden(true)
-        .overlay(alignment: .topLeading) { backButton }
     }
 
-    // MARK: - Tile column
-    private func tileColumn(width: CGFloat, height: CGFloat) -> some View {
-        let tileSize = max(width, 1) // guard: never zero or NaN
-        let count = height > 0 ? Int(ceil(height / tileSize)) + 1 : 2
+    // MARK: - Tile Column (full height, edge to edge)
+    private var tileColumn: some View {
+        GeometryReader { geo in
+            let screenHeight = geo.size.height + geo.safeAreaInsets.top + geo.safeAreaInsets.bottom
+            let count = max(Int(ceil(screenHeight / tileSize)) + 1, 2)
 
-        return ScrollView([]) {
             VStack(spacing: 0) {
                 ForEach(0..<count, id: \.self) { _ in
                     Image(tileName)
                         .resizable()
                         .scaledToFill()
-                        .frame(width: tileSize, height: tileSize)
+                        .frame(width: tileColumnWidth, height: tileSize)
                         .clipped()
                 }
             }
+            .frame(width: tileColumnWidth, height: screenHeight)
+            .offset(y: -geo.safeAreaInsets.top)
         }
-        .frame(width: width, height: height)
-        .clipped()
+        .frame(width: tileColumnWidth)
     }
 
-    // MARK: - Header: "Dear Diary,"
+    // MARK: - Header
     private var diaryHeader: some View {
         VStack(alignment: .leading, spacing: 6) {
-            Text("Dear Diary,")
+            Text("diary.detail.greeting".localized)
                 .font(.system(.title, design: .serif).weight(.bold))
-                .foregroundColor(Color("Ink"))
+                .foregroundColor(Color("Red3"))
+                .accessibilityAddTraits(.isHeader)
 
-            Text(language == "vi"
-                 ? "Một ngày bình thường của [Name] ở Việt Nam."
-                 : "A regular day of [Name]'s adaptation in Việt Nam.")
+            Text(String(format: "diary.detail.subtitle".localized, displayName))
                 .font(.system(.body, design: .serif))
-                .foregroundColor(Color("Ink").opacity(0.75))
+                .foregroundColor(Color("Red3").opacity(0.75))
                 .fixedSize(horizontal: false, vertical: true)
 
-            Text(language == "vi"
-                 ? "Hôm nay là \(dateString)"
-                 : "Today is \(dateString)")
+            Text(String(format: "diary.detail.date".localized, dateString))
                 .font(.system(.footnote, design: .monospaced))
                 .foregroundColor(Color("Moss"))
                 .padding(.top, 8)
         }
+        .padding(.top, 90)
     }
 
-    // MARK: - "I have collected a [object] [image]"
+    // MARK: - Collected block
     @ViewBuilder
     private var collectedBlock: some View {
         if let a = archetype {
-            VStack(alignment: .leading, spacing: 10) {
-                // "I have collected a"
-                Text(language == "vi" ? "Hôm nay tôi đã nhận được một" : "I have collected a")
-                    .font(.system(.body, design: .serif))
-                    .foregroundColor(Color("Ink").opacity(0.75))
+            let name = language == "vi" ? a.nameVI : a.nameEN
 
-                // Object name bold + image side by side
+            VStack(alignment: .leading, spacing: 10) {
+                Text("diary.detail.collected".localized)
+                    .font(.system(.body, design: .serif))
+                    .foregroundColor(Color("Red3").opacity(0.75))
+
                 HStack(alignment: .center, spacing: 14) {
-                    Text(language == "vi" ? a.nameVI : a.nameEN)
+                    Text(name + "!")
                         .font(.system(.title3, design: .serif).weight(.bold))
-                        .foregroundColor(Color("Ink"))
+                        .foregroundColor(Color("Red3"))
                         .fixedSize(horizontal: false, vertical: true)
                         .minimumScaleFactor(typeSize >= .accessibility1 ? 0.7 : 1.0)
+
+                    Spacer()
 
                     Image(a.imageName)
                         .resizable()
                         .scaledToFit()
-                        .frame(width: 56, height: 56)
+                        .frame(width: isIPad ? 70 : 56, height: isIPad ? 70 : 56)
                         .overlay(
                             RoundedRectangle(cornerRadius: 8)
                                 .stroke(Color("Moss"), lineWidth: 1.5)
@@ -169,72 +180,41 @@ struct DiaryEntryDetailView: View {
                 }
             }
             .accessibilityElement(children: .combine)
-            .accessibilityLabel(
-                language == "vi"
-                ? "Hôm nay tôi đã nhận được một \(a.nameVI)"
-                : "I have collected a \(a.nameEN)"
-            )
+            .accessibilityLabel(String(format: "diary.detail.collected.a11y".localized, name))
         }
     }
 
-    // MARK: - Scenario title + insight
+    // MARK: - Scenario insight (scrollable part)
     @ViewBuilder
     private var scenarioInsight: some View {
         VStack(alignment: .leading, spacing: 12) {
-            // Scenario title — bold, chronicleFade
             Text(titleText)
                 .font(.system(.callout, design: .serif).weight(.bold))
-                .foregroundColor(Color("Ink"))
+                .foregroundColor(Color("Red3"))
                 .fixedSize(horizontal: false, vertical: true)
                 .chronicleFade()
                 .accessibilityAddTraits(.isHeader)
 
-            // Insight paragraph
             if !insightText.isEmpty {
                 Text(insightText)
                     .font(.system(.footnote))
-                    .foregroundColor(Color("Ink").opacity(0.85))
+                    .foregroundColor(Color("Red3").opacity(0.85))
                     .lineSpacing(5)
                     .fixedSize(horizontal: false, vertical: true)
                     .multilineTextAlignment(.leading)
             } else {
-                // Fallback if insight not yet added to this scenario's JSON
-                Text(language == "vi"
-                     ? "Nội dung đang được cập nhật."
-                     : "Insight coming soon.")
+                Text("diary.detail.insight_placeholder".localized)
                     .font(.system(.footnote).italic())
                     .foregroundColor(Color("Moss").opacity(0.6))
             }
 
-            // Scroll hint
-            Text(language == "vi" ? "cuộn để đọc" : "scroll to read")
+            Text("diary.detail.scroll_hint".localized)
                 .font(.system(.caption2, design: .serif).italic())
                 .foregroundColor(Color("Moss").opacity(0.5))
                 .frame(maxWidth: .infinity, alignment: .center)
                 .padding(.top, 8)
                 .accessibilityHidden(true)
         }
-    }
-
-    // MARK: - Back button
-    private var backButton: some View {
-        Button(action: { dismiss() }) {
-            HStack(spacing: 6) {
-                Image(systemName: "chevron.left")
-                    .font(.system(.footnote).weight(.semibold))
-                Text("diary.back".localized)
-                    .font(.system(.footnote, design: .monospaced).weight(.medium))
-            }
-            .foregroundColor(Color("Moss"))
-            .padding(.horizontal, 16)
-            .padding(.vertical, 10)
-            .frame(minWidth: 44, minHeight: 44)
-            .contentShape(Rectangle())
-        }
-        .accessibilityLabel("diary.back".localized)
-        .accessibilityHint("diary.back.hint".localized)
-        .padding(.top, 8)
-        .padding(.leading, 4)
     }
 }
 

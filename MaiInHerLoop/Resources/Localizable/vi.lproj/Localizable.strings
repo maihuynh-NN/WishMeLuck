@@ -110,3 +110,22 @@
 "settings.button.hint" = "Mở cài đặt ngôn ngữ và giao diện";
 "settings.language.current" = "Đang được chọn";
 "settings.language.switch" = "Nhấn đúp để chuyển";
+
+// MARK: - Diary Detail View
+"diary.detail.greeting" = "Nhật Ký Thân Mến,";
+"diary.detail.subtitle" = "Một ngày bình thường của %@ ở Việt Nam.";
+"diary.detail.date" = "Hôm nay là %@";
+"diary.detail.collected" = "Hôm nay tôi đã nhận được một";
+"diary.detail.collected.a11y" = "Hôm nay tôi đã nhận được một %@";
+"diary.detail.insight_placeholder" = "Nội dung đang được cập nhật.";
+"diary.detail.scroll_hint" = "cuộn để đọc";
+
+// MARK: - Diary List View
+"diary.title" = "NHẬT KÝ";
+"diary.subtitle" = "Hành trình thích nghi của bạn.";
+"diary.past_scenarios" = "CÁC TÌNH HUỐNG ĐÃ QUA";
+
+// MARK: - Diary Navigation
+"diary.back" = "Quay lại";
+"diary.back.hint" = "Quay về màn hình trước";
+"diary.entry.hint" = "Mở mục nhật ký";
