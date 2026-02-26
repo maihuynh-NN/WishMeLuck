@@ -33,7 +33,7 @@ struct StoryView: View {
     var body: some View {
         ZStack {
             // ── Full-bleed background image ──
-            Image("Storyview")
+            Image("Background")
                 .resizable()
                 .scaledToFill()
                 .ignoresSafeArea()

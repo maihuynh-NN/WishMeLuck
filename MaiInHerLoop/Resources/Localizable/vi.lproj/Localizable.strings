@@ -86,3 +86,27 @@
 "scenariolist.region.south" = "Miền Nam";
 "scenariolist.region.central" = "Miền Trung";
 "scenariolist.region.north" = "Miền Bắc";
+
+// MARK: - Home View
+"home.title.red" = "RED";
+"home.title.embers" = "EMBERS";
+"home.title.vi" = "THAN HỒNG";
+"home.start_game" = "Bắt Đầu";
+"home.visit_regions" = "Khám Phá Vùng";
+"home.diary" = "Nhật Ký";
+"home.howtoplay" = "Cách chơi";
+"home.howtoplay.hint" = "Mở hướng dẫn chơi";
+
+// MARK: - Settings
+"settings.title" = "CÀI ĐẶT";
+"settings.language" = "NGÔN NGỮ";
+"settings.appearance" = "GIAO DIỆN";
+"settings.light" = "Sáng";
+"settings.dark" = "Tối";
+"settings.system" = "Tự động";
+"settings.close" = "Đóng";
+"settings.close.hint" = "Đóng bảng cài đặt";
+"settings.button" = "Cài đặt";
+"settings.button.hint" = "Mở cài đặt ngôn ngữ và giao diện";
+"settings.language.current" = "Đang được chọn";
+"settings.language.switch" = "Nhấn đúp để chuyển";

@@ -52,26 +52,6 @@ struct GameStartModifier: ViewModifier {
     }
 }
 
-// MARK: - Game End
-struct GameEndModifier: ViewModifier {
-    @State private var opacity: Double = 1.0
-    @State private var blur: CGFloat = 0
-    @Environment(\.accessibilityReduceMotion) private var reduceMotion
-
-    func body(content: Content) -> some View {
-        content
-            .opacity(opacity)
-            .blur(radius: reduceMotion ? 0 : blur)
-            .onAppear {
-                guard !reduceMotion else { return }
-                withAnimation(AppAnimations.gameEnd) {
-                    opacity = 0.3
-                    blur = 2
-                }
-            }
-    }
-}
-
 // MARK: - View Extensions
 extension View {
     func dayTransition() -> some View {
@@ -80,10 +60,6 @@ extension View {
 
     func gameStart() -> some View {
         modifier(GameStartModifier())
-    }
-
-    func gameEnd() -> some View {
-        modifier(GameEndModifier())
     }
 }
 
@@ -104,12 +80,6 @@ extension View {
             .cornerRadius(12)
             .gameStart()
 
-        Text("Game Over")
-            .font(.title2)
-            .padding()
-            .background(Color.red.opacity(0.2))
-            .cornerRadius(12)
-            .gameEnd()
     }
     .padding()
 }

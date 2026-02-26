@@ -95,3 +95,27 @@
 "splash.name_accessibility" = "Enter your name";
 "splash.name_hint" = "Type your name to begin the experience";
 "splash.begin_accessibility" = "Begin the experience";
+
+// MARK: - Home View
+"home.title.red" = "RED";
+"home.title.embers" = "EMBERS";
+"home.title.vi" = "THAN HỒNG";
+"home.start_game" = "Start Game";
+"home.visit_regions" = "Visit Regions";
+"home.diary" = "Diary";
+"home.howtoplay" = "How to play";
+"home.howtoplay.hint" = "Opens a guide on how to play";
+
+// MARK: - Settings
+"settings.title" = "SETTINGS";
+"settings.language" = "LANGUAGE";
+"settings.appearance" = "APPEARANCE";
+"settings.light" = "Light";
+"settings.dark" = "Dark";
+"settings.system" = "Auto";
+"settings.close" = "Close";
+"settings.close.hint" = "Closes the settings panel";
+"settings.button" = "Settings";
+"settings.button.hint" = "Opens settings for language and appearance";
+"settings.language.current" = "Currently selected";
+"settings.language.switch" = "Double tap to switch";
