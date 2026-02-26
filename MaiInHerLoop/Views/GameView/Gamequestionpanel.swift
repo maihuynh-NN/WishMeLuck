@@ -15,6 +15,10 @@ struct GameQuestionPanel: View {
 
     @AppStorage("selectedLanguage") private var language = "en"
 
+    // MARK: - Responsive
+    @Environment(\.horizontalSizeClass) var horizontalSizeClass
+    private var isWide: Bool { horizontalSizeClass == .regular }
+
     var body: some View {
         panelContent
     }
@@ -55,13 +59,13 @@ struct GameQuestionPanel: View {
             }
             .padding(.horizontal, 14)
 
-            // MARK: Question text — typewriter, auto-height
+            // MARK: Question text — typewriter, auto-height, semantic font
             Text("")
                 .typewriter(questionText, speed: 0.03, onComplete: onTypingComplete)
-                .font(.system(size: 13, weight: .medium))
+                .font(.system(isWide ? .body : .footnote, design: .default).weight(.medium))
                 .foregroundColor(Color("Red3"))
                 .multilineTextAlignment(.leading)
-                .lineSpacing(3)
+                .lineSpacing(isWide ? 4 : 3)
                 // fixedSize vertical = grows to fit text, never clips or scrolls
                 .fixedSize(horizontal: false, vertical: true)
                 .padding(.horizontal, 16)
@@ -84,31 +88,6 @@ struct GameQuestionPanel: View {
 // MARK: - Conditional slide-in modifier
 // Applies GameStartModifier only when active = true (first question).
 // For subsequent questions the panel stays in place — no re-animation.
-private struct ConditionalGameStart: ViewModifier {
-    let active: Bool
-    @State private var offset: CGFloat
-    @State private var opacity: Double
-
-    init(active: Bool) {
-        self.active = active
-        _offset = State(initialValue: active ? 50 : 0)
-        _opacity = State(initialValue: active ? 0 : 1)
-    }
-
-    func body(content: Content) -> some View {
-        content
-            .offset(y: offset)
-            .opacity(opacity)
-            .onAppear {
-                guard active else { return }
-                withAnimation(AppAnimations.gameStart.delay(0.1)) {
-                    offset = 0
-                    opacity = 1
-                }
-            }
-    }
-}
-
 #Preview {
     ZStack {
         Color("Beige3").ignoresSafeArea()

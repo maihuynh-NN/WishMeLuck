@@ -15,6 +15,10 @@ struct GameOptionCard: View {
     let isSelected: Bool
     let onSelect: () -> Void
 
+    // MARK: - Responsive
+    @Environment(\.horizontalSizeClass) var horizontalSizeClass
+    private var isWide: Bool { horizontalSizeClass == .regular }
+
     var body: some View {
         Button(action: onSelect) {
             VStack(spacing: 0) {
@@ -35,9 +39,9 @@ struct GameOptionCard: View {
 
                 Spacer(minLength: 4)
 
-                // Option text — auto-sizes, no clipping
+                // Option text — semantic font, scales on iPad
                 Text(text)
-                    .font(.system(size: 11, weight: .medium))
+                    .font(.system(isWide ? .subheadline : .caption, design: .default).weight(.medium))
                     .foregroundColor(isSelected ? Color("Gold") : Color("Moss"))
                     .multilineTextAlignment(.center)
                     .fixedSize(horizontal: false, vertical: true)
@@ -47,7 +51,8 @@ struct GameOptionCard: View {
 
                 // Bottom label
                 if isSelected {
-                    Text("game.chosen".localized)                        .font(.system(size: 8, weight: .black, design: .monospaced))
+                    Text("game.chosen".localized)
+                        .font(.system(.caption2, design: .monospaced).weight(.black))
                         .foregroundColor(Color("Gold"))
                         .tracking(1)
                         .padding(.bottom, 6)
@@ -69,7 +74,7 @@ struct GameOptionCard: View {
                 }
             }
             // Height is flexible — grows with text content
-            .frame(maxWidth: .infinity, minHeight: 80)
+            .frame(maxWidth: .infinity, minHeight: isWide ? 100 : 80)
             .background(
                 RoundedRectangle(cornerRadius: 8)
                     .fill(isSelected ? Color("Moss") : Color("Gold").opacity(0.9))

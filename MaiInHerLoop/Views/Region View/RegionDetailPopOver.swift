@@ -374,7 +374,6 @@ struct RegionDetailPopOver: View {
                                 .tracking(0.5)
                                 .underline()
                         }
-                        //.buttonPress()
                     }
                     .padding(.bottom, 30)
                 }
@@ -399,9 +398,7 @@ struct RegionDetailPopOver: View {
 }
 
 #Preview {
-    RegionDetailPopOver(
-        region: regions[1],
-        onClose: {},
-        onNavigate: {}
-    )
+    NavigationStack {
+        RegionSelectionView()
+    }
 }

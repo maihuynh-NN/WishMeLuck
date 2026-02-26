@@ -10,12 +10,18 @@ import SwiftUI
 struct RegionCard: View {
     let region: Region
     
+    // MARK: - Responsive
+    @Environment(\.horizontalSizeClass) var horizontalSizeClass
+    private var isWide: Bool { horizontalSizeClass == .regular }
+    private var cardW: CGFloat { isWide ? 420 : 321 }
+    private var cardH: CGFloat { isWide ? 630 : 482 }
+    
     var body: some View {
         ZStack(alignment: .bottom){
             CustomCard(
                 image: region.name,
                 borderColor: Color("Gold2"),
-                size: .customed(width: 321, height: 482)
+                size: .customed(width: cardW, height: cardH)
             ) {
                 LinearGradient(
                     colors: [Color.black.opacity(0.9), Color.clear],
@@ -23,7 +29,7 @@ struct RegionCard: View {
                     endPoint: .center
                 )
                 .clipShape(RoundedRectangle(cornerRadius: 20))
-                .frame(width: 321, height: 482)
+                .frame(width: cardW, height: cardH)
             }
             .scaledToFit()
             .modifier(ShadowModifier(color: Color("Gold2").opacity(0.5)))
@@ -52,7 +58,7 @@ struct RegionCard: View {
                 }
             }
             .padding(.horizontal, 24)
-            .padding(.bottom, 32)
+            .padding(.bottom, isWide ? 40 : 32)
         }
     }
 }

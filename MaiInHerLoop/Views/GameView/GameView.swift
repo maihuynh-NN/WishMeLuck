@@ -1,3 +1,10 @@
+//
+//  GameView.swift
+//  MaiInHerLoop
+//
+//  Created by Mai Huynh Ngoc Nhat on 21/2/26.
+//
+
 import SwiftUI
 
 struct GameView: View {
@@ -45,12 +52,22 @@ struct GameView: View {
         }
     }
 
+    // MARK: - Door sizing helper
+    
+    private func doorDimensions(in geo: GeometryProxy) -> (width: CGFloat, height: CGFloat) {
+        let isWide = geo.size.width > 600
+        let doorWidth = isWide
+            ? min(geo.size.width * 0.55, 520.0)   // iPad: wider, capped at 520
+            : min(geo.size.width * 0.82, 380.0)   // iPhone: unchanged
+        let doorHeight = geo.size.height * 0.82
+        return (doorWidth, doorHeight)
+    }
+
     // MARK: - Door shape
 
     @ViewBuilder
     private func doorShape(in geo: GeometryProxy) -> some View {
-        let doorWidth = min(geo.size.width * 0.82, 380.0)
-        let doorHeight = geo.size.height * 0.82
+        let (doorWidth, doorHeight) = doorDimensions(in: geo)
 
         DoorShape()
             .fill(Color.clear)
@@ -71,8 +88,7 @@ struct GameView: View {
 
     @ViewBuilder
     private func gameContent(in geo: GeometryProxy) -> some View {
-        let doorWidth = min(geo.size.width * 0.82, 380.0)
-        let doorHeight = geo.size.height * 0.82
+        let (doorWidth, doorHeight) = doorDimensions(in: geo)
         let innerPadding: CGFloat = 16
 
         let doorTop = (geo.size.height - doorHeight) / 2

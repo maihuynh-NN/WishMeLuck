@@ -23,7 +23,7 @@ struct GameTimerBadge: View {
 
     var body: some View {
         Text("\(timeRemaining)s")
-            .font(.system(size: 11, weight: .black, design: .monospaced))
+            .font(.system(.caption2, design: .monospaced).weight(.black))
             .foregroundColor(Color("Beige3"))
             .padding(.horizontal, 8)
             .padding(.vertical, 4)

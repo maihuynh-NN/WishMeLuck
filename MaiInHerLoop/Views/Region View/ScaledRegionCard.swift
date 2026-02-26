@@ -12,6 +12,12 @@ struct ScaledRegionCard: View {
     let index: Int
     @Binding var selectedRegion: Region?
     
+    // MARK: - Responsive
+    @Environment(\.horizontalSizeClass) var horizontalSizeClass
+    private var isWide: Bool { horizontalSizeClass == .regular }
+    private var cardWidth: CGFloat { isWide ? 420 : 321 }
+    private var cardHeight: CGFloat { isWide ? 630 : 481 }
+    
     var body: some View {
         GeometryReader { geo in
             let midX = geo.frame(in: .global).midX
@@ -27,7 +33,7 @@ struct ScaledRegionCard: View {
                     selectedRegion = region
                 }
         }
-        .frame(width: 321, height: 481)
+        .frame(width: cardWidth, height: cardHeight)
         .tag(index)
     }
 }

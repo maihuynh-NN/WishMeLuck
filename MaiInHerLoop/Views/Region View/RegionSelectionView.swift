@@ -17,6 +17,11 @@ struct RegionSelectionView: View {
     @State private var textOpacity = 0.0
     @State private var headerPulse = false
     
+    // MARK: - Responsive
+    @Environment(\.horizontalSizeClass) var horizontalSizeClass
+    private var isWide: Bool { horizontalSizeClass == .regular }
+    private var cardAreaHeight: CGFloat { isWide ? 640 : 493 }
+    
     var body: some View {
         ZStack {
             
@@ -27,8 +32,8 @@ struct RegionSelectionView: View {
                 .ignoresSafeArea()
             
             VStack(spacing: 0) {
-                // Top spacer for centering
-                Spacer()
+                // Top spacer — smaller on iPad so header isn't pushed too low
+                Spacer().frame(maxHeight: isWide ? 250 : .infinity)
                 
                 // MARK: - Cultural Header
                 VStack(spacing: 15) {
@@ -91,7 +96,7 @@ struct RegionSelectionView: View {
                         }
                     }
                     .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
-                    .frame(height: 493)
+                    .frame(height: cardAreaHeight)
                     
                     // MARK: - Navigation Indicators
                     HStack(spacing: 8) {
@@ -145,8 +150,8 @@ struct RegionSelectionView: View {
             }
         }
         
-        // MARK: - Popover for region details
-        .popover(item: $selectedRegion) { region in
+
+        .sheet(item: $selectedRegion) { region in
             RegionDetailPopOver(
                 region: region,
                 onClose: { selectedRegion = nil },
@@ -156,6 +161,8 @@ struct RegionSelectionView: View {
                     showDifficultySelector = true
                 }
             )
+            .presentationDetents([.large])
+            .presentationDragIndicator(.visible)
         }
         .onAppear {
             withAnimation(.easeIn(duration: 1.2).delay(0.5)) {
@@ -170,4 +177,3 @@ struct RegionSelectionView: View {
         RegionSelectionView()
     }
 }
-        
