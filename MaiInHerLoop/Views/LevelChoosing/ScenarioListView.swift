@@ -48,7 +48,13 @@ struct ScenarioListView: View {
         GeometryReader { geo in
             ZStack {
                 
-               
+                // MARK: - Background
+                Image("Background")
+                    .resizable()
+                    .scaledToFill()
+                    .ignoresSafeArea()
+                    .accessibilityHidden(true)
+
                 // Hidden NavigationLinks
                 VStack {
                     ForEach(scenarios.indices, id: \.self) { i in
@@ -86,7 +92,7 @@ struct ScenarioListView: View {
                             .tracking(2)
                             .opacity(headerPulse ? 1.0 : 0.85)
                             .chronicleFade()
-                            .accessibilityAddTraits(.isHeader)      // Rule 2: screen title
+                            .accessibilityAddTraits(.isHeader)
 
                         // Uses reusable SquareDivider
                         SquareDivider(color: Color("Red3"))
@@ -94,7 +100,7 @@ struct ScenarioListView: View {
                             .chronicleFade()
 
                         Text("scenariolist.subheader".localized)
-                            .font(.system(.caption2, design: .monospaced).weight(.light))
+                            .font(.system(.caption2, design: .monospaced).weight(.regular))
                             .foregroundColor(Color("Red3").opacity(0.55))
                             .tracking(0.5)
                             .italic()
@@ -156,7 +162,7 @@ struct ScenarioListView: View {
                                     .accessibilityHidden(true)
 
                                 Text("scenariolist.coming_soon".localized)
-                                    .font(.system(.caption2, design: .monospaced).weight(.light))
+                                    .font(.system(.caption2, design: .monospaced).weight(.regular))
                                     .foregroundColor(Color("Red3").opacity(0.5))
                                     .tracking(1)
                                     .italic()
@@ -179,8 +185,6 @@ struct ScenarioListView: View {
                     VStack(spacing: 14) {
                         DotRow(color: Color("Red3"))
                             .chronicleFade()
-                        
-                        
 
                         NavigationLink(destination: DiaryListView(), isActive: $navigateToDiary) {
                             EmptyView()
@@ -203,7 +207,7 @@ struct ScenarioListView: View {
 
                         Button(action: { dismiss() }) {
                             Text("scenariolist.back".localized)
-                                .font(.system(.caption2, design: .monospaced).weight(.light))
+                                .font(.system(.caption2, design: .monospaced).weight(.regular))
                                 .foregroundColor(Color("Moss").opacity(0.55))
                                 .tracking(0.5)
                                 .underline()
@@ -215,11 +219,17 @@ struct ScenarioListView: View {
                     }
                     .padding(.bottom, 36)
                 }
+
+                // MARK: - Back Button (top left)
+                BackButton(iconColor: Color("Red3"), borderColor: Color("Gold3"))
+
+                // MARK: - Settings Button (top right)
+                SettingsButton()
             }
         }
         .navigationBarHidden(true)
         .onAppear {
-            guard !reduceMotion else { return }                     // Rule 6
+            guard !reduceMotion else { return }
             withAnimation(Animation.easeInOut(duration: 2.0).repeatForever(autoreverses: true)) {
                 headerPulse = true
             }

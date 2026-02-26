@@ -36,6 +36,7 @@ struct GameQuestionPanel: View {
                             .frame(width: 3, height: 3)
                     }
                 }
+                .accessibilityHidden(true)
 
                 Spacer()
 
@@ -58,6 +59,7 @@ struct GameQuestionPanel: View {
                     .frame(height: 1)
             }
             .padding(.horizontal, 14)
+            .accessibilityHidden(true)
 
             // MARK: Question text — typewriter, auto-height, semantic font
             Text("")

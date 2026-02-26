@@ -7,9 +7,6 @@
 
 import SwiftUI
 
-/// One option card in the 2×2 grid.
-/// Single tap → bounce (CardSelectModifier) → fires onSelect.
-/// isSelected state shows "CHOSEN" state briefly.
 struct GameOptionCard: View {
     let text: String
     let isSelected: Bool
@@ -23,7 +20,6 @@ struct GameOptionCard: View {
         Button(action: onSelect) {
             VStack(spacing: 0) {
 
-                // Arrow row decoration (matches your existing CardView style)
                 HStack {
                     Spacer()
                     HStack(spacing: 2) {
@@ -90,6 +86,7 @@ struct GameOptionCard: View {
             .animation(.easeInOut(duration: 0.2), value: isSelected)
         }
         .buttonStyle(CardTapStyle())   // handles the CardSelectModifier bounce on tap
+        .accessibilityHint(isSelected ? "" : "game.option.hint".localized)
     }
 }
 

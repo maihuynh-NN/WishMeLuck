@@ -123,7 +123,7 @@ struct HomeView: View {
     private var titleSection: some View {
         VStack(alignment: .trailing, spacing: 2) {
             Text("home.title.red".localized)
-                .font(.system(.title2, design: .serif).weight(.bold))
+                .font(.system(.title, design: .serif).weight(.bold))
                 .foregroundColor(Color("Beige2"))
                 .tracking(4)
                 .shadow(color: Color.black.opacity(0.7), radius: 6)
@@ -248,7 +248,7 @@ struct HomeView: View {
     @ViewBuilder
     private var navigationDestinations: some View {
         NavigationLink(
-            destination: RegionSelectionView(),
+            destination:RegionSelectionView(),
             isActive: $navigateToScenarioList
         ) { EmptyView() }
             .hidden()

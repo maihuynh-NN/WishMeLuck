@@ -65,6 +65,7 @@ struct DiaryListView: View {
                 HStack {
                     backButton
                     Spacer()
+                    SettingsButton()
                 }
                 Spacer()
             }

@@ -30,6 +30,7 @@ struct RegionSelectionView: View {
                 .resizable()
                 .scaledToFill()
                 .ignoresSafeArea()
+                .accessibilityHidden(true)
             
             VStack(spacing: 0) {
                 // Top spacer — smaller on iPad so header isn't pushed too low
