@@ -39,7 +39,7 @@ struct StoryView: View {
         }
         .navigationBarHidden(true)
         .navigationDestination(isPresented: $navigateToRegion) {
-            RegionSelectionView()
+            HomeView()
         }
     }
 

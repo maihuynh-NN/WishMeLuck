@@ -7,7 +7,7 @@ struct HomeView: View {
 
     // MARK: - Navigation State
     @State private var navigateToScenarioList = false
-    @State private var navigateToRegion = false
+    @State private var navigateToView = false
     @State private var navigateToDiary = false
 
     // MARK: - Settings State
@@ -156,6 +156,18 @@ struct HomeView: View {
             ) {
                 navigateToScenarioList = true
             }
+            
+            // Button 2: Visit Regions
+           homeButton(
+               title: "home.how_to_play".localized,
+               textColor: Color("Beige2"),
+               buttonColor: Color("Moss").opacity(0.75),
+               borderColor: Color("Gold").opacity(0.6),
+               rotation: 1.5,
+               staggerDelay: 0.4
+           ) {
+               navigateToView = true
+           }
 
             homeButton(
                 title: "home.diary".localized,
@@ -232,6 +244,12 @@ struct HomeView: View {
             isActive: $navigateToScenarioList
         ) { EmptyView() }
             .hidden()
+        
+        NavigationLink(
+                   destination: HowToPlayView(),
+                   isActive: $navigateToView
+               ) { EmptyView() }
+                   .hidden()
 
         NavigationLink(
             destination: DiaryListView(),
