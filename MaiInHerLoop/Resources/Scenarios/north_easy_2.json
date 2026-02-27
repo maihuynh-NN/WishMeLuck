@@ -1,0 +1,120 @@
+{
+  "id": "north_easy_2",
+  "region": "north",
+  "danger": "5",
+  "title_en": "The Mountain Torrent",
+  "title_vi": "Lũ Quét Đường Rừng",
+  "intro_en": "[Name] is riding a motorbike through a Northern mountain pass. Suddenly, a deafening roar echoes from above. A wall of brown water and debris surges toward the road.",
+  "intro_vi": "[Name] đang đi xe máy qua một con đèo miền núi phía Bắc. Đột nhiên, tiếng gầm vang dội từ trên cao. Một bức tường nước lũ và bùn đất đang lao thẳng xuống đường.",
+  "start_question": "q1",
+  "questions": [
+    {
+      "id": "q1",
+      "text_en": "The water hits the road 50 meters ahead. The path behind is narrow and steep. What is [Name]'s immediate reaction?",
+      "text_vi": "Nước đổ xuống mặt đường cách 50m phía trước. Đường phía sau rất hẹp và dốc. Phản ứng tức thì của [Name] là gì?",
+      "timer": 15,
+      "options": [
+        { "id": "q1_a", "text_en": "Abandon the bike and climb up", "text_vi": "Bỏ xe và leo lên phía sườn cao", "trait_tag": "risk_recognition", "next_question": "q2" },
+        { "id": "q1_b", "text_en": "U-turn and ride away fast", "text_vi": "Quay xe và chạy thật nhanh", "trait_tag": "immediate_action", "next_question": "q2" },
+        { "id": "q1_c", "text_en": "Stop and wait near a large rock", "text_vi": "Dừng lại chờ gần tảng đá lớn", "trait_tag": "self_reliance", "next_question": "q2" },
+        { "id": "q1_d", "text_en": "Honk to warn other riders", "text_vi": "Bấm còi cảnh báo người khác", "trait_tag": "information_first", "next_question": "q2" }
+      ]
+    },
+    {
+      "id": "q2",
+      "text_en": "Mud starts sliding under [Name]'s feet. The road begins to crumble toward the valley below. The roar is now bone-shaking.",
+      "text_vi": "Bùn bắt đầu trượt dưới chân [Name]. Mặt đường bắt đầu sạt xuống thung lũng. Tiếng gầm rú giờ đây rung chuyển cả mặt đất.",
+      "timer": 15,
+      "options": [
+        { "id": "q2_a", "text_en": "Grab onto sturdy tree roots", "text_vi": "Bám chặt vào rễ cây cổ thụ", "trait_tag": "risk_recognition", "next_question": "q3" },
+        { "id": "q2_b", "text_en": "Run toward a high concrete bridge", "text_vi": "Chạy về phía cây cầu bê tông cao", "trait_tag": "immediate_action", "next_question": "q3" },
+        { "id": "q2_c", "text_en": "Stay in the middle of the road", "text_vi": "Giữ vị trí ở giữa mặt đường", "trait_tag": "self_reliance", "next_question": "q3" },
+        { "id": "q2_d", "text_en": "Look for a shallow cave", "text_vi": "Tìm kiếm một hang đá nông", "trait_tag": "information_first", "next_question": "q3" }
+      ]
+    },
+    {
+      "id": "q3",
+      "text_en": "Water floods the road surface. [Name] sees two options for higher ground: a steep dirt slope or a rocky ridge.",
+      "text_vi": "Nước tràn ngập mặt đường. [Name] thấy hai lối lên cao: một sườn đất dốc hoặc một mỏm đá.",
+      "timer": 15,
+      "options": [
+        { "id": "q3_a", "text_en": "Scramble up the rocky ridge", "text_vi": "Trèo lên mỏm đá phía trên", "trait_tag": "risk_recognition", "next_question": "q4a" },
+        { "id": "q3_b", "text_en": "Climb the dirt slope quickly", "text_vi": "Leo lên sườn đất thật nhanh", "trait_tag": "self_reliance", "next_question": "q4b" },
+        { "id": "q3_c", "text_en": "Wade through to find a house", "text_vi": "Lội qua nước tìm nhà dân", "trait_tag": "immediate_action", "next_question": "q4a" },
+        { "id": "q3_d", "text_en": "Call for help on the phone", "text_vi": "Gọi điện thoại cầu cứu", "trait_tag": "information_first", "next_question": "q4b" }
+      ]
+    },
+    {
+      "id": "q4a",
+      "text_en": "[Name] reaches the ridge. Looking down, the bike is swept away like a toy. Heavy rain makes the rock slippery.",
+      "text_vi": "[Name] lên được mỏm đá. Nhìn xuống, chiếc xe bị cuốn trôi như đồ chơi. Mưa lớn khiến đá rất trơn.",
+      "timer": 15,
+      "options": [
+        { "id": "q4a_a", "text_en": "Stay low and hold the rock", "text_vi": "Hạ thấp trọng tâm, bám sát đá", "trait_tag": "risk_recognition", "next_question": "q5" },
+        { "id": "q4a_b", "text_en": "Try to signal passing vehicles", "text_vi": "Cố ra hiệu cho các xe đi ngang", "trait_tag": "information_first", "next_question": "q5" },
+        { "id": "q4a_c", "text_en": "Move higher up the mountain", "text_vi": "Tiếp tục leo cao lên núi", "trait_tag": "immediate_action", "next_question": "q5" },
+        { "id": "q4a_d", "text_en": "Check for injuries on limbs", "text_vi": "Kiểm tra vết thương trên cơ thể", "trait_tag": "self_reliance", "next_question": "q5" }
+      ]
+    },
+    {
+      "id": "q4b",
+      "text_en": "The dirt slope is unstable. Small rocks fall as [Name] climbs. Below, the road has completely vanished into the river.",
+      "text_vi": "Sườn đất không ổn định. Đá nhỏ rơi lả tả khi [Name] leo. Bên dưới, mặt đường đã biến mất hoàn toàn.",
+      "timer": 12,
+      "options": [
+        { "id": "q4b_a", "text_en": "Dig fingers deep for grip", "text_vi": "Bám ngón tay sâu vào đất", "trait_tag": "self_reliance", "next_question": "q5" },
+        { "id": "q4b_b", "text_en": "Look for a horizontal ledge", "text_vi": "Tìm kiếm một gờ đá nằm ngang", "trait_tag": "risk_recognition", "next_question": "q5" },
+        { "id": "q4b_c", "text_en": "Shout at the top of lungs", "text_vi": "Hét thật to kêu cứu", "trait_tag": "immediate_action", "next_question": "q5" },
+        { "id": "q4b_d", "text_en": "Check phone GPS signal", "text_vi": "Kiểm tra tín hiệu GPS điện thoại", "trait_tag": "information_first", "next_question": "q5" }
+      ]
+    },
+    {
+      "id": "q5",
+      "text_en": "The rain stops, but the mountain is groaning. [Name] hears a series of cracks. Another landslide is possible nearby.",
+      "text_vi": "Mưa tạnh nhưng núi rừng đang rung chuyển. [Name] nghe tiếng nứt vỡ. Một vụ sạt lở khác sắp xảy ra.",
+      "timer": 15,
+      "options": [
+        { "id": "q5_a", "text_en": "Watch the tilt of trees", "text_vi": "Quan sát độ nghiêng của cây", "trait_tag": "risk_recognition", "next_question": "q6" },
+        { "id": "q5_b", "text_en": "Run across the slope fast", "text_vi": "Chạy thật nhanh băng qua sườn", "trait_tag": "immediate_action", "next_question": "q6" },
+        { "id": "q5_c", "text_en": "Stay still and listen closely", "text_vi": "Giữ im lặng và lắng nghe kỹ", "trait_tag": "information_first", "next_question": "q6" },
+        { "id": "q5_d", "text_en": "Put on a helmet for protection", "text_vi": "Đội mũ bảo hiểm để bảo vệ đầu", "trait_tag": "self_reliance", "next_question": "q6" }
+      ]
+    },
+    {
+      "id": "q6",
+      "text_en": "A rescue team with flashlights appears on the ridge above. They drop a rope. The ground is shivering.",
+      "text_vi": "Đội cứu hộ xuất hiện với đèn pin phía trên. Họ thả dây xuống. Mặt đất đang rung nhẹ.",
+      "timer": 15,
+      "options": [
+        { "id": "q6_a", "text_en": "Secure the rope around waist", "text_vi": "Buộc dây chắc chắn quanh eo", "trait_tag": "risk_recognition", "next_question": "q7a" },
+        { "id": "q6_b", "text_en": "Climb up using only hands", "text_vi": "Chỉ dùng tay không leo lên", "trait_tag": "immediate_action", "next_question": "q7b" }
+      ]
+    },
+    {
+      "id": "q7a",
+      "text_en": "[Name] is pulled to safety. Below, the entire hillside collapses. [Name] is safe but shaken by the narrow escape.",
+      "text_vi": "[Name] được kéo lên an toàn. Phía dưới, cả sườn đồi sụp đổ. [Name] an toàn nhưng vẫn bàng hoàng.",
+      "timer": 20,
+      "options": [
+        { "id": "q7a_a", "text_en": "Follow team to local shelter", "text_vi": "Theo đội về trạm trú ẩn", "trait_tag": "risk_recognition", "next_question": null },
+        { "id": "q7a_b", "text_en": "Notify family of the location", "text_vi": "Báo vị trí hiện tại cho người thân", "trait_tag": "information_first", "next_question": null },
+        { "id": "q7a_c", "text_en": "Help other survivors found", "text_vi": "Giúp đỡ những người sống sót khác", "trait_tag": "immediate_action", "next_question": null },
+        { "id": "q7a_d", "text_en": "Keep warm with blankets provided", "text_vi": "Quấn chăn giữ ấm cơ thể", "trait_tag": "self_reliance", "next_question": null }
+      ]
+    },
+    {
+      "id": "q7b",
+      "text_en": "[Name] reaches the top just as the ledge gives way. Rescuers pull [Name] back. Life is precious and fragile.",
+      "text_vi": "[Name] lên tới đỉnh ngay khi gờ đá sụp. Cứu hộ kịp kéo [Name] lại. Mạng sống thật quý giá.",
+      "timer": 20,
+      "options": [
+        { "id": "q7b_a", "text_en": "Get a medical checkup immediately", "text_vi": "Kiểm tra y tế ngay lập tức", "trait_tag": "immediate_action", "next_question": null },
+        { "id": "q7b_b", "text_en": "Avoid mountain roads during rain", "text_vi": "Tránh đường đèo khi trời mưa", "trait_tag": "risk_recognition", "next_question": null },
+        { "id": "q7b_c", "text_en": "Volunteer for flood awareness", "text_vi": "Tham gia tuyên truyền về lũ quét", "trait_tag": "information_first", "next_question": null },
+        { "id": "q7b_d", "text_en": "Donate to local rescue teams", "text_vi": "Ủng hộ cho các đội cứu hộ", "trait_tag": "self_reliance", "next_question": null }
+      ]
+    }
+  ],
+  "insight_en": "**Northern Flash Flood Dynamics**\nIn Northern Vietnam's mountainous regions (Lào Cai, Yên Bái), flash floods and landslides often strike with zero warning. The terrain funnels rainwater into narrow valleys, creating a high-velocity wall of water, mud, and boulders that can pulverize anything in its path.\n\n**Why the Toll is High**\n* **Topography Trap:** Winding mountain roads often have steep cliffs on one side and drops on the other, leaving travelers with nowhere to run when a torrent hits the road.\n* **Debris Weight:** The water isn't just liquid; it carries uprooted trees and rocks. The density and impact force of this mixture make swimming or wading impossible.\n* **Secondary Landslides:** The initial flood saturates the soil, often triggering larger landslides minutes or hours after the main water surge has passed.\n\n**Practical Solutions**\n* **The Vertical Exit:** If you hear a deep roar like a low-flying jet, move uphill immediately. Even 5 to 10 meters of elevation can be the difference between life and death.\n* **Ditch the Bike:** A motorbike is a liability in a flash flood. Do not try to save it or ride through flowing water; abandon it and prioritize your climb.\n* **Tree Indicators:** Watch for trees tilting or cracking. This is a sign that the ground is saturated and a landslide is imminent. Avoid standing directly under or over these areas.",
+  "insight_vi": "**Đặc điểm lũ quét miền Bắc**\nTại các vùng núi phía Bắc (Lào Cai, Yên Bái), lũ quét và sạt lở thường xảy ra bất ngờ không có cảnh báo. Địa hình núi cao dốc đứng biến nước mưa thành những bức tường nước, bùn và đá hộc chảy xiết, có thể nghiền nát mọi thứ trên đường đi.\n\n**Tại sao thiệt hại cao?**\n* **Bẫy địa hình:** Các cung đường đèo uốn lượn một bên là vách đá, một bên là vực sâu, khiến người đi đường không có lối thoát khi lũ đổ xuống mặt đường.\n* **Sức nặng của rác thải:** Nước lũ không chỉ là chất lỏng mà còn cuốn theo cây cối và đá. Tỷ trọng và lực va chạm của hỗn hợp này khiến việc bơi hay lội qua là bất khả thi.\n* **Sạt lở thứ cấp:** Đợt lũ đầu tiên làm bão hòa đất, thường gây ra các vụ sạt lở lớn hơn vài phút hoặc vài giờ sau khi đợt nước chính đã đi qua.\n\n**Giải pháp thực tế**\n* **Thoát hiểm theo chiều dọc:** Nếu nghe tiếng gầm như động cơ máy bay, hãy leo lên cao ngay lập tức. Chỉ cần cao hơn 5-10m có thể là ranh giới giữa sự sống và cái chết.\n* **Bỏ xe cứu người:** Xe máy là gánh nặng trong lũ quét. Đừng cố cứu xe hay lái qua dòng nước chảy; hãy bỏ lại tài sản và ưu tiên việc leo lên cao.\n* **Dấu hiệu từ cây cối:** Quan sát cây cối bị nghiêng hoặc tiếng rễ cây đứt. Đây là dấu hiệu đất đã mủn và sạt lở sắp xảy ra. Tránh đứng trực tiếp phía dưới hoặc trên các khu vực này."
+}

@@ -1,0 +1,122 @@
+{
+"id": "central_easy_5",
+"region": "central",
+"danger": "5",
+"title_en": "The Golden Promise",
+"title_vi": "Đáy Sông Mò Trăng",
+"intro_en": "A recruiter on Facebook offers [Name] a computer job in a 'special economic zone' across the border. No experience needed, $1,500 salary, all travel costs covered.",
+"intro_vi": "Một người tuyển dụng trên Facebook mời [Name] làm việc máy tính tại 'khu kinh tế đặc biệt' bên kia biên giới. Không cần kinh nghiệm, lương 35 triệu, bao toàn bộ chi phí.",
+"start_question": "q1",
+"questions": [
+  {
+    "id": "q1",
+    "text_en": "The recruiter insists [Name] must leave tonight via a 'private trail' to avoid paperwork delays. They ask for a photo of [Name]'s ID.",
+    "text_vi": "Người tuyển dụng hối thúc [Name] phải đi ngay đêm nay theo 'đường mòn' để tránh thủ tục chậm trễ. Họ đòi chụp ảnh CCCD của [Name].",
+    "timer": 15,
+    "options": [
+      { "id": "q1_a", "text_en": "Send the photo to secure the spot", "text_vi": "Gửi ảnh để giữ chỗ làm việc", "trait_tag": "self_reliance", "next_question": "q2" },
+      { "id": "q1_b", "text_en": "Ask why the border crossing is unofficial", "text_vi": "Hỏi tại sao lại đi đường tiểu ngạch", "trait_tag": "information_first", "next_question": "q2" },
+      { "id": "q1_c", "text_en": "Refuse and block the recruiter immediately", "text_vi": "Từ chối và chặn người tuyển dụng ngay", "trait_tag": "risk_recognition", "next_question": "q2" },
+      { "id": "q1_d", "text_en": "Consult with a local police officer", "text_vi": "Hỏi ý kiến công an khu vực", "trait_tag": "immediate_action", "next_question": "q2" }
+    ]
+  },
+  {
+    "id": "q2",
+    "text_en": "They send 'proof'—videos of young people in Central Vietnam eating luxury meals at the workplace. They offer [Name] a $200 'advance' bonus.",
+    "text_vi": "Họ gửi 'bằng chứng'—video thanh niên miền Trung ăn uống sang chảnh tại nơi làm. Họ hứa ứng trước cho [Name] 5 triệu đồng.",
+    "timer": 15,
+    "options": [
+      { "id": "q2_a", "text_en": "Accept the bonus for travel expenses", "text_vi": "Nhận tiền ứng trước để lo chi phí", "trait_tag": "self_reliance", "next_question": "q3" },
+      { "id": "q2_b", "text_en": "Ask to speak with the video's stars", "text_vi": "Yêu cầu nói chuyện với người trong video", "trait_tag": "information_first", "next_question": "q3" },
+      { "id": "q2_c", "text_en": "Search for the company name online", "text_vi": "Tìm kiếm tên công ty trên mạng", "trait_tag": "risk_recognition", "next_question": "q3" },
+      { "id": "q2_d", "text_en": "Request a signed labor contract first", "text_vi": "Yêu cầu xem hợp đồng lao động trước", "trait_tag": "immediate_action", "next_question": "q3" }
+    ]
+  },
+  {
+    "id": "q3",
+    "text_en": "A car arrives at [Name]'s house. The driver is hurried. 'Get in now or lose the job. Hand over your phone for security.'",
+    "text_vi": "Xe đón đến tận nhà [Name]. Tài xế giục giã: 'Lên xe ngay không là mất việc. Đưa điện thoại đây để bảo mật.'",
+    "timer": 15,
+    "options": [
+      { "id": "q3_a", "text_en": "Get in but keep the phone hidden", "text_vi": "Lên xe nhưng giấu kỹ điện thoại", "trait_tag": "self_reliance", "next_question": "q4b" },
+      { "id": "q3_b", "text_en": "Back away and call for family", "text_vi": "Lùi lại và gọi người nhà ra", "trait_tag": "risk_recognition", "next_question": "q4a" },
+      { "id": "q3_c", "text_en": "Hand over the phone and board", "text_vi": "Giao điện thoại và lên xe", "trait_tag": "immediate_action", "next_question": "q4b" },
+      { "id": "q3_d", "text_en": "Take a photo of the license plate", "text_vi": "Chụp ảnh lại biển số xe", "trait_tag": "information_first", "next_question": "q4a" }
+    ]
+  },
+  {
+    "id": "q4a",
+    "text_en": "The driver speeds off. [Name] sees a Zalo alert about 'Human Trafficking' scams targeting the Central coast. [Name] feels a chill.",
+    "text_vi": "Tài xế phóng xe đi mất. [Name] thấy cảnh báo Zalo về nạn buôn người nhắm vào miền Trung. [Name] thấy rùng mình.",
+    "timer": 15,
+    "options": [
+      { "id": "q4a_a", "text_en": "Report the plate to the authorities", "text_vi": "Báo cáo biển số xe cho cơ quan chức năng", "trait_tag": "risk_recognition", "next_question": "q5" },
+      { "id": "q4a_b", "text_en": "Warn friends about the recruiter's profile", "text_vi": "Cảnh báo bạn bè về trang cá nhân đó", "trait_tag": "information_first", "next_question": "q5" },
+      { "id": "q4a_c", "text_en": "Check for official job overseas portals", "text_vi": "Tra cứu cổng thông tin việc làm quốc tế", "trait_tag": "self_reliance", "next_question": "q5" },
+      { "id": "q4a_d", "text_en": "Delete all contact with the recruiter", "text_vi": "Xóa mọi liên lạc với kẻ tuyển dụng", "trait_tag": "immediate_action", "next_question": "q5" }
+    ]
+  },
+  {
+    "id": "q4b",
+    "text_en": "The car stops at a dark border crossing. Men with flashlights take [Name]'s passport. 'You owe us $3,000 for travel now.'",
+    "text_vi": "Xe dừng tại biên giới tối om. Nhóm người cầm đèn pin thu hộ chiếu của [Name]. 'Giờ mày nợ tụi tao 70 triệu tiền xe.'",
+    "timer": 12,
+    "options": [
+      { "id": "q4b_a", "text_en": "Run toward the nearest light/building", "text_vi": "Chạy về phía có ánh đèn/nhà dân", "trait_tag": "risk_recognition", "next_question": "q5" },
+      { "id": "q4b_b", "text_en": "Try to negotiate the debt down", "text_vi": "Cố gắng thương lượng giảm nợ", "trait_tag": "self_reliance", "next_question": "q5" },
+      { "id": "q4b_c", "text_en": "Quietly dial an emergency SOS", "text_vi": "Âm thầm bấm số cứu hộ khẩn cấp", "trait_tag": "immediate_action", "next_question": "q5" },
+      { "id": "q4b_d", "text_en": "Observe surroundings for a border post", "text_vi": "Quan sát tìm kiếm trạm biên phòng", "trait_tag": "information_first", "next_question": "q5" }
+    ]
+  },
+  {
+    "id": "q5",
+    "text_en": "The gravity of the situation hits. These 'special zones' are often scam centers. Escape is nearly impossible once inside.",
+    "text_vi": "Sự thật phơi bày. Những 'khu đặc biệt' này thường là ổ lừa đảo. Một khi vào trong, gần như không thể thoát ra.",
+    "timer": 15,
+    "options": [
+      { "id": "q5_a", "text_en": "Look for a chance to call home", "text_vi": "Tìm cơ hội gọi điện về nhà", "trait_tag": "information_first", "next_question": "q6" },
+      { "id": "q5_b", "text_en": "Comply until you find an exit", "text_vi": "Giả vờ tuân thủ cho đến khi thấy lối thoát", "trait_tag": "risk_recognition", "next_question": "q6" },
+      { "id": "q5_c", "text_en": "Seek help from other workers", "text_vi": "Tìm sự giúp đỡ từ những công nhân khác", "trait_tag": "self_reliance", "next_question": "q6" },
+      { "id": "q5_d", "text_en": "Hide any remaining identification", "text_vi": "Giấu kỹ mọi giấy tờ tùy thân còn lại", "trait_tag": "immediate_action", "next_question": "q6" }
+    ]
+  },
+  {
+    "id": "q6",
+    "text_en": "[Name] manages to contact a family member. They are working with 'Blue Dragon' or local police to locate [Name].",
+    "text_vi": "[Name] liên lạc được với người thân. Họ đang phối hợp với 'Rồng Xanh' hoặc công an để định vị [Name].",
+    "timer": 15,
+    "options": [
+      { "id": "q6_a", "text_en": "Stay calm and wait for instructions", "text_vi": "Bình tĩnh và chờ đợi hướng dẫn", "trait_tag": "risk_recognition", "next_question": "q7a" },
+      { "id": "q6_b", "text_en": "Attempt to escape on your own", "text_vi": "Tự mình tìm cách trốn thoát", "trait_tag": "self_reliance", "next_question": "q7b" },
+      { "id": "q6_c", "text_en": "Gather evidence of the captors", "text_vi": "Thu thập bằng chứng về kẻ bắt giữ", "trait_tag": "information_first", "next_question": "q7a" },
+      { "id": "q6_d", "text_en": "Keep the line open silently", "text_vi": "Giữ kết nối điện thoại trong im lặng", "trait_tag": "immediate_action", "next_question": "q7b" }
+    ]
+  },
+  {
+    "id": "q7a",
+    "text_en": "Authorities intervene at the border point. [Name] is rescued before crossing the deep interior. The recruiter's network is exposed.",
+    "text_vi": "Cơ quan chức năng can thiệp tại biên giới. [Name] được cứu trước khi bị đưa sâu vào nội địa. Đường dây bị triệt phá.",
+    "timer": 20,
+    "options": [
+      { "id": "q7a_a", "text_en": "Provide a full statement to police", "text_vi": "Khai báo đầy đủ với công an", "trait_tag": "risk_recognition", "next_question": null },
+      { "id": "q7a_b", "text_en": "Share the warning on social media", "text_vi": "Chia sẻ cảnh báo lên mạng xã hội", "trait_tag": "immediate_action", "next_question": null },
+      { "id": "q7a_c", "text_en": "Seek counseling for the trauma", "text_vi": "Tìm kiếm tư vấn tâm lý sau biến cố", "trait_tag": "self_reliance", "next_question": null },
+      { "id": "q7a_d", "text_en": "Warn others about 'Easy Jobs'", "text_vi": "Cảnh báo người khác về 'Việc nhẹ lương cao'", "trait_tag": "information_first", "next_question": null }
+    ]
+  },
+  {
+    "id": "q7b",
+    "text_en": "[Name] escapes but remains in hiding near the border. It takes days to return home safely. The lesson is permanent.",
+    "text_vi": "[Name] trốn thoát nhưng phải ẩn náu gần biên giới. Mất nhiều ngày mới về nhà an toàn. Bài học này sẽ theo suốt đời.",
+    "timer": 20,
+    "options": [
+      { "id": "q7b_a", "text_en": "Research safe labor export programs", "text_vi": "Tìm hiểu chương trình xuất khẩu lao động an toàn", "trait_tag": "risk_recognition", "next_question": null },
+      { "id": "q7b_b", "text_en": "Learn to spot digital red flags", "text_vi": "Học cách nhận diện dấu hiệu lừa đảo mạng", "trait_tag": "information_first", "next_question": null },
+      { "id": "q7b_c", "text_en": "Spread awareness in the village", "text_vi": "Lan tỏa thông tin cảnh giác trong làng", "trait_tag": "immediate_action", "next_question": null },
+      { "id": "q7b_d", "text_en": "Keep emergency contacts on speed dial", "text_vi": "Lưu các số khẩn cấp vào danh bạ nhanh", "trait_tag": "self_reliance", "next_question": null }
+    ]
+  }
+],
+"insight_en": "**The Employment & Cross-Border Trap**\nIn Central Vietnam, 'Easy Jobs, High Pay' scams are a critical threat. Scammers target young people and those in economically vulnerable areas, promising high-salary office work in neighboring countries (Cambodia, Laos, Myanmar). In reality, victims are often sold into forced labor centers.\n\n**Why the Toll is High**\n* **Debt Bondage:** Victims are told travel is 'free,' but once they cross the border, they are charged thousands of dollars for 'fees.' They are then forced to work 14+ hours a day to pay off an unpayable debt.\n* **Unofficial Crossings:** By luring victims through 'private trails' (đường mòn), scammers bypass legal protections and record-keeping, making it nearly impossible for authorities to track the victims.\n* **Isolation Tactics:** Confiscating phones and IDs is the first step. This cuts off the victim's ability to call for help or prove their identity to local foreign police.\n\n**Practical Solutions**\n* **Verify via DOLAB:** Only work through companies licensed by the Department of Overseas Labour (DOLAB). If a recruiter refuses to show a license or insists on an unofficial border crossing, it is 100% a scam.\n* **Digital Red Flags:** Be wary of 'office jobs' that require no experience, no degree, and yet offer 3-4 times the average local salary. If it's too good to be true, it is.\n* **SOS Planning:** If you or someone you know is traveling for work, always share live location with family. Memorize the 'Blue Dragon Children's Foundation' or the Vietnamese Embassy's emergency hotline in the destination country.",
+"insight_vi": "**Cạm bẫy việc làm và biên giới**\nTại miền Trung, lừa đảo 'Việc nhẹ lương cao' là mối đe dọa nghiêm trọng. Kẻ xấu nhắm vào thanh niên và người dân vùng kinh tế khó khăn, hứa hẹn việc văn phòng lương cao tại Campuchia, Lào hoặc Myanmar. Thực tế, nạn nhân thường bị bán vào các ổ lao động cưỡng bức.\n\n**Tại sao thiệt hại cao?**\n* **Nợ nần chồng chất:** Nạn nhân được hứa bao phí đi lại, nhưng khi qua biên giới, họ bị áp những khoản 'phí' lên tới hàng ngàn đô la. Sau đó, họ bị ép làm việc 14 tiếng mỗi ngày để trả món nợ không bao giờ hết.\n* **Vượt biên trái phép:** Bằng cách dụ dỗ nạn nhân đi 'đường mòn, lối mở', kẻ lừa đảo lách qua sự kiểm soát của pháp luật, khiến cơ quan chức năng cực kỳ khó theo dấu.\n* **Thủ đoạn cô lập:** Thu giữ điện thoại và giấy tờ tùy thân là bước đầu tiên. Điều này tước đi khả năng gọi cứu hộ hoặc chứng minh danh tính với cảnh sát nước sở tại của nạn nhân.\n\n**Giải pháp thực tế**\n* **Xác minh qua DOLAB:** Chỉ làm việc thông qua các công ty được Cục Quản lý lao động ngoài nước (DOLAB) cấp phép. Nếu nhà tuyển dụng từ chối cho xem giấy phép hoặc đòi đi đường tiểu ngạch, đó chắc chắn là lừa đảo.\n* **Dấu hiệu nhận biết:** Cảnh giác với những 'việc văn phòng' không yêu cầu bằng cấp, kinh nghiệm nhưng lương cao gấp 3-4 lần mức bình thường. Cái gì quá tốt thường không có thật.\n* **Kế hoạch khẩn cấp:** Nếu bạn hoặc người thân đi làm xa, luôn chia sẻ vị trí trực tiếp cho gia đình. Ghi nhớ hotline của 'Tổ chức Rồng Xanh' hoặc số điện thoại bảo hộ công dân của Đại sứ quán Việt Nam tại nước sở tại."
+}

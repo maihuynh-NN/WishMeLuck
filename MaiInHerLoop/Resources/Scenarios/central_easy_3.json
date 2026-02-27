@@ -1,0 +1,118 @@
+{
+  "id": "central_easy_3",
+  "region": "central",
+  "danger": "3",
+  "title_en": "The Supply Bottleneck",
+  "title_vi": "Nút Thắt Cứu Trợ",
+  "intro_en": "Floodwaters have cut off main roads for days. When a supply truck finally reaches the ward office with fresh water, the collective urgency of hundreds of families creates a dangerous surge at the gate. [Name] is caught in the tightening press.",
+  "intro_vi": "Nước lũ chia cắt các tuyến đường chính suốt nhiều ngày. Khi xe tải tiếp tế nước sạch cuối cùng cũng đến được sân phường, sự cấp bách của hàng trăm gia đình tạo ra một làn sóng xô đẩy nguy hiểm tại cổng. [Name] bị kẹt giữa vòng vây đang siết chặt.",
+  "start_question": "q1",
+  "questions": [
+    {
+      "id": "q1",
+      "text_en": "The crowd surges toward the truck. [Name] is forced toward a concrete pillar. The pressure on the ribs makes it hard to inhale.",
+      "text_vi": "Đám đông ùa về phía xe tải. [Name] bị ép vào một cột bê tông. Áp lực lên mạn sườn khiến việc hít thở trở nên khó khăn.",
+      "timer": 15,
+      "options": [
+        { "id": "q1_a", "text_en": "Keep arms up to create chest space", "text_vi": "Giữ tay cao để tạo khoảng trống cho ngực", "trait_tag": "risk_recognition", "next_question": "q2" },
+        { "id": "q1_b", "text_en": "Push hard to regain personal space", "text_vi": "Đẩy mạnh để lấy lại không gian riêng", "trait_tag": "immediate_action", "next_question": "q2" },
+        { "id": "q1_c", "text_en": "Climb the pillar to get above", "text_vi": "Trèo lên cột để lên cao", "trait_tag": "self_reliance", "next_question": "q2" },
+        { "id": "q1_d", "text_en": "Shout for everyone to move back", "text_vi": "Hét lớn yêu cầu mọi người lùi lại", "trait_tag": "information_first", "next_question": "q2" }
+      ]
+    },
+    {
+      "id": "q2",
+      "text_en": "A person trips directly in [Name]'s path. If they aren't helped, the crowd behind will move over them. The momentum is heavy.",
+      "text_vi": "Một người vấp ngã ngay trước mặt [Name]. Nếu không được giúp, đám đông phía sau sẽ giẫm lên họ. Đà xô đẩy rất lớn.",
+      "timer": 15,
+      "options": [
+        { "id": "q2_a", "text_en": "Form a circle to protect them", "text_vi": "Tạo vòng chắn để bảo vệ họ", "trait_tag": "risk_recognition", "next_question": "q3" },
+        { "id": "q2_b", "text_en": "Pull them up quickly and move", "text_vi": "Kéo họ đứng dậy nhanh rồi đi tiếp", "trait_tag": "immediate_action", "next_question": "q3" },
+        { "id": "q2_c", "text_en": "Keep moving to avoid falling yourself", "text_vi": "Tiếp tục đi để tránh chính mình bị ngã", "trait_tag": "self_reliance", "next_question": "q3" },
+        { "id": "q2_d", "text_en": "Call for help from nearby people", "text_vi": "Gọi những người xung quanh giúp một tay", "trait_tag": "information_first", "next_question": "q3" }
+      ]
+    },
+    {
+      "id": "q3",
+      "text_en": "The bottleneck at the gate tightens. [Name] spots a small gap toward the side of the yard, away from the truck.",
+      "text_vi": "Nút thắt tại cổng hẹp lại. [Name] thấy một khe hở nhỏ về phía rìa sân, cách xa chiếc xe tải.",
+      "timer": 15,
+      "options": [
+        { "id": "q3_a", "text_en": "Move diagonally toward the yard edge", "text_vi": "Di chuyển chéo về phía rìa sân", "trait_tag": "risk_recognition", "next_question": "q4a" },
+        { "id": "q3_b", "text_en": "Brace against the flow to wait", "text_vi": "Gồng mình chịu lực để chờ đợi", "trait_tag": "self_reliance", "next_question": "q4b" }
+      ]
+    },
+    {
+      "id": "q4a",
+      "text_en": "[Name] reaches the edge, but people start climbing the perimeter fence. The old metal structure begins to lean and groan.",
+      "text_vi": "[Name] ra được rìa, nhưng mọi người bắt đầu trèo rào. Kết cấu kim loại cũ kỹ bắt đầu nghiêng và rên rỉ.",
+      "timer": 15,
+      "options": [
+        { "id": "q4a_a", "text_en": "Move away from the unstable fence", "text_vi": "Tránh xa khỏi hàng rào không an toàn", "trait_tag": "risk_recognition", "next_question": "q5" },
+        { "id": "q4a_b", "text_en": "Warn others about the fence leaning", "text_vi": "Cảnh báo mọi người hàng rào sắp đổ", "trait_tag": "information_first", "next_question": "q5" },
+        { "id": "q4a_c", "text_en": "Help stabilize the fence base", "text_vi": "Giữ chặt chân hàng rào", "trait_tag": "self_reliance", "next_question": "q5" },
+        { "id": "q4a_d", "text_en": "Push toward the open yard space", "text_vi": "Đẩy về phía khoảng sân trống", "trait_tag": "immediate_action", "next_question": "q5" }
+      ]
+    },
+    {
+      "id": "q4b",
+      "text_en": "The center of the crowd is a whirlpool of movement. [Name] is struggling to keep feet on the slippery, muddy ground.",
+      "text_vi": "Giữa đám đông như một vòng xoáy. [Name] chật vật để giữ vững chân trên nền đất bùn trơn trượt.",
+      "timer": 12,
+      "options": [
+        { "id": "q4b_a", "text_en": "Adopt a wide, staggered foot stance", "text_vi": "Đứng chân trước chân sau thật vững", "trait_tag": "risk_recognition", "next_question": "q5" },
+        { "id": "q4b_b", "text_en": "Hold onto the person in front", "text_vi": "Bám chặt vào người phía trước", "trait_tag": "self_reliance", "next_question": "q5" },
+        { "id": "q4b_c", "text_en": "Go with the crowd's motion", "text_vi": "Di chuyển nương theo đám đông", "trait_tag": "immediate_action", "next_question": "q5" },
+        { "id": "q4b_d", "text_en": "Signal to the truck for space", "text_vi": "Ra hiệu cho xe tải lùi lại", "trait_tag": "information_first", "next_question": "q5" }
+      ]
+    },
+    {
+      "id": "q5",
+      "text_en": "The distribution is paused to restore order. The heat and humidity are rising. Some people near [Name] appear faint.",
+      "text_vi": "Việc phát đồ tạm dừng để ổn định trật tự. Sức nóng và độ ẩm tăng cao. Một vài người gần [Name] có dấu hiệu lả đi.",
+      "timer": 15,
+      "options": [
+        { "id": "q5_a", "text_en": "Fan them and create air space", "text_vi": "Quạt và tạo không gian cho họ thở", "trait_tag": "risk_recognition", "next_question": "q6" },
+        { "id": "q5_b", "text_en": "Pass forward any available water", "text_vi": "Chuyền nước cho người cần", "trait_tag": "immediate_action", "next_question": "q6" },
+        { "id": "q5_c", "text_en": "Conserve own energy and breathe slowly", "text_vi": "Tiết kiệm sức và thở chậm", "trait_tag": "self_reliance", "next_question": "q6" },
+        { "id": "q5_d", "text_en": "Ask organizers for medical help", "text_vi": "Yêu cầu ban tổ chức hỗ trợ y tế", "trait_tag": "information_first", "next_question": "q6" }
+      ]
+    },
+    {
+      "id": "q6",
+      "text_en": "Security begins clearing a path for the faint. The crowd shifts suddenly. A gap opens toward the exit.",
+      "text_vi": "Lực lượng bảo vệ mở lối cho người bị ngất. Đám đông dịch chuyển bất ngờ. Một khoảng trống mở ra phía lối thoát.",
+      "timer": 15,
+      "options": [
+        { "id": "q6_a", "text_en": "Exit the area to safety now", "text_vi": "Thoát ra khu vực an toàn ngay", "trait_tag": "risk_recognition", "next_question": "q7a" },
+        { "id": "q6_b", "text_en": "Stay to wait for the restart", "text_vi": "Ở lại chờ đợt phát đồ tiếp theo", "trait_tag": "self_reliance", "next_question": "q7b" }
+      ]
+    },
+    {
+      "id": "q7a",
+      "text_en": "[Name] is safe outside the yard. The rush was dangerous, but [Name] is uninjured. The truck begins organized delivery later.",
+      "text_vi": "[Name] đã an toàn bên ngoài sân. Vụ xô đẩy thật nguy hiểm nhưng [Name] không bị thương. Xe bắt đầu phát đồ trật tự sau đó.",
+      "timer": 20,
+      "options": [
+        { "id": "q7a_a", "text_en": "Assist with organizing the new queue", "text_vi": "Hỗ trợ sắp xếp lại hàng ngũ mới", "trait_tag": "immediate_action", "next_question": null },
+        { "id": "q7a_b", "text_en": "Wait for a quieter time to return", "text_vi": "Đợi lúc vắng hơn mới quay lại", "trait_tag": "risk_recognition", "next_question": null },
+        { "id": "q7a_c", "text_en": "Share the location status on Zalo", "text_vi": "Chia sẻ tình hình địa điểm lên Zalo", "trait_tag": "information_first", "next_question": null },
+        { "id": "q7a_d", "text_en": "Rest and recover from the heat", "text_vi": "Nghỉ ngơi và hồi phục sức khỏe", "trait_tag": "self_reliance", "next_question": null }
+      ]
+    },
+    {
+      "id": "q7b",
+      "text_en": "The queue restarts with strict control. [Name] finally receives supplies. The experience was taxing but the mission is accomplished.",
+      "text_vi": "Hàng ngũ bắt đầu lại với sự kiểm soát chặt. [Name] cuối cùng cũng nhận được tiếp tế. Trải nghiệm thật vất vả nhưng đã xong việc.",
+      "timer": 20,
+      "options": [
+        { "id": "q7b_a", "text_en": "Help elderly neighbors carry their bags", "text_vi": "Giúp người già xách đồ về", "trait_tag": "risk_recognition", "next_question": null },
+        { "id": "q7b_b", "text_en": "Document the supplies for the group", "text_vi": "Ghi chép lại các phần tiếp tế cho nhóm", "trait_tag": "information_first", "next_question": null },
+        { "id": "q7b_c", "text_en": "Clean up litter in the yard", "text_vi": "Dọn dẹp rác trong sân", "trait_tag": "immediate_action", "next_question": null },
+        { "id": "q7b_d", "text_en": "Head home to secure the goods", "text_vi": "Về nhà để cất giữ đồ đạc an toàn", "trait_tag": "self_reliance", "next_question": null }
+      ]
+    }
+  ],
+  "insight_en": "**The Relief Point Crush**\nIn Central Vietnam, post-flood logistical bottlenecks are common as roads are cleared at different times. Spontaneous relief points often face 'crowd crush' risks. This occurs when a high density of people creates a fluid-like surge, leading to compressive asphyxiation, where the pressure prevents the chest from expanding to breathe.\n\n**Why the Toll is High**\n* **The 'Wave' Physics:** In a dense crowd, a single push at the back creates a shockwave that amplifies toward the front, pinning people against hard objects like pillars or trucks.\n* **Trip-and-Fall Traps:** Mud and debris from the flood make the ground slippery. A single fall can trigger a chain reaction, leading to trampling.\n* **Environmental Stress:** High humidity and post-storm heat increase the risk of fainting, which causes immediate gaps in the crowd that others fall into.\n\n**Practical Solutions**\n* **Boxer Bracing:** Keep your arms up in front of your chest with elbows out. This creates a small but vital 'air pocket' that allows your lungs to expand even under heavy pressure.\n* **Diagonal Movement:** Never fight the forward surge. Move chéo (diagonally) toward the edges of the crowd where the density is lower and exit paths are clearer.\n* **Object Avoidance:** Stay away from solid barriers like walls, fences, or the truck itself. Being caught between a moving crowd and a fixed object is the highest risk for crush injuries.",
+  "insight_vi": "**Nút thắt tại điểm cứu trợ**\nTại miền Trung, các nút thắt hậu cần sau lũ rất phổ biến do đường xá được khai thông vào các thời điểm khác nhau. Các điểm cứu trợ tự phát thường đối mặt với rủi ro 'đám đông xô đẩy'. Điều này xảy ra khi mật độ người quá cao tạo ra một làn sóng dồn nén, dẫn đến ngạt thở do áp lực ép chặt lồng ngực.\n\n**Tại sao thiệt hại cao?**\n* **Vật lý của 'làn sóng':** Trong đám đông dày đặc, một cú đẩy ở phía sau tạo ra sóng xung kích khuếch đại về phía trước, ép mọi người vào các vật cứng như cột trụ hoặc thành xe.\n* **Bẫy vấp ngã:** Bùn đất và mảnh vụn sau lũ khiến mặt đất trơn trượt. Một người ngã có thể gây ra phản ứng dây chuyền, dẫn đến tình trạng giẫm đạp.\n* **Áp lực môi trường:** Độ ẩm cao và sức nóng sau bão làm tăng nguy cơ ngất xỉu, tạo ra những khoảng trống đột ngột khiến người khác ngã vào.\n\n**Giải pháp thực tế**\n* **Tư thế võ sĩ:** Giữ hai tay trước ngực, khuỷu tay hướng ra ngoài. Điều này tạo ra một 'túi khí' nhỏ nhưng sống còn, giúp phổi vẫn có thể giãn nở dưới áp lực lớn.\n* **Di chuyển chéo:** Tuyệt đối không chống lại dòng xô đẩy trực diện. Hãy di chuyển chéo về phía rìa đám đông, nơi mật độ thấp hơn và lối thoát rõ ràng hơn.\n* **Tránh vật cản cố định:** Tránh xa các rào chắn cứng như tường, hàng rào hoặc thành xe tải. Việc bị kẹt giữa đám đông đang di chuyển và một vật cố định là rủi ro cao nhất gây chấn thương do chèn ép."
+}

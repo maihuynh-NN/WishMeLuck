@@ -1,0 +1,118 @@
+{
+  "id": "central_easy_2",
+  "region": "central",
+  "danger": "4",
+  "title_en": "The Guard's Debt",
+  "title_vi": "Món Nợ Kẻ Giữ Nhà",
+  "intro_en": "The sky is a bruised purple. In your new 'dream' house, the power flickers. Outside, a loudspeaker blares: 'Mandatory evacuation. Dam release in two hours.' You look at your $5,000 workstation and the custom furniture. You're alone. You decide to stay and guard it.",
+  "intro_vi": "Bầu trời tím bầm. Trong ngôi nhà 'mơ ước', điện chập chờn. Bên ngoài, loa phường phát đi râm ran: 'Yêu cầu di tản khẩn cấp. Thủy điện xả lũ trong hai tiếng nữa.' Bạn nhìn dàn máy tính 5.000 đô và đống nội thất đắt tiền. Bạn ở một mình. Bạn quyết định ở lại để giữ của.",
+  "start_question": "q1",
+  "questions": [
+    {
+      "id": "q1",
+      "text_en": "A neighbor bangs on your gate, water already swirling at his ankles. 'Lên xe đi em! (Get on the bike!)' he shouts, pointing to his overloaded Honda. 'The surge is coming!'",
+      "text_vi": "Hàng xóm đập cổng, nước đã ngập đến mắt cá chân ông ấy. 'Lên xe đi em!' ông ấy hét lớn, tay chỉ vào chiếc xe Honda lỉnh kỉnh đồ đạc. 'Lũ sắp về rồi!'",
+      "timer": 15,
+      "options": [
+        { "id": "q1_a", "text_en": "Grab your bag and hop on his bike", "text_vi": "Quăng túi lên xe và đi cùng ông ấy", "trait_tag": "risk_recognition", "next_question": "q2" },
+        { "id": "q1_b", "text_en": "'I'm staying to move the fridge up!'", "text_vi": "'Em ở lại kê nốt cái tủ lạnh đã!'", "trait_tag": "self_reliance", "next_question": "q2" },
+        { "id": "q1_c", "text_en": "Check Zalo for the official water level", "text_vi": "Check Zalo xem mực nước chính thức", "trait_tag": "information_first", "next_question": "q2" },
+        { "id": "q1_d", "text_en": "Ask if he can help move your desk first", "text_vi": "Nhờ ông ấy khênh giúp cái bàn trước", "trait_tag": "immediate_action", "next_question": "q2" }
+      ]
+    },
+    {
+      "id": "q2",
+      "text_en": "He leaves. Silence returns, then a low, vibrating growl from the mountains. The street light dies. In the dark, the front door groans as a wave of muddy water slams against the wood.",
+      "text_vi": "Ông ấy đi rồi. Sự im lặng trở lại, rồi một tiếng gầm trầm đục từ phía núi vọng về. Đèn đường vụt tắt. Trong bóng tối, cửa chính rên rỉ khi một làn sóng nước bùn quật mạnh vào lớp gỗ.",
+      "timer": 15,
+      "options": [
+        { "id": "q2_a", "text_en": "Hammer wooden planks across the door", "text_vi": "Đóng thêm ván gỗ chắn cửa", "trait_tag": "self_reliance", "next_question": "q3" },
+        { "id": "q2_b", "text_en": "Kill the main breaker before it shorts", "text_vi": "Dập cầu dao tổng trước khi chập điện", "trait_tag": "risk_recognition", "next_question": "q3" },
+        { "id": "q2_c", "text_en": "Abandon the floor and run to the attic", "text_vi": "Bỏ tầng trệt, chạy ngay lên gác mái", "trait_tag": "immediate_action", "next_question": "q3" },
+        { "id": "q2_d", "text_en": "Call the neighbor back to say sorry", "text_vi": "Gọi điện xin lỗi ông hàng xóm", "trait_tag": "information_first", "next_question": "q3" }
+      ]
+    },
+    {
+      "id": "q3",
+      "text_en": "The glass shatters. The surge bursts in, freezing and thick with silt. It pins you against the wall. The fridge you tried to save is now a floating battering ram aiming for your chest.",
+      "text_vi": "Kính vỡ tan. Luồng nước dữ dội tràn vào, lạnh buốt và đặc quánh bùn. Nó ép chặt bạn vào tường. Chiếc tủ lạnh bạn cố giữ giờ như một khúc gỗ trôi sông đang đâm thẳng vào ngực bạn.",
+      "timer": 12,
+      "options": [
+        { "id": "q3_a", "text_en": "Dive and swim for the stairs", "text_vi": "Lặn xuống bơi về phía cầu thang", "trait_tag": "immediate_action", "next_question": "q4a" },
+        { "id": "q3_b", "text_en": "Push the fridge away with your legs", "text_vi": "Dùng chân đẩy chiếc tủ lạnh ra", "trait_tag": "self_reliance", "next_question": "q4b" }
+      ]
+    },
+    {
+      "id": "q4a",
+      "text_en": "You scramble up. The attic is a tomb; the water is already soaking the floorboards. You hear scratching above—snakes are fleeing onto your roof.",
+      "text_vi": "Bạn bò lên được. Gác mái giờ như một hầm mộ; nước đã thấm qua sàn gỗ. Bạn nghe tiếng cào trên đầu—lũ rắn đang chạy nạn lên mái nhà bạn.",
+      "timer": 15,
+      "options": [
+        { "id": "q4a_a", "text_en": "Smash the tiles to get outside", "text_vi": "Đập vỡ mái ngói để thoát ra ngoài", "trait_tag": "risk_recognition", "next_question": "q5" },
+        { "id": "q4a_b", "text_en": "Wait in the highest corner and pray", "text_vi": "Đợi ở góc cao nhất và cầu nguyện", "trait_tag": "self_reliance", "next_question": "q5" },
+        { "id": "q4a_c", "text_en": "Signal through the roof gaps with phone", "text_vi": "Dùng điện thoại soi qua khe mái", "trait_tag": "information_first", "next_question": "q5" },
+        { "id": "q4a_d", "text_en": "Check your body for bites", "text_vi": "Kiểm tra xem có bị rắn cắn không", "trait_tag": "immediate_action", "next_question": "q5" }
+      ]
+    },
+    {
+      "id": "q4b",
+      "text_en": "The fridge pins your leg. The pain is white-hot. Water is rising to your chin. You are trapped in the kitchen of your dream house.",
+      "text_vi": "Tủ lạnh đè nghiến chân bạn. Đau thấu xương. Nước đã dâng đến cằm. Bạn bị kẹt cứng trong căn bếp của ngôi nhà mơ ước.",
+      "timer": 12,
+      "options": [
+        { "id": "q4b_a", "text_en": "Scream for help with your last breath", "text_vi": "Dùng chút sức tàn hét gọi cứu hộ", "trait_tag": "immediate_action", "next_question": "q5" },
+        { "id": "q4b_b", "text_en": "Use a floating chair to lift the fridge", "text_vi": "Dùng chiếc ghế đang nổi để bẩy tủ lạnh", "trait_tag": "self_reliance", "next_question": "q5" },
+        { "id": "q4b_c", "text_en": "Accept your fate and stop fighting", "text_vi": "Chấp nhận số phận, ngừng vùng vẫy", "trait_tag": "risk_recognition", "next_question": "q5" },
+        { "id": "q4b_d", "text_en": "Try to pull your leg out regardless", "text_vi": "Cố giật chân ra bằng mọi giá", "trait_tag": "information_first", "next_question": "q5" }
+      ]
+    },
+    {
+      "id": "q5",
+      "text_en": "A boat's engine hums nearby. Flashlights cut through the rain. It’s the local search team. They have to break your roof to reach you. You leave with nothing but the clothes on your back.",
+      "text_vi": "Tiếng máy ghe nổ gần đó. Ánh đèn pin xé toạc màn mưa. Đội cứu hộ địa phương đã tới. Họ phải phá mái nhà để kéo bạn ra. Bạn ra đi tay trắng, chỉ còn bộ quần áo trên người.",
+      "timer": 20,
+      "options": [
+        { "id": "q5_a", "text_en": "Jump in without looking back", "text_vi": "Nhảy lên ghe, không ngoảnh đầu lại", "trait_tag": "immediate_action", "next_question": "q6" },
+        { "id": "q5_b", "text_en": "Beg them to save your hard drives", "text_vi": "Van xin họ cứu lấy đống ổ cứng", "trait_tag": "self_reliance", "next_question": "q6" },
+        { "id": "q5_c", "text_en": "Ask if the neighbor made it out", "text_vi": "Hỏi xem ông hàng xóm có thoát không", "trait_tag": "risk_recognition", "next_question": "q6" },
+        { "id": "q5_d", "text_en": "Cry from the relief of being alive", "text_vi": "Khóc nấc lên vì biết mình còn sống", "trait_tag": "information_first", "next_question": "q6" }
+      ]
+    },
+    {
+      "id": "q6",
+      "text_en": "The shelter is a school gym, humid and packed with grieving families. You hear the news: the dam release was the largest in history. Your ward is gone.",
+      "text_vi": "Nơi trú ẩn là một nhà tập thể thao trường học, ẩm thấp và đầy những gia đình đang khóc thương. Tin tức báo: đợt xả lũ vừa rồi lớn nhất lịch sử. Cả khu của bạn đã mất trắng.",
+      "timer": 15,
+      "options": [
+        { "id": "q6_a", "text_en": "Volunteer to hand out instant noodles", "text_vi": "Tình nguyện đi phát mì tôm cứu trợ", "trait_tag": "immediate_action", "next_question": "q7a" },
+        { "id": "q6_b", "text_en": "Search for your neighbor in the crowd", "text_vi": "Tìm ông hàng xóm giữa đám đông", "trait_tag": "risk_recognition", "next_question": "q7b" }
+      ]
+    },
+    {
+      "id": "q7a",
+      "text_en": "As you hand a bowl to a child, you see your own muddy reflection. You stayed for a house, but these people are staying for each other.",
+      "text_vi": "Khi đưa bát mì cho một đứa trẻ, bạn thấy bóng mình lấm lem bùn đất. Bạn ở lại vì căn nhà, nhưng những người này ở lại vì nhau.",
+      "timer": 25,
+      "options": [
+        { "id": "q7a_a", "text_en": "Commit to the community rebuild", "text_vi": "Cam kết cùng cộng đồng tái thiết", "trait_tag": "immediate_action", "next_question": null },
+        { "id": "q7a_b", "text_en": "Realize stuff is just stuff", "text_vi": "Nhận ra đồ đạc cũng chỉ là vật ngoài thân", "trait_tag": "risk_recognition", "next_question": null },
+        { "id": "q7a_c", "text_en": "Plan to move to higher ground", "text_vi": "Dự định chuyển đến nơi cao hơn", "trait_tag": "self_reliance", "next_question": null },
+        { "id": "q7a_d", "text_en": "Call family to say you're safe", "text_vi": "Gọi cho gia đình báo mình an toàn", "trait_tag": "information_first", "next_question": null }
+      ]
+    },
+    {
+      "id": "q7b",
+      "text_en": "You find him. He’s safe. He shares his last bottle of water with you. 'I told you, em,' he whispers. You look at your empty hands and nod.",
+      "text_vi": "Bạn tìm thấy ông ấy. Ông ấy an toàn. Ông chia cho bạn chai nước cuối cùng. 'Anh bảo rồi mà em,' ông thì thầm. Bạn nhìn đôi bàn tay trắng và gật đầu.",
+      "timer": 25,
+      "options": [
+        { "id": "q7b_a", "text_en": "Thank him for trying to save you", "text_vi": "Cảm ơn vì đã cố cứu mình", "trait_tag": "risk_recognition", "next_question": null },
+        { "id": "q7b_b", "text_en": "Ask how to help the others", "text_vi": "Hỏi cách giúp đỡ những người khác", "trait_tag": "immediate_action", "next_question": null },
+        { "id": "q7b_c", "text_en": "Go to sleep on the hard floor", "text_vi": "Nằm ngủ trên sàn nhà cứng", "trait_tag": "self_reliance", "next_question": null },
+        { "id": "q7b_d", "text_en": "Ask about the recovery timeline", "text_vi": "Hỏi về thời gian khắc phục hậu quả", "trait_tag": "information_first", "next_question": null }
+      ]
+    }
+  ],
+    "insight_en": "**The Flash Flood Surge**\nIn Central Vietnam, flood dynamics often shift from gradual rain to sudden 'surges' when upstream hydropower dams reach capacity. Because these releases happen during the peak of a typhoon to protect dam integrity, the water level in residential wards can rise by meters in less than an hour, moving with enough force to trap occupants inside.\n\n**Why the Toll is High**\n* **Velocity vs. Reaction Time:** Unlike seasonal rising rivers, dam-release surges move at high velocity. The window between 'ankle-deep' and 'lethal' is often less than 20 minutes, making it difficult to evacuate once the first wave hits.\n* **The 'Property Guard' Paradox:** Staying to secure electronics or furniture is common. However, the lateral pressure of a moving flood makes opening doors or windows nearly impossible, turning a home into a sealed trap.\n* **Structural Vulnerability:** Standard ground-level homes are designed for rain, not for the massive weight of a rushing river. Foundations can compromise before the storm officially passes.\n\n**Practical Solutions**\n* **The 2-Hour Window:** Upon receiving a 'Thông báo xả lũ' (Dam Release Notice), prioritize your life immediately. Use the time to evacuate yourself, not to move heavy appliances.\n* **Main Breaker Isolation:** Always shut off the 'Cầu dao tổng' (Main Breaker) before water enters the living area to prevent electrocution through the water itself.\n* **Attic Breach Tools:** If moving to a gác mái (attic), always keep a heavy tool like a hammer or axe. If water reaches the ceiling, you must be able to break roof tiles to exit and be visible to rescue boats.",
+    "insight_vi": "**Lũ quét và xả lũ khẩn cấp**\nTại miền Trung, đặc điểm lũ lụt thường chuyển từ mưa dâng dần sang 'lũ quét' khi các đập thủy điện thượng nguồn đạt ngưỡng và buộc phải xả lũ khẩn cấp. Do việc xả lũ diễn ra ngay trong đỉnh bão để bảo vệ đập, mực nước tại các khu dân cư có thể dâng cao hàng mét chỉ trong chưa đầy một giờ với sức nước cực mạnh.\n\n**Tại sao thiệt hại cao?**\n* **Vận tốc nước và thời gian phản ứng:** Khác với nước sông dâng theo mùa, lũ xả đập di chuyển rất nhanh. Khoảng cách từ lúc nước 'ngang mắt cá' đến khi 'nguy hiểm tính mạng' thường chưa tới 20 phút, khiến việc di tản cực kỳ khó khăn nếu đã lỡ chuyến.\n* **Nghịch lý giữ tài sản:** Nhiều người chọn ở lại để kê cao đồ đạc. Tuy nhiên, áp lực ngang của dòng nước chảy xiết sẽ ép chặt cửa chính và cửa sổ, biến ngôi nhà thành một chiếc hộp kín không thể thoát ra.\n* **Hư hại kết cấu:** Nhà tầng trệt thông thường được xây để chịu mưa, không phải chịu sức nặng của một dòng sông đang chảy. Sạt lở hoặc sụt lún móng thường xảy ra ngay cả khi bão chưa tan hẳn.\n\n**Giải pháp thực tế**\n* **Quy tắc vàng 2 giờ:** Khi nhận được 'Thông báo xả lũ', hãy ưu tiên tính mạng ngay lập tức. Dùng thời gian này để di chuyển bản thân đến nơi an toàn, thay vì cố khênh vác đồ đạc.\n* **Cô lập nguồn điện:** Luôn ngắt cầu dao tổng trước khi nước vào nhà để tránh nguy cơ bị điện giật thông qua chính dòng nước lũ.\n* **Công cụ phá mái:** Nếu phải lánh nạn trên gác mái, luôn mang theo vật dụng nặng như búa hoặc rìu. Nếu nước dâng sát trần, bạn phải có khả năng phá ngói để thoát ra ngoài và ra hiệu cho ghe cứu hộ thấy."
+}

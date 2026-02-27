@@ -1,0 +1,122 @@
+{
+  "id": "central_easy_4",
+  "region": "central",
+  "danger": "4",
+  "title_en": "The Gió Lào Furnace",
+  "title_vi": "Lửa Gió Lào",
+  "intro_en": "The Foehn winds (Gió Lào) are screaming across the plains. It is 1:00 PM, 42°C. [Name] is finishing the harvest in open fields, miles from any shade.",
+  "intro_vi": "Gió Lào đang gào thét qua các bình nguyên. Bây giờ là 1 giờ chiều, 42°C. [Name] đang cố gặt nốt vụ mùa giữa đồng, cách bóng râm gần nhất hàng cây số.",
+  "start_question": "q1",
+  "questions": [
+    {
+      "id": "q1",
+      "text_en": "The dry heat feels like a hairdryer. Sweat stops forming, and the air feels thin. The harvest is 80% finished.",
+      "text_vi": "Cái nóng khô như máy sấy. Mồ hôi ngừng chảy, không khí loãng dần. Vụ mùa mới xong 80%.",
+      "timer": 15,
+      "options": [
+        { "id": "q1_a", "text_en": "Stop immediately and seek cover", "text_vi": "Dừng lại và đi tìm chỗ trú", "trait_tag": "risk_recognition", "next_question": "q2" },
+        { "id": "q1_b", "text_en": "Push for ten more minutes", "text_vi": "Cố làm thêm mười phút nữa", "trait_tag": "self_reliance", "next_question": "q2" },
+        { "id": "q1_c", "text_en": "Drink the remaining warm water", "text_vi": "Uống nốt chỗ nước ấm", "trait_tag": "immediate_action", "next_question": "q2" },
+        { "id": "q1_d", "text_en": "Cover face with a damp cloth", "text_vi": "Dùng khăn ẩm che kín mặt", "trait_tag": "information_first", "next_question": "q2" }
+      ]
+    },
+    {
+      "id": "q2",
+      "text_en": "Vision blurs with white spots. [Name] feels a sudden, throbbing headache. The ground feels like it is vibrating.",
+      "text_vi": "Tầm nhìn nhòe đi với đốm trắng. [Name] đau đầu nhói từng cơn. Mặt đất cảm giác như rung chuyển.",
+      "timer": 15,
+      "options": [
+        { "id": "q2_a", "text_en": "Sit down right where you are", "text_vi": "Ngồi thụp xuống tại chỗ", "trait_tag": "risk_recognition", "next_question": "q3" },
+        { "id": "q2_b", "text_en": "Try to walk back to the bike", "text_vi": "Cố đi bộ quay lại xe", "trait_tag": "immediate_action", "next_question": "q3" },
+        { "id": "q2_c", "text_en": "Pour water over the neck", "text_vi": "Dội nước vào sau gáy", "trait_tag": "self_reliance", "next_question": "q3" },
+        { "id": "q2_d", "text_en": "Call a neighbor for a ride", "text_vi": "Gọi hàng xóm đến đón", "trait_tag": "information_first", "next_question": "q3" }
+      ]
+    },
+    {
+      "id": "q3",
+      "text_en": "[Name] reaches the field's edge. There is a muddy irrigation ditch and a lone, thin tree. Which way?",
+      "text_vi": "[Name] lết đến rìa ruộng. Có một mương nước đục và một cái cây còi cọc. Chọn hướng nào?",
+      "timer": 15,
+      "options": [
+        { "id": "q3_a", "text_en": "Submerge legs in ditch water", "text_vi": "Ngâm chân xuống nước mương", "trait_tag": "immediate_action", "next_question": "q4a" },
+        { "id": "q3_b", "text_en": "Lie flat in the tree shade", "text_vi": "Nằm dưới bóng cây", "trait_tag": "risk_recognition", "next_question": "q4b" },
+        { "id": "q3_c", "text_en": "Splash water on your chest", "text_vi": "Vỗ nước lên ngực", "trait_tag": "self_reliance", "next_question": "q4a" },
+        { "id": "q3_d", "text_en": "Check phone for nearest clinic", "text_vi": "Tìm trạm y tế trên bản đồ", "trait_tag": "information_first", "next_question": "q4b" }
+      ]
+    },
+    {
+      "id": "q4a",
+      "text_en": "The water is cooler, but [Name] feels nauseous. Muscle cramps start locking the thighs. Panic sets in.",
+      "text_vi": "Nước mát nhưng [Name] thấy buồn nôn. Chuột rút làm cứng đùi. Sự hoảng loạn ập đến.",
+      "timer": 15,
+      "options": [
+        { "id": "q4a_a", "text_en": "Gently massage the cramped muscles", "text_vi": "Xoa bóp nhẹ cơ bị chuột rút", "trait_tag": "risk_recognition", "next_question": "q5" },
+        { "id": "q4a_b", "text_en": "Try to stand and stretch", "text_vi": "Cố đứng dậy và vươn người", "trait_tag": "self_reliance", "next_question": "q5" },
+        { "id": "q4a_c", "text_en": "Drink small sips of salty water", "text_vi": "Uống từng ngụm nước muối", "trait_tag": "immediate_action", "next_question": "q5" },
+        { "id": "q4a_d", "text_en": "Signal to the distant road", "text_vi": "Ra hiệu về phía đường lộ", "trait_tag": "information_first", "next_question": "q5" }
+      ]
+    },
+    {
+      "id": "q4b",
+      "text_en": "Shade is minimal. [Name]'s skin is bone-dry. Mental confusion makes it hard to remember the way home.",
+      "text_vi": "Bóng râm ít. Da [Name] khô ran. Sự lú lẫn khiến việc nhớ đường rất khó.",
+      "timer": 12,
+      "options": [
+        { "id": "q4b_a", "text_en": "Loosen all tight clothing", "text_vi": "Nới lỏng quần áo ngay", "trait_tag": "risk_recognition", "next_question": "q5" },
+        { "id": "q4b_b", "text_en": "Take a nap to regain strength", "text_vi": "Ngủ một lát để lấy sức", "trait_tag": "self_reliance", "next_question": "q5" },
+        { "id": "q4b_c", "text_en": "Wipe face with a damp shirt", "text_vi": "Lau mặt bằng vạt áo ẩm", "trait_tag": "immediate_action", "next_question": "q5" },
+        { "id": "q4b_d", "text_en": "Check pulse on the wrist", "text_vi": "Tự bắt mạch cổ tay", "trait_tag": "information_first", "next_question": "q5" }
+      ]
+    },
+    {
+      "id": "q5",
+      "text_en": "A motorbike engine rumbles nearby. A neighbor finds [Name]. They offer to pull [Name] onto the bike.",
+      "text_vi": "Tiếng máy xe nổ gần đó. Hàng xóm tìm thấy [Name]. Họ định kéo [Name] lên xe.",
+      "timer": 20,
+      "options": [
+        { "id": "q5_a", "text_en": "Ask to go to the clinic", "text_vi": "Yêu cầu đến trạm y tế", "trait_tag": "risk_recognition", "next_question": "q6" },
+        { "id": "q5_b", "text_en": "Ask to go home to shower", "text_vi": "Yêu cầu chở về nhà tắm", "trait_tag": "self_reliance", "next_question": "q6" },
+        { "id": "q5_c", "text_en": "Drink the ice water they have", "text_vi": "Uống nước đá họ mang theo", "trait_tag": "immediate_action", "next_question": "q6" },
+        { "id": "q5_d", "text_en": "Ask about the left-over harvest", "text_vi": "Hỏi về số lúa còn lại", "trait_tag": "information_first", "next_question": "q6" }
+      ]
+    },
+    {
+      "id": "q6",
+      "text_en": "At the clinic, the doctor is busy. [Name] is on a bench. Shivering begins despite the extreme heat.",
+      "text_vi": "Tại trạm y tế, bác sĩ đang bận. [Name] nằm trên ghế. Cơn run rẩy bắt đầu dù trời nóng.",
+      "timer": 15,
+      "options": [
+        { "id": "q6_a", "text_en": "Request wet blanket cooling", "text_vi": "Yêu cầu làm mát bằng chăn ướt", "trait_tag": "risk_recognition", "next_question": "q7a" },
+        { "id": "q6_b", "text_en": "Insist on an IV drip", "text_vi": "Yêu cầu truyền dịch ngay", "trait_tag": "immediate_action", "next_question": "q7b" },
+        { "id": "q6_c", "text_en": "Drink a bottle of electrolytes", "text_vi": "Uống chai nước điện giải", "trait_tag": "self_reliance", "next_question": "q7a" },
+        { "id": "q6_d", "text_en": "Call family to come over", "text_vi": "Gọi người nhà đến đón", "trait_tag": "information_first", "next_question": "q7b" }
+      ]
+    },
+    {
+      "id": "q7a",
+      "text_en": "Nurse applies cool compresses. Temperature begins to drop slowly. The danger of organ damage is fading.",
+      "text_vi": "Y tá đắp gạc mát. Thân nhiệt hạ dần. Nguy cơ tổn thương nội tạng dần qua đi.",
+      "timer": 25,
+      "options": [
+        { "id": "q7a_a", "text_en": "Rest for 48 hours", "text_vi": "Nghỉ ngơi trong 48 giờ", "trait_tag": "risk_recognition", "next_question": null },
+        { "id": "q7a_b", "text_en": "Drink electrolytes regularly", "text_vi": "Uống điện giải thường xuyên", "trait_tag": "immediate_action", "next_question": null },
+        { "id": "q7a_c", "text_en": "Check Zalo for heat warnings", "text_vi": "Xem Zalo cảnh báo nắng nóng", "trait_tag": "information_first", "next_question": null },
+        { "id": "q7a_d", "text_en": "Thank the neighbors for help", "text_vi": "Cảm ơn hàng xóm giúp đỡ", "trait_tag": "self_reliance", "next_question": null }
+      ]
+    },
+    {
+      "id": "q7b",
+      "text_en": "[Name] receives fluids and stabilized. Pushing through 'Gió Lào' is a common but lethal gamble.",
+      "text_vi": "[Name] được truyền dịch và ổn định. Cố làm việc dưới Gió Lào là canh bạc chết người.",
+      "timer": 25,
+      "options": [
+        { "id": "q7b_a", "text_en": "Monitor body temperature", "text_vi": "Học cách theo dõi thân nhiệt", "trait_tag": "risk_recognition", "next_question": null },
+        { "id": "q7b_b", "text_en": "Avoid work in peak hours", "text_vi": "Tránh làm việc giờ cao điểm", "trait_tag": "immediate_action", "next_question": null },
+        { "id": "q7b_c", "text_en": "Wear breathable, loose clothing", "text_vi": "Mặc quần áo rộng, thoáng", "trait_tag": "self_reliance", "next_question": null },
+        { "id": "q7b_d", "text_en": "Prepare salt-sugar solutions", "text_vi": "Chuẩn bị sẵn nước muối đường", "trait_tag": "information_first", "next_question": null }
+      ]
+    }
+  ],
+  "insight_en": "**The Gió Lào Heatwave**\nIn Central Vietnam, the Foehn wind (Gió Lào) creates a unique 'dry oven' effect. Unlike humid heat, this dry wind evaporates sweat instantly, leading to rapid dehydration and heatstroke before the victim realizes they are in danger.\n\n**Why the Toll is High**\n* **Inapparent Dehydration:** Because sweat evaporates instantly, farmers often don't feel 'wet' or overheated until their core temperature hits critical levels (40°C+).\n* **The Harvesting Pressure:** Economic need to finish the harvest before rains often leads to working through the 12 PM - 3 PM peak, when the Foehn wind is most intense.\n* **Organ Failure:** Heatstroke can cause the brain to swell and kidneys to fail within minutes once the body's cooling mechanism shuts down.\n\n**Practical Solutions**\n* **The 'Pinch Test':** Frequently pinch the skin on your hand. If it doesn't snap back instantly, you are dangerously dehydrated. Seek shade immediately.\n* **Rapid Cooling:** If someone is confused or shivering, cool the armpits, groin, and neck with wet cloths to drop core temperature fast.\n* **Avoid Sudden Ice:** Do not pour ice-cold water directly over a head; it can shock the nervous system. Use cool, moving water or damp towels instead.",
+  "insight_vi": "**Nắng nóng Gió Lào**\nTại miền Trung, Gió Lào tạo ra hiệu ứng 'lò sấy khô' đặc trưng. Khác với nắng nóng ẩm, gió khô làm bay hơi mồ hôi ngay lập tức, dẫn đến mất nước nhanh chóng và sốc nhiệt trước khi nạn nhân kịp nhận ra nguy hiểm.\n\n**Tại sao thiệt hại cao?**\n* **Mất nước âm thầm:** Vì mồ hôi bay hơi tức thì, nông dân thường không cảm thấy bị 'ướt' cho đến khi thân nhiệt chạm mức nguy hiểm (trên 40°C).\n* **Áp lực mùa vụ:** Áp lực phải gặt xong lúa trước khi mưa về khiến nhiều người cố làm việc xuyên giai đoạn cao điểm 12 giờ trưa - 3 giờ chiều.\n* **Suy tạng:** Sốc nhiệt có thể gây phù não và suy thận chỉ trong vài phút khi cơ chế tự làm mát của cơ thể ngừng hoạt động.\n\n**Giải pháp thực tế**\n* **Kiểm tra độ đàn hồi da:** Thường xuyên véo nhẹ da mu bàn tay. Nếu da không hồi lại ngay, bạn đang mất nước trầm trọng. Tìm bóng râm ngay.\n* **Làm mát cấp tốc:** Nếu thấy ai đó lú lẫn, hãy làm mát vùng nách, bẹn và cổ bằng khăn ướt để hạ thân nhiệt nhanh chóng.\n* **Tránh dội đá lạnh đột ngột:** Không dội nước đá trực tiếp lên đầu; việc này có thể gây sốc hệ thần kinh. Hãy dùng nước mát hoặc khăn ẩm thay thế."
+}

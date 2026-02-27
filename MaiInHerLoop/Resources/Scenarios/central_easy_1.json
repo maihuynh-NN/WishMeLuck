@@ -1,0 +1,122 @@
+{
+  "id": "central_easy_1",
+  "region": "central",
+  "danger": "1",
+  "title_en": "The Lantern Trap",
+  "title_vi": "Bẫy Lồng Đèn",
+  "intro_en": "A humid night in the historic old town. [Name] is surrounded by glowing silk lanterns when a transformer sparks, igniting the wooden rafters.",
+  "intro_vi": "Đêm phố cổ oi ả. [Name] đang giữa rừng lồng đèn lụa thì máy biến áp nổ, lửa bén nhanh vào những xà gỗ khô.",
+  "start_question": "q1",
+  "questions": [
+    {
+      "id": "q1",
+      "text_en": "Black smoke chokes the alley. [Name]'s path to the square is blocked by a screaming crowd and falling silk.",
+      "text_vi": "Khói đen kịt con hẻm. Đường ra quảng trường của [Name] bị chặn bởi đám đông hỗn loạn và lụa cháy.",
+      "timer": 20,
+      "options": [
+        { "id": "q1_a", "text_en": "Push through the crowd to the square", "text_vi": "Chen qua đám đông ra quảng trường", "trait_tag": "self_reliance", "next_question": "q2" },
+        { "id": "q1_b", "text_en": "Find a secondary 'Hẻm' (alleyway)", "text_vi": "Tìm một lối hẻm phụ khác", "trait_tag": "risk_recognition", "next_question": "q2" },
+        { "id": "q1_c", "text_en": "Wet your shirt in a fountain", "text_vi": "Làm ướt áo từ hồ nước", "trait_tag": "immediate_action", "next_question": "q2" },
+        { "id": "q1_d", "text_en": "Stop to record for the police", "text_vi": "Dừng lại quay phim báo công an", "trait_tag": "information_first", "next_question": "q2" }
+      ]
+    },
+    {
+      "id": "q2",
+      "text_en": "[Name]'s lungs burn as lanterns drip fire from above. A shopkeeper pulls his metal shutter down, blocking an exit.",
+      "text_vi": "Phổi của [Name] nóng rát. Một chủ tiệm đang kéo cửa cuốn xuống, chặn mất một lối thoát.",
+      "timer": 20,
+      "options": [
+        { "id": "q2_a", "text_en": "Shout at him to stay open", "text_vi": "Hét bảo ông ấy để cửa mở", "trait_tag": "immediate_action", "next_question": "q3" },
+        { "id": "q2_b", "text_en": "Crawl low beneath the thick smoke", "text_vi": "Bò thấp xuống dưới lớp khói", "trait_tag": "risk_recognition", "next_question": "q3" },
+        { "id": "q2_c", "text_en": "Run toward the open riverbank", "text_vi": "Chạy thẳng về phía bờ sông", "trait_tag": "self_reliance", "next_question": "q3" },
+        { "id": "q2_d", "text_en": "Search for a fire extinguisher", "text_vi": "Tìm bình chữa cháy gần đó", "trait_tag": "information_first", "next_question": "q3" }
+      ]
+    },
+    {
+      "id": "q3",
+      "text_en": "The hẻm is a furnace. [Name]'s exit is blocked by a beam. Left is a shop; right is a narrow gap.",
+      "text_vi": "Con hẻm như lò lửa. Lối ra của [Name] bị xà chặn. Trái là cửa hàng; phải là khe tường hẹp.",
+      "timer": 18,
+      "options": [
+        { "id": "q3_a", "text_en": "Enter shop for a back exit", "text_vi": "Vào tiệm tìm cửa sau", "trait_tag": "information_first", "next_question": "q4a" },
+        { "id": "q3_b", "text_en": "Squeeze through the stone gap", "text_vi": "Lách qua khe tường đá", "trait_tag": "self_reliance", "next_question": "q4b" },
+        { "id": "q3_c", "text_en": "Try to lift the burning beam", "text_vi": "Cố nhấc thanh xà đang cháy", "trait_tag": "immediate_action", "next_question": "q4a" },
+        { "id": "q3_d", "text_en": "Cover face and jump the fire", "text_vi": "Che mặt và nhảy qua lửa", "trait_tag": "risk_recognition", "next_question": "q4b" }
+      ]
+    },
+    {
+      "id": "q4a",
+      "text_en": "The shop is full of fabric. [Name]'s heart sinks; the back door is locked with a heavy padlock.",
+      "text_vi": "Tiệm đầy vải vóc. Tim [Name] rụng rời; cửa sau đã bị khóa bằng ổ khóa lớn.",
+      "timer": 18,
+      "options": [
+        { "id": "q4a_a", "text_en": "Break the lock with a heavy object", "text_vi": "Dùng vật nặng phá khóa", "trait_tag": "self_reliance", "next_question": "q5" },
+        { "id": "q4a_b", "text_en": "Smash a window to escape", "text_vi": "Phá cửa sổ để thoát ra", "trait_tag": "risk_recognition", "next_question": "q5" },
+        { "id": "q4a_c", "text_en": "Yell for help from the alley", "text_vi": "Hét cứu viện từ phía hẻm", "trait_tag": "immediate_action", "next_question": "q5" },
+        { "id": "q4a_d", "text_en": "Hide in bathroom and use water", "text_vi": "Trốn vào vệ sinh, xả nước", "trait_tag": "information_first", "next_question": "q5" }
+      ]
+    },
+    {
+      "id": "q4b",
+      "text_en": "The gap is too tight. [Name]'s clothes snag. Behind you, the fire roars louder through the ancient timber.",
+      "text_vi": "Khe tường quá hẹp. Áo [Name] bị kẹt. Sau lưng, lửa gầm rú qua những thanh gỗ cổ.",
+      "timer": 18,
+      "options": [
+        { "id": "q4b_a", "text_en": "Exhale deeply and shimmy through", "text_vi": "Thở hết hơi rồi lách qua", "trait_tag": "risk_recognition", "next_question": "q5" },
+        { "id": "q4b_b", "text_en": "Rip your clothes to get free", "text_vi": "Xé rách quần áo thoát thân", "trait_tag": "self_reliance", "next_question": "q5" },
+        { "id": "q4b_c", "text_en": "Push back and try another way", "text_vi": "Lùi lại tìm đường khác", "trait_tag": "immediate_action", "next_question": "q5" },
+        { "id": "q4b_d", "text_en": "Call for help to the outside", "text_vi": "Gọi người phía bên kia giúp", "trait_tag": "information_first", "next_question": "q5" }
+      ]
+    },
+    {
+      "id": "q5",
+      "text_en": "[Name] bursts onto the riverbank. Locals are already forming a bucket brigade from the water to the flames.",
+      "text_vi": "[Name] lao ra bờ sông. Người dân đang kết hàng chuyền xô nước từ sông lên đám cháy.",
+      "timer": 20,
+      "options": [
+        { "id": "q5_a", "text_en": "Join the water line to help", "text_vi": "Tham gia hàng người tiếp nước", "trait_tag": "immediate_action", "next_question": "q6" },
+        { "id": "q5_b", "text_en": "Clear area for the fire trucks", "text_vi": "Giải tỏa đường cho xe cứu hỏa", "trait_tag": "risk_recognition", "next_question": "q6" },
+        { "id": "q5_c", "text_en": "Check your arms for silk burns", "text_vi": "Kiểm tra vết bỏng trên tay", "trait_tag": "self_reliance", "next_question": "q6" },
+        { "id": "q5_d", "text_en": "Search for your lost friends", "text_vi": "Tìm nhóm bạn đi cùng", "trait_tag": "information_first", "next_question": "q6" }
+      ]
+    },
+    {
+      "id": "q6",
+      "text_en": "A small fire truck arrives but is too wide for the hẻm. The fire jumps roof to roof.",
+      "text_vi": "Xe cứu hỏa nhỏ tới nhưng vẫn không vào nổi hẻm. Lửa nhảy từ mái này sang mái khác.",
+      "timer": 15,
+      "options": [
+        { "id": "q6_a", "text_en": "Direct firemen to the back alley", "text_vi": "Chỉ đường cứu hỏa vào hẻm", "trait_tag": "information_first", "next_question": "q7a" },
+        { "id": "q6_b", "text_en": "Keep crowd away from the river", "text_vi": "Ngăn đám đông xa mép sông", "trait_tag": "risk_recognition", "next_question": "q7a" },
+        { "id": "q6_c", "text_en": "Move further away to safety", "text_vi": "Di chuyển ra xa để an toàn", "trait_tag": "self_reliance", "next_question": "q7b" },
+        { "id": "q6_d", "text_en": "Help someone who is coughing", "text_vi": "Giúp một người đang sặc khói", "trait_tag": "immediate_action", "next_question": "q7b" }
+      ]
+    },
+    {
+      "id": "q7a",
+      "text_en": "The sky is thick with embers. [Name] watches history burn as the bucket line holds firm.",
+      "text_vi": "Trời rợp tàn lửa. [Name] nhìn lịch sử cháy rực khi hàng người vẫn kiên trì tiếp nước.",
+      "timer": 25,
+      "options": [
+        { "id": "q7a_a", "text_en": "Keep helping until it's out", "text_vi": "Tiếp tục giúp đến khi tắt", "trait_tag": "immediate_action", "next_question": null },
+        { "id": "q7a_b", "text_en": "Document the bravery of locals", "text_vi": "Ghi lại sự dũng cảm của họ", "trait_tag": "information_first", "next_question": null },
+        { "id": "q7a_c", "text_en": "Reflect on fragility of heritage", "text_vi": "Ngẫm về sự mong manh di sản", "trait_tag": "risk_recognition", "next_question": null },
+        { "id": "q7a_d", "text_en": "Drink water to clear your throat", "text_vi": "Uống nước để dịu cổ họng", "trait_tag": "self_reliance", "next_question": null }
+      ]
+    },
+    {
+      "id": "q7b",
+      "text_en": "[Name]'s lungs sting. Looking back at the glowing ruins, the river was your only savior tonight.",
+      "text_vi": "Phổi của [Name] đau nhói. Nhìn lại đống đổ nát, con sông là cứu tinh duy nhất.",
+      "timer": 25,
+      "options": [
+        { "id": "q7b_a", "text_en": "Seek medical attention for smoke", "text_vi": "Đi khám vì hít phải khói", "trait_tag": "risk_recognition", "next_question": null },
+        { "id": "q7b_b", "text_en": "Call family to say you're okay", "text_vi": "Gọi gia đình báo mình ổn", "trait_tag": "immediate_action", "next_question": null },
+        { "id": "q7b_c", "text_en": "Find a place to sit and recover", "text_vi": "Tìm chỗ để ngồi hồi sức", "trait_tag": "self_reliance", "next_question": null },
+        { "id": "q7b_d", "text_en": "Ask for the nearest shelter", "text_vi": "Hỏi nơi trú ẩn gần nhất", "trait_tag": "information_first", "next_question": null }
+      ]
+    }
+  ],
+  "insight_en": "**The Heritage Fire Trap**\nAncient Central towns have wooden structures and narrow 'kiệt' (alleys) that create a **Chimney Effect**. High-density areas with silk decorations produce toxic smoke instantly.\n\n**Why the Toll is High**\n* **Access Denied:** Historic streets are too narrow for fire trucks.\n* **The 'Hẻm' Labyrinth:** Smoke causes total disorientation in winding alleys.\n* **Roof Beams:** Shared wooden beams mean one shop fire can destroy a whole block.\n\n**Practical Solutions**\n* **Head for the Water:** Rivers are natural firebreaks and clear landmarks.\n* **Watch the Ceiling:** Silk and wood drop **liquid fire** before walls collapse.\n* **Stay Low:** Breathable air stays 30cm from the floor; crawl to escape.",
+  "insight_vi": "**Cái bẫy hỏa hoạn di sản**\nPhố cổ miền Trung có cấu trúc gỗ và ngõ 'kiệt' hẹp tạo **Hiệu ứng ống khói**. Lồng đèn lụa tạo khói độc cực nhanh.\n\n**Tại sao thiệt hại cao?**\n* **Không thể tiếp cận:** Đường quá hẹp cho xe cứu hỏa lớn.\n* **Mê cung ngõ kiệt:** Khói làm mất phương hướng hoàn toàn.\n* **Xà gồ liên kế:** Nhà chung xà gỗ khiến lửa lan toàn dãy phố rất nhanh.\n\n**Giải pháp thực tế**\n* **Hướng về phía sông:** Sông là rào chắn lửa và cột mốc thoát hiểm tự nhiên.\n* **Nhìn lên trên:** Lồng đèn lụa nhỏ giọt 'lửa lỏng' trước khi tường sập.\n* **Bò sát sàn:** Không khí sạch nằm ở khoảng 30cm sát sàn nhà."
+}

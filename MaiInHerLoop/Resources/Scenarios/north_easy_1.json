@@ -1,0 +1,120 @@
+{
+  "id": "north_easy_1",
+  "region": "north",
+  "danger": "5",
+  "title_en": "The Industrial Infernal",
+  "title_vi": "Hỏa Hoạn Khu Công Nghiệp",
+  "intro_en": "A chemical fire breaks out in a Northern industrial park. Thick black smoke fills the workshop. [Name] is at the back, far from the main exit.",
+  "intro_vi": "Hỏa hoạn hóa chất bùng phát tại một khu công nghiệp miền Bắc. Khói đen kịt bao trùm xưởng. [Name] đang ở phía sau, cách xa lối thoát chính.",
+  "start_question": "q1",
+  "questions": [
+    {
+      "id": "q1",
+      "text_en": "Visibility drops to zero as smoke layers thicken at eye level. The heat is becoming intense. What is [Name]'s first move?",
+      "text_vi": "Tầm nhìn bằng không khi khói dày đặc ngang tầm mắt. Sức nóng tăng dần. Hành động đầu tiên của [Name] là gì?",
+      "timer": 15,
+      "options": [
+        { "id": "q1_a", "text_en": "Crawl low beneath the smoke", "text_vi": "Bò thấp người dưới làn khói", "trait_tag": "risk_recognition", "next_question": "q2" },
+        { "id": "q1_b", "text_en": "Run toward the brightest light", "text_vi": "Chạy về phía ánh sáng mạnh nhất", "trait_tag": "immediate_action", "next_question": "q2" },
+        { "id": "q1_c", "text_en": "Cover face with a dry shirt", "text_vi": "Dùng áo khô che kín mặt", "trait_tag": "self_reliance", "next_question": "q2" },
+        { "id": "q1_d", "text_en": "Call the floor supervisor", "text_vi": "Gọi điện cho quản lý xưởng", "trait_tag": "information_first", "next_question": "q2" }
+      ]
+    },
+    {
+      "id": "q2",
+      "text_en": "[Name] reaches a heavy metal door. It is closed. Smoke is seeping through the edges. What should [Name] do?",
+      "text_vi": "[Name] đến trước một cánh cửa kim loại nặng đang đóng. Khói len qua khe cửa. [Name] nên làm gì?",
+      "timer": 15,
+      "options": [
+        { "id": "q2_a", "text_en": "Feel the door with the back of hand", "text_vi": "Dùng mu bàn tay thử nhiệt độ cửa", "trait_tag": "risk_recognition", "next_question": "q3" },
+        { "id": "q2_b", "text_en": "Kick the door open immediately", "text_vi": "Đạp cửa xông ra ngay lập tức", "trait_tag": "immediate_action", "next_question": "q3" },
+        { "id": "q2_c", "text_en": "Shout for help through the door", "text_vi": "Hét lớn cầu cứu qua khe cửa", "trait_tag": "information_first", "next_question": "q3" },
+        { "id": "q2_d", "text_en": "Wait for a rescue team", "text_vi": "Đứng đợi đội cứu hộ đến", "trait_tag": "self_reliance", "next_question": "q3" }
+      ]
+    },
+    {
+      "id": "q3",
+      "text_en": "The door is cool, but a hallway leads to two paths: a stairwell filled with light smoke and an elevator.",
+      "text_vi": "Cửa không nóng, nhưng hành lang dẫn ra hai lối: cầu thang bộ có khói nhẹ và thang máy.",
+      "timer": 15,
+      "options": [
+        { "id": "q3_a", "text_en": "Take the stairwell downward", "text_vi": "Đi xuống bằng cầu thang bộ", "trait_tag": "risk_recognition", "next_question": "q4a" },
+        { "id": "q3_b", "text_en": "Head toward the roof access", "text_vi": "Chạy lên phía sân thượng", "trait_tag": "self_reliance", "next_question": "q4b" },
+        { "id": "q3_c", "text_en": "Use the elevator for speed", "text_vi": "Dùng thang máy để thoát nhanh", "trait_tag": "immediate_action", "next_question": "q4a" },
+        { "id": "q3_d", "text_en": "Find a fire extinguisher first", "text_vi": "Tìm bình chữa cháy trước", "trait_tag": "information_first", "next_question": "q4b" }
+      ]
+    },
+    {
+      "id": "q4a",
+      "text_en": "The stairs are crowded. Someone falls. The smoke is getting darker and acrid, causing [Name] to cough violently.",
+      "text_vi": "Cầu thang đông nghịt. Có người ngã. Khói ngày càng đen và nồng khiến [Name] ho sặc sụa.",
+      "timer": 15,
+      "options": [
+        { "id": "q4a_a", "text_en": "Use a wet cloth over nose/mouth", "text_vi": "Dùng khăn ướt bịt mũi miệng", "trait_tag": "risk_recognition", "next_question": "q5" },
+        { "id": "q4a_b", "text_en": "Push through to reach the bottom", "text_vi": "Chen lấn để xuống tầng trệt", "trait_tag": "immediate_action", "next_question": "q5" },
+        { "id": "q4a_c", "text_en": "Help the person who fell", "text_vi": "Giúp người vừa bị ngã đứng dậy", "trait_tag": "self_reliance", "next_question": "q5" },
+        { "id": "q4a_d", "text_en": "Stop to call emergency 114", "text_vi": "Dừng lại gọi 114 báo vị trí", "trait_tag": "information_first", "next_question": "q5" }
+      ]
+    },
+    {
+      "id": "q4b",
+      "text_en": "The roof door is locked. [Name] is trapped on the top floor. Smoke is rising fast through the vents.",
+      "text_vi": "Cửa thượng tầng bị khóa. [Name] kẹt ở tầng cao nhất. Khói bốc lên rất nhanh qua các lỗ thông hơi.",
+      "timer": 12,
+      "options": [
+        { "id": "q4b_a", "text_en": "Find a room and seal the door", "text_vi": "Tìm một phòng và chặn kín khe cửa", "trait_tag": "risk_recognition", "next_question": "q5" },
+        { "id": "q4b_b", "text_en": "Break a window to signal rescuers", "text_vi": "Phá cửa sổ để ra hiệu cứu hộ", "trait_tag": "immediate_action", "next_question": "q5" },
+        { "id": "q4b_c", "text_en": "Try to force the roof door open", "text_vi": "Cố gắng phá khóa cửa sân thượng", "trait_tag": "self_reliance", "next_question": "q5" },
+        { "id": "q4b_d", "text_en": "Wave a bright shirt out the window", "text_vi": "Vẫy áo sáng màu qua cửa sổ", "trait_tag": "information_first", "next_question": "q5" }
+      ]
+    },
+    {
+      "id": "q5",
+      "text_en": "Firefighters arrive. The building's structural integrity is failing. [Name] hears a loud crack from the ceiling above.",
+      "text_vi": "Cứu hỏa đã đến. Kết cấu tòa nhà đang yếu dần. [Name] nghe tiếng nứt lớn từ trần nhà phía trên.",
+      "timer": 15,
+      "options": [
+        { "id": "q5_a", "text_en": "Move away from the central span", "text_vi": "Di chuyển khỏi khu vực giữa sàn", "trait_tag": "risk_recognition", "next_question": "q6" },
+        { "id": "q5_b", "text_en": "Run toward the flashing lights", "text_vi": "Chạy về phía có ánh đèn nháy", "trait_tag": "immediate_action", "next_question": "q6" },
+        { "id": "q5_c", "text_en": "Stay near a load-bearing pillar", "text_vi": "Đứng gần các cột trụ chịu lực", "trait_tag": "self_reliance", "next_question": "q6" },
+        { "id": "q5_d", "text_en": "Listen for firefighter instructions", "text_vi": "Lắng nghe chỉ dẫn của lính cứu hỏa", "trait_tag": "information_first", "next_question": "q6" }
+      ]
+    },
+    {
+      "id": "q6",
+      "text_en": "[Name] sees a ladder extended to a window. Several workers are scrambling toward it in a panic.",
+      "text_vi": "[Name] thấy thang cứu hỏa vươn tới cửa sổ. Nhiều công nhân đang hoảng loạn ùa về phía đó.",
+      "timer": 15,
+      "options": [
+        { "id": "q6_a", "text_en": "Wait for the crowd to settle", "text_vi": "Đợi đám đông ổn định lại", "trait_tag": "risk_recognition", "next_question": "q7a" },
+        { "id": "q6_b", "text_en": "Push to be the next one out", "text_vi": "Chen lên để được ra ngoài tiếp theo", "trait_tag": "immediate_action", "next_question": "q7b" }
+      ]
+    },
+    {
+      "id": "q7a",
+      "text_en": "[Name] exits safely and receives oxygen. The factory is destroyed, but the safety protocols saved dozens of workers.",
+      "text_vi": "[Name] thoát ra an toàn và được thở oxy. Nhà máy bị hủy hoại, nhưng quy trình an toàn đã cứu sống hàng chục người.",
+      "timer": 20,
+      "options": [
+        { "id": "q7a_a", "text_en": "Give a statement to the fire chief", "text_vi": "Cung cấp lời khai cho chỉ huy cứu hỏa", "trait_tag": "risk_recognition", "next_question": null },
+        { "id": "q7a_b", "text_en": "Check on co-workers at the triage", "text_vi": "Kiểm tra đồng nghiệp tại khu sơ cứu", "trait_tag": "immediate_action", "next_question": null },
+        { "id": "q7a_c", "text_en": "Share the news with family", "text_vi": "Báo tin an toàn cho gia đình", "trait_tag": "information_first", "next_question": null },
+        { "id": "q7a_d", "text_en": "Rest and monitor for smoke inhalation", "text_vi": "Nghỉ ngơi và theo dõi hô hấp", "trait_tag": "self_reliance", "next_question": null }
+      ]
+    },
+    {
+      "id": "q7b",
+      "text_en": "[Name] escapes but sustains minor burns in the crush. The chaos outside is overwhelming as sirens wail.",
+      "text_vi": "[Name] thoát được nhưng bị bỏng nhẹ do chen lấn. Sự hỗn loạn bên ngoài bao trùm cùng tiếng còi hú.",
+      "timer": 20,
+      "options": [
+        { "id": "q7b_a", "text_en": "Seek immediate burn treatment", "text_vi": "Tìm người sơ cứu vết bỏng ngay", "trait_tag": "immediate_action", "next_question": null },
+        { "id": "q7b_b", "text_en": "Sit down to recover from shock", "text_vi": "Ngồi xuống để hồi phục sau cú sốc", "trait_tag": "self_reliance", "next_question": null },
+        { "id": "q7b_c", "text_en": "Ask where the assembly point is", "text_vi": "Hỏi vị trí điểm tập kết ở đâu", "trait_tag": "information_first", "next_question": null },
+        { "id": "q7b_d", "text_en": "Look for missing personal items", "text_vi": "Tìm kiếm đồ đạc cá nhân bị rơi", "trait_tag": "risk_recognition", "next_question": null }
+      ]
+    }
+  ],
+  "insight_en": "**Northern Industrial Fire Risks**\nIn Northern Vietnam's industrial zones (like Bac Ninh or Hai Phong), factory fires often involve chemicals or textiles. These fires create 'Toxic Smoke Plumes' that kill faster than the flames. Industrial structural failures are common due to high-density machinery and heat-weakened steel.\n\n**Why the Toll is High**\n* **Chemical Inhalation:** Modern factories use materials that release cyanide and carbon monoxide. Two breaths in thick smoke can cause immediate unconsciousness.\n* **The 'Backdraft' Trap:** Opening a hot door introduces oxygen, causing an explosion. Workers often panic and open doors without checking for heat.\n* **Exit Obstruction:** In many older zones, exits are often blocked by raw materials or finished stock, turning escape routes into dead ends.\n\n**Practical Solutions**\n* **Crawl to Live:** Clean air stays in the bottom 30cm near the floor. Crawl on hands and knees to avoid the 'hot layer' of toxic gases.\n* **The Back-of-Hand Test:** Always touch a door/handle with the back of your hand. If it's hot, the fire is on the other side. Never open it.\n* **The 'Wet Filter':** A wet cloth over the nose and mouth doesn't filter chemicals but cools the air and stops large soot particles from searing your lungs.",
+  "insight_vi": "**Rủi ro hỏa hoạn KCN miền Bắc**\nTại các khu công nghiệp miền Bắc (như Bắc Ninh, Hải Phòng), cháy nhà xưởng thường liên quan đến hóa chất hoặc dệt may. Các vụ cháy này tạo ra 'Luồng khói độc' gây tử vong nhanh hơn cả lửa. Sập đổ kết cấu là rủi ro lớn do máy móc mật độ cao và thép bị yếu đi vì nhiệt.\n\n**Tại sao thiệt hại cao?**\n* **Hít phải khói hóa chất:** Nhà xưởng hiện đại chứa vật liệu giải phóng xyanua và CO. Chỉ cần hít hai hơi khói đặc có thể gây mất ý thức ngay lập tức.\n* **Bẫy nổ ngược (Backdraft):** Mở cửa khi phòng đang nóng cung cấp oxy gây nổ. Công nhân thường hoảng loạn mở cửa mà không kiểm tra nhiệt độ.\n* **Lối thoát bị cản trở:** Tại nhiều khu cũ, lối thoát hiểm thường bị chặn bởi nguyên liệu hoặc thành phẩm, biến đường thoát thành ngõ cụt.\n\n**Giải pháp thực tế**\n* **Bò để sống:** Không khí sạch nằm ở khoảng 30cm sát sàn nhà. Hãy bò bằng bàn tay và đầu gối để tránh 'lớp nhiệt' chứa khí độc.\n* **Thử cửa bằng mu bàn tay:** Luôn chạm vào cửa/tay nắm bằng mu bàn tay. Nếu thấy nóng, lửa đang ở phía bên kia. Tuyệt đối không mở cửa.\n* **'Bộ lọc' ướt:** Khăn ướt bịt mũi miệng không lọc được hóa chất nhưng giúp làm mát không khí và ngăn các hạt muội than lớn gây bỏng phổi."
+}

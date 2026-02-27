@@ -1,0 +1,122 @@
+{
+  "id": "north_easy_5",
+  "region": "north",
+  "danger": "2",
+  "title_en": "The Prestige Impersonator",
+  "title_vi": "Kẻ Giả Danh Uy Tín",
+  "intro_en": "[Name] receives a Zalo message from their 'Department Head' using a new profile. The boss says they are in an urgent closed-door meeting and need a favor.",
+  "intro_vi": "[Name] nhận tin nhắn Zalo từ 'Trưởng phòng' bằng một tài khoản mới. Sếp nói đang họp kín khẩn cấp và cần nhờ một việc quan trọng.",
+  "start_question": "q1",
+  "questions": [
+    {
+      "id": "q1",
+      "text_en": "The 'Boss' asks [Name] to transfer 50 million VND to a partner's account immediately to secure a contract. They promise to repay by evening.",
+      "text_vi": "Sếp nhờ [Name] chuyển gấp 50 triệu cho đối tác để giữ hợp đồng. Họ hứa sẽ trả lại ngay trong chiều nay.",
+      "timer": 15,
+      "options": [
+        { "id": "q1_a", "text_en": "Transfer money to show loyalty", "text_vi": "Chuyển tiền để thể hiện sự tận tụy", "trait_tag": "self_reliance", "next_question": "q2" },
+        { "id": "q1_b", "text_en": "Ask for an official voice note", "text_vi": "Yêu cầu sếp gửi tin nhắn thoại", "trait_tag": "information_first", "next_question": "q2" },
+        { "id": "q1_c", "text_en": "Call the boss's old phone number", "text_vi": "Gọi vào số điện thoại cũ của sếp", "trait_tag": "risk_recognition", "next_question": "q2" },
+        { "id": "q1_d", "text_en": "Contact the office accountant first", "text_vi": "Liên hệ với kế toán công ty trước", "trait_tag": "immediate_action", "next_question": "q2" }
+      ]
+    },
+    {
+      "id": "q2",
+      "text_en": "The profile sends a photo of a bank transfer slip showing they already sent money to [Name], but it's 'pending due to interbank delay.'",
+      "text_vi": "Tài khoản gửi ảnh chụp biên lai chuyển tiền cho [Name], nhưng báo là 'đang chờ vì khác ngân hàng'.",
+      "timer": 15,
+      "options": [
+        { "id": "q2_a", "text_en": "Trust the photo and proceed", "text_vi": "Tin vào ảnh chụp và chuyển tiền", "trait_tag": "self_reliance", "next_question": "q3" },
+        { "id": "q2_b", "text_en": "Check for signs of photo editing", "text_vi": "Kiểm tra dấu hiệu chỉnh sửa ảnh", "trait_tag": "information_first", "next_question": "q3" },
+        { "id": "q2_c", "text_en": "Wait for the balance to update", "text_vi": "Chờ số dư tài khoản thực sự thay đổi", "trait_tag": "risk_recognition", "next_question": "q3" },
+        { "id": "q2_d", "text_en": "Ask the boss to call directly", "text_vi": "Yêu cầu sếp gọi điện trực tiếp", "trait_tag": "immediate_action", "next_question": "q3" }
+      ]
+    },
+    {
+      "id": "q3",
+      "text_en": "A second message arrives from 'Auntie' saying [Name]'s younger brother was arrested in a traffic accident and needs bail money fast.",
+      "text_vi": "Tin nhắn thứ hai từ 'Cô ruột' báo em trai [Name] bị bắt vì tai nạn giao thông, cần tiền bảo lãnh gấp.",
+      "timer": 15,
+      "options": [
+        { "id": "q3_a", "text_en": "Call the brother directly now", "text_vi": "Gọi trực tiếp cho em trai ngay", "trait_tag": "risk_recognition", "next_question": "q4a" },
+        { "id": "q3_b", "text_en": "Send the bail money immediately", "text_vi": "Chuyển tiền bảo lãnh ngay lập tức", "trait_tag": "self_reliance", "next_question": "q4b" },
+        { "id": "q3_c", "text_en": "Ask which police station he is at", "text_vi": "Hỏi xem em trai đang ở đồn công an nào", "trait_tag": "information_first", "next_question": "q4a" },
+        { "id": "q3_d", "text_en": "Notify your parents about the news", "text_vi": "Báo tin này cho bố mẹ biết", "trait_tag": "immediate_action", "next_question": "q4b" }
+      ]
+    },
+    {
+      "id": "q4a",
+      "text_en": "The brother answers; he is at work and fine. [Name] realizes both the 'Boss' and 'Auntie' profiles are fake. They use Deepfake audio.",
+      "text_vi": "Em trai nhấc máy; vẫn đang làm việc bình thường. [Name] nhận ra cả sếp và cô đều là giả mạo bằng AI.",
+      "timer": 15,
+      "options": [
+        { "id": "q4a_a", "text_en": "Report and block both accounts", "text_vi": "Báo cáo và chặn cả hai tài khoản", "trait_tag": "risk_recognition", "next_question": "q5" },
+        { "id": "q4a_b", "text_en": "Warn other relatives and colleagues", "text_vi": "Cảnh báo người thân và đồng nghiệp", "trait_tag": "immediate_action", "next_question": "q5" },
+        { "id": "q4a_c", "text_en": "Save the chat logs for police", "text_vi": "Lưu lại bằng chứng cho công an", "trait_tag": "information_first", "next_question": "q5" },
+        { "id": "q4a_d", "text_en": "Insult the scammer in the chat", "text_vi": "Chửi bới kẻ lừa đảo trong khung chat", "trait_tag": "self_reliance", "next_question": "q5" }
+      ]
+    },
+    {
+      "id": "q4b",
+      "text_en": "The money is sent. Minutes later, the 'Auntie' account is deleted. [Name] calls the real Auntie, who knows nothing about it.",
+      "text_vi": "Tiền đã gửi. Vài phút sau, tài khoản 'Cô' bị xóa. [Name] gọi cho cô thật thì cô không biết gì cả.",
+      "timer": 12,
+      "options": [
+        { "id": "q4b_a", "text_en": "Contact the bank to freeze transfer", "text_vi": "Liên hệ ngân hàng để phong tỏa", "trait_tag": "risk_recognition", "next_question": "q5" },
+        { "id": "q4b_b", "text_en": "Report to the local cyber-police", "text_vi": "Báo cáo cho công an mạng", "trait_tag": "immediate_action", "next_question": "q5" },
+        { "id": "q4b_c", "text_en": "Check if your own data leaked", "text_vi": "Kiểm tra xem dữ liệu cá nhân bị lộ không", "trait_tag": "information_first", "next_question": "q5" },
+        { "id": "q4b_d", "text_en": "Keep the secret out of shame", "text_vi": "Giữ bí mật vì thấy xấu hổ", "trait_tag": "self_reliance", "next_question": "q5" }
+      ]
+    },
+    {
+      "id": "q5",
+      "text_en": "Security experts warn that hackers are scraping social media to map Northern family hierarchies for more targeted attacks.",
+      "text_vi": "Chuyên gia cảnh báo tin tặc đang quét mạng xã hội để vẽ sơ đồ gia đình miền Bắc cho các vụ lừa đảo.",
+      "timer": 15,
+      "options": [
+        { "id": "q5_a", "text_en": "Set social media to private", "text_vi": "Chuyển mạng xã hội sang chế độ riêng tư", "trait_tag": "risk_recognition", "next_question": "q6" },
+        { "id": "q5_b", "text_en": "Delete public lists of relatives", "text_vi": "Xóa danh sách người thân công khai", "trait_tag": "immediate_action", "next_question": "q6" },
+        { "id": "q5_c", "text_en": "Audit your app privacy settings", "text_vi": "Kiểm tra cài đặt quyền riêng tư", "trait_tag": "information_first", "next_question": "q6" },
+        { "id": "q5_d", "text_en": "Stop posting workplace location tags", "text_vi": "Ngừng gắn thẻ vị trí nơi làm việc", "trait_tag": "self_reliance", "next_question": "q6" }
+      ]
+    },
+    {
+      "id": "q6",
+      "text_en": "The real Department Head asks the team to set a 'family password' for emergency money requests. Everyone is still nervous.",
+      "text_vi": "Sếp thật yêu cầu cả nhóm đặt 'mật khẩu gia đình' cho các yêu cầu tiền khẩn cấp. Mọi người vẫn lo lắng.",
+      "timer": 15,
+      "options": [
+        { "id": "q6_a", "text_en": "Agree and set a secret keyword", "text_vi": "Đồng ý và đặt một từ khóa bí mật", "trait_tag": "risk_recognition", "next_question": "q7a" },
+        { "id": "q6_b", "text_en": "Suggest using 2FA for all Zalo", "text_vi": "Đề xuất bật 2FA cho mọi tài khoản Zalo", "trait_tag": "information_first", "next_question": "q7a" },
+        { "id": "q6_c", "text_en": "Ignore it; lightning won't strike twice", "text_vi": "Bỏ qua; sét không đánh hai lần một chỗ", "trait_tag": "self_reliance", "next_question": "q7b" },
+        { "id": "q6_d", "text_en": "Limit work discussion to secure apps", "text_vi": "Chỉ bàn việc trên ứng dụng bảo mật", "trait_tag": "immediate_action", "next_question": "q7b" }
+      ]
+    },
+    {
+      "id": "q7a",
+      "text_en": "[Name] protects their network. The team is now hyper-aware of digital impersonation and social engineering tactics.",
+      "text_vi": "[Name] bảo vệ được vòng kết nối. Cả nhóm giờ đã cảnh giác cao độ với các thủ đoạn giả mạo và thao túng.",
+      "timer": 20,
+      "options": [
+        { "id": "q7a_a", "text_en": "Educate elderly parents on AI", "text_vi": "Hướng dẫn cha mẹ già về công nghệ AI", "trait_tag": "immediate_action", "next_question": null },
+        { "id": "q7a_b", "text_en": "Report the incident to VNCERT", "text_vi": "Báo cáo vụ việc cho VNCERT", "trait_tag": "information_first", "next_question": null },
+        { "id": "q7a_c", "text_en": "Enable biometric login for banks", "text_vi": "Bật đăng nhập sinh trắc học ngân hàng", "trait_tag": "risk_recognition", "next_question": null },
+        { "id": "q7a_d", "text_en": "Stay alert but remain helpful", "text_vi": "Giữ cảnh giác nhưng vẫn sẵn lòng giúp đỡ", "trait_tag": "self_reliance", "next_question": null }
+      ]
+    },
+    {
+      "id": "q7b",
+      "text_en": "[Name] remains a target due to loose security settings. Digital hygiene is a continuous effort, not a one-time fix.",
+      "text_vi": "[Name] vẫn là mục tiêu vì cài đặt bảo mật lỏng lẻo. Vệ sinh số là nỗ lực liên tục, không phải nhất thời.",
+      "timer": 20,
+      "options": [
+        { "id": "q7b_a", "text_en": "Re-evaluate privacy every month", "text_vi": "Đánh giá lại quyền riêng tư hàng tháng", "trait_tag": "risk_recognition", "next_question": null },
+        { "id": "q7b_b", "text_en": "Watch for new phishing methods", "text_vi": "Theo dõi các phương thức lừa đảo mới", "trait_tag": "information_first", "next_question": null },
+        { "id": "q7b_c", "text_en": "Use stronger passwords for apps", "text_vi": "Sử dụng mật khẩu mạnh cho ứng dụng", "trait_tag": "self_reliance", "next_question": null },
+        { "id": "q7b_d", "text_en": "Clean up friend lists regularly", "text_vi": "Lọc danh sách bạn bè thường xuyên", "trait_tag": "immediate_action", "next_question": null }
+      ]
+    }
+  ],
+  "insight_en": "**The Status/Network Scam**\nIn Northern Vietnam, cultural values emphasizing 'Face' (uy tín), workplace hierarchy, and intense family devotion are exploited by cybercriminals. Scammers use Deepfake AI to mimic the voice and face of authority figures to bypass critical thinking.\n\n**Why the Toll is High**\n* **Hierarchical Pressure:** In Northern corporate and social structures, refusing a direct request from a 'superior' or an 'elder' feels socially unacceptable, leading victims to act before verifying.\n* **Social Engineering:** Scammers 'socially map' victims by monitoring public interactions on Facebook and Zalo, identifying who the victim respects most (bosses, uncles, parents).\n* **The 'Urgency' Trap:** Every request is framed as a crisis (accidents, closed-door meetings) to prevent the victim from taking the time to verify the source through traditional channels.\n\n**Practical Solutions**\n* **The 2-Channel Rule:** If a request for money comes via message, verify it through a voice call or a different platform (e.g., call their phone number if they messaged on Zalo).\n* **Establish a 'Safe Word':** Families and close work teams should have a non-digital secret word to verify identities during suspicious emergency requests.\n* **Screen for AI Indicators:** Watch for unnatural pauses, robotic tones, or blurry backgrounds in video calls. If a 'boss' says they can't talk because they are in a meeting, wait for the meeting to end.",
+  "insight_vi": "**Lừa đảo mạo danh địa vị/mối quan hệ**\nTại miền Bắc, các giá trị văn hóa như 'Uy tín', thứ bậc nơi làm việc và lòng hiếu thảo bị tội phạm mạng lợi dụng triệt để. Kẻ lừa đảo sử dụng AI Deepfake để giả giọng nói và khuôn mặt của những người có sức ảnh hưởng nhằm làm tê liệt sự cảnh giác.\n\n**Tại sao thiệt hại cao?**\n* **Áp lực thứ bậc:** Trong cấu trúc xã hội miền Bắc, việc từ chối yêu cầu từ 'cấp trên' hoặc 'người bề trên' bị coi là bất lịch sự, khiến nạn nhân hành động trước khi kiểm chứng.\n* **Thao túng xã hội:** Kẻ gian 'vẽ sơ đồ xã hội' của nạn nhân bằng cách theo dõi tương tác trên Facebook/Zalo để tìm ra người nạn nhân nể trọng nhất (sếp, cô chú, bố mẹ).\n* **Cái bẫy 'Khẩn cấp':** Mọi yêu cầu đều được gắn mác khủng hoảng (tai nạn, họp kín) để ngăn nạn nhân có thời gian kiểm chứng nguồn tin qua các kênh truyền thống.\n\n**Giải pháp thực tế**\n* **Quy tắc 2 kênh:** Nếu nhận yêu cầu chuyển tiền qua tin nhắn, hãy xác minh bằng cuộc gọi thoại hoặc qua một nền tảng khác (ví dụ: gọi số di động nếu họ nhắn qua Zalo).\n* **Thiết lập 'Mật mã an toàn':** Gia đình và nhóm làm việc nên có một từ khóa bí mật để xác minh danh tính khi có các yêu cầu khẩn cấp nghi vấn.\n* **Nhận biết dấu hiệu AI:** Chú ý các khoảng dừng bất thường, giọng nói robot hoặc phông nền bị nhòe trong video call. Nếu 'sếp' bảo không nghe máy được vì đang họp, hãy đợi cho đến khi cuộc họp kết thúc."
+}

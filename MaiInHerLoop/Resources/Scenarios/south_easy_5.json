@@ -1,0 +1,122 @@
+{
+  "id": "south_easy_5",
+  "region": "south",
+  "danger": "5",
+  "title_en": "The Digital Ghost",
+  "title_vi": "Bóng Ma Số",
+  "intro_en": "Midnight in the city. [Name]'s 17 Pro Max vibrates with a Messenger video call from your favorite cousin. You answer, and her face appears—blurry, tearful, and screaming that she's been in a car accident.",
+  "intro_vi": "Nửa đêm trong thành phố. [Name], điện thoại bạn rung lên một cuộc gọi video Messenger từ người em họ thân nhất. Bạn bắt máy, gương mặt cô ấy hiện ra—nhòe nhoè, đẫm nước mắt và đang hét lên rằng mình vừa bị tai nạn xe hơi.",
+  "start_question": "q1",
+  "questions": [
+    {
+      "id": "q1",
+      "text_en": "The signal is 'laggy' and the audio is distorted. She begs you to send 20 million VND to a 'hospital admin' account immediately because her phone is dying. [Name], she looks exactly like herself.",
+      "text_vi": "Tín hiệu bị 'giật' và âm thanh bị biến dạng. Cô ấy van nài bạn chuyển gấp 20 triệu đồng vào tài khoản 'viện phí' vì điện thoại sắp sập nguồn. [Name], cô ấy trông y hệt người thật.",
+      "timer": 20,
+      "options": [
+        { "id": "q1_a", "text_en": "Ask her a personal 'secret' question", "text_vi": "Hỏi một câu hỏi bí mật cá nhân", "trait_tag": "risk_recognition", "next_question": "q2" },
+        { "id": "q1_b", "text_en": "Transfer the money to help her", "text_vi": "Chuyển tiền ngay để giúp cô ấy", "trait_tag": "immediate_action", "next_question": "q2" },
+        { "id": "q1_c", "text_en": "Try to call her regular phone number", "text_vi": "Thử gọi vào số điện thoại bình thường", "trait_tag": "information_first", "next_question": "q2" },
+        { "id": "q1_d", "text_en": "Tell her to stay calm and wait", "text_vi": "Bảo cô ấy bình tĩnh và chờ đợi", "trait_tag": "self_reliance", "next_question": "q2" }
+      ]
+    },
+    {
+      "id": "q2",
+      "text_en": "The call drops. A second later, you get a photo of a bloody ID card—her ID card—sent from her account. [Name], the pressure to act is overwhelming.",
+      "text_vi": "Cuộc gọi bị ngắt. Một giây sau, bạn nhận được ảnh chụp căn cước công dân dính máu—đúng là của cô ấy—gửi từ chính tài khoản đó. [Name], áp lực phải hành động cực kỳ lớn.",
+      "timer": 20,
+      "options": [
+        { "id": "q2_a", "text_en": "Check for 'glitches' in the photo", "text_vi": "Kiểm tra các lỗi 'vỡ ảnh' bất thường", "trait_tag": "risk_recognition", "next_question": "q3" },
+        { "id": "q2_b", "text_en": "Message other family members", "text_vi": "Nhắn tin hỏi những người thân khác", "trait_tag": "information_first", "next_question": "q3" },
+        { "id": "q2_c", "text_en": "Call the hospital named in the text", "text_vi": "Gọi cho bệnh viện nêu trong tin nhắn", "trait_tag": "self_reliance", "next_question": "q3" },
+        { "id": "q2_d", "text_en": "Ask for the location of the accident", "text_vi": "Hỏi vị trí chính xác của vụ tai nạn", "trait_tag": "immediate_action", "next_question": "q3" }
+      ]
+    },
+    {
+      "id": "q3",
+      "text_en": "You notice the bank account name isn't the hospital—it’s a personal name you don't recognize. [Name], the 'cousin' messages back: 'Hurry, they won't treat me without it!'",
+      "text_vi": "Bạn nhận ra tên tài khoản ngân hàng không phải bệnh viện—mà là một cái tên cá nhân lạ lẫm. [Name], 'người em' nhắn lại: 'Nhanh lên, không có tiền họ không cấp cứu đâu!'",
+      "timer": 18,
+      "options": [
+        { "id": "q3_a", "text_en": "Demand a voice message for proof", "text_vi": "Yêu cầu gửi tin nhắn thoại làm bằng chứng", "trait_tag": "information_first", "next_question": "q4a" },
+        { "id": "q3_b", "text_en": "Stop responding and call 113", "text_vi": "Ngừng trả lời và gọi 113", "trait_tag": "risk_recognition", "next_question": "q4b" },
+        { "id": "q3_c", "text_en": "Threaten to call her parents", "text_vi": "Dọa sẽ gọi cho bố mẹ cô ấy", "trait_tag": "self_reliance", "next_question": "q4b" },
+        { "id": "q3_d", "text_en": "Send half the money just in case", "text_vi": "Gửi một nửa số tiền để đề phòng", "trait_tag": "immediate_action", "next_question": "q4a" }
+      ]
+    },
+    {
+      "id": "q4a",
+      "text_en": "A voice clip arrives. It sounds like her, but the tone is robotic and the background noise is too clean for a street accident. [Name], your skin crawls.",
+      "text_vi": "Một đoạn tin nhắn thoại gửi đến. Giọng rất giống cô ấy, nhưng âm điệu hơi máy móc và tiếng ồn nền quá sạch so với một vụ tai nạn trên đường. [Name], bạn thấy nổi da gà.",
+      "timer": 18,
+      "options": [
+        { "id": "q4a_a", "text_en": "Report the account for being hacked", "text_vi": "Báo cáo tài khoản bị hack", "trait_tag": "risk_recognition", "next_question": "q5" },
+        { "id": "q4a_b", "text_en": "Ask why her voice sounds weird", "text_vi": "Hỏi tại sao giọng cô ấy nghe lạ vậy", "trait_tag": "information_first", "next_question": "q5" },
+        { "id": "q4a_c", "text_en": "Block the account immediately", "text_vi": "Chặn tài khoản ngay lập tức", "trait_tag": "self_reliance", "next_question": "q5" },
+        { "id": "q4a_d", "text_en": "Try to trace the bank account", "text_vi": "Cố gắng truy tìm tài khoản ngân hàng", "trait_tag": "immediate_action", "next_question": "q5" }
+      ]
+    },
+    {
+      "id": "q4b",
+      "text_en": "The scammer realizes you're suspicious. They send a new video—a 5-second clip of her 'crying' on a stretcher. [Name], it's a Deepfake masterpiece.",
+      "text_vi": "Kẻ lừa đảo nhận ra bạn nghi ngờ. Chúng gửi một video mới—đoạn clip 5 giây cô ấy 'khóc' trên cáng cứu thương. [Name], đó là một tuyệt phẩm Deepfake.",
+      "timer": 18,
+      "options": [
+        { "id": "q4b_a", "text_en": "Look for flickering around the eyes", "text_vi": "Quan sát vùng mắt xem có bị giật mờ không", "trait_tag": "risk_recognition", "next_question": "q5" },
+        { "id": "q4b_b", "text_en": "Call her on a different app (Zalo/Viber)", "text_vi": "Gọi cho cô ấy qua ứng dụng khác", "trait_tag": "information_first", "next_question": "q5" },
+        { "id": "q4b_c", "text_en": "Keep them talking to buy time", "text_vi": "Tiếp tục nói chuyện để câu giờ", "trait_tag": "immediate_action", "next_question": "q5" },
+        { "id": "q4b_d", "text_en": "Search the image on Google Lens", "text_vi": "Tìm kiếm hình ảnh qua Google Lens", "trait_tag": "self_reliance", "next_question": "q5" }
+      ]
+    },
+    {
+      "id": "q5",
+      "text_en": "You finally reach your cousin on a normal phone call. She’s at home, safe and asleep. [Name], you were seconds away from losing a fortune to a ghost.",
+      "text_vi": "Cuối cùng bạn cũng gọi được cho cô em họ qua điện thoại thường. Cô ấy đang ở nhà, an toàn và đang ngủ. [Name], bạn đã suýt mất một gia tài cho một bóng ma.",
+      "timer": 20,
+      "options": [
+        { "id": "q5_a", "text_en": "Explain what happened to her", "text_vi": "Giải thích chuyện gì đã xảy ra với cô ấy", "trait_tag": "immediate_action", "next_question": "q6" },
+        { "id": "q5_b", "text_en": "Warn everyone in your contact list", "text_vi": "Cảnh báo mọi người trong danh bạ", "trait_tag": "risk_recognition", "next_question": "q6" },
+        { "id": "q5_c", "text_en": "Change your own privacy settings", "text_vi": "Thay đổi cài đặt quyền riêng tư của chính bạn", "trait_tag": "self_reliance", "next_question": "q6" },
+        { "id": "q5_d", "text_en": "Check for security breaches on your device", "text_vi": "Kiểm tra lỗ hổng bảo mật trên thiết bị", "trait_tag": "information_first", "next_question": "q6" }
+      ]
+    },
+    {
+      "id": "q6",
+      "text_en": "The next morning, you realize how they did it: they scraped your public photos and used a 15-second voice clip from an old video you posted online.",
+      "text_vi": "Sáng hôm sau, bạn nhận ra cách chúng làm: chúng quét ảnh công khai của bạn và dùng đoạn tin nhắn thoại 15 giây từ một video cũ bạn đăng trên mạng.",
+      "timer": 15,
+      "options": [
+        { "id": "q6_a", "text_en": "Set social media to 'Private'", "text_vi": "Chuyển mạng xã hội sang chế độ 'Riêng tư'", "trait_tag": "risk_recognition", "next_question": "q7a" },
+        { "id": "q6_b", "text_en": "Establish a family 'Safe Word'", "text_vi": "Thiết lập một 'Mật mã an toàn' cho gia đình", "trait_tag": "immediate_action", "next_question": "q7a" },
+        { "id": "q6_c", "text_en": "Report the bank account to the police", "text_vi": "Báo cáo số tài khoản ngân hàng cho công an", "trait_tag": "information_first", "next_question": "q7b" },
+        { "id": "q6_d", "text_en": "Delete all public voice clips", "text_vi": "Xóa sạch các đoạn tin nhắn thoại công khai", "trait_tag": "self_reliance", "next_question": "q7b" }
+      ]
+    },
+    {
+      "id": "q7a",
+      "text_en": "You sit on your balcony, [Name]. The city feels different now. Every 'connection' you make online feels like a potential trap.",
+      "text_vi": "Bạn ngồi trên ban công, [Name]. Thành phố giờ cảm giác thật khác. Mọi 'kết nối' trên mạng giờ đều giống như một cái bẫy tiềm tàng.",
+      "timer": 25,
+      "options": [
+        { "id": "q7a_a", "text_en": "Focus on offline interactions", "text_vi": "Tập trung vào các tương tác trực tiếp", "trait_tag": "risk_recognition", "next_question": null },
+        { "id": "q7a_b", "text_en": "Share your story to protect others", "text_vi": "Chia sẻ câu chuyện để bảo vệ người khác", "trait_tag": "immediate_action", "next_question": null },
+        { "id": "q7a_c", "text_en": "Trust your instincts more", "text_vi": "Tin vào trực giác của mình hơn", "trait_tag": "self_reliance", "next_question": null },
+        { "id": "q7a_d", "text_en": "Keep learning about AI threats", "text_vi": "Tiếp tục tìm hiểu về các mối đe dọa từ AI", "trait_tag": "information_first", "next_question": null }
+      ]
+    },
+    {
+      "id": "q7b",
+      "text_en": "[Name], you realize the 'past' you ran from follows you in lines of code, not just in memories.",
+      "text_vi": "[Name], bạn nhận ra 'quá khứ' mà bạn trốn chạy đi theo bạn qua những dòng mã, chứ không chỉ trong ký ức.",
+      "timer": 25,
+      "options": [
+        { "id": "q7b_a", "text_en": "Tighten your digital footprint", "text_vi": "Siết chặt dấu chân kỹ thuật số", "trait_tag": "risk_recognition", "next_question": null },
+        { "id": "q7b_b", "text_en": "Forgive yourself for the panic", "text_vi": "Tha thứ cho bản thân vì đã hoảng loạn", "trait_tag": "immediate_action", "next_question": null },
+        { "id": "q7b_c", "text_en": "Stay skeptical of all digital info", "text_vi": "Luôn hoài nghi mọi thông tin kỹ thuật số", "trait_tag": "information_first", "next_question": null },
+        { "id": "q7b_d", "text_en": "Look for the human element", "text_vi": "Tìm kiếm những giá trị con người thật", "trait_tag": "self_reliance", "next_question": null }
+      ]
+    }
+  ],
+  "insight_en": "**The Dawn of Deepfake Scams**\nIn Vietnam, the 'Deepfake' scam is the new frontier of fraud. Scammers use AI to clone voices and faces from social media, creating a **'Sense of Urgency'** that bypasses critical thinking. By the time you realize it's a fake, the money is already laundered through multiple accounts.\n\n**Why the Toll is High**\n* **Emotional Hijacking:** Scammers don't attack your logic; they attack your **love for family**. The 'Accident/Emergency' script is designed to make your brain skip verification steps.\n* **The Data Scrapers:** Even if your profile is private, scammers can find clips of you from your friends' public posts or old 'Check-in' videos. It only takes **15-30 seconds of audio** to clone a convincing voice.\n* **Digital Trust:** Most people still believe 'Seeing is Believing.' Deepfakes destroy this foundation, making it harder for real families to communicate during actual emergencies.\n\n**Practical Solutions**\n* **The 'Safe Word' Strategy:** Create a unique, non-guessable safe word with your inner circle. If someone calls in an emergency, ask for the word. If they can't give it, it's a scam.\n* **Spotting the Fake:** Deepfakes often struggle with **blinking, unnatural eye movements, or skin textures** near the edge of the face. Ask the caller to turn their head sideways; AI often fails to render profiles accurately.\n* **Verify through Multiple Channels:** Never transfer money based on a single app. Hang up and call the person's phone number directly, or call a mutual relative to confirm.",
+  "insight_vi": "**Kỷ nguyên Lừa đảo Deepfake**\nTại Việt Nam, lừa đảo 'Deepfake' là ranh giới mới của tội phạm mạng. Kẻ xấu dùng AI để giả mạo giọng nói và khuôn mặt từ mạng xã hội, tạo ra **'Sự khẩn cấp giả tạo'** để làm tê liệt khả năng suy nghĩ thấu đáo. Khi bạn nhận ra đó là giả, tiền đã bị 'rửa' qua nhiều tài khoản khác nhau.\n\n**Tại sao thiệt hại lại cao?**\n* **Đánh vào cảm xúc:** Kẻ lừa đảo không tấn công vào logic; chúng tấn công vào **tình cảm gia đình**. Kịch bản 'Tai nạn/Cấp cứu' được thiết kế để não bạn bỏ qua các bước xác minh.\n* **Thu thập dữ liệu:** Ngay cả khi bạn để trang cá nhân riêng tư, chúng vẫn có thể tìm thấy video của bạn từ bài đăng công khai của bạn bè. Chỉ cần **15-30 giây âm thanh** là đủ để tạo ra một giọng nói giả thuyết phục.\n* **Niềm tin kỹ thuật số:** Nhiều người vẫn tin 'thấy tận mắt mới là thật'. Deepfake phá hủy nền tảng này, khiến các gia đình khó liên lạc hơn ngay cả trong những tình huống khẩn cấp thật sự.\n\n**Giải pháp thực tế**\n* **Chiến thuật 'Mật mã an toàn':** Hãy tạo một mật mã riêng biệt, khó đoán với người thân. Nếu có cuộc gọi khẩn cấp, hãy hỏi mật mã này. Nếu không trả lời được, đó là lừa đảo.\n* **Cách nhận diện:** Deepfake thường gặp lỗi ở **nhịp chớp mắt, chuyển động mắt không tự nhiên hoặc vùng da** gần mép mặt. Hãy yêu cầu người gọi quay nghiêng mặt; AI thường thất bại trong việc xử lý góc nghiêng.\n* **Xác minh đa kênh:** Đừng bao giờ chuyển tiền chỉ dựa trên một ứng dụng. Hãy cúp máy và gọi trực tiếp vào số điện thoại của người đó, hoặc gọi cho một người thân khác để kiểm tra."
+}
