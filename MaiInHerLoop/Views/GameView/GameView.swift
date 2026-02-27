@@ -10,6 +10,7 @@ struct GameView: View {
     @State private var selectedOptionID: String? = nil
     @State private var currentQuestionID: String = ""
     @State private var panelHeight: CGFloat = 0
+    @State private var navigateToDiary = false
 
     var body: some View {
         GeometryReader { geo in
@@ -38,6 +39,9 @@ struct GameView: View {
             }
         }
         .navigationBarHidden(true)
+        .navigationDestination(isPresented: $navigateToDiary) {
+            DiaryListView()
+        }
         .onChange(of: engine.currentQuestion?.id) { newID in
             guard let id = newID, id != currentQuestionID else { return }
             currentQuestionID = id
@@ -172,7 +176,7 @@ struct GameView: View {
             ReflectionResultView(
                 snapshot: snapshot,
                 shouldPersist: true,
-                onGoToDiary: { DiaryListView() },
+                onGoToDiary: { navigateToDiary = true },
                 onGoToScenarios: { dismiss() }
             )
             .frame(width: doorWidth)

@@ -157,19 +157,6 @@ struct HomeView: View {
                 navigateToScenarioList = true
             }
 
-            // Button 2: Visit Regions
-            homeButton(
-                title: "home.visit_regions".localized,
-                textColor: Color("Beige2"),
-                buttonColor: Color("Moss").opacity(0.75),
-                borderColor: Color("Gold").opacity(0.6),
-                rotation: 1.5,
-                staggerDelay: 0.4
-            ) {
-                navigateToRegion = true
-            }
-
-            // Button 3: Diary
             homeButton(
                 title: "home.diary".localized,
                 textColor: Color("Beige2"),
@@ -243,12 +230,6 @@ struct HomeView: View {
         NavigationLink(
             destination:RegionSelectionView(),
             isActive: $navigateToScenarioList
-        ) { EmptyView() }
-            .hidden()
-
-        NavigationLink(
-            destination: RegionSelectionView(),
-            isActive: $navigateToRegion
         ) { EmptyView() }
             .hidden()
 

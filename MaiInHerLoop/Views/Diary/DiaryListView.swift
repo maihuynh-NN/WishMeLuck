@@ -21,9 +21,11 @@ struct DiaryListView: View {
             ScrollView(.vertical, showsIndicators: false) {
                 VStack(alignment: .leading, spacing: 20) {
 
-                    // Screen title
+                    // Screen title — centered
                     screenTitle
+                        .frame(maxWidth: .infinity)
                         .padding(.horizontal, hPad)
+                        .padding(.top, 60)
                         .staggeredAppear(delay: 0.05)
 
                     // Collection panel
@@ -51,26 +53,19 @@ struct DiaryListView: View {
 
                     Spacer(minLength: 60)
                 }
-                .padding(.top, 24)
             }
 
-            VStack {
-                HStack {
-                    backButton
-                    Spacer()
-                    SettingsButton()
-                }
-                Spacer()
-            }
-            .ignoresSafeArea(edges: .top)
-            .padding(.top, isIPad ? 20 : 8)
+            // MARK: - Overlaid buttons 
+            BackButton(iconColor: Color("Red3"), borderColor: Color("Gold3"))
+            SettingsButton()
         }
         .navigationBarHidden(true)
+        .navigationBarBackButtonHidden(true)
     }
 
     // MARK: - Screen title
     private var screenTitle: some View {
-        VStack(alignment: .leading, spacing: 4) {
+        VStack(spacing: 4) {
             Text("diary.title".localized)
                 .font(.system(.title2, design: .monospaced).weight(.black))
                 .foregroundColor(Color("Moss"))
@@ -83,7 +78,7 @@ struct DiaryListView: View {
         }
     }
 
-    // MARK: - Entry list 
+    // MARK: - Entry list
     private var entryList: some View {
         VStack(spacing: 0) {
             ForEach(Array(entries.enumerated()), id: \.element.id) { index, entry in
@@ -108,26 +103,6 @@ struct DiaryListView: View {
             buttonType: .flexible(height: .infinity)
         )
         .padding(.horizontal, hPad)
-    }
-
-    // MARK: - Back button
-    private var backButton: some View {
-        Button(action: { dismiss() }) {
-            HStack(spacing: 6) {
-                Image(systemName: "chevron.left")
-                    .font(.system(.footnote).weight(.semibold))
-                Text("diary.back".localized)
-                    .font(.system(.footnote, design: .monospaced).weight(.medium))
-            }
-            .foregroundColor(Color("Moss"))
-            .padding(.horizontal, 16)
-            .padding(.vertical, 10)
-            .frame(minWidth: 44, minHeight: 44)
-            .contentShape(Rectangle())
-        }
-        .accessibilityLabel("diary.back".localized)
-        .accessibilityHint("diary.back.hint".localized)
-        .padding(.leading, 8)
     }
 }
 
