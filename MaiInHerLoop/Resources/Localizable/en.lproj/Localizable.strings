@@ -1,25 +1,88 @@
-// MARK: - UI Generic
+// MARK: - Splash Screen
+
+"splash.welcome_message" = "Welcome, survivor.\nBefore you step into the unknown, tell us — who are you?";
+"splash.enter_name" = "YOUR IDENTITY";
+"splash.name_placeholder" = "Enter your name";
+"splash.begin" = "BEGIN";
+"splash.name_accessibility" = "Enter your name";
+"splash.name_hint" = "Type your name to begin the experience";
+"splash.begin_accessibility" = "Begin the experience";
+
+
+// MARK: - Home View
+
+"home.title.red" = "RED";
+"home.title.embers" = "EMBERS";
+"home.title.vi" = "THAN HỒNG";
+"home.title.a11y" = "Red Embers — Than Hồng";
+"home.start_game" = "Start Game";
+"home.visit_regions" = "Visit Regions";
+"home.diary" = "Diary";
+"home.howtoplay" = "How to play";
+"home.howtoplay.hint" = "Opens a guide on how to play";
+
+
+// MARK: - Settings Modal
+
+"settings.title" = "SETTINGS";
+"settings.language" = "LANGUAGE";
+"settings.language.current" = "Currently selected";
+"settings.language.switch" = "Double tap to switch";
+"settings.appearance" = "APPEARANCE";
+"settings.light" = "Light";
+"settings.dark" = "Dark";
+"settings.system" = "Auto";
+"settings.close" = "Close";
+"settings.close.hint" = "Closes the settings panel";
+"settings.button" = "Settings";
+"settings.button.hint" = "Opens settings for language and appearance";
+
+
+// MARK: - Story View
+
+"story.skip" = "Skip";
+"story.skip.a11y" = "Skip introduction";
+"story.skip.a11y.hint" = "Go directly to region selection";
+"story.enter" = "Enter  ▶";
+"story.enter.a11y" = "Begin region exploration";
+"story.nav.next" = "Next section";
+"story.nav.previous" = "Previous section";
+
+
+// MARK: - Region Selection View
+
+"region.title" = "Choose Your Region";
+"region.subtitle" = "Swipe to explore different disasters";
+"regionselect.selectButton" = "SELECT";
+
+
+// MARK: - Region Card
+
+"region.tap_to_explore" = "Tap to explore ›";
+
+
+// MARK: - Region Names
+
+"region.north.name" = "North";
+"region.central.name" = "Central";
+"region.south.name" = "South";
+
+
+// MARK: - Region Detail Popover — UI
+
 "ui.landing_on" = "LANDING ON";
 "ui.survival_orientation_manual" = "Survival Orientation Manual";
 "ui.the_region" = "THE %@";
 "ui.ready_to_face_trials" = "Ready to face the trials of %@?";
 "ui.enter_region" = "ENTER REGION";
 "ui.study_others_first" = "study other regions first";
+"ui.chronicles.title" = "CHRONICLES";
 
-// MARK: - Region Names
-"region.north.name" = "North";
-"region.central.name" = "Central";
-"region.south.name" = "South";
 
-// MARK: - Region Selection
-"region.title" = "Choose Your Region";
-"region.subtitle" = "Swipe to explore different disasters";
-"regionselect.selectButton" = "SELECT";
+// MARK: - Region Detail — North Risk Briefing
 
-// MARK: - North Risk Briefing
 "region.north.riskBriefing" = "The North doesn't wait for you to prepare. \nStorms roll in overnight. Valleys drown, ridges crack, and whole hamlets vanish behind walls of snow or mud. Locals survive because they plan like their lives depend on it. \nYours will, too.";
 
-// MARK: - North Sections
 "region.north.sections.1.title" = "THE LAND ITSELF TESTS YOU";
 "region.north.sections.1.content" = "In the North, one moment you're on open ground, the next you're fighting icy winds along a ridge. \nAltitude steals heat faster than fire can give it back. Veterans never trust a single road, they carry maps in their heads. \nWhen the main pass collapses, they already know the side paths.";
 "region.north.sections.1.subtitle" = "Learn them, or be buried with the road.";
@@ -36,30 +99,11 @@
 "region.north.sections.4.content" = "Rescue in the North starts with neighbors. \nThe shock teams who rope across rivers and dig through slides before the army ever arrives. Soldiers and helicopters follow, but the first grip in the dark is always local. \nKnow the shelters, know the routes.";
 "region.north.sections.4.subtitle" = "If you wait hidden at home, the rescuers will pass you by.";
 
-// MARK: - South Risk Briefing
-"region.south.riskBriefing" = "The South tests you with water and heat. \nRivers swell and drown the delta, while cities choke under storms and standing floods. When the sun returns, the heat steals strength faster than hunger. Down here, survival is not about braving the cold, it is about outlasting the flood and guarding your water.";
 
-// MARK: - South Sections
-"region.south.sections.1.title" = "THE FLOODS WRITE THEIR OWN LAWS";
-"region.south.sections.1.content" = "Here, floods come from the streets. \nRains slam down, drains clog, and motorbikes vanish under filthy water. Rescue crawls through gridlock. \nThe ones who make it are not surprised, they already know which schools and trees turn into shelters.";
-"region.south.sections.1.subtitle" = "Maps of safe ground matter more than weapons.";
+// MARK: - Region Detail — Central Risk Briefing
 
-"region.south.sections.2.title" = "WHEN THE CALL COMES, DON'T RUN ALONE";
-"region.south.sections.2.content" = "Not officials. Not trucks. Rescue in the South begins barefoot, in chest-deep water. Youth groups tie rope, neighbors carry the weak, men pile the sandbags. The army arrives hours later. \nSurvival comes from the crowd around you.";
-"region.south.sections.2.subtitle" = "Move with the tide of people, not against it.";
-
-"region.south.sections.3.title" = "THE FLOOD LEAVES, THE HEAT STRIKES";
-"region.south.sections.3.content" = "Danger does not end with the flood. Heat over 38°C breaks the strong, while puddles breed sickness. \nDengue, stomach bugs, and rot wait in plain water. Locals last by carrying shade, cooling with wet cloths, and boiling every drop they drink.";
-"region.south.sections.3.subtitle" = "In the South, thirst won't kill you, dirty water will.";
-
-"region.south.sections.4.title" = "WHEN SIGNALS FAIL, PEOPLE SPEAK";
-"region.south.sections.4.content" = "Electronics die first in the storm. Sirens drown, phones fail, radios crackle out. But people don't. A motorbike rider shouting through the street, a neighbor pounding your door, youth volunteers calling ahead...";
-"region.south.sections.4.subtitle" = "Miss it, and you miss your only chance to move.";
-
-// MARK: - Central Risk Briefing
 "region.central.riskBriefing" = "The Central coast does not just rain, it roars. \nTyphoons crash from sea to mountains, rivers flash without warning, and roads vanish under mudslides. Villages brace for wind, towns watch the waves. \nDown here, survival is timing, trust, and knowing which path is truly safe.";
 
-// MARK: - Central Sections
 "region.central.sections.1.title" = "MUD, RIVERS, AND FALLING RIDGES";
 "region.central.sections.1.content" = "From beach to mountain pass in one stride. Sand softens to mud, ridges fail, rivers erupt. \nLocals run three escape routes for every road, you'd better do the same. \nWhen the typhoon comes, the terrain is the ruler.";
 "region.central.sections.1.subtitle" = "Know every path, or be trapped.";
@@ -76,51 +120,97 @@
 "region.central.sections.4.content" = "The wind carries more than rain, it carries warnings. \nSirens howl, flags snap, messengers race along mountain paths. Networks of elders, unions, and fishermen reach every home. \nMiss their call, and the mud and water won't wait.";
 "region.central.sections.4.subtitle" = "Follow the warnings, disaster won't pause for you.";
 
-"scenariolist.region.south" = "South";
-"scenariolist.region.central" = "Central";
+
+// MARK: - Region Detail — South Risk Briefing
+
+"region.south.riskBriefing" = "The South tests you with water and heat. \nRivers swell and drown the delta, while cities choke under storms and standing floods. When the sun returns, the heat steals strength faster than hunger. Down here, survival is not about braving the cold, it is about outlasting the flood and guarding your water.";
+
+"region.south.sections.1.title" = "THE FLOODS WRITE THEIR OWN LAWS";
+"region.south.sections.1.content" = "Here, floods come from the streets. \nRains slam down, drains clog, and motorbikes vanish under filthy water. Rescue crawls through gridlock. \nThe ones who make it are not surprised, they already know which schools and trees turn into shelters.";
+"region.south.sections.1.subtitle" = "Maps of safe ground matter more than weapons.";
+
+"region.south.sections.2.title" = "WHEN THE CALL COMES, DON'T RUN ALONE";
+"region.south.sections.2.content" = "Not officials. Not trucks. Rescue in the South begins barefoot, in chest-deep water. Youth groups tie rope, neighbors carry the weak, men pile the sandbags. The army arrives hours later. \nSurvival comes from the crowd around you.";
+"region.south.sections.2.subtitle" = "Move with the tide of people, not against it.";
+
+"region.south.sections.3.title" = "THE FLOOD LEAVES, THE HEAT STRIKES";
+"region.south.sections.3.content" = "Danger does not end with the flood. Heat over 38°C breaks the strong, while puddles breed sickness. \nDengue, stomach bugs, and rot wait in plain water. Locals last by carrying shade, cooling with wet cloths, and boiling every drop they drink.";
+"region.south.sections.3.subtitle" = "In the South, thirst won't kill you, dirty water will.";
+
+"region.south.sections.4.title" = "WHEN SIGNALS FAIL, PEOPLE SPEAK";
+"region.south.sections.4.content" = "Electronics die first in the storm. Sirens drown, phones fail, radios crackle out. But people don't. A motorbike rider shouting through the street, a neighbor pounding your door, youth volunteers calling ahead...";
+"region.south.sections.4.subtitle" = "Miss it, and you miss your only chance to move.";
+
+
+// MARK: - Scenario List View
+
+"scenariolist.header" = "MISSION BOARD";
+"scenariolist.subheader" = "Choose your mission";
+"scenariolist.coming_soon" = "· more scenarios coming soon ·";
+"scenariolist.back" = "back to regions";
+"scenariolist.diary" = "Diary";
 "scenariolist.region.north" = "North";
+"scenariolist.region.central" = "Central";
+"scenariolist.region.south" = "South";
+"scenariolist.board.a11y" = "Mission board for %@";
+"scenariolist.diary.a11y" = "Open diary";
+"scenariolist.diary.a11y.hint" = "View your reflections from completed missions";
+"scenariolist.back.a11y" = "Go back";
+"scenariolist.back.a11y.hint" = "Return to region selection";
+
+
+// MARK: - Blindbox Card (Mission Card)
 
 "mission.classified" = "Not Done";
 "mission.responded" = "Done";
+"mission.a11y.label" = "Mission %d, %@";
+"mission.a11y.completed" = "completed";
+"mission.a11y.locked" = "locked";
+"mission.a11y.hint.replay" = "Double tap to replay";
+"mission.a11y.hint.start" = "Double tap to start this mission";
 
-"diary.back" = "aa";
-"diary.back.hint" = "aa";
-"diary.entry.hint" = "aa";
 
-// MARK: - Splash Screen
-"splash.welcome_message" = "Welcome, survivor.\nBefore you step into the unknown, tell us — who are you?";
-"splash.enter_name" = "YOUR IDENTITY";
-"splash.name_placeholder" = "Enter your name";
-"splash.begin" = "BEGIN";
-"splash.name_accessibility" = "Enter your name";
-"splash.name_hint" = "Type your name to begin the experience";
-"splash.begin_accessibility" = "Begin the experience";
+// MARK: - Mission Brief Overlay (Dispatch)
 
-// MARK: - Home View
-"home.title.red" = "RED";
-"home.title.embers" = "EMBERS";
-"home.title.vi" = "THAN HỒNG";
-"home.start_game" = "Start Game";
-"home.visit_regions" = "Visit Regions";
-"home.diary" = "Diary";
-"home.howtoplay" = "How to play";
-"home.howtoplay.hint" = "Opens a guide on how to play";
+"threat.level" = "THREAT LEVEL";
+"threat.level.accessibility" = "Threat level: %@";
+"dispatch.incoming" = "INCOMING DISPATCH";
+"dispatch.scroll_guide" = "scroll to read the briefing";
+"dispatch.respond" = "RESPOND";
+"dispatch.not_ready" = "NOT READY";
+"dispatch.ready_prompt" = "Double tap to accept the mission";
+"dispatch.retreat_hint" = "Double tap to return to mission board";
 
-// MARK: - Settings
-"settings.title" = "SETTINGS";
-"settings.language" = "LANGUAGE";
-"settings.appearance" = "APPEARANCE";
-"settings.light" = "Light";
-"settings.dark" = "Dark";
-"settings.system" = "Auto";
-"settings.close" = "Close";
-"settings.close.hint" = "Closes the settings panel";
-"settings.button" = "Settings";
-"settings.button.hint" = "Opens settings for language and appearance";
-"settings.language.current" = "Currently selected";
-"settings.language.switch" = "Double tap to switch";
+
+// MARK: - Game View
+
+"game.reflection_unavailable" = "Reflection unavailable";
+"game.chosen" = "CHOSEN";
+"game.option.hint" = "Double tap to select this option";
+
+
+// MARK: - Reflection Result View
+
+"reflection.result.header" = "IN PEOPLE'S EYES, YOU ARE LIKE";
+"reflection.result.announcement" = "Your archetype is";
+"reflection.diary" = "VIEW DIARY";
+"reflection.diary.hint" = "Double tap to view your diary entry";
+"reflection.play_again" = "PLAY AGAIN";
+"reflection.play_again.hint" = "Double tap to start a new mission";
+
+
+// MARK: - Diary List View
+
+"diary.title" = "DIARY";
+"diary.subtitle" = "Your adaptation journey.";
+"diary.past_scenarios" = "PAST SCENARIOS";
+"diary.back" = "Back";
+"diary.back.hint" = "Return to previous screen";
+"diary.entry.hint" = "Open diary entry";
+
 
 // MARK: - Diary Detail View
+
 "diary.detail.greeting" = "Dear Diary,";
 "diary.detail.subtitle" = "A regular day of %@'s adaptation in Việt Nam.";
 "diary.detail.date" = "Today is %@";
@@ -129,65 +219,8 @@
 "diary.detail.insight_placeholder" = "Insight coming soon.";
 "diary.detail.scroll_hint" = "scroll to read";
 
-// MARK: - Diary List View
-"diary.title" = "DIARY";
-"diary.subtitle" = "Your adaptation journey.";
-"diary.past_scenarios" = "PAST SCENARIOS";
-
-// MARK: - Diary Navigation (REPLACE the "aa" placeholders)
-"diary.back" = "Back";
-"diary.back.hint" = "Return to previous screen";
-"diary.entry.hint" = "Open diary entry";
-
- "dispatch.scroll_guide" = "scroll to read the briefing";
- "reflection.result.header" = "IN PEOPLE'S EYES, YOU ARE LIKE";
- "ui.chronicles.title" = "CHRONICLES";
- "scenariolist.header" = "MISSION BOARD";
- "scenariolist.subheader" = "Choose your mission";
- "scenariolist.back" = "back to regions";
-
-// MARK: - Game
- "game.reflection_unavailable" = "Reflection unavailable";
- "game.chosen" = "CHOSEN";
-
-// MARK: - Region Card
- "region.tap_to_explore" = "Tap to explore ›";
-
-// MARK: - Scenario List
- "scenariolist.coming_soon" = "· more scenarios coming soon ·";
 
 // MARK: - Diary Collection Panel
- "diary.collection.title" = "YOUR COLLECTION";
- "diary.collection.empty" = "No objects yet. Play a scenario first.";
 
-// MARK: - Diary List (these were in Batch 1 keys, verify they exist)
- "diary.title" = "DIARY";
- "diary.subtitle" = "Your adaptation journey.";
- "diary.past_scenarios" = "PAST SCENARIOS";
-
-
-// MARK: - BlindboxCard Accessibility
- "mission.a11y.label" = "Mission %d, %@";
- "mission.a11y.completed" = "completed";
- "mission.a11y.locked" = "locked";
- "mission.a11y.hint.replay" = "Double tap to replay";
- "mission.a11y.hint.start" = "Double tap to start this mission";
-
-// MARK: - Home Accessibility
- "home.title.a11y" = "Red Embers — Than Hồng";
-
-// MARK: - Scenario List Accessibility
- "scenariolist.board.a11y" = "Mission board for %@";
- "scenariolist.diary.a11y" = "Open diary";
- "scenariolist.diary.a11y.hint" = "View your reflections from completed missions";
- "scenariolist.back.a11y" = "Go back";
- "scenariolist.back.a11y.hint" = "Return to region selection";
-
-// MARK: - Story View
- "story.skip" = "Skip";
- "story.skip.a11y" = "Skip introduction";
- "story.skip.a11y.hint" = "Go directly to region selection";
- "story.enter" = "Enter  ▶";
- "story.enter.a11y" = "Begin region exploration";
- "story.nav.next" = "Next section";
- "story.nav.previous" = "Previous section";
+"diary.collection.title" = "YOUR COLLECTION";
+"diary.collection.empty" = "No objects yet. Play a scenario first.";

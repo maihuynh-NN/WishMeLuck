@@ -1,25 +1,88 @@
-// MARK: - UI Generic
+// MARK: - Splash Screen
+
+"splash.welcome_message" = "Chào mừng, người sống sót.\nTrước khi bước vào điều chưa biết, hãy cho chúng tôi biết — bạn là ai?";
+"splash.enter_name" = "DANH TÍNH CỦA BẠN";
+"splash.name_placeholder" = "Nhập tên của bạn";
+"splash.begin" = "BẮT ĐẦU";
+"splash.name_accessibility" = "Nhập tên của bạn";
+"splash.name_hint" = "Nhập tên để bắt đầu trải nghiệm";
+"splash.begin_accessibility" = "Bắt đầu trải nghiệm";
+
+
+// MARK: - Home View
+
+"home.title.red" = "RED";
+"home.title.embers" = "EMBERS";
+"home.title.vi" = "THAN HỒNG";
+"home.title.a11y" = "Red Embers — Than Hồng";
+"home.start_game" = "Bắt Đầu";
+"home.visit_regions" = "Khám Phá Vùng";
+"home.diary" = "Nhật Ký";
+"home.howtoplay" = "Cách chơi";
+"home.howtoplay.hint" = "Mở hướng dẫn chơi";
+
+
+// MARK: - Settings Modal
+
+"settings.title" = "CÀI ĐẶT";
+"settings.language" = "NGÔN NGỮ";
+"settings.language.current" = "Đang được chọn";
+"settings.language.switch" = "Nhấn đúp để chuyển";
+"settings.appearance" = "GIAO DIỆN";
+"settings.light" = "Sáng";
+"settings.dark" = "Tối";
+"settings.system" = "Tự động";
+"settings.close" = "Đóng";
+"settings.close.hint" = "Đóng bảng cài đặt";
+"settings.button" = "Cài đặt";
+"settings.button.hint" = "Mở cài đặt ngôn ngữ và giao diện";
+
+
+// MARK: - Story View
+
+"story.skip" = "Bỏ qua";
+"story.skip.a11y" = "Bỏ qua phần giới thiệu";
+"story.skip.a11y.hint" = "Chuyển thẳng đến chọn vùng";
+"story.enter" = "Bắt Đầu  ▶";
+"story.enter.a11y" = "Bắt đầu khám phá vùng đất";
+"story.nav.next" = "Phần tiếp theo";
+"story.nav.previous" = "Phần trước";
+
+
+// MARK: - Region Selection View
+
+"region.title" = "Chọn Khu Vực";
+"region.subtitle" = "Vuốt để khám phá các thiên tai khác nhau";
+"regionselect.selectButton" = "CHỌN";
+
+
+// MARK: - Region Card
+
+"region.tap_to_explore" = "Chạm để khám phá ›";
+
+
+// MARK: - Region Names
+
+"region.north.name" = "Bắc";
+"region.central.name" = "Trung";
+"region.south.name" = "Nam";
+
+
+// MARK: - Region Detail Popover — UI
+
 "ui.landing_on" = "ĐỔ BỘ VÀO";
 "ui.survival_orientation_manual" = "Cẩm Nang Định Hướng Sinh Tồn";
 "ui.the_region" = "MIỀN %@";
 "ui.ready_to_face_trials" = "Sẵn sàng đối mặt với thử thách của %@?";
 "ui.enter_region" = "VÀO KHU VỰC";
 "ui.study_others_first" = "tìm hiểu các vùng khác trước";
+"ui.chronicles.title" = "BIÊN NIÊN SỬ";
 
-// MARK: - Region Names
-"region.north.name" = "Bắc";
-"region.central.name" = "Trung";
-"region.south.name" = "Nam";
 
-// MARK: - Region Selection
-"region.title" = "Chọn Khu Vực";
-"region.subtitle" = "Vuốt để khám phá các thiên tai khác nhau";
-"regionselect.selectButton" = "CHỌN";
+// MARK: - Region Detail — North Risk Briefing
 
-// MARK: - North Risk Briefing
 "region.north.riskBriefing" = "Miền Bắc không chờ bạn chuẩn bị. \nBão ập đến qua đêm. Thung lũng chìm trong nước, sườn núi nứt vỡ, cả xóm làng biến mất sau những bức tường tuyết hay bùn đất. Người địa phương sống sót vì họ lên kế hoạch như thể mạng sống phụ thuộc vào đó. \nCủa bạn cũng vậy.";
 
-// MARK: - North Sections
 "region.north.sections.1.title" = "CHÍNH ĐẤT ĐAI THỬ THÁCH BẠN";
 "region.north.sections.1.content" = "Ở miền Bắc, một khoảnh khắc bạn đứng trên mặt đất trống, khoảnh khắc tiếp theo bạn đang chống chọi với gió lạnh buốt trên sườn núi. \nĐộ cao lấy đi hơi ấm nhanh hơn lửa có thể trả lại. Những người dày dạn kinh nghiệm không bao giờ tin vào một con đường duy nhất, họ mang bản đồ trong đầu. \nKhi con đèo chính sập, họ đã biết các lối tắt.";
 "region.north.sections.1.subtitle" = "Học thuộc chúng, hoặc bị chôn vùi cùng con đường.";
@@ -36,30 +99,11 @@
 "region.north.sections.4.content" = "Cứu hộ ở miền Bắc bắt đầu từ hàng xóm. \nNhững đội xung kích bắc dây qua sông và đào bới qua lở đất trước khi quân đội đến. Lính và trực thăng đến sau, nhưng bàn tay chìa ra đầu tiên trong bóng tối luôn là người địa phương. \nHãy biết các nơi trú ẩn, biết các tuyến đường.";
 "region.north.sections.4.subtitle" = "Nếu bạn ẩn náu ở nhà, đội cứu hộ sẽ đi qua mà không biết.";
 
-// MARK: - South Risk Briefing
-"region.south.riskBriefing" = "Miền Nam thử thách bạn bằng nước và nắng. \nSông dâng lên nhấn chìm đồng bằng, trong khi các thành phố nghẹt thở dưới bão và nước ngập. Khi mặt trời trở lại, cái nóng lấy đi sức lực nhanh hơn đói. Ở đây, sinh tồn không phải là dũng cảm chống chọi cái lạnh, mà là vượt qua trận lũ và bảo vệ nguồn nước.";
 
-// MARK: - South Sections
-"region.south.sections.1.title" = "LŨ LỤT VIẾT LUẬT CỦA RIÊNG MÌNH";
-"region.south.sections.1.content" = "Ở đây, lũ đến từ những con phố. \nMưa đổ xuống, cống tắc, xe máy biến mất dưới làn nước bẩn. Cứu hộ bị kẹt trong tắc đường. \nNhững người vượt qua không phải là người bị bất ngờ, họ đã biết trường học và cây cối nào trở thành nơi trú ẩn.";
-"region.south.sections.1.subtitle" = "Bản đồ vùng đất an toàn quan trọng hơn vũ khí.";
+// MARK: - Region Detail — Central Risk Briefing
 
-"region.south.sections.2.title" = "KHI TIẾNG GỌI ĐẾN, ĐỪNG CHẠY MỘT MÌNH";
-"region.south.sections.2.content" = "Không phải quan chức. Không phải xe tải. Cứu hộ ở miền Nam bắt đầu chân trần, ngập đến ngực. Đoàn thanh niên buộc dây, hàng xóm cõng người yếu, đàn ông chất bao cát. Quân đội đến nhiều giờ sau. \nSự sống sót đến từ đám đông xung quanh bạn.";
-"region.south.sections.2.subtitle" = "Đi cùng dòng người, không phải ngược lại.";
-
-"region.south.sections.3.title" = "LŨ RÚT, NẮNG NÓNG ĐỔ XUỐNG";
-"region.south.sections.3.content" = "Nguy hiểm không kết thúc khi lũ rút. Nhiệt độ trên 38°C quật ngã người khoẻ mạnh, trong khi vũng nước sinh ra bệnh tật. \nSốt xuất huyết, bệnh tiêu hoá, và mầm bệnh ẩn trong nước thường. Người địa phương sống sót bằng cách mang theo bóng mát, làm mát bằng khăn ướt, và đun sôi từng giọt nước uống.";
-"region.south.sections.3.subtitle" = "Ở miền Nam, khát không giết bạn, nước bẩn mới giết.";
-
-"region.south.sections.4.title" = "KHI TÍN HIỆU MẤT, CON NGƯỜI LÊN TIẾNG";
-"region.south.sections.4.content" = "Thiết bị điện tử chết đầu tiên trong bão. Còi hú chìm trong nước, điện thoại mất sóng, radio tắt tiếng. Nhưng con người thì không. Người đi xe máy hét vang qua phố, hàng xóm đập cửa, tình nguyện viên thanh niên gọi báo trước...";
-"region.south.sections.4.subtitle" = "Bỏ lỡ điều đó, bạn bỏ lỡ cơ hội duy nhất để di chuyển.";
-
-// MARK: - Central Risk Briefing
 "region.central.riskBriefing" = "Bờ biển miền Trung không chỉ mưa, mà gào thét. \nBão tố đổ bộ từ biển vào núi, sông lũ ập đến không báo trước, và những con đường biến mất dưới lở đất. Làng mạc chống chọi với gió, thị trấn nhìn sóng biển. \nỞ đây, sinh tồn là sự kịp thời, lòng tin, và biết con đường nào thực sự an toàn.";
 
-// MARK: - Central Sections
 "region.central.sections.1.title" = "BÙN ĐẤT, SÔNG SUỐI VÀ SỰ SỤP ĐỔ";
 "region.central.sections.1.content" = "Từ bãi biển đến đèo núi chỉ một bước. Cát hoá thành bùn, sườn núi sụp đổ, sông lũ bùng phát. \nNgười địa phương chuẩn bị ba tuyến thoát hiểm cho mỗi con đường, bạn cũng nên làm vậy. \nKhi bão đến, địa hình là kẻ cai trị.";
 "region.central.sections.1.subtitle" = "Biết mọi con đường, hoặc bị mắc kẹt.";
@@ -76,35 +120,97 @@
 "region.central.sections.4.content" = "Gió mang theo nhiều hơn mưa, nó mang theo cảnh báo. \nCòi hú vang, cờ phất, sứ giả chạy dọc các con đường núi. Mạng lưới các bậc trưởng lão, hội đoàn, và ngư dân tiếp cận từng ngôi nhà. \nBỏ lỡ tiếng gọi của họ, bùn đất và nước sẽ không chờ bạn.";
 "region.central.sections.4.subtitle" = "Hãy theo những cảnh báo đó, thiên tai sẽ không dừng lại vì bạn.";
 
-"scenariolist.region.south" = "Miền Nam";
-"scenariolist.region.central" = "Miền Trung";
+
+// MARK: - Region Detail — South Risk Briefing
+
+"region.south.riskBriefing" = "Miền Nam thử thách bạn bằng nước và nắng. \nSông dâng lên nhấn chìm đồng bằng, trong khi các thành phố nghẹt thở dưới bão và nước ngập. Khi mặt trời trở lại, cái nóng lấy đi sức lực nhanh hơn đói. Ở đây, sinh tồn không phải là dũng cảm chống chọi cái lạnh, mà là vượt qua trận lũ và bảo vệ nguồn nước.";
+
+"region.south.sections.1.title" = "LŨ LỤT VIẾT LUẬT CỦA RIÊNG MÌNH";
+"region.south.sections.1.content" = "Ở đây, lũ đến từ những con phố. \nMưa đổ xuống, cống tắc, xe máy biến mất dưới làn nước bẩn. Cứu hộ bị kẹt trong tắc đường. \nNhững người vượt qua không phải là người bị bất ngờ, họ đã biết trường học và cây cối nào trở thành nơi trú ẩn.";
+"region.south.sections.1.subtitle" = "Bản đồ vùng đất an toàn quan trọng hơn vũ khí.";
+
+"region.south.sections.2.title" = "KHI TIẾNG GỌI ĐẾN, ĐỪNG CHẠY MỘT MÌNH";
+"region.south.sections.2.content" = "Không phải quan chức. Không phải xe tải. Cứu hộ ở miền Nam bắt đầu chân trần, ngập đến ngực. Đoàn thanh niên buộc dây, hàng xóm cõng người yếu, đàn ông chất bao cát. Quân đội đến nhiều giờ sau. \nSự sống sót đến từ đám đông xung quanh bạn.";
+"region.south.sections.2.subtitle" = "Đi cùng dòng người, không phải ngược lại.";
+
+"region.south.sections.3.title" = "LŨ RÚT, NẮNG NÓNG ĐỔ XUỐNG";
+"region.south.sections.3.content" = "Nguy hiểm không kết thúc khi lũ rút. Nhiệt độ trên 38°C quật ngã người khoẻ mạnh, trong khi vũng nước sinh ra bệnh tật. \nSốt xuất huyết, bệnh tiêu hoá, và mầm bệnh ẩn trong nước thường. Người địa phương sống sót bằng cách mang theo bóng mát, làm mát bằng khăn ướt, và đun sôi từng giọt nước uống.";
+"region.south.sections.3.subtitle" = "Ở miền Nam, khát không giết bạn, nước bẩn mới giết.";
+
+"region.south.sections.4.title" = "KHI TÍN HIỆU MẤT, CON NGƯỜI LÊN TIẾNG";
+"region.south.sections.4.content" = "Thiết bị điện tử chết đầu tiên trong bão. Còi hú chìm trong nước, điện thoại mất sóng, radio tắt tiếng. Nhưng con người thì không. Người đi xe máy hét vang qua phố, hàng xóm đập cửa, tình nguyện viên thanh niên gọi báo trước...";
+"region.south.sections.4.subtitle" = "Bỏ lỡ điều đó, bạn bỏ lỡ cơ hội duy nhất để di chuyển.";
+
+
+// MARK: - Scenario List View
+
+"scenariolist.header" = "BẢNG NHIỆM VỤ";
+"scenariolist.subheader" = "Chọn nhiệm vụ của bạn";
+"scenariolist.coming_soon" = "· sắp có thêm tình huống ·";
+"scenariolist.back" = "quay lại chọn vùng";
+"scenariolist.diary" = "Nhật Ký";
 "scenariolist.region.north" = "Miền Bắc";
+"scenariolist.region.central" = "Miền Trung";
+"scenariolist.region.south" = "Miền Nam";
+"scenariolist.board.a11y" = "Bảng nhiệm vụ cho %@";
+"scenariolist.diary.a11y" = "Mở nhật ký";
+"scenariolist.diary.a11y.hint" = "Xem lại các kết quả từ nhiệm vụ đã hoàn thành";
+"scenariolist.back.a11y" = "Quay lại";
+"scenariolist.back.a11y.hint" = "Quay về chọn vùng";
 
-// MARK: - Home View
-"home.title.red" = "RED";
-"home.title.embers" = "EMBERS";
-"home.title.vi" = "THAN HỒNG";
-"home.start_game" = "Bắt Đầu";
-"home.visit_regions" = "Khám Phá Vùng";
-"home.diary" = "Nhật Ký";
-"home.howtoplay" = "Cách chơi";
-"home.howtoplay.hint" = "Mở hướng dẫn chơi";
 
-// MARK: - Settings
-"settings.title" = "CÀI ĐẶT";
-"settings.language" = "NGÔN NGỮ";
-"settings.appearance" = "GIAO DIỆN";
-"settings.light" = "Sáng";
-"settings.dark" = "Tối";
-"settings.system" = "Tự động";
-"settings.close" = "Đóng";
-"settings.close.hint" = "Đóng bảng cài đặt";
-"settings.button" = "Cài đặt";
-"settings.button.hint" = "Mở cài đặt ngôn ngữ và giao diện";
-"settings.language.current" = "Đang được chọn";
-"settings.language.switch" = "Nhấn đúp để chuyển";
+// MARK: - Blindbox Card (Mission Card)
+
+"mission.classified" = "Chưa Hoàn Thành";
+"mission.responded" = "Đã Hoàn Thành";
+"mission.a11y.label" = "Nhiệm vụ %d, %@";
+"mission.a11y.completed" = "đã hoàn thành";
+"mission.a11y.locked" = "chưa mở";
+"mission.a11y.hint.replay" = "Nhấn đúp để chơi lại";
+"mission.a11y.hint.start" = "Nhấn đúp để bắt đầu nhiệm vụ";
+
+
+// MARK: - Mission Brief Overlay (Dispatch)
+
+"threat.level" = "MỨC ĐỘ NGUY HIỂM";
+"threat.level.accessibility" = "Mức độ nguy hiểm: %@";
+"dispatch.incoming" = "ĐIỆN KHẨN ĐẾN";
+"dispatch.scroll_guide" = "cuộn để đọc bản tin";
+"dispatch.respond" = "ỨNG CHIẾN";
+"dispatch.not_ready" = "CHƯA SẴN SÀNG";
+"dispatch.ready_prompt" = "Nhấn đúp để nhận nhiệm vụ";
+"dispatch.retreat_hint" = "Nhấn đúp để quay lại bảng nhiệm vụ";
+
+
+// MARK: - Game View
+
+"game.reflection_unavailable" = "Không thể hiển thị kết quả";
+"game.chosen" = "ĐÃ CHỌN";
+"game.option.hint" = "Nhấn đúp để chọn phương án này";
+
+
+// MARK: - Reflection Result View
+
+"reflection.result.header" = "MẪU HÌNH CỦA BẠN";
+"reflection.result.announcement" = "Mẫu hình của bạn là";
+"reflection.diary" = "XEM NHẬT KÝ";
+"reflection.diary.hint" = "Nhấn đúp để xem mục nhật ký";
+"reflection.play_again" = "CHƠI LẠI";
+"reflection.play_again.hint" = "Nhấn đúp để bắt đầu nhiệm vụ mới";
+
+
+// MARK: - Diary List View
+
+"diary.title" = "NHẬT KÝ";
+"diary.subtitle" = "Hành trình thích nghi của bạn.";
+"diary.past_scenarios" = "CÁC TÌNH HUỐNG ĐÃ QUA";
+"diary.back" = "Quay lại";
+"diary.back.hint" = "Quay về màn hình trước";
+"diary.entry.hint" = "Mở mục nhật ký";
+
 
 // MARK: - Diary Detail View
+
 "diary.detail.greeting" = "Nhật Ký Thân Mến,";
 "diary.detail.subtitle" = "Một ngày bình thường của %@ ở Việt Nam.";
 "diary.detail.date" = "Hôm nay là %@";
@@ -113,63 +219,8 @@
 "diary.detail.insight_placeholder" = "Nội dung đang được cập nhật.";
 "diary.detail.scroll_hint" = "cuộn để đọc";
 
-// MARK: - Diary List View
-"diary.title" = "NHẬT KÝ";
-"diary.subtitle" = "Hành trình thích nghi của bạn.";
-"diary.past_scenarios" = "CÁC TÌNH HUỐNG ĐÃ QUA";
-
-// MARK: - Diary Navigation
-"diary.back" = "Quay lại";
-"diary.back.hint" = "Quay về màn hình trước";
-"diary.entry.hint" = "Mở mục nhật ký";
-
- "dispatch.scroll_guide" = "cuộn để đọc bản tin";
- "reflection.result.header" = "MẪU HÌNH CỦA BẠN";
- "ui.chronicles.title" = "BIÊN NIÊN SỬ";
- "scenariolist.header" = "BẢNG NHIỆM VỤ";
- "scenariolist.subheader" = "Chọn nhiệm vụ của bạn";
- "scenariolist.back" = "quay lại chọn vùng";
-
- "game.reflection_unavailable" = "Không thể hiển thị kết quả";
- "game.chosen" = "ĐÃ CHỌN";
-
-// MARK: - Region Card
- "region.tap_to_explore" = "Chạm để khám phá ›";
-
-// MARK: - Scenario List
- "scenariolist.coming_soon" = "· sắp có thêm tình huống ·";
 
 // MARK: - Diary Collection Panel
- "diary.collection.title" = "BỘ SƯU TẬP";
- "diary.collection.empty" = "Chưa có vật phẩm. Hãy chơi một tình huống.";
 
-// MARK: - Diary List
- "diary.title" = "NHẬT KÝ";
- "diary.subtitle" = "Hành trình thích nghi của bạn.";
- "diary.past_scenarios" = "CÁC TÌNH HUỐNG ĐÃ QUA";
-
-// MARK: - BlindboxCard Accessibility
- "mission.a11y.label" = "Nhiệm vụ %d, %@";
- "mission.a11y.completed" = "đã hoàn thành";
- "mission.a11y.locked" = "chưa mở";
- "mission.a11y.hint.replay" = "Nhấn đúp để chơi lại";
- "mission.a11y.hint.start" = "Nhấn đúp để bắt đầu nhiệm vụ";
-
-// MARK: - Home Accessibility
- "home.title.a11y" = "Red Embers — Than Hồng";
-
-// MARK: - Scenario List Accessibility
- "scenariolist.board.a11y" = "Bảng nhiệm vụ cho %@";
- "scenariolist.diary.a11y" = "Mở nhật ký";
- "scenariolist.diary.a11y.hint" = "Xem lại các kết quả từ nhiệm vụ đã hoàn thành";
- "scenariolist.back.a11y" = "Quay lại";
- "scenariolist.back.a11y.hint" = "Quay về chọn vùng";
-
-// MARK: - Story View
- "story.skip" = "Bỏ qua";
- "story.skip.a11y" = "Bỏ qua phần giới thiệu";
- "story.skip.a11y.hint" = "Chuyển thẳng đến chọn vùng";
- "story.enter" = "Bắt Đầu  ▶";
- "story.enter.a11y" = "Bắt đầu khám phá vùng đất";
- "story.nav.next" = "Phần tiếp theo";
- "story.nav.previous" = "Phần trước";
+"diary.collection.title" = "BỘ SƯU TẬP";
+"diary.collection.empty" = "Chưa có vật phẩm. Hãy chơi một tình huống.";
