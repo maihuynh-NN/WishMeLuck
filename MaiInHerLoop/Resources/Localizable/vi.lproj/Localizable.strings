@@ -173,7 +173,7 @@
 // MARK: - Mission Brief Overlay (Dispatch)
 
 "threat.level" = "MỨC ĐỘ NGUY HIỂM";
-"threat.level.accessibility" = "Mức độ nguy hiểm: %@";
+"threat.level.accessibility" = "Mức độ nguy hiểm: %d trên %d";
 "dispatch.incoming" = "ĐIỆN KHẨN ĐẾN";
 "dispatch.scroll_guide" = "cuộn để đọc bản tin";
 "dispatch.respond" = "ỨNG CHIẾN";

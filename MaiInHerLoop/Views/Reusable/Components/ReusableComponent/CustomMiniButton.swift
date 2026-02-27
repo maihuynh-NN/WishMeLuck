@@ -45,7 +45,7 @@ struct CustomMiniButton: View {
                 }
             }
             .frame(width: 30, height: 30)
-            .background(buttonColor.opacity(0.4))
+            .background(Color("Beige3").opacity(0.85))
         }
         .frame(minWidth: 44, minHeight: 44)
         .contentShape(Rectangle())

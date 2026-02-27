@@ -51,7 +51,7 @@
 
 // MARK: - Region Selection View
 
-"region.title" = "Choose Your Region";
+"region.title" = "RED EMBERS Airlines";
 "region.subtitle" = "Swipe to explore different disasters";
 "regionselect.selectButton" = "SELECT";
 
@@ -173,7 +173,7 @@
 // MARK: - Mission Brief Overlay (Dispatch)
 
 "threat.level" = "THREAT LEVEL";
-"threat.level.accessibility" = "Threat level: %@";
+"threat.level.accessibility" = "TThreat level: %d out of %d";
 "dispatch.incoming" = "INCOMING DISPATCH";
 "dispatch.scroll_guide" = "scroll to read the briefing";
 "dispatch.respond" = "RESPOND";

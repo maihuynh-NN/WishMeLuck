@@ -185,13 +185,16 @@ struct GameView: View {
     // MARK: - Language helpers
 
     @AppStorage("selectedLanguage") private var language = "en"
-
+    @AppStorage("playerName") private var playerName = ""
+    
     private func resolvedText(_ question: Question) -> String {
-        language == "vi" ? question.textVI : question.textEN
+        let raw = language == "vi" ? question.textVI : question.textEN
+        return raw.replacingOccurrences(of: "[Name]", with: playerName)
     }
 
     private func resolvedOptionText(_ option: Option) -> String {
-        language == "vi" ? option.textVI : option.textEN
+        let raw = language == "vi" ? option.textVI : option.textEN
+        return raw.replacingOccurrences(of: "[Name]", with: playerName)
     }
 }
 

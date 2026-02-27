@@ -7,6 +7,7 @@ struct MissionBriefingOverlay: View {
     let onRetreat: () -> Void
 
     @AppStorage("selectedLanguage") private var language = "en"
+    @AppStorage("playerName") private var playerName = ""
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     @State private var pulseAnimation = false
@@ -22,7 +23,12 @@ struct MissionBriefingOverlay: View {
         language == "vi" ? scenario.titleVI : scenario.titleEN
     }
     private var intro: String {
-        language == "vi" ? scenario.introVI : scenario.introEN
+        let raw = language == "vi" ? scenario.introVI : scenario.introEN
+        return raw.replacingOccurrences(of: "[Name]", with: displayName)
+    }
+    
+    private var displayName: String {
+        playerName.isEmpty ? "[Name]" : playerName
     }
 
     // MARK: - Body

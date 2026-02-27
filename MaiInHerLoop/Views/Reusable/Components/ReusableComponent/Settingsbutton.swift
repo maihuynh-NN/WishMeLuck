@@ -18,7 +18,7 @@ struct SettingsButton: View {
 
                     CustomMiniButton(
                         systemIcon: "gearshape.fill",
-                        buttonColor: Color("Beige2"),
+                        buttonColor: Color("Red3"),
                         action: {
                             if reduceMotion {
                                 showSettings = true
@@ -31,7 +31,7 @@ struct SettingsButton: View {
                     )
                     .customedBorder(
                         borderShape: "panel-border-004",
-                        borderColor: Color("Beige2"),
+                        borderColor: Color("Gold3"),
                         buttonType: .miniButton
                     )
                     .accessibilityLabel("settings.button".localized)
