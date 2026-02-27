@@ -10,110 +10,326 @@
   "questions": [
     {
       "id": "q1",
-      "text_en": "The power grid flickers and dies. [Name], you're suddenly sitting in stagnant, heavy air. Your skin is bone-dry despite the heat, and your head begins to throb.",
-      "text_vi": "Lưới điện chập chờn rồi tắt lịm. [Name], bạn đột nhiên ngồi trong bầu không khí đặc quánh, đứng lặng. Da bạn khô khốc dù trời nóng hầm hập, và đầu bắt đầu đau nhức.",
-      "timer": 20,
+      "text_en": "The power grid flickers and dies. You're sitting in stagnant, heavy air. Your skin is bone-dry despite the heat, and your head throbs.",
+      "text_vi": "Lưới điện chập chờn rồi tắt. Bạn ngồi trong bầu không khí đặc quánh. Da khô khốc dù nóng hầm hập, đầu nhức dần.",
+      "timer": 15,
       "options": [
-        { "id": "q1_a", "text_en": "Drink a large glass of tap water", "text_vi": "Uống một ly nước máy thật lớn", "trait_tag": "self_reliance", "next_question": "q2" },
-        { "id": "q1_b", "text_en": "Take a cold shower to cool down", "text_vi": "Đi tắm nước lạnh để hạ nhiệt", "trait_tag": "immediate_action", "next_question": "q2" },
-        { "id": "q1_c", "text_en": "Find a wet towel for your neck", "text_vi": "Dùng khăn ướt quấn quanh cổ", "trait_tag": "risk_recognition", "next_question": "q2" },
-        { "id": "q1_d", "text_en": "Open all windows for a breeze", "text_vi": "Mở hết cửa sổ để đón gió", "trait_tag": "information_first", "next_question": "q2" }
+        {
+          "id": "q1_a",
+          "text_en": "Drink a large glass of tap water",
+          "text_vi": "Uống một ly nước máy thật lớn",
+          "trait_tag": "self_reliance",
+          "next_question": "q2"
+        },
+        {
+          "id": "q1_b",
+          "text_en": "Take a cold shower to cool down",
+          "text_vi": "Đi tắm nước lạnh để hạ nhiệt",
+          "trait_tag": "immediate_action",
+          "next_question": "q2"
+        },
+        {
+          "id": "q1_c",
+          "text_en": "Find a wet towel for your neck",
+          "text_vi": "Dùng khăn ướt quấn quanh cổ",
+          "trait_tag": "risk_recognition",
+          "next_question": "q2"
+        },
+        {
+          "id": "q1_d",
+          "text_en": "Open all windows for a breeze",
+          "text_vi": "Mở hết cửa sổ để đón gió",
+          "trait_tag": "information_first",
+          "next_question": "q2"
+        }
       ]
     },
     {
       "id": "q2",
-      "text_en": "The air outside is even hotter than inside. [Name], as you lean against the wall, you realize you haven't used the bathroom in hours. Your heart is racing.",
-      "text_vi": "Không khí bên ngoài còn nóng hơn trong nhà. [Name], khi tựa người vào tường, bạn nhận ra mình đã nhiều giờ chưa đi vệ sinh. Tim bạn đang đập rất nhanh.",
-      "timer": 20,
+      "text_en": "The air outside is even hotter. Leaning against the wall, you realize you haven't used the bathroom in hours. Your heart races.",
+      "text_vi": "Không khí bên ngoài còn nóng hơn. Tựa người vào tường, bạn nhận ra mình nhiều giờ chưa đi vệ sinh. Tim đập rất nhanh.",
+      "timer": 15,
       "options": [
-        { "id": "q2_a", "text_en": "Check your pulse and breathing", "text_vi": "Kiểm tra mạch và nhịp thở", "trait_tag": "risk_recognition", "next_question": "q3" },
-        { "id": "q2_b", "text_en": "Force yourself to drink more water", "text_vi": "Cố ép mình uống thêm nước", "trait_tag": "self_reliance", "next_question": "q3" },
-        { "id": "q2_c", "text_en": "Call a friend to chat it off", "text_vi": "Gọi điện cho bạn tán gẫu cho quên", "trait_tag": "information_first", "next_question": "q3" },
-        { "id": "q2_d", "text_en": "Lie down on the tiled floor", "text_vi": "Nằm xuống sàn gạch cho mát", "trait_tag": "immediate_action", "next_question": "q3" }
+        {
+          "id": "q2_a",
+          "text_en": "Check your pulse and breathing",
+          "text_vi": "Kiểm tra mạch và nhịp thở",
+          "trait_tag": "risk_recognition",
+          "next_question": "q3"
+        },
+        {
+          "id": "q2_b",
+          "text_en": "Force yourself to drink more water",
+          "text_vi": "Cố ép mình uống thêm nước",
+          "trait_tag": "self_reliance",
+          "next_question": "q3"
+        },
+        {
+          "id": "q2_c",
+          "text_en": "Call a friend to chat it off",
+          "text_vi": "Gọi điện cho bạn tán gẫu cho quên",
+          "trait_tag": "information_first",
+          "next_question": "q3"
+        },
+        {
+          "id": "q2_d",
+          "text_en": "Lie down on the tiled floor",
+          "text_vi": "Nằm xuống sàn gạch cho mát",
+          "trait_tag": "immediate_action",
+          "next_question": "q3"
+        }
       ]
     },
     {
       "id": "q3",
-      "text_en": "You feel a sudden wave of nausea. [Name], the room begins to tilt. You need to get to a cooler environment, but you feel too weak to walk down five flights of stairs.",
-      "text_vi": "Bạn đột nhiên thấy buồn nôn. [Name], căn phòng bắt đầu nghiêng ngả. Bạn cần đến nơi mát hơn, nhưng thấy quá yếu để đi bộ xuống 5 tầng cầu thang.",
-      "timer": 18,
+      "text_en": "A sudden wave of nausea. The room tilts. You need cooler air, but you're too weak for five flights of stairs.",
+      "text_vi": "Buồn nôn ập đến. Phòng nghiêng ngả. Bạn cần nơi mát hơn nhưng quá yếu để đi 5 tầng cầu thang.",
+      "timer": 15,
       "options": [
-        { "id": "q3_a", "text_en": "Message a neighbor for help", "text_vi": "Nhắn tin nhờ hàng xóm giúp đỡ", "trait_tag": "immediate_action", "next_question": "q4a" },
-        { "id": "q3_b", "text_en": "Try to vomit to feel better", "text_vi": "Cố nôn ra cho nhẹ người", "trait_tag": "self_reliance", "next_question": "q4b" },
-        { "id": "q3_c", "text_en": "Pour lukewarm water over your head", "text_vi": "Dội nước ấm lên đầu", "trait_tag": "risk_recognition", "next_question": "q4a" },
-        { "id": "q3_d", "text_en": "Wait for the power to come back", "text_vi": "Đợi đến khi có điện trở lại", "trait_tag": "information_first", "next_question": "q4b" }
+        {
+          "id": "q3_a",
+          "text_en": "Message a neighbor for help",
+          "text_vi": "Nhắn tin nhờ hàng xóm giúp đỡ",
+          "trait_tag": "immediate_action",
+          "next_question": "q4a"
+        },
+        {
+          "id": "q3_b",
+          "text_en": "Try to vomit to feel better",
+          "text_vi": "Cố nôn ra cho nhẹ người",
+          "trait_tag": "self_reliance",
+          "next_question": "q4b"
+        },
+        {
+          "id": "q3_c",
+          "text_en": "Pour lukewarm water over your head",
+          "text_vi": "Dội nước ấm lên đầu",
+          "trait_tag": "risk_recognition",
+          "next_question": "q4a"
+        },
+        {
+          "id": "q3_d",
+          "text_en": "Wait for the power to come back",
+          "text_vi": "Đợi đến khi có điện trở lại",
+          "trait_tag": "information_first",
+          "next_question": "q4b"
+        }
       ]
     },
     {
       "id": "q4a",
-      "text_en": "A neighbor arrives with an electrolyte drink, but you notice your skin is becoming red and hot to the touch. You’re stopping being able to sweat.",
-      "text_vi": "Hàng xóm mang nước điện giải đến, nhưng bạn thấy da mình bắt đầu đỏ ửng và nóng rực. Bạn không còn ra mồ hôi được nữa.",
-      "timer": 18,
+      "text_en": "A neighbor arrives with electrolytes, but your skin is turning red and hot to the touch. You've stopped sweating entirely.",
+      "text_vi": "Hàng xóm mang nước điện giải đến, nhưng da bạn đỏ ửng và nóng rực. Mồ hôi đã ngừng hẳn.",
+      "timer": 15,
       "options": [
-        { "id": "q4a_a", "text_en": "Ask them to call an ambulance", "text_vi": "Nhờ họ gọi xe cấp cứu ngay", "trait_tag": "risk_recognition", "next_question": "q5" },
-        { "id": "q4a_b", "text_en": "Fan yourself vigorously", "text_vi": "Quạt thật mạnh cho bản thân", "trait_tag": "self_reliance", "next_question": "q5" },
-        { "id": "q4a_c", "text_en": "Ask for an ice pack for your armpits", "text_vi": "Xin túi đá chườm vào nách", "trait_tag": "immediate_action", "next_question": "q5" },
-        { "id": "q4a_d", "text_en": "Check if they have any painkillers", "text_vi": "Hỏi xem họ có thuốc giảm đau không", "trait_tag": "information_first", "next_question": "q5" }
+        {
+          "id": "q4a_a",
+          "text_en": "Ask them to call an ambulance",
+          "text_vi": "Nhờ họ gọi xe cấp cứu ngay",
+          "trait_tag": "risk_recognition",
+          "next_question": "q5"
+        },
+        {
+          "id": "q4a_b",
+          "text_en": "Fan yourself vigorously",
+          "text_vi": "Quạt thật mạnh cho bản thân",
+          "trait_tag": "self_reliance",
+          "next_question": "q5"
+        },
+        {
+          "id": "q4a_c",
+          "text_en": "Ask for an ice pack for your armpits",
+          "text_vi": "Xin túi đá chườm vào nách",
+          "trait_tag": "immediate_action",
+          "next_question": "q5"
+        },
+        {
+          "id": "q4a_d",
+          "text_en": "Check if they have any painkillers",
+          "text_vi": "Hỏi xem họ có thuốc giảm đau không",
+          "trait_tag": "information_first",
+          "next_question": "q5"
+        }
       ]
     },
     {
       "id": "q4b",
-      "text_en": "The nausea gets worse. [Name], you're losing coordination. The metallic taste in your mouth is stronger—the salt in the water is dehydrating you faster.",
-      "text_vi": "Cơn buồn nôn tệ hơn. [Name], bạn bắt đầu mất thăng bằng. Vị kim loại trong miệng rõ hơn—độ mặn trong nước đang làm bạn mất nước nhanh hơn.",
-      "timer": 18,
+      "text_en": "The nausea gets worse. You're losing coordination. The metallic taste is stronger—the salt in the water is dehydrating you faster.",
+      "text_vi": "Cơn buồn nôn tệ hơn. Bạn mất thăng bằng. Vị kim loại rõ hơn—nước máy nhiễm mặn đang làm mất nước nhanh hơn.",
+      "timer": 15,
       "options": [
-        { "id": "q4b_a", "text_en": "Call 115 immediately", "text_vi": "Gọi 115 ngay lập tức", "trait_tag": "risk_recognition", "next_question": "q5" },
-        { "id": "q4b_b", "text_en": "Drink bottled water only", "text_vi": "Chỉ uống nước đóng chai thôi", "trait_tag": "information_first", "next_question": "q5" },
-        { "id": "q4b_c", "text_en": "Crawl toward the hallway for air", "text_vi": "Bò ra hành lang để tìm khí trời", "trait_tag": "self_reliance", "next_question": "q5" },
-        { "id": "q4b_d", "text_en": "Try to stand up and walk out", "text_vi": "Cố đứng dậy và đi ra ngoài", "trait_tag": "immediate_action", "next_question": "q5" }
+        {
+          "id": "q4b_a",
+          "text_en": "Call 115 immediately",
+          "text_vi": "Gọi 115 ngay lập tức",
+          "trait_tag": "risk_recognition",
+          "next_question": "q5"
+        },
+        {
+          "id": "q4b_b",
+          "text_en": "Drink bottled water only",
+          "text_vi": "Chỉ uống nước đóng chai thôi",
+          "trait_tag": "information_first",
+          "next_question": "q5"
+        },
+        {
+          "id": "q4b_c",
+          "text_en": "Crawl toward the hallway for air",
+          "text_vi": "Bò ra hành lang để tìm khí trời",
+          "trait_tag": "self_reliance",
+          "next_question": "q5"
+        },
+        {
+          "id": "q4b_d",
+          "text_en": "Try to stand up and walk out",
+          "text_vi": "Cố đứng dậy và đi ra ngoài",
+          "trait_tag": "immediate_action",
+          "next_question": "q5"
+        }
       ]
     },
     {
       "id": "q5",
-      "text_en": "Everything is blurry, [Name]. You’re being helped into a taxi. The driver is blasting the AC, but your body feels like it's vibrating from the core.",
-      "text_vi": "Mọi thứ mờ ảo, [Name]. Bạn được dìu lên taxi. Tài xế bật máy lạnh hết cỡ, nhưng cơ thể bạn cảm giác như đang rung lên từ bên trong.",
-      "timer": 20,
+      "text_en": "Everything is blurry. You're being helped into a taxi. The driver blasts the AC, but your body vibrates from the core.",
+      "text_vi": "Mọi thứ mờ ảo. Bạn được dìu lên taxi. Tài xế bật máy lạnh hết cỡ, nhưng cơ thể rung lên từ bên trong.",
+      "timer": 15,
       "options": [
-        { "id": "q5_a", "text_en": "Keep sipping water slowly", "text_vi": "Nhấp từng ngụm nước nhỏ", "trait_tag": "risk_recognition", "next_question": "q6" },
-        { "id": "q5_b", "text_en": "Tell him to drive faster", "text_vi": "Bảo tài xế chạy nhanh lên", "trait_tag": "immediate_action", "next_question": "q6" },
-        { "id": "q5_c", "text_en": "Close your eyes and try to sleep", "text_vi": "Nhắm mắt và cố ngủ một chút", "trait_tag": "self_reliance", "next_question": "q6" },
-        { "id": "q5_d", "text_en": "Check your phone for the hospital's name", "text_vi": "Coi điện thoại tìm tên bệnh viện", "trait_tag": "information_first", "next_question": "q6" }
+        {
+          "id": "q5_a",
+          "text_en": "Keep sipping water slowly",
+          "text_vi": "Nhấp từng ngụm nước nhỏ",
+          "trait_tag": "risk_recognition",
+          "next_question": "q6"
+        },
+        {
+          "id": "q5_b",
+          "text_en": "Tell him to drive faster",
+          "text_vi": "Bảo tài xế chạy nhanh lên",
+          "trait_tag": "immediate_action",
+          "next_question": "q6"
+        },
+        {
+          "id": "q5_c",
+          "text_en": "Close your eyes and try to sleep",
+          "text_vi": "Nhắm mắt và cố ngủ một chút",
+          "trait_tag": "self_reliance",
+          "next_question": "q6"
+        },
+        {
+          "id": "q5_d",
+          "text_en": "Check your phone for the hospital's name",
+          "text_vi": "Coi điện thoại tìm tên bệnh viện",
+          "trait_tag": "information_first",
+          "next_question": "q6"
+        }
       ]
     },
     {
       "id": "q6",
-      "text_en": "You arrive at the ER. It's packed with elderly people and children, all looking as drained as you feel. A nurse approaches with a thermometer.",
-      "text_vi": "Bạn đến phòng cấp cứu. Nơi đây chật kín người già và trẻ em, ai nấy đều kiệt quệ như bạn. Một y tá tiến lại với nhiệt kế.",
-      "timer": 15,
+      "text_en": "You arrive at the ER. It's packed with elderly and children, all as drained as you feel. A nurse approaches with a thermometer.",
+      "text_vi": "Bạn đến phòng cấp cứu. Chật kín người già và trẻ em, ai nấy kiệt quệ. Y tá tiến lại với nhiệt kế.",
+      "timer": 12,
       "options": [
-        { "id": "q6_a", "text_en": "Tell her exactly when you stopped sweating", "text_vi": "Nói rõ lúc bạn bắt đầu ngừng ra mồ hôi", "trait_tag": "risk_recognition", "next_question": "q7a" },
-        { "id": "q6_b", "text_en": "Ask for an IV drip immediately", "text_vi": "Yêu cầu được truyền dịch ngay", "trait_tag": "immediate_action", "next_question": "q7a" },
-        { "id": "q6_c", "text_en": "Point to your pounding head", "text_vi": "Chỉ vào cái đầu đang đau như búa bổ", "trait_tag": "self_reliance", "next_question": "q7b" },
-        { "id": "q6_d", "text_en": "Ask how long the wait will be", "text_vi": "Hỏi xem phải đợi bao lâu", "trait_tag": "information_first", "next_question": "q7b" }
+        {
+          "id": "q6_a",
+          "text_en": "Tell her exactly when you stopped sweating",
+          "text_vi": "Nói rõ lúc bạn bắt đầu ngừng ra mồ hôi",
+          "trait_tag": "risk_recognition",
+          "next_question": "q7a"
+        },
+        {
+          "id": "q6_b",
+          "text_en": "Ask for an IV drip immediately",
+          "text_vi": "Yêu cầu được truyền dịch ngay",
+          "trait_tag": "immediate_action",
+          "next_question": "q7a"
+        },
+        {
+          "id": "q6_c",
+          "text_en": "Point to your pounding head",
+          "text_vi": "Chỉ vào cái đầu đang đau như búa bổ",
+          "trait_tag": "self_reliance",
+          "next_question": "q7b"
+        },
+        {
+          "id": "q6_d",
+          "text_en": "Ask how long the wait will be",
+          "text_vi": "Hỏi xem phải đợi bao lâu",
+          "trait_tag": "information_first",
+          "next_question": "q7b"
+        }
       ]
     },
     {
       "id": "q7a",
-      "text_en": "She moves you to the front of the line. 'Heatstroke is a brain emergency,' she says. You feel the first cool rush of the saline drip.",
-      "text_vi": "Cô ấy đưa bạn lên đầu hàng. 'Sốc nhiệt là tình trạng khẩn cấp của não,' cô nói. Bạn cảm nhận dòng nước muối mát lạnh đầu tiên truyền vào người.",
-      "timer": 25,
+      "text_en": "She moves you to the front. 'Heatstroke is a brain emergency,' she says. The first cool rush of saline drip flows in.",
+      "text_vi": "Cô ấy đưa bạn lên đầu hàng. 'Sốc nhiệt là cấp cứu não,' cô nói. Dòng nước muối mát lạnh đầu tiên chảy vào.",
+      "timer": 20,
       "options": [
-        { "id": "q7a_a", "text_en": "Rest and monitor your breathing", "text_vi": "Nghỉ ngơi và theo dõi nhịp thở", "trait_tag": "risk_recognition", "next_question": null },
-        { "id": "q7a_b", "text_en": "Thank the nurse for the priority", "text_vi": "Cảm ơn y tá đã ưu tiên mình", "trait_tag": "immediate_action", "next_question": null },
-        { "id": "q7a_c", "text_en": "Try to call your landlord about the power", "text_vi": "Gọi cho chủ nhà hỏi về điện", "trait_tag": "self_reliance", "next_question": null },
-        { "id": "q7a_d", "text_en": "Read the posters about heat safety", "text_vi": "Đọc áp phích về an toàn mùa nắng nóng", "trait_tag": "information_first", "next_question": null }
+        {
+          "id": "q7a_a",
+          "text_en": "Rest and monitor your breathing",
+          "text_vi": "Nghỉ ngơi và theo dõi nhịp thở",
+          "trait_tag": "risk_recognition",
+          "next_question": null
+        },
+        {
+          "id": "q7a_b",
+          "text_en": "Thank the nurse for the priority",
+          "text_vi": "Cảm ơn y tá đã ưu tiên mình",
+          "trait_tag": "immediate_action",
+          "next_question": null
+        },
+        {
+          "id": "q7a_c",
+          "text_en": "Try to call your landlord about the power",
+          "text_vi": "Gọi cho chủ nhà hỏi về điện",
+          "trait_tag": "information_first",
+          "next_question": null
+        },
+        {
+          "id": "q7a_d",
+          "text_en": "Read the posters about heat safety",
+          "text_vi": "Đọc áp phích về an toàn mùa nắng nóng",
+          "trait_tag": "self_reliance",
+          "next_question": null
+        }
       ]
     },
     {
       "id": "q7b",
       "text_en": "You're waiting on a bench, feeling the heavy hum of the hospital. You realize that 'toughing it out' almost cost you your life.",
       "text_vi": "Bạn ngồi chờ trên ghế đá, nghe tiếng rì rầm của bệnh viện. Bạn nhận ra việc 'cố quá' suýt chút nữa đã khiến bạn mất mạng.",
-      "timer": 25,
+      "timer": 20,
       "options": [
-        { "id": "q7b_a", "text_en": "Ask for a cold compress", "text_vi": "Xin một túi chườm lạnh", "trait_tag": "risk_recognition", "next_question": null },
-        { "id": "q7b_b", "text_en": "Drink small sips of bottled water", "text_vi": "Uống từng ngụm nước đóng chai nhỏ", "trait_tag": "immediate_action", "next_question": null },
-        { "id": "q7b_c", "text_en": "Look for a fan to sit near", "text_vi": "Tìm chỗ ngồi gần quạt", "trait_tag": "information_first", "next_question": null },
-        { "id": "q7b_d", "text_en": "Close your eyes and breathe", "text_vi": "Nhắm mắt và hít thở", "trait_tag": "self_reliance", "next_question": null }
+        {
+          "id": "q7b_a",
+          "text_en": "Ask for a cold compress",
+          "text_vi": "Xin một túi chườm lạnh",
+          "trait_tag": "risk_recognition",
+          "next_question": null
+        },
+        {
+          "id": "q7b_b",
+          "text_en": "Drink small sips of bottled water",
+          "text_vi": "Uống từng ngụm nước đóng chai nhỏ",
+          "trait_tag": "immediate_action",
+          "next_question": null
+        },
+        {
+          "id": "q7b_c",
+          "text_en": "Look for a fan to sit near",
+          "text_vi": "Tìm chỗ ngồi gần quạt",
+          "trait_tag": "information_first",
+          "next_question": null
+        },
+        {
+          "id": "q7b_d",
+          "text_en": "Close your eyes and breathe",
+          "text_vi": "Nhắm mắt và hít thở",
+          "trait_tag": "self_reliance",
+          "next_question": null
+        }
       ]
     }
   ],

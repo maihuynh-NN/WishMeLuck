@@ -1,7 +1,7 @@
 {
   "id": "central_easy_4",
   "region": "central",
-  "danger": "4",
+  "danger": "3",
   "title_en": "The Gió Lào Furnace",
   "title_vi": "Lửa Gió Lào",
   "intro_en": "The Foehn winds (Gió Lào) are screaming across the plains. It is 1:00 PM, 42°C. [Name] is finishing the harvest in open fields, miles from any shade.",
@@ -14,10 +14,34 @@
       "text_vi": "Cái nóng khô như máy sấy. Mồ hôi ngừng chảy, không khí loãng dần. Vụ mùa mới xong 80%.",
       "timer": 15,
       "options": [
-        { "id": "q1_a", "text_en": "Stop immediately and seek cover", "text_vi": "Dừng lại và đi tìm chỗ trú", "trait_tag": "risk_recognition", "next_question": "q2" },
-        { "id": "q1_b", "text_en": "Push for ten more minutes", "text_vi": "Cố làm thêm mười phút nữa", "trait_tag": "self_reliance", "next_question": "q2" },
-        { "id": "q1_c", "text_en": "Drink the remaining warm water", "text_vi": "Uống nốt chỗ nước ấm", "trait_tag": "immediate_action", "next_question": "q2" },
-        { "id": "q1_d", "text_en": "Cover face with a damp cloth", "text_vi": "Dùng khăn ẩm che kín mặt", "trait_tag": "information_first", "next_question": "q2" }
+        {
+          "id": "q1_a",
+          "text_en": "Stop immediately and seek cover",
+          "text_vi": "Dừng lại và đi tìm chỗ trú",
+          "trait_tag": "risk_recognition",
+          "next_question": "q2"
+        },
+        {
+          "id": "q1_b",
+          "text_en": "Push for ten more minutes",
+          "text_vi": "Cố làm thêm mười phút nữa",
+          "trait_tag": "self_reliance",
+          "next_question": "q2"
+        },
+        {
+          "id": "q1_c",
+          "text_en": "Drink the remaining warm water",
+          "text_vi": "Uống nốt chỗ nước ấm",
+          "trait_tag": "immediate_action",
+          "next_question": "q2"
+        },
+        {
+          "id": "q1_d",
+          "text_en": "Cover face with a damp cloth",
+          "text_vi": "Dùng khăn ẩm che kín mặt",
+          "trait_tag": "information_first",
+          "next_question": "q2"
+        }
       ]
     },
     {
@@ -26,10 +50,34 @@
       "text_vi": "Tầm nhìn nhòe đi với đốm trắng. [Name] đau đầu nhói từng cơn. Mặt đất cảm giác như rung chuyển.",
       "timer": 15,
       "options": [
-        { "id": "q2_a", "text_en": "Sit down right where you are", "text_vi": "Ngồi thụp xuống tại chỗ", "trait_tag": "risk_recognition", "next_question": "q3" },
-        { "id": "q2_b", "text_en": "Try to walk back to the bike", "text_vi": "Cố đi bộ quay lại xe", "trait_tag": "immediate_action", "next_question": "q3" },
-        { "id": "q2_c", "text_en": "Pour water over the neck", "text_vi": "Dội nước vào sau gáy", "trait_tag": "self_reliance", "next_question": "q3" },
-        { "id": "q2_d", "text_en": "Call a neighbor for a ride", "text_vi": "Gọi hàng xóm đến đón", "trait_tag": "information_first", "next_question": "q3" }
+        {
+          "id": "q2_a",
+          "text_en": "Sit down right where you are",
+          "text_vi": "Ngồi thụp xuống tại chỗ",
+          "trait_tag": "risk_recognition",
+          "next_question": "q3"
+        },
+        {
+          "id": "q2_b",
+          "text_en": "Try to walk back to the bike",
+          "text_vi": "Cố đi bộ quay lại xe",
+          "trait_tag": "immediate_action",
+          "next_question": "q3"
+        },
+        {
+          "id": "q2_c",
+          "text_en": "Pour water over the neck",
+          "text_vi": "Dội nước vào sau gáy",
+          "trait_tag": "self_reliance",
+          "next_question": "q3"
+        },
+        {
+          "id": "q2_d",
+          "text_en": "Call a neighbor for a ride",
+          "text_vi": "Gọi hàng xóm đến đón",
+          "trait_tag": "information_first",
+          "next_question": "q3"
+        }
       ]
     },
     {
@@ -38,10 +86,34 @@
       "text_vi": "[Name] lết đến rìa ruộng. Có một mương nước đục và một cái cây còi cọc. Chọn hướng nào?",
       "timer": 15,
       "options": [
-        { "id": "q3_a", "text_en": "Submerge legs in ditch water", "text_vi": "Ngâm chân xuống nước mương", "trait_tag": "immediate_action", "next_question": "q4a" },
-        { "id": "q3_b", "text_en": "Lie flat in the tree shade", "text_vi": "Nằm dưới bóng cây", "trait_tag": "risk_recognition", "next_question": "q4b" },
-        { "id": "q3_c", "text_en": "Splash water on your chest", "text_vi": "Vỗ nước lên ngực", "trait_tag": "self_reliance", "next_question": "q4a" },
-        { "id": "q3_d", "text_en": "Check phone for nearest clinic", "text_vi": "Tìm trạm y tế trên bản đồ", "trait_tag": "information_first", "next_question": "q4b" }
+        {
+          "id": "q3_a",
+          "text_en": "Submerge legs in ditch water",
+          "text_vi": "Ngâm chân xuống nước mương",
+          "trait_tag": "immediate_action",
+          "next_question": "q4a"
+        },
+        {
+          "id": "q3_b",
+          "text_en": "Lie flat in the tree shade",
+          "text_vi": "Nằm dưới bóng cây",
+          "trait_tag": "risk_recognition",
+          "next_question": "q4b"
+        },
+        {
+          "id": "q3_c",
+          "text_en": "Splash water on your chest",
+          "text_vi": "Vỗ nước lên ngực",
+          "trait_tag": "self_reliance",
+          "next_question": "q4a"
+        },
+        {
+          "id": "q3_d",
+          "text_en": "Check phone for nearest clinic",
+          "text_vi": "Tìm trạm y tế trên bản đồ",
+          "trait_tag": "information_first",
+          "next_question": "q4b"
+        }
       ]
     },
     {
@@ -50,10 +122,34 @@
       "text_vi": "Nước mát nhưng [Name] thấy buồn nôn. Chuột rút làm cứng đùi. Sự hoảng loạn ập đến.",
       "timer": 15,
       "options": [
-        { "id": "q4a_a", "text_en": "Gently massage the cramped muscles", "text_vi": "Xoa bóp nhẹ cơ bị chuột rút", "trait_tag": "risk_recognition", "next_question": "q5" },
-        { "id": "q4a_b", "text_en": "Try to stand and stretch", "text_vi": "Cố đứng dậy và vươn người", "trait_tag": "self_reliance", "next_question": "q5" },
-        { "id": "q4a_c", "text_en": "Drink small sips of salty water", "text_vi": "Uống từng ngụm nước muối", "trait_tag": "immediate_action", "next_question": "q5" },
-        { "id": "q4a_d", "text_en": "Signal to the distant road", "text_vi": "Ra hiệu về phía đường lộ", "trait_tag": "information_first", "next_question": "q5" }
+        {
+          "id": "q4a_a",
+          "text_en": "Gently massage the cramped muscles",
+          "text_vi": "Xoa bóp nhẹ cơ bị chuột rút",
+          "trait_tag": "risk_recognition",
+          "next_question": "q5"
+        },
+        {
+          "id": "q4a_b",
+          "text_en": "Try to stand and stretch",
+          "text_vi": "Cố đứng dậy và vươn người",
+          "trait_tag": "self_reliance",
+          "next_question": "q5"
+        },
+        {
+          "id": "q4a_c",
+          "text_en": "Drink small sips of salty water",
+          "text_vi": "Uống từng ngụm nước muối",
+          "trait_tag": "immediate_action",
+          "next_question": "q5"
+        },
+        {
+          "id": "q4a_d",
+          "text_en": "Signal to the distant road",
+          "text_vi": "Ra hiệu về phía đường lộ",
+          "trait_tag": "information_first",
+          "next_question": "q5"
+        }
       ]
     },
     {
@@ -62,58 +158,178 @@
       "text_vi": "Bóng râm ít. Da [Name] khô ran. Sự lú lẫn khiến việc nhớ đường rất khó.",
       "timer": 12,
       "options": [
-        { "id": "q4b_a", "text_en": "Loosen all tight clothing", "text_vi": "Nới lỏng quần áo ngay", "trait_tag": "risk_recognition", "next_question": "q5" },
-        { "id": "q4b_b", "text_en": "Take a nap to regain strength", "text_vi": "Ngủ một lát để lấy sức", "trait_tag": "self_reliance", "next_question": "q5" },
-        { "id": "q4b_c", "text_en": "Wipe face with a damp shirt", "text_vi": "Lau mặt bằng vạt áo ẩm", "trait_tag": "immediate_action", "next_question": "q5" },
-        { "id": "q4b_d", "text_en": "Check pulse on the wrist", "text_vi": "Tự bắt mạch cổ tay", "trait_tag": "information_first", "next_question": "q5" }
+        {
+          "id": "q4b_a",
+          "text_en": "Loosen all tight clothing",
+          "text_vi": "Nới lỏng quần áo ngay",
+          "trait_tag": "risk_recognition",
+          "next_question": "q5"
+        },
+        {
+          "id": "q4b_b",
+          "text_en": "Take a nap to regain strength",
+          "text_vi": "Ngủ một lát để lấy sức",
+          "trait_tag": "self_reliance",
+          "next_question": "q5"
+        },
+        {
+          "id": "q4b_c",
+          "text_en": "Wipe face with a damp shirt",
+          "text_vi": "Lau mặt bằng vạt áo ẩm",
+          "trait_tag": "immediate_action",
+          "next_question": "q5"
+        },
+        {
+          "id": "q4b_d",
+          "text_en": "Check pulse on the wrist",
+          "text_vi": "Tự bắt mạch cổ tay",
+          "trait_tag": "information_first",
+          "next_question": "q5"
+        }
       ]
     },
     {
       "id": "q5",
       "text_en": "A motorbike engine rumbles nearby. A neighbor finds [Name]. They offer to pull [Name] onto the bike.",
       "text_vi": "Tiếng máy xe nổ gần đó. Hàng xóm tìm thấy [Name]. Họ định kéo [Name] lên xe.",
-      "timer": 20,
+      "timer": 15,
       "options": [
-        { "id": "q5_a", "text_en": "Ask to go to the clinic", "text_vi": "Yêu cầu đến trạm y tế", "trait_tag": "risk_recognition", "next_question": "q6" },
-        { "id": "q5_b", "text_en": "Ask to go home to shower", "text_vi": "Yêu cầu chở về nhà tắm", "trait_tag": "self_reliance", "next_question": "q6" },
-        { "id": "q5_c", "text_en": "Drink the ice water they have", "text_vi": "Uống nước đá họ mang theo", "trait_tag": "immediate_action", "next_question": "q6" },
-        { "id": "q5_d", "text_en": "Ask about the left-over harvest", "text_vi": "Hỏi về số lúa còn lại", "trait_tag": "information_first", "next_question": "q6" }
+        {
+          "id": "q5_a",
+          "text_en": "Ask to go to the clinic",
+          "text_vi": "Yêu cầu đến trạm y tế",
+          "trait_tag": "risk_recognition",
+          "next_question": "q6"
+        },
+        {
+          "id": "q5_b",
+          "text_en": "Ask to go home to shower",
+          "text_vi": "Yêu cầu chở về nhà tắm",
+          "trait_tag": "self_reliance",
+          "next_question": "q6"
+        },
+        {
+          "id": "q5_c",
+          "text_en": "Drink the ice water they have",
+          "text_vi": "Uống nước đá họ mang theo",
+          "trait_tag": "immediate_action",
+          "next_question": "q6"
+        },
+        {
+          "id": "q5_d",
+          "text_en": "Ask about the left-over harvest",
+          "text_vi": "Hỏi về số lúa còn lại",
+          "trait_tag": "information_first",
+          "next_question": "q6"
+        }
       ]
     },
     {
       "id": "q6",
       "text_en": "At the clinic, the doctor is busy. [Name] is on a bench. Shivering begins despite the extreme heat.",
       "text_vi": "Tại trạm y tế, bác sĩ đang bận. [Name] nằm trên ghế. Cơn run rẩy bắt đầu dù trời nóng.",
-      "timer": 15,
+      "timer": 12,
       "options": [
-        { "id": "q6_a", "text_en": "Request wet blanket cooling", "text_vi": "Yêu cầu làm mát bằng chăn ướt", "trait_tag": "risk_recognition", "next_question": "q7a" },
-        { "id": "q6_b", "text_en": "Insist on an IV drip", "text_vi": "Yêu cầu truyền dịch ngay", "trait_tag": "immediate_action", "next_question": "q7b" },
-        { "id": "q6_c", "text_en": "Drink a bottle of electrolytes", "text_vi": "Uống chai nước điện giải", "trait_tag": "self_reliance", "next_question": "q7a" },
-        { "id": "q6_d", "text_en": "Call family to come over", "text_vi": "Gọi người nhà đến đón", "trait_tag": "information_first", "next_question": "q7b" }
+        {
+          "id": "q6_a",
+          "text_en": "Request wet blanket cooling",
+          "text_vi": "Yêu cầu làm mát bằng chăn ướt",
+          "trait_tag": "risk_recognition",
+          "next_question": "q7a"
+        },
+        {
+          "id": "q6_b",
+          "text_en": "Insist on an IV drip",
+          "text_vi": "Yêu cầu truyền dịch ngay",
+          "trait_tag": "immediate_action",
+          "next_question": "q7b"
+        },
+        {
+          "id": "q6_c",
+          "text_en": "Drink a bottle of electrolytes",
+          "text_vi": "Uống chai nước điện giải",
+          "trait_tag": "self_reliance",
+          "next_question": "q7a"
+        },
+        {
+          "id": "q6_d",
+          "text_en": "Call family to come over",
+          "text_vi": "Gọi người nhà đến đón",
+          "trait_tag": "information_first",
+          "next_question": "q7b"
+        }
       ]
     },
     {
       "id": "q7a",
       "text_en": "Nurse applies cool compresses. Temperature begins to drop slowly. The danger of organ damage is fading.",
       "text_vi": "Y tá đắp gạc mát. Thân nhiệt hạ dần. Nguy cơ tổn thương nội tạng dần qua đi.",
-      "timer": 25,
+      "timer": 20,
       "options": [
-        { "id": "q7a_a", "text_en": "Rest for 48 hours", "text_vi": "Nghỉ ngơi trong 48 giờ", "trait_tag": "risk_recognition", "next_question": null },
-        { "id": "q7a_b", "text_en": "Drink electrolytes regularly", "text_vi": "Uống điện giải thường xuyên", "trait_tag": "immediate_action", "next_question": null },
-        { "id": "q7a_c", "text_en": "Check Zalo for heat warnings", "text_vi": "Xem Zalo cảnh báo nắng nóng", "trait_tag": "information_first", "next_question": null },
-        { "id": "q7a_d", "text_en": "Thank the neighbors for help", "text_vi": "Cảm ơn hàng xóm giúp đỡ", "trait_tag": "self_reliance", "next_question": null }
+        {
+          "id": "q7a_a",
+          "text_en": "Rest for 48 hours",
+          "text_vi": "Nghỉ ngơi trong 48 giờ",
+          "trait_tag": "risk_recognition",
+          "next_question": null
+        },
+        {
+          "id": "q7a_b",
+          "text_en": "Drink electrolytes regularly",
+          "text_vi": "Uống điện giải thường xuyên",
+          "trait_tag": "immediate_action",
+          "next_question": null
+        },
+        {
+          "id": "q7a_c",
+          "text_en": "Check Zalo for heat warnings",
+          "text_vi": "Xem Zalo cảnh báo nắng nóng",
+          "trait_tag": "information_first",
+          "next_question": null
+        },
+        {
+          "id": "q7a_d",
+          "text_en": "Thank the neighbors for help",
+          "text_vi": "Cảm ơn hàng xóm giúp đỡ",
+          "trait_tag": "self_reliance",
+          "next_question": null
+        }
       ]
     },
     {
       "id": "q7b",
       "text_en": "[Name] receives fluids and stabilized. Pushing through 'Gió Lào' is a common but lethal gamble.",
       "text_vi": "[Name] được truyền dịch và ổn định. Cố làm việc dưới Gió Lào là canh bạc chết người.",
-      "timer": 25,
+      "timer": 20,
       "options": [
-        { "id": "q7b_a", "text_en": "Monitor body temperature", "text_vi": "Học cách theo dõi thân nhiệt", "trait_tag": "risk_recognition", "next_question": null },
-        { "id": "q7b_b", "text_en": "Avoid work in peak hours", "text_vi": "Tránh làm việc giờ cao điểm", "trait_tag": "immediate_action", "next_question": null },
-        { "id": "q7b_c", "text_en": "Wear breathable, loose clothing", "text_vi": "Mặc quần áo rộng, thoáng", "trait_tag": "self_reliance", "next_question": null },
-        { "id": "q7b_d", "text_en": "Prepare salt-sugar solutions", "text_vi": "Chuẩn bị sẵn nước muối đường", "trait_tag": "information_first", "next_question": null }
+        {
+          "id": "q7b_a",
+          "text_en": "Monitor body temperature",
+          "text_vi": "Học cách theo dõi thân nhiệt",
+          "trait_tag": "risk_recognition",
+          "next_question": null
+        },
+        {
+          "id": "q7b_b",
+          "text_en": "Avoid work in peak hours",
+          "text_vi": "Tránh làm việc giờ cao điểm",
+          "trait_tag": "immediate_action",
+          "next_question": null
+        },
+        {
+          "id": "q7b_c",
+          "text_en": "Wear breathable, loose clothing",
+          "text_vi": "Mặc quần áo rộng, thoáng",
+          "trait_tag": "self_reliance",
+          "next_question": null
+        },
+        {
+          "id": "q7b_d",
+          "text_en": "Prepare salt-sugar solutions",
+          "text_vi": "Chuẩn bị sẵn nước muối đường",
+          "trait_tag": "information_first",
+          "next_question": null
+        }
       ]
     }
   ],

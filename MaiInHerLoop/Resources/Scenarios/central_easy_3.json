@@ -14,10 +14,34 @@
       "text_vi": "Đám đông ùa về phía xe tải. [Name] bị ép vào một cột bê tông. Áp lực lên mạn sườn khiến việc hít thở trở nên khó khăn.",
       "timer": 15,
       "options": [
-        { "id": "q1_a", "text_en": "Keep arms up to create chest space", "text_vi": "Giữ tay cao để tạo khoảng trống cho ngực", "trait_tag": "risk_recognition", "next_question": "q2" },
-        { "id": "q1_b", "text_en": "Push hard to regain personal space", "text_vi": "Đẩy mạnh để lấy lại không gian riêng", "trait_tag": "immediate_action", "next_question": "q2" },
-        { "id": "q1_c", "text_en": "Climb the pillar to get above", "text_vi": "Trèo lên cột để lên cao", "trait_tag": "self_reliance", "next_question": "q2" },
-        { "id": "q1_d", "text_en": "Shout for everyone to move back", "text_vi": "Hét lớn yêu cầu mọi người lùi lại", "trait_tag": "information_first", "next_question": "q2" }
+        {
+          "id": "q1_a",
+          "text_en": "Keep arms up to create chest space",
+          "text_vi": "Giữ tay cao để tạo khoảng trống cho ngực",
+          "trait_tag": "risk_recognition",
+          "next_question": "q2"
+        },
+        {
+          "id": "q1_b",
+          "text_en": "Push hard to regain personal space",
+          "text_vi": "Đẩy mạnh để lấy lại không gian riêng",
+          "trait_tag": "immediate_action",
+          "next_question": "q2"
+        },
+        {
+          "id": "q1_c",
+          "text_en": "Climb the pillar to get above",
+          "text_vi": "Trèo lên cột để lên cao",
+          "trait_tag": "self_reliance",
+          "next_question": "q2"
+        },
+        {
+          "id": "q1_d",
+          "text_en": "Shout for everyone to move back",
+          "text_vi": "Hét lớn yêu cầu mọi người lùi lại",
+          "trait_tag": "information_first",
+          "next_question": "q2"
+        }
       ]
     },
     {
@@ -26,10 +50,34 @@
       "text_vi": "Một người vấp ngã ngay trước mặt [Name]. Nếu không được giúp, đám đông phía sau sẽ giẫm lên họ. Đà xô đẩy rất lớn.",
       "timer": 15,
       "options": [
-        { "id": "q2_a", "text_en": "Form a circle to protect them", "text_vi": "Tạo vòng chắn để bảo vệ họ", "trait_tag": "risk_recognition", "next_question": "q3" },
-        { "id": "q2_b", "text_en": "Pull them up quickly and move", "text_vi": "Kéo họ đứng dậy nhanh rồi đi tiếp", "trait_tag": "immediate_action", "next_question": "q3" },
-        { "id": "q2_c", "text_en": "Keep moving to avoid falling yourself", "text_vi": "Tiếp tục đi để tránh chính mình bị ngã", "trait_tag": "self_reliance", "next_question": "q3" },
-        { "id": "q2_d", "text_en": "Call for help from nearby people", "text_vi": "Gọi những người xung quanh giúp một tay", "trait_tag": "information_first", "next_question": "q3" }
+        {
+          "id": "q2_a",
+          "text_en": "Form a circle to protect them",
+          "text_vi": "Tạo vòng chắn để bảo vệ họ",
+          "trait_tag": "risk_recognition",
+          "next_question": "q3"
+        },
+        {
+          "id": "q2_b",
+          "text_en": "Pull them up quickly and move",
+          "text_vi": "Kéo họ đứng dậy nhanh rồi đi tiếp",
+          "trait_tag": "immediate_action",
+          "next_question": "q3"
+        },
+        {
+          "id": "q2_c",
+          "text_en": "Keep moving to avoid falling yourself",
+          "text_vi": "Tiếp tục đi để tránh chính mình bị ngã",
+          "trait_tag": "self_reliance",
+          "next_question": "q3"
+        },
+        {
+          "id": "q2_d",
+          "text_en": "Call for help from nearby people",
+          "text_vi": "Gọi những người xung quanh giúp một tay",
+          "trait_tag": "information_first",
+          "next_question": "q3"
+        }
       ]
     },
     {
@@ -38,8 +86,34 @@
       "text_vi": "Nút thắt tại cổng hẹp lại. [Name] thấy một khe hở nhỏ về phía rìa sân, cách xa chiếc xe tải.",
       "timer": 15,
       "options": [
-        { "id": "q3_a", "text_en": "Move diagonally toward the yard edge", "text_vi": "Di chuyển chéo về phía rìa sân", "trait_tag": "risk_recognition", "next_question": "q4a" },
-        { "id": "q3_b", "text_en": "Brace against the flow to wait", "text_vi": "Gồng mình chịu lực để chờ đợi", "trait_tag": "self_reliance", "next_question": "q4b" }
+        {
+          "id": "q3_a",
+          "text_en": "Move diagonally toward the yard edge",
+          "text_vi": "Di chuyển chéo về phía rìa sân",
+          "trait_tag": "risk_recognition",
+          "next_question": "q4a"
+        },
+        {
+          "id": "q3_b",
+          "text_en": "Brace against the flow and wait",
+          "text_vi": "Gồng mình chịu lực để chờ đợi",
+          "trait_tag": "self_reliance",
+          "next_question": "q4b"
+        },
+        {
+          "id": "q3_c",
+          "text_en": "Shout to redirect people sideways",
+          "text_vi": "Hét lớn hướng mọi người sang bên",
+          "trait_tag": "information_first",
+          "next_question": "q4a"
+        },
+        {
+          "id": "q3_d",
+          "text_en": "Link arms with those around you",
+          "text_vi": "Nắm tay người xung quanh tạo chuỗi",
+          "trait_tag": "immediate_action",
+          "next_question": "q4b"
+        }
       ]
     },
     {
@@ -48,10 +122,34 @@
       "text_vi": "[Name] ra được rìa, nhưng mọi người bắt đầu trèo rào. Kết cấu kim loại cũ kỹ bắt đầu nghiêng và rên rỉ.",
       "timer": 15,
       "options": [
-        { "id": "q4a_a", "text_en": "Move away from the unstable fence", "text_vi": "Tránh xa khỏi hàng rào không an toàn", "trait_tag": "risk_recognition", "next_question": "q5" },
-        { "id": "q4a_b", "text_en": "Warn others about the fence leaning", "text_vi": "Cảnh báo mọi người hàng rào sắp đổ", "trait_tag": "information_first", "next_question": "q5" },
-        { "id": "q4a_c", "text_en": "Help stabilize the fence base", "text_vi": "Giữ chặt chân hàng rào", "trait_tag": "self_reliance", "next_question": "q5" },
-        { "id": "q4a_d", "text_en": "Push toward the open yard space", "text_vi": "Đẩy về phía khoảng sân trống", "trait_tag": "immediate_action", "next_question": "q5" }
+        {
+          "id": "q4a_a",
+          "text_en": "Move away from the unstable fence",
+          "text_vi": "Tránh xa khỏi hàng rào không an toàn",
+          "trait_tag": "risk_recognition",
+          "next_question": "q5"
+        },
+        {
+          "id": "q4a_b",
+          "text_en": "Warn others about the fence leaning",
+          "text_vi": "Cảnh báo mọi người hàng rào sắp đổ",
+          "trait_tag": "information_first",
+          "next_question": "q5"
+        },
+        {
+          "id": "q4a_c",
+          "text_en": "Help stabilize the fence base",
+          "text_vi": "Giữ chặt chân hàng rào",
+          "trait_tag": "self_reliance",
+          "next_question": "q5"
+        },
+        {
+          "id": "q4a_d",
+          "text_en": "Push toward the open yard space",
+          "text_vi": "Đẩy về phía khoảng sân trống",
+          "trait_tag": "immediate_action",
+          "next_question": "q5"
+        }
       ]
     },
     {
@@ -60,10 +158,34 @@
       "text_vi": "Giữa đám đông như một vòng xoáy. [Name] chật vật để giữ vững chân trên nền đất bùn trơn trượt.",
       "timer": 12,
       "options": [
-        { "id": "q4b_a", "text_en": "Adopt a wide, staggered foot stance", "text_vi": "Đứng chân trước chân sau thật vững", "trait_tag": "risk_recognition", "next_question": "q5" },
-        { "id": "q4b_b", "text_en": "Hold onto the person in front", "text_vi": "Bám chặt vào người phía trước", "trait_tag": "self_reliance", "next_question": "q5" },
-        { "id": "q4b_c", "text_en": "Go with the crowd's motion", "text_vi": "Di chuyển nương theo đám đông", "trait_tag": "immediate_action", "next_question": "q5" },
-        { "id": "q4b_d", "text_en": "Signal to the truck for space", "text_vi": "Ra hiệu cho xe tải lùi lại", "trait_tag": "information_first", "next_question": "q5" }
+        {
+          "id": "q4b_a",
+          "text_en": "Adopt a wide, staggered foot stance",
+          "text_vi": "Đứng chân trước chân sau thật vững",
+          "trait_tag": "risk_recognition",
+          "next_question": "q5"
+        },
+        {
+          "id": "q4b_b",
+          "text_en": "Hold onto the person in front",
+          "text_vi": "Bám chặt vào người phía trước",
+          "trait_tag": "self_reliance",
+          "next_question": "q5"
+        },
+        {
+          "id": "q4b_c",
+          "text_en": "Go with the crowd's motion",
+          "text_vi": "Di chuyển nương theo đám đông",
+          "trait_tag": "immediate_action",
+          "next_question": "q5"
+        },
+        {
+          "id": "q4b_d",
+          "text_en": "Signal to the truck for space",
+          "text_vi": "Ra hiệu cho xe tải lùi lại",
+          "trait_tag": "information_first",
+          "next_question": "q5"
+        }
       ]
     },
     {
@@ -72,10 +194,34 @@
       "text_vi": "Việc phát đồ tạm dừng để ổn định trật tự. Sức nóng và độ ẩm tăng cao. Một vài người gần [Name] có dấu hiệu lả đi.",
       "timer": 15,
       "options": [
-        { "id": "q5_a", "text_en": "Fan them and create air space", "text_vi": "Quạt và tạo không gian cho họ thở", "trait_tag": "risk_recognition", "next_question": "q6" },
-        { "id": "q5_b", "text_en": "Pass forward any available water", "text_vi": "Chuyền nước cho người cần", "trait_tag": "immediate_action", "next_question": "q6" },
-        { "id": "q5_c", "text_en": "Conserve own energy and breathe slowly", "text_vi": "Tiết kiệm sức và thở chậm", "trait_tag": "self_reliance", "next_question": "q6" },
-        { "id": "q5_d", "text_en": "Ask organizers for medical help", "text_vi": "Yêu cầu ban tổ chức hỗ trợ y tế", "trait_tag": "information_first", "next_question": "q6" }
+        {
+          "id": "q5_a",
+          "text_en": "Fan them and create air space",
+          "text_vi": "Quạt và tạo không gian cho họ thở",
+          "trait_tag": "risk_recognition",
+          "next_question": "q6"
+        },
+        {
+          "id": "q5_b",
+          "text_en": "Pass forward any available water",
+          "text_vi": "Chuyền nước cho người cần",
+          "trait_tag": "immediate_action",
+          "next_question": "q6"
+        },
+        {
+          "id": "q5_c",
+          "text_en": "Conserve own energy and breathe slowly",
+          "text_vi": "Tiết kiệm sức và thở chậm",
+          "trait_tag": "self_reliance",
+          "next_question": "q6"
+        },
+        {
+          "id": "q5_d",
+          "text_en": "Ask organizers for medical help",
+          "text_vi": "Yêu cầu ban tổ chức hỗ trợ y tế",
+          "trait_tag": "information_first",
+          "next_question": "q6"
+        }
       ]
     },
     {
@@ -84,8 +230,34 @@
       "text_vi": "Lực lượng bảo vệ mở lối cho người bị ngất. Đám đông dịch chuyển bất ngờ. Một khoảng trống mở ra phía lối thoát.",
       "timer": 15,
       "options": [
-        { "id": "q6_a", "text_en": "Exit the area to safety now", "text_vi": "Thoát ra khu vực an toàn ngay", "trait_tag": "risk_recognition", "next_question": "q7a" },
-        { "id": "q6_b", "text_en": "Stay to wait for the restart", "text_vi": "Ở lại chờ đợt phát đồ tiếp theo", "trait_tag": "self_reliance", "next_question": "q7b" }
+        {
+          "id": "q6_a",
+          "text_en": "Exit the area to safety now",
+          "text_vi": "Thoát ra khu vực an toàn ngay",
+          "trait_tag": "risk_recognition",
+          "next_question": "q7a"
+        },
+        {
+          "id": "q6_b",
+          "text_en": "Stay to wait for the restart",
+          "text_vi": "Ở lại chờ đợt phát đồ tiếp theo",
+          "trait_tag": "self_reliance",
+          "next_question": "q7b"
+        },
+        {
+          "id": "q6_c",
+          "text_en": "Help carry the faint people out",
+          "text_vi": "Giúp khiêng người ngất ra ngoài",
+          "trait_tag": "immediate_action",
+          "next_question": "q7a"
+        },
+        {
+          "id": "q6_d",
+          "text_en": "Ask organizers for a better system",
+          "text_vi": "Đề xuất ban tổ chức cách phát tốt hơn",
+          "trait_tag": "information_first",
+          "next_question": "q7b"
+        }
       ]
     },
     {
@@ -94,10 +266,34 @@
       "text_vi": "[Name] đã an toàn bên ngoài sân. Vụ xô đẩy thật nguy hiểm nhưng [Name] không bị thương. Xe bắt đầu phát đồ trật tự sau đó.",
       "timer": 20,
       "options": [
-        { "id": "q7a_a", "text_en": "Assist with organizing the new queue", "text_vi": "Hỗ trợ sắp xếp lại hàng ngũ mới", "trait_tag": "immediate_action", "next_question": null },
-        { "id": "q7a_b", "text_en": "Wait for a quieter time to return", "text_vi": "Đợi lúc vắng hơn mới quay lại", "trait_tag": "risk_recognition", "next_question": null },
-        { "id": "q7a_c", "text_en": "Share the location status on Zalo", "text_vi": "Chia sẻ tình hình địa điểm lên Zalo", "trait_tag": "information_first", "next_question": null },
-        { "id": "q7a_d", "text_en": "Rest and recover from the heat", "text_vi": "Nghỉ ngơi và hồi phục sức khỏe", "trait_tag": "self_reliance", "next_question": null }
+        {
+          "id": "q7a_a",
+          "text_en": "Assist with organizing the new queue",
+          "text_vi": "Hỗ trợ sắp xếp lại hàng ngũ mới",
+          "trait_tag": "immediate_action",
+          "next_question": null
+        },
+        {
+          "id": "q7a_b",
+          "text_en": "Wait for a quieter time to return",
+          "text_vi": "Đợi lúc vắng hơn mới quay lại",
+          "trait_tag": "risk_recognition",
+          "next_question": null
+        },
+        {
+          "id": "q7a_c",
+          "text_en": "Share the location status on Zalo",
+          "text_vi": "Chia sẻ tình hình địa điểm lên Zalo",
+          "trait_tag": "information_first",
+          "next_question": null
+        },
+        {
+          "id": "q7a_d",
+          "text_en": "Rest and recover from the heat",
+          "text_vi": "Nghỉ ngơi và hồi phục sức khỏe",
+          "trait_tag": "self_reliance",
+          "next_question": null
+        }
       ]
     },
     {
@@ -106,10 +302,34 @@
       "text_vi": "Hàng ngũ bắt đầu lại với sự kiểm soát chặt. [Name] cuối cùng cũng nhận được tiếp tế. Trải nghiệm thật vất vả nhưng đã xong việc.",
       "timer": 20,
       "options": [
-        { "id": "q7b_a", "text_en": "Help elderly neighbors carry their bags", "text_vi": "Giúp người già xách đồ về", "trait_tag": "risk_recognition", "next_question": null },
-        { "id": "q7b_b", "text_en": "Document the supplies for the group", "text_vi": "Ghi chép lại các phần tiếp tế cho nhóm", "trait_tag": "information_first", "next_question": null },
-        { "id": "q7b_c", "text_en": "Clean up litter in the yard", "text_vi": "Dọn dẹp rác trong sân", "trait_tag": "immediate_action", "next_question": null },
-        { "id": "q7b_d", "text_en": "Head home to secure the goods", "text_vi": "Về nhà để cất giữ đồ đạc an toàn", "trait_tag": "self_reliance", "next_question": null }
+        {
+          "id": "q7b_a",
+          "text_en": "Help elderly neighbors carry their bags",
+          "text_vi": "Giúp người già xách đồ về",
+          "trait_tag": "risk_recognition",
+          "next_question": null
+        },
+        {
+          "id": "q7b_b",
+          "text_en": "Document the supplies for the group",
+          "text_vi": "Ghi chép lại các phần tiếp tế cho nhóm",
+          "trait_tag": "information_first",
+          "next_question": null
+        },
+        {
+          "id": "q7b_c",
+          "text_en": "Clean up litter in the yard",
+          "text_vi": "Dọn dẹp rác trong sân",
+          "trait_tag": "immediate_action",
+          "next_question": null
+        },
+        {
+          "id": "q7b_d",
+          "text_en": "Head home to secure the goods",
+          "text_vi": "Về nhà để cất giữ đồ đạc an toàn",
+          "trait_tag": "self_reliance",
+          "next_question": null
+        }
       ]
     }
   ],

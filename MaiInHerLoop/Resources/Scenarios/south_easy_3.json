@@ -12,108 +12,324 @@
       "id": "q1",
       "text_en": "The music cuts out. Panic ripples through the crowd as thousands of soaked people surge simultaneously toward the only narrow exit gate.",
       "text_vi": "Nhạc tắt lịm. Sự hoảng loạn lan nhanh khi hàng ngàn người ướt sũng cùng lúc đổ dồn về phía cổng thoát duy nhất chật hẹp.",
-      "timer": 20,
+      "timer": 15,
       "options": [
-        { "id": "q1_a", "text_en": "Run as fast as you can to the gate", "text_vi": "Chạy thật nhanh về phía cổng chính", "trait_tag": "self_reliance", "next_question": "q2" },
-        { "id": "q1_b", "text_en": "Move diagonally toward the side edges", "text_vi": "Di chuyển chéo về phía rìa đám đông", "trait_tag": "risk_recognition", "next_question": "q2" },
-        { "id": "q1_c", "text_en": "Stand still and wait for them to pass", "text_vi": "Đứng yên đợi mọi người đi bớt", "trait_tag": "information_first", "next_question": "q2" },
-        { "id": "q1_d", "text_en": "Hold onto a friend's hand tightly, or maybe a stranger's", "text_vi": "Nắm chặt tay người bạn đi cùng", "trait_tag": "immediate_action", "next_question": "q2" }
+        {
+          "id": "q1_a",
+          "text_en": "Run as fast as you can to the gate",
+          "text_vi": "Chạy thật nhanh về phía cổng chính",
+          "trait_tag": "self_reliance",
+          "next_question": "q2"
+        },
+        {
+          "id": "q1_b",
+          "text_en": "Move diagonally toward the side edges",
+          "text_vi": "Di chuyển chéo về phía rìa đám đông",
+          "trait_tag": "risk_recognition",
+          "next_question": "q2"
+        },
+        {
+          "id": "q1_c",
+          "text_en": "Stand still and wait for them to pass",
+          "text_vi": "Đứng yên đợi mọi người đi bớt",
+          "trait_tag": "information_first",
+          "next_question": "q2"
+        },
+        {
+          "id": "q1_d",
+          "text_en": "Hold onto a friend's hand tightly, or maybe a stranger's",
+          "text_vi": "Nắm chặt tay người bạn đi cùng",
+          "trait_tag": "immediate_action",
+          "next_question": "q2"
+        }
       ]
     },
     {
       "id": "q2",
-      "text_en": "The pressure increases. [Name] can feel the breath of the person behind you, and your feet are starting to lose their grip on the muddy grass.",
-      "text_vi": "Áp lực tăng dần. [Name] cảm nhận được hơi thở của người phía sau, và chân bạn bắt đầu trượt trên nền cỏ sũng bùn.",
-      "timer": 20,
+      "text_en": "The pressure increases. [Name] feels the breath of the person behind, and your feet start losing their grip on the muddy grass.",
+      "text_vi": "Áp lực tăng dần. [Name] cảm nhận hơi thở người phía sau, và chân bắt đầu trượt trên nền cỏ sũng bùn.",
+      "timer": 15,
       "options": [
-        { "id": "q2_a", "text_en": "Keep your arms up like a boxer", "text_vi": "Thủ thế tay như võ sĩ trước ngực", "trait_tag": "risk_recognition", "next_question": "q3" },
-        { "id": "q2_b", "text_en": "Roar for everyone to stop pushing", "text_vi": "Hét lớn bảo mọi người ngừng đẩy", "trait_tag": "immediate_action", "next_question": "q3" },
-        { "id": "q2_c", "text_en": "Push back to maintain your space", "text_vi": "Gồng người đẩy lại để giữ chỗ", "trait_tag": "self_reliance", "next_question": "q3" },
-        { "id": "q2_d", "text_en": "Look for a sturdy pillar to grab", "text_vi": "Tìm một cây cột chắc chắn để bám", "trait_tag": "information_first", "next_question": "q3" }
+        {
+          "id": "q2_a",
+          "text_en": "Keep your arms up like a boxer",
+          "text_vi": "Thủ thế tay như võ sĩ trước ngực",
+          "trait_tag": "risk_recognition",
+          "next_question": "q3"
+        },
+        {
+          "id": "q2_b",
+          "text_en": "Roar for everyone to stop pushing",
+          "text_vi": "Hét lớn bảo mọi người ngừng đẩy",
+          "trait_tag": "immediate_action",
+          "next_question": "q3"
+        },
+        {
+          "id": "q2_c",
+          "text_en": "Push back to maintain your space",
+          "text_vi": "Gồng người đẩy lại để giữ chỗ",
+          "trait_tag": "self_reliance",
+          "next_question": "q3"
+        },
+        {
+          "id": "q2_d",
+          "text_en": "Look for a sturdy pillar to grab",
+          "text_vi": "Tìm một cây cột chắc chắn để bám",
+          "trait_tag": "information_first",
+          "next_question": "q3"
+        }
       ]
     },
     {
       "id": "q3",
       "text_en": "A girl near [Name] trips and falls. The crowd behind doesn't see her and keeps surging forward. She’s about to be stepped on.",
       "text_vi": "Một cô gái gần [Name] vấp ngã. Đám đông phía sau không thấy và vẫn tiếp tục tràn tới, cô ấy sắp bị dẫm đạp.",
-      "timer": 18,
+      "timer": 15,
       "options": [
-        { "id": "q3_a", "text_en": "Form a human shield around her", "text_vi": "Tạo vòng chắn người quanh cô ấy", "trait_tag": "immediate_action", "next_question": "q4a" },
-        { "id": "q3_b", "text_en": "Keep moving so you don't fall too", "text_vi": "Tiếp tục đi để không bị ngã theo", "trait_tag": "risk_recognition", "next_question": "q4b" },
-        { "id": "q3_c", "text_en": "Try to pull her up with one hand", "text_vi": "Dùng một tay kéo cô ấy dậy", "trait_tag": "self_reliance", "next_question": "q4a" },
-        { "id": "q3_d", "text_en": "Yell 'Person down!' repeatedly", "text_vi": "Hét lớn 'Có người ngã!' liên tục", "trait_tag": "information_first", "next_question": "q4b" }
+        {
+          "id": "q3_a",
+          "text_en": "Form a human shield around her",
+          "text_vi": "Tạo vòng chắn người quanh cô ấy",
+          "trait_tag": "immediate_action",
+          "next_question": "q4a"
+        },
+        {
+          "id": "q3_b",
+          "text_en": "Keep moving so you don't fall too",
+          "text_vi": "Tiếp tục đi để không bị ngã theo",
+          "trait_tag": "risk_recognition",
+          "next_question": "q4b"
+        },
+        {
+          "id": "q3_c",
+          "text_en": "Try to pull her up with one hand",
+          "text_vi": "Dùng một tay kéo cô ấy dậy",
+          "trait_tag": "self_reliance",
+          "next_question": "q4a"
+        },
+        {
+          "id": "q3_d",
+          "text_en": "Yell 'Person down!' repeatedly",
+          "text_vi": "Hét lớn 'Có người ngã!' liên tục",
+          "trait_tag": "information_first",
+          "next_question": "q4b"
+        }
       ]
     },
     {
       "id": "q4a",
       "text_en": "[Name] manage to get her up, but the wave of bodies slams you into a temporary metal fence. It’s groaning under the weight.",
       "text_vi": "[Name] đỡ được cô ấy, nhưng làn sóng người xô mạnh bạn vào hàng rào sắt tạm thời. Nó đang oằn mình dưới sức nặng.",
-      "timer": 18,
+      "timer": 15,
       "options": [
-        { "id": "q4a_a", "text_en": "Climb over the fence immediately", "text_vi": "Trèo qua hàng rào ngay lập tức", "trait_tag": "risk_recognition", "next_question": "q5" },
-        { "id": "q4a_b", "text_en": "Stay against it and wait for a gap", "text_vi": "Bám sát hàng rào đợi kẽ hở", "trait_tag": "information_first", "next_question": "q5" },
-        { "id": "q4a_c", "text_en": "Push off the fence to move sideways", "text_vi": "Đẩy mạnh hàng rào để dạt sang bên", "trait_tag": "self_reliance", "next_question": "q5" },
-        { "id": "q4a_d", "text_en": "Check if the fence is electrified", "text_vi": "Kiểm tra xem hàng rào có điện không", "trait_tag": "immediate_action", "next_question": "q5" }
+        {
+          "id": "q4a_a",
+          "text_en": "Climb over the fence immediately",
+          "text_vi": "Trèo qua hàng rào ngay lập tức",
+          "trait_tag": "risk_recognition",
+          "next_question": "q5"
+        },
+        {
+          "id": "q4a_b",
+          "text_en": "Stay against it and wait for a gap",
+          "text_vi": "Bám sát hàng rào đợi kẽ hở",
+          "trait_tag": "information_first",
+          "next_question": "q5"
+        },
+        {
+          "id": "q4a_c",
+          "text_en": "Push off the fence to move sideways",
+          "text_vi": "Đẩy mạnh hàng rào để dạt sang bên",
+          "trait_tag": "self_reliance",
+          "next_question": "q5"
+        },
+        {
+          "id": "q4a_d",
+          "text_en": "Check if the fence is electrified",
+          "text_vi": "Kiểm tra xem hàng rào có điện không",
+          "trait_tag": "immediate_action",
+          "next_question": "q5"
+        }
       ]
     },
     {
       "id": "q4b",
       "text_en": "You lose sight of her. The crowd becomes a single, crushing organism. [Name] can't breathe properly as your chest is compressed.",
       "text_vi": "Bạn mất dấu cô ấy. Đám đông biến thành một khối khổng lồ nghiền nát. [Name] không thể thở nổi vì lồng ngực bị ép chặt.",
-      "timer": 18,
+      "timer": 15,
       "options": [
-        { "id": "q4b_a", "text_en": "Inhale deeply when the crowd shifts", "text_vi": "Tranh thủ hít sâu khi đám đông dạt ra", "trait_tag": "risk_recognition", "next_question": "q5" },
-        { "id": "q4b_b", "text_en": "Try to lift your feet off the ground", "text_vi": "Cố gắng nhấc chân khỏi mặt đất", "trait_tag": "self_reliance", "next_question": "q5" },
-        { "id": "q4b_c", "text_en": "Move in rhythm with the surge", "text_vi": "Di chuyển theo nhịp sóng người", "trait_tag": "immediate_action", "next_question": "q5" },
-        { "id": "q4b_d", "text_en": "Look for a gap in the sky above", "text_vi": "Nhìn lên trời tìm khoảng trống", "trait_tag": "information_first", "next_question": "q5" }
+        {
+          "id": "q4b_a",
+          "text_en": "Inhale deeply when the crowd shifts",
+          "text_vi": "Tranh thủ hít sâu khi đám đông dạt ra",
+          "trait_tag": "risk_recognition",
+          "next_question": "q5"
+        },
+        {
+          "id": "q4b_b",
+          "text_en": "Try to lift your feet off the ground",
+          "text_vi": "Cố gắng nhấc chân khỏi mặt đất",
+          "trait_tag": "self_reliance",
+          "next_question": "q5"
+        },
+        {
+          "id": "q4b_c",
+          "text_en": "Move in rhythm with the surge",
+          "text_vi": "Di chuyển theo nhịp sóng người",
+          "trait_tag": "immediate_action",
+          "next_question": "q5"
+        },
+        {
+          "id": "q4b_d",
+          "text_en": "Look for a gap in the sky above",
+          "text_vi": "Nhìn lên trời tìm khoảng trống",
+          "trait_tag": "information_first",
+          "next_question": "q5"
+        }
       ]
     },
     {
       "id": "q5",
       "text_en": "A security guard opens a side emergency gate. The surge becomes violent as everyone spots the new opening.",
       "text_vi": "Bảo vệ mở một cổng thoát hiểm phụ, làn sóng người trở nên hung hãn khi ai nấy đều thấy lối thoát mới.",
-      "timer": 20,
+      "timer": 15,
       "options": [
-        { "id": "q5_a", "text_en": "Go with the flow toward the gate", "text_vi": "Cuốn theo dòng người về phía cổng", "trait_tag": "risk_recognition", "next_question": "q6" },
-        { "id": "q5_b", "text_en": "Wait for the initial rush to end", "text_vi": "Đợi đợt xô đẩy đầu tiên qua đi", "trait_tag": "information_first", "next_question": "q6" },
-        { "id": "q5_c", "text_en": "Hold your position near the wall", "text_vi": "Giữ vững vị trí gần vách tường", "trait_tag": "self_reliance", "next_question": "q6" },
-        { "id": "q5_d", "text_en": "Help guide others to the opening", "text_vi": "Hỗ trợ hướng dẫn người khác ra cổng", "trait_tag": "immediate_action", "next_question": "q6" }
+        {
+          "id": "q5_a",
+          "text_en": "Go with the flow toward the gate",
+          "text_vi": "Cuốn theo dòng người về phía cổng",
+          "trait_tag": "risk_recognition",
+          "next_question": "q6"
+        },
+        {
+          "id": "q5_b",
+          "text_en": "Wait for the initial rush to end",
+          "text_vi": "Đợi đợt xô đẩy đầu tiên qua đi",
+          "trait_tag": "information_first",
+          "next_question": "q6"
+        },
+        {
+          "id": "q5_c",
+          "text_en": "Hold your position near the wall",
+          "text_vi": "Giữ vững vị trí gần vách tường",
+          "trait_tag": "self_reliance",
+          "next_question": "q6"
+        },
+        {
+          "id": "q5_d",
+          "text_en": "Help guide others to the opening",
+          "text_vi": "Hỗ trợ hướng dẫn người khác ra cổng",
+          "trait_tag": "immediate_action",
+          "next_question": "q6"
+        }
       ]
     },
     {
       "id": "q6",
       "text_en": "You're out, but the rain is freezing and [Name] is separated from your friends. People are sitting on the curb, gasping for air.",
       "text_vi": "Bạn đã thoát ra, nhưng mưa lạnh buốt và [Name] đã lạc mất bạn bè. Mọi người ngồi bệt trên vỉa hè, thở dốc.",
-      "timer": 15,
+      "timer": 12,
       "options": [
-        { "id": "q6_a", "text_en": "Keep walking to create space", "text_vi": "Tiếp tục đi bộ để tạo khoảng trống", "trait_tag": "risk_recognition", "next_question": "q7a" },
-        { "id": "q6_b", "text_en": "Look for a first aid station", "text_vi": "Tìm trạm sơ cứu gần nhất", "trait_tag": "information_first", "next_question": "q7a" },
-        { "id": "q6_c", "text_en": "Check your body for bruises", "text_vi": "Kiểm tra các vết bầm trên cơ thể", "trait_tag": "self_reliance", "next_question": "q7b" },
-        { "id": "q6_d", "text_en": "Call your friends immediately", "text_vi": "Gọi điện cho bạn bè ngay lập tức", "trait_tag": "immediate_action", "next_question": "q7b" }
+        {
+          "id": "q6_a",
+          "text_en": "Keep walking to create space",
+          "text_vi": "Tiếp tục đi bộ để tạo khoảng trống",
+          "trait_tag": "risk_recognition",
+          "next_question": "q7a"
+        },
+        {
+          "id": "q6_b",
+          "text_en": "Look for a first aid station",
+          "text_vi": "Tìm trạm sơ cứu gần nhất",
+          "trait_tag": "information_first",
+          "next_question": "q7a"
+        },
+        {
+          "id": "q6_c",
+          "text_en": "Check your body for bruises",
+          "text_vi": "Kiểm tra các vết bầm trên cơ thể",
+          "trait_tag": "self_reliance",
+          "next_question": "q7b"
+        },
+        {
+          "id": "q6_d",
+          "text_en": "Call your friends immediately",
+          "text_vi": "Gọi điện cho bạn bè ngay lập tức",
+          "trait_tag": "immediate_action",
+          "next_question": "q7b"
+        }
       ]
     },
     {
       "id": "q7a",
       "text_en": "You see a group still trapped behind the fence. An ambulance siren wails in the distance as the reality sinks in.",
       "text_vi": "Bạn thấy một nhóm người vẫn kẹt sau hàng rào. Tiếng còi cứu thương vang từ xa, [Name] như tỉnh lại từ một giấc mơ.",
-      "timer": 25,
+      "timer": 20,
       "options": [
-        { "id": "q7a_a", "text_en": "Help the medics clear a path", "text_vi": "Giúp nhân viên y tế mở đường", "trait_tag": "immediate_action", "next_question": null },
-        { "id": "q7a_b", "text_en": "Sit down and catch your breath", "text_vi": "Ngồi xuống và hít thở sâu", "trait_tag": "risk_recognition", "next_question": null },
-        { "id": "q7a_c", "text_en": "Search for your lost shoes", "text_vi": "Tìm lại chiếc giày bị mất", "trait_tag": "self_reliance", "next_question": null },
-        { "id": "q7a_d", "text_en": "Ask a guard for the meetup point", "text_vi": "Hỏi bảo vệ điểm tập trung", "trait_tag": "information_first", "next_question": null }
+        {
+          "id": "q7a_a",
+          "text_en": "Help the medics clear a path",
+          "text_vi": "Giúp nhân viên y tế mở đường",
+          "trait_tag": "immediate_action",
+          "next_question": null
+        },
+        {
+          "id": "q7a_b",
+          "text_en": "Sit down and catch your breath",
+          "text_vi": "Ngồi xuống và hít thở sâu",
+          "trait_tag": "risk_recognition",
+          "next_question": null
+        },
+        {
+          "id": "q7a_c",
+          "text_en": "Search for your lost shoes",
+          "text_vi": "Tìm lại chiếc giày bị mất",
+          "trait_tag": "self_reliance",
+          "next_question": null
+        },
+        {
+          "id": "q7a_d",
+          "text_en": "Ask a guard for the meetup point",
+          "text_vi": "Hỏi bảo vệ điểm tập trung",
+          "trait_tag": "information_first",
+          "next_question": null
+        }
       ]
     },
     {
       "id": "q7b",
       "text_en": "Your hands are shaking. [Name] survived the crush, but the festival lights behind you now look like a warning sign.",
       "text_vi": "Tay bạn run rẩy. [Name] đã sống sót qua đám đông, nhưng ánh đèn lễ hội sau lưng giờ trông như một biển cảnh báo.",
-      "timer": 25,
+      "timer": 20,
       "options": [
-        { "id": "q7b_a", "text_en": "Go home and rest your heart", "text_vi": "Về nhà và nghỉ ngơi cho lại sức", "trait_tag": "risk_recognition", "next_question": null },
-        { "id": "q7b_b", "text_en": "Text your family that you're safe", "text_vi": "Nhắn tin báo gia đình bạn đã ổn", "trait_tag": "immediate_action", "next_question": null },
-        { "id": "q7b_c", "text_en": "Find a quiet place to wait", "text_vi": "Tìm một nơi yên tĩnh để đợi", "trait_tag": "information_first", "next_question": null },
-        { "id": "q7b_d", "text_en": "Walk until the adrenaline fades", "text_vi": "Đi bộ cho đến khi hết bàng hoàng", "trait_tag": "self_reliance", "next_question": null }
+        {
+          "id": "q7b_a",
+          "text_en": "Go home and rest your heart",
+          "text_vi": "Về nhà và nghỉ ngơi cho lại sức",
+          "trait_tag": "risk_recognition",
+          "next_question": null
+        },
+        {
+          "id": "q7b_b",
+          "text_en": "Text your family that you're safe",
+          "text_vi": "Nhắn tin báo gia đình bạn đã ổn",
+          "trait_tag": "immediate_action",
+          "next_question": null
+        },
+        {
+          "id": "q7b_c",
+          "text_en": "Find a quiet place to wait",
+          "text_vi": "Tìm một nơi yên tĩnh để đợi",
+          "trait_tag": "information_first",
+          "next_question": null
+        },
+        {
+          "id": "q7b_d",
+          "text_en": "Walk until the adrenaline fades",
+          "text_vi": "Đi bộ cho đến khi hết bàng hoàng",
+          "trait_tag": "self_reliance",
+          "next_question": null
+        }
       ]
     }
   ],

@@ -1,7 +1,7 @@
 {
   "id": "north_easy_4",
   "region": "north",
-  "danger": "4",
+  "danger": "3",
   "title_en": "The Nồm Short Circuit",
   "title_vi": "Chập Điện Mùa Nồm",
   "intro_en": "It is 'Nồm' season in Hanoi. Humidity is 98%, and walls are dripping. Suddenly, an old power strip sparks, and a fire starts behind the sofa.",
@@ -14,10 +14,34 @@
       "text_vi": "Ngọn lửa nhỏ nhưng đang lớn dần. Mùi nhựa cháy nồng nặc. [Name] thấy một ly nước và một chiếc chăn dày gần đó.",
       "timer": 15,
       "options": [
-        { "id": "q1_a", "text_en": "Switch off the main circuit breaker", "text_vi": "Ngắt cầu dao tổng ngay lập tức", "trait_tag": "risk_recognition", "next_question": "q2" },
-        { "id": "q1_b", "text_en": "Throw the glass of water on the fire", "text_vi": "Dội ly nước vào đám cháy", "trait_tag": "immediate_action", "next_question": "q2" },
-        { "id": "q1_c", "text_en": "Smother the fire with the dry blanket", "text_vi": "Dùng chăn khô dập lửa", "trait_tag": "self_reliance", "next_question": "q2" },
-        { "id": "q1_d", "text_en": "Call the fire department (114)", "text_vi": "Gọi ngay cho cứu hỏa 114", "trait_tag": "information_first", "next_question": "q2" }
+        {
+          "id": "q1_a",
+          "text_en": "Switch off the main circuit breaker",
+          "text_vi": "Ngắt cầu dao tổng ngay lập tức",
+          "trait_tag": "risk_recognition",
+          "next_question": "q2"
+        },
+        {
+          "id": "q1_b",
+          "text_en": "Throw the glass of water on the fire",
+          "text_vi": "Dội ly nước vào đám cháy",
+          "trait_tag": "immediate_action",
+          "next_question": "q2"
+        },
+        {
+          "id": "q1_c",
+          "text_en": "Smother the fire with the dry blanket",
+          "text_vi": "Dùng chăn khô dập lửa",
+          "trait_tag": "self_reliance",
+          "next_question": "q2"
+        },
+        {
+          "id": "q1_d",
+          "text_en": "Call the fire department (114)",
+          "text_vi": "Gọi ngay cho cứu hỏa 114",
+          "trait_tag": "information_first",
+          "next_question": "q2"
+        }
       ]
     },
     {
@@ -26,10 +50,34 @@
       "text_vi": "Ghế sofa bắt lửa. Khói đen bốc lên trần nhà. Hành lang hẹp lại đầy những thùng đồ chất đống.",
       "timer": 15,
       "options": [
-        { "id": "q2_a", "text_en": "Get low to avoid the rising smoke", "text_vi": "Cúi thấp người tránh khói", "trait_tag": "risk_recognition", "next_question": "q3" },
-        { "id": "q2_b", "text_en": "Grab a fire extinguisher from the kitchen", "text_vi": "Lấy bình chữa cháy từ bếp", "trait_tag": "immediate_action", "next_question": "q3" },
-        { "id": "q2_c", "text_en": "Try to drag the sofa out the door", "text_vi": "Cố kéo ghế sofa ra ngoài cửa", "trait_tag": "self_reliance", "next_question": "q3" },
-        { "id": "q2_d", "text_en": "Shout to wake up the neighbors", "text_vi": "Hét lớn để báo động hàng xóm", "trait_tag": "information_first", "next_question": "q3" }
+        {
+          "id": "q2_a",
+          "text_en": "Get low to avoid the rising smoke",
+          "text_vi": "Cúi thấp người tránh khói",
+          "trait_tag": "risk_recognition",
+          "next_question": "q3"
+        },
+        {
+          "id": "q2_b",
+          "text_en": "Grab a fire extinguisher from the kitchen",
+          "text_vi": "Lấy bình chữa cháy từ bếp",
+          "trait_tag": "immediate_action",
+          "next_question": "q3"
+        },
+        {
+          "id": "q2_c",
+          "text_en": "Try to drag the sofa out the door",
+          "text_vi": "Cố kéo ghế sofa ra ngoài cửa",
+          "trait_tag": "self_reliance",
+          "next_question": "q3"
+        },
+        {
+          "id": "q2_d",
+          "text_en": "Shout to wake up the neighbors",
+          "text_vi": "Hét lớn để báo động hàng xóm",
+          "trait_tag": "information_first",
+          "next_question": "q3"
+        }
       ]
     },
     {
@@ -38,10 +86,34 @@
       "text_vi": "Phòng khách đã bị bao trùm bởi lửa. [Name] phải chọn đường thoát: cửa chính hay ban công.",
       "timer": 15,
       "options": [
-        { "id": "q3_a", "text_en": "Test the front door for heat", "text_vi": "Thử nhiệt độ cửa chính", "trait_tag": "risk_recognition", "next_question": "q4a" },
-        { "id": "q3_b", "text_en": "Retreat to the balcony for air", "text_vi": "Ra ban công để hít thở", "trait_tag": "self_reliance", "next_question": "q4b" },
-        { "id": "q3_c", "text_en": "Use the window in the bedroom", "text_vi": "Sử dụng cửa sổ trong phòng ngủ", "trait_tag": "immediate_action", "next_question": "q4a" },
-        { "id": "q3_d", "text_en": "Check for a communal fire exit", "text_vi": "Tìm lối thoát hiểm chung", "trait_tag": "information_first", "next_question": "q4b" }
+        {
+          "id": "q3_a",
+          "text_en": "Test the front door for heat",
+          "text_vi": "Thử nhiệt độ cửa chính",
+          "trait_tag": "risk_recognition",
+          "next_question": "q4a"
+        },
+        {
+          "id": "q3_b",
+          "text_en": "Retreat to the balcony for air",
+          "text_vi": "Ra ban công để hít thở",
+          "trait_tag": "self_reliance",
+          "next_question": "q4b"
+        },
+        {
+          "id": "q3_c",
+          "text_en": "Use the window in the bedroom",
+          "text_vi": "Sử dụng cửa sổ trong phòng ngủ",
+          "trait_tag": "immediate_action",
+          "next_question": "q4a"
+        },
+        {
+          "id": "q3_d",
+          "text_en": "Check for a communal fire exit",
+          "text_vi": "Tìm lối thoát hiểm chung",
+          "trait_tag": "information_first",
+          "next_question": "q4b"
+        }
       ]
     },
     {
@@ -50,10 +122,34 @@
       "text_vi": "Cánh cửa chính đang nóng ran. Mở cửa có thể gây nổ tạt lửa. Khói đã tràn vào phổi.",
       "timer": 15,
       "options": [
-        { "id": "q4a_a", "text_en": "Do not open; seal the door gaps", "text_vi": "Không mở cửa; chặn kín khe cửa", "trait_tag": "risk_recognition", "next_question": "q5" },
-        { "id": "q4a_b", "text_en": "Cover face with a damp towel", "text_vi": "Dùng khăn ẩm che kín mặt", "trait_tag": "immediate_action", "next_question": "q5" },
-        { "id": "q4a_c", "text_en": "Find a different exit immediately", "text_vi": "Tìm lối thoát khác ngay lập tức", "trait_tag": "self_reliance", "next_question": "q5" },
-        { "id": "q4a_d", "text_en": "Bang on the door for help", "text_vi": "Đập cửa kêu cứu", "trait_tag": "information_first", "next_question": "q5" }
+        {
+          "id": "q4a_a",
+          "text_en": "Do not open; seal the door gaps",
+          "text_vi": "Không mở cửa; chặn kín khe cửa",
+          "trait_tag": "risk_recognition",
+          "next_question": "q5"
+        },
+        {
+          "id": "q4a_b",
+          "text_en": "Cover face with a damp towel",
+          "text_vi": "Dùng khăn ẩm che kín mặt",
+          "trait_tag": "immediate_action",
+          "next_question": "q5"
+        },
+        {
+          "id": "q4a_c",
+          "text_en": "Find a different exit immediately",
+          "text_vi": "Tìm lối thoát khác ngay lập tức",
+          "trait_tag": "self_reliance",
+          "next_question": "q5"
+        },
+        {
+          "id": "q4a_d",
+          "text_en": "Bang on the door for help",
+          "text_vi": "Đập cửa kêu cứu",
+          "trait_tag": "information_first",
+          "next_question": "q5"
+        }
       ]
     },
     {
@@ -62,10 +158,34 @@
       "text_vi": "Ban công không có khói nhưng lửa đã sát cửa. [Name] đang ở tầng 3. Không thấy thang cứu nạn.",
       "timer": 12,
       "options": [
-        { "id": "q4b_a", "text_en": "Signal with a bright cloth or light", "text_vi": "Ra hiệu bằng vải sáng hoặc đèn", "trait_tag": "risk_recognition", "next_question": "q5" },
-        { "id": "q4b_b", "text_en": "Try to climb down the drainpipe", "text_vi": "Cố leo xuống bằng ống thoát nước", "trait_tag": "self_reliance", "next_question": "q5" },
-        { "id": "q4b_c", "text_en": "Shout your apartment number to street", "text_vi": "Hét số phòng mình xuống đường", "trait_tag": "information_first", "next_question": "q5" },
-        { "id": "q4b_d", "text_en": "Prepare to jump onto something soft", "text_vi": "Chuẩn bị nhảy xuống vật gì đó êm", "trait_tag": "immediate_action", "next_question": "q5" }
+        {
+          "id": "q4b_a",
+          "text_en": "Signal with a bright cloth or light",
+          "text_vi": "Ra hiệu bằng vải sáng hoặc đèn",
+          "trait_tag": "risk_recognition",
+          "next_question": "q5"
+        },
+        {
+          "id": "q4b_b",
+          "text_en": "Try to climb down the drainpipe",
+          "text_vi": "Cố leo xuống bằng ống thoát nước",
+          "trait_tag": "self_reliance",
+          "next_question": "q5"
+        },
+        {
+          "id": "q4b_c",
+          "text_en": "Shout your apartment number to street",
+          "text_vi": "Hét số phòng mình xuống đường",
+          "trait_tag": "information_first",
+          "next_question": "q5"
+        },
+        {
+          "id": "q4b_d",
+          "text_en": "Prepare to jump onto something soft",
+          "text_vi": "Chuẩn bị nhảy xuống vật gì đó êm",
+          "trait_tag": "immediate_action",
+          "next_question": "q5"
+        }
       ]
     },
     {
@@ -74,10 +194,34 @@
       "text_vi": "Tiếng còi hú vang lên. Cứu hỏa đang triển khai. [Name] nghe tiếng lửa bùng lên khi gặp oxy.",
       "timer": 15,
       "options": [
-        { "id": "q5_a", "text_en": "Stay visible to the rescuers", "text_vi": "Giữ vị trí để đội cứu hộ thấy", "trait_tag": "risk_recognition", "next_question": "q6" },
-        { "id": "q5_b", "text_en": "Keep the balcony door closed tight", "text_vi": "Đóng chặt cửa ra ban công", "trait_tag": "immediate_action", "next_question": "q6" },
-        { "id": "q5_c", "text_en": "Watch for falling debris from above", "text_vi": "Quan sát vật liệu rơi từ trên", "trait_tag": "self_reliance", "next_question": "q6" },
-        { "id": "q5_d", "text_en": "Verify the rescue ladder's position", "text_vi": "Xác nhận vị trí thang cứu hộ", "trait_tag": "information_first", "next_question": "q6" }
+        {
+          "id": "q5_a",
+          "text_en": "Stay visible to the rescuers",
+          "text_vi": "Giữ vị trí để đội cứu hộ thấy",
+          "trait_tag": "risk_recognition",
+          "next_question": "q6"
+        },
+        {
+          "id": "q5_b",
+          "text_en": "Keep the balcony door closed tight",
+          "text_vi": "Đóng chặt cửa ra ban công",
+          "trait_tag": "immediate_action",
+          "next_question": "q6"
+        },
+        {
+          "id": "q5_c",
+          "text_en": "Watch for falling debris from above",
+          "text_vi": "Quan sát vật liệu rơi từ trên",
+          "trait_tag": "self_reliance",
+          "next_question": "q6"
+        },
+        {
+          "id": "q5_d",
+          "text_en": "Verify the rescue ladder's position",
+          "text_vi": "Xác nhận vị trí thang cứu hộ",
+          "trait_tag": "information_first",
+          "next_question": "q6"
+        }
       ]
     },
     {
@@ -86,10 +230,34 @@
       "text_vi": "Một lính cứu hỏa đưa mặt nạ lọc khói cho [Name]. Họ hỏi còn ai ở trong nhà không.",
       "timer": 15,
       "options": [
-        { "id": "q6_a", "text_en": "Provide clear count and location", "text_vi": "Báo chính xác số người và vị trí", "trait_tag": "risk_recognition", "next_question": "q7a" },
-        { "id": "q6_b", "text_en": "Point to the rooms already checked", "text_vi": "Chỉ các phòng đã kiểm tra rồi", "trait_tag": "information_first", "next_question": "q7b" },
-        { "id": "q6_c", "text_en": "Hurry to get down the ladder", "text_vi": "Nhanh chóng leo xuống thang", "trait_tag": "immediate_action", "next_question": "q7b" },
-        { "id": "q6_d", "text_en": "Show them the origin of the fire", "text_vi": "Chỉ cho họ nơi lửa bùng phát", "trait_tag": "self_reliance", "next_question": "q7a" }
+        {
+          "id": "q6_a",
+          "text_en": "Provide clear count and location",
+          "text_vi": "Báo chính xác số người và vị trí",
+          "trait_tag": "risk_recognition",
+          "next_question": "q7a"
+        },
+        {
+          "id": "q6_b",
+          "text_en": "Point to the rooms already checked",
+          "text_vi": "Chỉ các phòng đã kiểm tra rồi",
+          "trait_tag": "information_first",
+          "next_question": "q7b"
+        },
+        {
+          "id": "q6_c",
+          "text_en": "Hurry to get down the ladder",
+          "text_vi": "Nhanh chóng leo xuống thang",
+          "trait_tag": "immediate_action",
+          "next_question": "q7b"
+        },
+        {
+          "id": "q6_d",
+          "text_en": "Show them the origin of the fire",
+          "text_vi": "Chỉ cho họ nơi lửa bùng phát",
+          "trait_tag": "self_reliance",
+          "next_question": "q7a"
+        }
       ]
     },
     {
@@ -98,10 +266,34 @@
       "text_vi": "[Name] xuống đất an toàn. Nhân viên y tế kiểm tra ngộ độc khí CO. Đám cháy được dập tắt nhanh chóng.",
       "timer": 20,
       "options": [
-        { "id": "q7a_a", "text_en": "Schedule an electrical safety audit", "text_vi": "Lên lịch kiểm tra an toàn điện", "trait_tag": "risk_recognition", "next_question": null },
-        { "id": "q7a_b", "text_en": "Install smoke detectors in all rooms", "text_vi": "Lắp chuông báo khói các phòng", "trait_tag": "immediate_action", "next_question": null },
-        { "id": "q7a_c", "text_en": "Discard all damp power strips", "text_vi": "Vứt bỏ các ổ điện bị ẩm", "trait_tag": "self_reliance", "next_question": null },
-        { "id": "q7a_d", "text_en": "Thank the local fire station", "text_vi": "Cảm ơn đơn vị phòng cháy", "trait_tag": "information_first", "next_question": null }
+        {
+          "id": "q7a_a",
+          "text_en": "Schedule an electrical safety audit",
+          "text_vi": "Lên lịch kiểm tra an toàn điện",
+          "trait_tag": "risk_recognition",
+          "next_question": null
+        },
+        {
+          "id": "q7a_b",
+          "text_en": "Install smoke detectors in all rooms",
+          "text_vi": "Lắp chuông báo khói các phòng",
+          "trait_tag": "immediate_action",
+          "next_question": null
+        },
+        {
+          "id": "q7a_c",
+          "text_en": "Discard all damp power strips",
+          "text_vi": "Vứt bỏ các ổ điện bị ẩm",
+          "trait_tag": "self_reliance",
+          "next_question": null
+        },
+        {
+          "id": "q7a_d",
+          "text_en": "Thank the local fire station",
+          "text_vi": "Cảm ơn đơn vị phòng cháy",
+          "trait_tag": "information_first",
+          "next_question": null
+        }
       ]
     },
     {
@@ -110,10 +302,34 @@
       "text_vi": "[Name] an toàn nhưng phải điều trị sốc nhẹ. Ngôi nhà bị hư hại nặng do khói và nước.",
       "timer": 20,
       "options": [
-        { "id": "q7b_a", "text_en": "Use dehumidifiers during Nồm", "text_vi": "Sử dụng máy hút ẩm trong mùa nồm", "trait_tag": "risk_recognition", "next_question": null },
-        { "id": "q7b_b", "text_en": "Replace old wiring in the walls", "text_vi": "Thay hệ thống dây điện cũ trong tường", "trait_tag": "immediate_action", "next_question": null },
-        { "id": "q7b_c", "text_en": "Keep exits clear of clutter", "text_vi": "Giữ lối thoát hiểm thông thoáng", "trait_tag": "self_reliance", "next_question": null },
-        { "id": "q7b_d", "text_en": "Check insurance coverage for fire", "text_vi": "Kiểm tra bảo hiểm cháy nổ", "trait_tag": "information_first", "next_question": null }
+        {
+          "id": "q7b_a",
+          "text_en": "Use dehumidifiers during Nồm",
+          "text_vi": "Sử dụng máy hút ẩm trong mùa nồm",
+          "trait_tag": "risk_recognition",
+          "next_question": null
+        },
+        {
+          "id": "q7b_b",
+          "text_en": "Replace old wiring in the walls",
+          "text_vi": "Thay hệ thống dây điện cũ trong tường",
+          "trait_tag": "immediate_action",
+          "next_question": null
+        },
+        {
+          "id": "q7b_c",
+          "text_en": "Keep exits clear of clutter",
+          "text_vi": "Giữ lối thoát hiểm thông thoáng",
+          "trait_tag": "self_reliance",
+          "next_question": null
+        },
+        {
+          "id": "q7b_d",
+          "text_en": "Check insurance coverage for fire",
+          "text_vi": "Kiểm tra bảo hiểm cháy nổ",
+          "trait_tag": "information_first",
+          "next_question": null
+        }
       ]
     }
   ],
