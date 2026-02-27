@@ -15,9 +15,22 @@
 		D3AC34C72F35FD2B008CE481 /* DiaryModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DiaryModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+		D38CEE4C2F518E4B00285A02 /* Exceptions for "MaiInHerLoop" folder in "Compile Sources" phase from "MaiInHerLoop" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			buildPhase = D3379A222F335FD70044E4D3 /* Sources */;
+			membershipExceptions = (
+				Resources/Scenarios/south_easy_2.json,
+			);
+		};
+/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		D3379A282F335FD70044E4D3 /* MaiInHerLoop */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				D38CEE4C2F518E4B00285A02 /* Exceptions for "MaiInHerLoop" folder in "Compile Sources" phase from "MaiInHerLoop" target */,
+			);
 			path = MaiInHerLoop;
 			sourceTree = "<group>";
 		};

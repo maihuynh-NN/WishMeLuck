@@ -4,335 +4,119 @@
   "danger": "2",
   "title_en": "The 18th Floor",
   "title_vi": "Tầng 18",
-  "intro_en": "[Name] rents on the 18th floor. On a regular Tuesday night, [Name]'s mind drifts to the idea of starting your life from scratch, and chasing million-dollar investments in Vietnam.",
-  "intro_vi": "[Name] thuê căn hộ tầng 18. Vào một tối thứ Ba bình thường, [Name] đang mơ về việc làm lại từ đầu và theo đuổi những khoản đầu tư triệu đô ở Việt Nam.",
+  "intro_en": "Tuesday night in Saigon. You're finally settling into your 18th-floor rental, glass of wine in hand, watching the city lights blur behind the glass.",
+  "intro_vi": "Đêm Sài Gòn. Bạn đang thư giãn trong căn hộ tầng 18 với ly rượu trên tay, nhìn ánh đèn thành phố mờ ảo qua ô cửa kính.",
   "start_question": "q1",
   "questions": [
     {
       "id": "q1",
-      "text_en": "11 pm, [Name] sip red wine from the balcony and view the Bitexco Tower, reminisce your glorious time in Melbourne. A faint smell reaches you, faintly burnt. Could be a neighbor cooking. Could be nothing.",
-      "text_vi": "[Name] thuê một căn hộ ấm cúng ở tầng 18, nơi [Name] có thể đứng bên ban công vừa nhâm nhi rượu vang đỏ, vừa nhìn ra tòa nhà Bitexco. 11 giờ đêm, bạn đang hoài niệm về những ngày sung túc ở Melbourne, bỗng một mùi lạ thoảng đến. Một mùi rất hoá chất, hơi khét nhẹ. Có lẽ ai đó rán cá quá lửa, hoặc cuộc đời bạn quá khét.",
-      "timer": 25,
+      "text_en": "A sharp, chemical smell drifts through the balcony door while the hallway outside falls into an unsettling, heavy silence.",
+      "text_vi": "Mùi hóa chất nồng nặc thoảng qua cửa ban công, trong khi hành lang bên ngoài đột ngột rơi vào sự im lặng đến đáng sợ.",
+      "timer": 20,
       "options": [
-        {
-          "id": "q1_a",
-          "text_en": "Open the door and check the hallway",
-          "text_vi": "Mở cửa và kiểm tra hành lang",
-          "trait_tag": "risk_recognition",
-          "next_question": "q2"
-        },
-        {
-          "id": "q1_b",
-          "text_en": "Check your building's group chat for any alerts from the building manager",
-          "text_vi": "Kiểm tra nhóm chat tòa nhà xem có thông báo nào từ quản lý không",
-          "trait_tag": "information_first",
-          "next_question": "q2"
-        },
-        {
-          "id": "q1_c",
-          "text_en": "Ignore it and keep reminiscing your glorious time nostalgically",
-          "text_vi": "Khẽ khép bờ mi, tiếp tục đắm chìm trong dòng chảy huy hoàng",
-          "trait_tag": "self_reliance",
-          "next_question": "q2"
-        },
-        {
-          "id": "q1_d",
-          "text_en": "Knock on your neighbor's door to ask",
-          "text_vi": "Gõ cửa hàng xóm hỏi thăm",
-          "trait_tag": "immediate_action",
-          "next_question": "q2"
-        }
+        { "id": "q1_a", "text_en": "Step out to investigate the hall", "text_vi": "Ra ngoài kiểm tra hành lang", "trait_tag": "risk_recognition", "next_question": "q2" },
+        { "id": "q1_b", "text_en": "Check the building's Zalo group", "text_vi": "Kiểm tra nhóm Zalo cư dân", "trait_tag": "information_first", "next_question": "q2" },
+        { "id": "q1_c", "text_en": "Knock on your neighbor's door", "text_vi": "Gõ cửa hỏi nhà hàng xóm", "trait_tag": "immediate_action", "next_question": "q2" },
+        { "id": "q1_d", "text_en": "Close the balcony, pour another glass", "text_vi": "Đóng cửa ban công, rót thêm ly nữa", "trait_tag": "self_reliance", "next_question": "q2" }
       ]
     },
     {
       "id": "q2",
-      "text_en": "You decide to check the hallway. An atmospheric mist fills at ankle level — maybe someone is filming a TikTok trend? From the stairwell, you hear someone shouting one floor below.",
-      "text_vi": "Bạn quyết định ra hành lang kiểm tra. Một lớp sương mỏng đang lan ở tầm mắt cá chân — có thể ai đó đang quay TikTok trend? Từ cầu thang, bạn nghe tiếng ai đó hô hào ở tầng dưới.",
-      "timer": 25,
+      "text_en": "Acrid smoke is already hugging the floorboards, and as someone screams from the stairwell, you notice your neighbor's light is still on.",
+      "text_vi": "Khói khét lẹt đã bắt đầu len lỏi dưới sàn, và giữa tiếng hét từ phía cầu thang, bạn thấy đèn nhà hàng xóm vẫn đang sáng.",
+      "timer": 20,
       "options": [
-        {
-          "id": "q2_a",
-          "text_en": "Move toward the stairwell to see what's happening",
-          "text_vi": "Tiến về phía cầu thang để xem chuyện gì đang xảy ra",
-          "trait_tag": "risk_recognition",
-          "next_question": "q3"
-        },
-        {
-          "id": "q2_b",
-          "text_en": "Go back inside and call building security first",
-          "text_vi": "Quay vào trong và gọi bảo vệ tòa nhà trước",
-          "trait_tag": "information_first",
-          "next_question": "q3"
-        },
-        {
-          "id": "q2_c",
-          "text_en": "Start banging on doors on your floor to warn neighbors",
-          "text_vi": "Bắt đầu đập cửa các phòng cùng tầng để cảnh báo hàng xóm",
-          "trait_tag": "immediate_action",
-          "next_question": "q3"
-        },
-        {
-          "id": "q2_d",
-          "text_en": "It's a sign from the universe — grab your bag and prepare to leave",
-          "text_vi": "Đây là tín hiệu từ vũ trụ, bạn quay vào phòng và soạn vật dụng để phòng hờ",
-          "trait_tag": "self_reliance",
-          "next_question": "q3"
-        }
+        { "id": "q2_a", "text_en": "Head straight for the emergency exit", "text_vi": "Chạy thẳng ra lối thoát hiểm", "trait_tag": "risk_recognition", "next_question": "q3" },
+        { "id": "q2_b", "text_en": "Bang on their door to wake them", "text_vi": "Đập cửa gọi hàng xóm dậy", "trait_tag": "immediate_action", "next_question": "q3" },
+        { "id": "q2_c", "text_en": "Grab your laptop and essentials first", "text_vi": "Vơ lấy máy tính và đồ quan trọng", "trait_tag": "self_reliance", "next_question": "q3" },
+        { "id": "q2_d", "text_en": "Call building security for confirmation", "text_vi": "Gọi bảo vệ tòa nhà xác nhận tình hình", "trait_tag": "information_first", "next_question": "q3" }
       ]
     },
     {
       "id": "q3",
-      "text_en": "Smoke is now visible rising from the stairwell. The hallway is still in silence. You — in your $1,000 bathrobe — are standing next to the elevator. Someone is already pressing the button, the door opens in front of you.",
-      "text_vi": "Khói đã hiện diện rõ từ cầu thang, có lẽ không phải ai đó quay TikTok với nhiều khói như vậy? Nhưng hành lang vẫn im lặng. Bạn, vẫn trong chiếc áo choàng tắm 1.000 đô, đang đứng cạnh thang máy. Hẳn ai đó đã nhấn nút trước, nên cửa thang máy mở ra trước mắt bạn.",
-      "timer": 20,
+      "text_en": "The elevator chimes open just as your neighbor stumbles out barefoot, clutching a crying baby against the rising heat.",
+      "text_vi": "Tiếng chuông thang máy vang lên ngay lúc chị hàng xóm hớt hải bước ra chân đất, ôm chặt đứa bé đang khóc giữa hơi nóng đang bốc lên.",
+      "timer": 18,
       "options": [
-        {
-          "id": "q3_a",
-          "text_en": "Might be an overthinker, but take the stairs immediately",
-          "text_vi": "Có thể là lo xa, nhưng xuống cầu thang ngay thôi",
-          "trait_tag": "risk_recognition",
-          "next_question": "q4a"
-        },
-        {
-          "id": "q3_b",
-          "text_en": "The smoke isn't that bad. Elevator to the reception real quick",
-          "text_vi": "Khói đã tệ lắm đâu. Xuống thang máy ra sảnh cho nhanh",
-          "trait_tag": "information_first",
-          "next_question": "q4b"
-        },
-        {
-          "id": "q3_c",
-          "text_en": "Start packing devices and cash, you still have bills no matter what",
-          "text_vi": "Thu dọn giấy tờ và đồ điện tử, dù thế nào hóa đơn vẫn phải trả",
-          "trait_tag": "self_reliance",
-          "next_question": "q4a"
-        },
-        {
-          "id": "q3_d",
-          "text_en": "Spend a few more minutes to observe the phenomenon",
-          "text_vi": "Dành thêm vài phút quan sát xung quanh có động tĩnh gì không",
-          "trait_tag": "immediate_action",
-          "next_question": "q4b"
-        }
+        { "id": "q3_a", "text_en": "Direct her toward the smoky stairs", "text_vi": "Dẫn chị hướng về phía cầu thang", "trait_tag": "risk_recognition", "next_question": "q4a" },
+        { "id": "q3_b", "text_en": "Hop into the elevator to go down", "text_vi": "Vào thang máy để xuống cho nhanh", "trait_tag": "information_first", "next_question": "q4b" },
+        { "id": "q3_c", "text_en": "Carry the baby so she can run", "text_vi": "Bế giúp đứa bé để chị dễ chạy", "trait_tag": "immediate_action", "next_question": "q4a" },
+        { "id": "q3_d", "text_en": "She's grown, she'll manage. Move now.", "text_vi": "Chị tự lo được. Đi ngay thôi.", "trait_tag": "self_reliance", "next_question": "q4b" }
       ]
     },
     {
       "id": "q4a",
-      "text_en": "Suddenly the fire alarm is deafening, people starts shouting chaotically, your eyes gets sting. [Name] run and already reaches the third floor, an elderly woman falls and blocks your path. She is heavier than she looks. You clearly hear the fire roar and iron bars collapsing from behind.",
-      "text_vi": "Khói phủ kín cầu thang nhanh hơn dự kiến. Chuông báo cháy chát chúa, mọi người hét loạn xạ, mắt bạn cay xè vì khói. [Name] chạy như một vận động viên và đã đến tầng ba — thì một bà cụ ngã xuống chặn đường bạn. Bà nặng hơn vẻ ngoài. Cả hai còn hai tầng nữa là tới lối ra. Bạn nghe rõ tiếng lửa gầm và thanh sắt sập từ bên dưới.",
-      "timer": 20,
+      "text_en": "On the third-floor landing, an elderly woman collapses across the stairs as the baby's screams echo off concrete walls closing in with heat.",
+      "text_vi": "Ở chiếu nghỉ tầng ba, một bà cụ ngã sụp ngang cầu thang trong khi tiếng khóc của đứa bé vọng khắp bức tường bê tông đang nóng rực.",
+      "timer": 18,
       "options": [
-        {
-          "id": "q4a_a",
-          "text_en": "Try to carry her on your back",
-          "text_vi": "Cố cõng bà lên lưng",
-          "trait_tag": "immediate_action",
-          "next_question": "q5"
-        },
-        {
-          "id": "q4a_b",
-          "text_en": "Keep her staying low and rapidly get a fireman or security for help from outside",
-          "text_vi": "Giữ bà nằm thấp và nhanh chóng ra ngoài kêu lính cứu hỏa hoặc bảo vệ",
-          "trait_tag": "risk_recognition",
-          "next_question": "q5"
-        },
-        {
-          "id": "q4a_c",
-          "text_en": "Shout for others on the stairwell to help her while you keep moving",
-          "text_vi": "Hét to kêu người khác trên cầu thang giúp bà trong khi bạn tiếp tục chạy",
-          "trait_tag": "information_first",
-          "next_question": "q5"
-        },
-        {
-          "id": "q4a_d",
-          "text_en": "She's conscious. She's stronger than she looks. You've made worse bets than this — keep moving, someone behind will reach her",
-          "text_vi": "Bà vẫn tỉnh. Bà mạnh hơn vẻ ngoài. Bạn đã đặt cược tệ hơn thế này — cứ chạy đi, người phía sau sẽ giúp bà",
-          "trait_tag": "self_reliance",
-          "next_question": "q5"
-        }
+        { "id": "q4a_a", "text_en": "Hoist her up and drag her along", "text_vi": "Đỡ bà dậy và kéo bà theo", "trait_tag": "immediate_action", "next_question": "q5" },
+        { "id": "q4a_b", "text_en": "Lay her flat, sprint outside for help", "text_vi": "Đặt bà nằm xuống, chạy ra kêu cứu", "trait_tag": "risk_recognition", "next_question": "q5" },
+        { "id": "q4a_c", "text_en": "Scream for anyone above to assist", "text_vi": "Hét lên gọi người phía trên hỗ trợ", "trait_tag": "information_first", "next_question": "q5" },
+        { "id": "q4a_d", "text_en": "She's breathing. Others will come. Keep going.", "text_vi": "Bà còn thở. Người khác sẽ đến. Đi tiếp.", "trait_tag": "self_reliance", "next_question": "q5" }
       ]
     },
     {
       "id": "q4b",
-      "text_en": "[Name] gets in the elevator rapidly like placing a stop-loss order — but the elevator stops at floor 3, just like how the market cuts you off. Smoke is now entering the elevator shaft. You force the doors open manually and step into an unknown smoke-filled floor with the lights off and screams echoing through the darkness.",
-      "text_vi": "[Name] bước vào thang máy nhanh như đặt lệnh cắt lỗ — nhưng thang dừng ở tầng 3, y như thị trường cắt bạn ra. Khói đang tràn vào trục thang máy. Bạn tự tay bẻ cửa ra và bước vào một tầng không quen, đầy khói, đèn tắt, tiếng la hét vọng khắp nơi.",
-      "timer": 20,
+      "text_en": "The elevator jerks violently and dies, leaving you trapped in a metal box as smoke begins to seep through the ceiling vents.",
+      "text_vi": "Thang máy giật mạnh rồi khựng lại, nhốt bạn trong chiếc hộp kim loại trong khi khói bắt đầu tràn qua khe thông gió trên trần.",
+      "timer": 18,
       "options": [
-        {
-          "id": "q4b_a",
-          "text_en": "Stay low and try to navigate toward the emergency exit sign",
-          "text_vi": "Cúi thấp và cố tìm biển thoát hiểm",
-          "trait_tag": "risk_recognition",
-          "next_question": "q5"
-        },
-        {
-          "id": "q4b_b",
-          "text_en": "Shout to find out if anyone else is on this floor",
-          "text_vi": "Hét to xem có ai khác trên tầng này không",
-          "trait_tag": "immediate_action",
-          "next_question": "q5"
-        },
-        {
-          "id": "q4b_c",
-          "text_en": "Call the building manager or someone close — mark your situation",
-          "text_vi": "Gọi cho quản lý tòa nhà hoặc người thân — báo tình trạng của bạn",
-          "trait_tag": "information_first",
-          "next_question": "q5"
-        },
-        {
-          "id": "q4b_d",
-          "text_en": "Gamble on your sixth sense to find the stairwell door",
-          "text_vi": "Đánh cược vào linh cảm thứ sáu để tìm cửa cầu thang",
-          "trait_tag": "self_reliance",
-          "next_question": "q5"
-        }
+        { "id": "q4b_a", "text_en": "Try to pry the doors open by hand", "text_vi": "Cố dùng tay cạy cửa thang máy", "trait_tag": "risk_recognition", "next_question": "q5" },
+        { "id": "q4b_b", "text_en": "Spam the alarm and call 114", "text_vi": "Bấm chuông báo động và gọi 114", "trait_tag": "information_first", "next_question": "q5" },
+        { "id": "q4b_c", "text_en": "Cover your face with a wet shirt", "text_vi": "Dùng áo ướt bịt chặt mũi miệng", "trait_tag": "self_reliance", "next_question": "q5" },
+        { "id": "q4b_d", "text_en": "Kick the lowest panel as hard as you can", "text_vi": "Đạp mạnh hết sức vào tấm panel dưới cùng", "trait_tag": "immediate_action", "next_question": "q5" }
       ]
     },
     {
       "id": "q5",
-      "text_en": "[Name] makes it outside — a third life earned, though you look like a burning toast. The street is chaos: residents, fire trucks, and reporters pushing through the crowd. Your phone is at 11%. You don't see two of your neighbors from your floor — the ones who shared a bowl of phở with you on your first day in Vietnam.",
-      "text_vi": "[Name] thoát ra ngoài được — thêm một mạng nữa, dù trông bạn như cái bánh mì cháy. Ngoài đường hỗn loạn: cư dân, xe cứu hỏa, phóng viên chen nhau. Điện thoại còn 11%. Bạn giật mình vì chưa thấy hai hàng xóm 'cốt' cùng tầng — những người đã mời bạn tô phở ấm nóng vào ngày đầu tiên bạn dọn đến chung cư.",
+      "text_en": "You burst onto the street, lungs burning. Your neighbor is clutching her baby — but her husband never made it down.",
+      "text_vi": "Bạn lao ra đường, phổi rát bỏng, thấy chị hàng xóm ôm chặt đứa bé — nhưng chồng chị không bao giờ xuống được từ tầng 18.",
       "timer": 20,
       "options": [
-        {
-          "id": "q5_a",
-          "text_en": "Tell a firefighter exactly what floor you came from and who you didn't see",
-          "text_vi": "Báo cho lính cứu hỏa chính xác tầng bạn từ đó ra và ai bạn không thấy",
-          "trait_tag": "risk_recognition",
-          "next_question": "q6"
-        },
-        {
-          "id": "q5_b",
-          "text_en": "Call your missing neighbors' numbers immediately",
-          "text_vi": "Gọi ngay cho những hàng xóm mất tích",
-          "trait_tag": "immediate_action",
-          "next_question": "q6"
-        },
-        {
-          "id": "q5_c",
-          "text_en": "Stay near the entrance to guide firefighters on building layout",
-          "text_vi": "Ở gần lối vào để hướng dẫn lính cứu hỏa về sơ đồ tòa nhà",
-          "trait_tag": "information_first",
-          "next_question": "q6"
-        },
-        {
-          "id": "q5_d",
-          "text_en": "Move away from the building to safety — maybe step into the next door coffee shop for a cup of herbal tea",
-          "text_vi": "Rời xa tòa nhà đến nơi an toàn — có thể ghé quán cà phê bên cạnh uống trà thảo mộc",
-          "trait_tag": "self_reliance",
-          "next_question": "q6"
-        }
+        { "id": "q5_a", "text_en": "Give firefighters his exact floor and unit", "text_vi": "Báo lính cứu hỏa chính xác tầng và phòng", "trait_tag": "risk_recognition", "next_question": "q6" },
+        { "id": "q5_b", "text_en": "Dial his number with your dying phone", "text_vi": "Bấm số anh ấy bằng cục pin sắp cạn", "trait_tag": "immediate_action", "next_question": "q6" },
+        { "id": "q5_c", "text_en": "Ask her what he was doing when she left", "text_vi": "Hỏi chị lúc đi anh ấy đang làm gì", "trait_tag": "information_first", "next_question": "q6" },
+        { "id": "q5_d", "text_en": "The professionals are here. Stand back.", "text_vi": "Lính chuyên nghiệp đã tới. Đứng ra xa.", "trait_tag": "self_reliance", "next_question": "q6" }
       ]
     },
     {
       "id": "q6",
-      "text_en": "One of your neighbors made it out. The other didn't. Firefighters are telling everyone to move back. Your phone dies — because you were scrolling Facebook trying to spot yourself in someone else's footage. A stranger hands you their phone: 'Call whoever you need to.' You have 30 seconds before they need it back.",
-      "text_vi": "Một trong hai hàng xóm của bạn đã ra được. Người còn lại thì không. Lính cứu hỏa yêu cầu mọi người lùi ra. Điện thoại bạn hết pin, vì bạn mãi lướt Facebook để hóng mình trong video của người khác. Một người lạ bí ẩn đưa điện thoại cho bạn: 'Gọi cho ai cần gọi đi.' Bạn có 30 giây trước khi vị bụt này cần lại.",
+      "text_en": "Outside, the sirens are deafening. Your phone is dead, but a stranger offers theirs, saying you only have time for one call.",
+      "text_vi": "Bên ngoài, tiếng còi hú vang trời. Điện thoại đã sập nguồn, nhưng một người lạ đưa máy cho bạn: 'Chỉ một cuộc thôi, nhanh lên!'",
       "timer": 15,
       "options": [
-        {
-          "id": "q6_a",
-          "text_en": "Call the emergency line to report the missing neighbor with specific room number",
-          "text_vi": "Gọi đường dây khẩn cấp báo hàng xóm mất tích kèm số phòng cụ thể",
-          "trait_tag": "risk_recognition",
-          "next_question": "q7a"
-        },
-        {
-          "id": "q6_b",
-          "text_en": "Call the missing neighbor one more time",
-          "text_vi": "Gọi lại cho hàng xóm mất tích thêm một lần nữa",
-          "trait_tag": "immediate_action",
-          "next_question": "q7b"
-        },
-        {
-          "id": "q6_c",
-          "text_en": "Give the phone to someone who looks like they're in worse shape",
-          "text_vi": "Đưa điện thoại cho người trông có vẻ cần hơn bạn",
-          "trait_tag": "self_reliance",
-          "next_question": "q7a"
-        },
-        {
-          "id": "q6_d",
-          "text_en": "Use it to document the scene — evidence matters later",
-          "text_vi": "Dùng để ghi lại hiện trường — bằng chứng sẽ cần sau này",
-          "trait_tag": "information_first",
-          "next_question": "q7b"
-        }
+        { "id": "q6_a", "text_en": "Report the exact floor to 114", "text_vi": "Báo số tầng chính xác cho 114", "trait_tag": "risk_recognition", "next_question": "q7a" },
+        { "id": "q6_b", "text_en": "Give the phone to the sobbing mother", "text_vi": "Nhường máy cho người mẹ đang khóc", "trait_tag": "immediate_action", "next_question": "q7a" },
+        { "id": "q6_c", "text_en": "Call your family to say you're safe", "text_vi": "Gọi báo cho gia đình bạn bình an", "trait_tag": "information_first", "next_question": "q7b" },
+        { "id": "q6_d", "text_en": "You have no one to call. Hand it back.", "text_vi": "Không có ai để gọi. Trả lại máy.", "trait_tag": "self_reliance", "next_question": "q7b" }
       ]
     },
     {
       "id": "q7a",
-      "text_en": "The firefighters have the room number. They go back in. You stand outside in the crowd, not knowing. The building is still burning on lower floors. Around you, people are calling family, crying, sitting on the curb.\n\n[Name] stands alone. The noise fading. With no name to dial.",
-      "text_vi": "Lính cứu hỏa đã có số phòng. Họ quay vào. Bạn đứng ngoài đám đông, không biết gì thêm. Tòa nhà vẫn còn cháy ở các tầng dưới. Xung quanh, mọi người đang gọi điện cho gia đình, khóc, ngồi bệt xuống vỉa hè.\n\n[Name] đứng một mình. Tiếng ồn dần tắt. Không có tên nào để gọi.",
-      "timer": 30,
+      "text_en": "Firefighters disappear back inside with his room number. Around you the sidewalk fills with families weeping, holding each other tight.\n\n[Name] stands alone.",
+      "text_vi": "Lính cứu hỏa biến mất vào bên trong với số phòng anh ấy. Xung quanh, vỉa hè đầy những gia đình đang khóc, ôm chặt lấy nhau.\n\n[Name] đứng một mình.",
+      "timer": 25,
       "options": [
-        {
-          "id": "q7a_a",
-          "text_en": "Stay until you know what happened to your neighbor",
-          "text_vi": "Ở lại cho đến khi biết chuyện gì xảy ra với hàng xóm",
-          "trait_tag": "risk_recognition",
-          "next_question": null
-        },
-        {
-          "id": "q7a_b",
-          "text_en": "Find the building manager — someone needs to account for all residents",
-          "text_vi": "Tìm quản lý tòa nhà — cần phải kiểm đếm tất cả cư dân",
-          "trait_tag": "information_first",
-          "next_question": null
-        },
-        {
-          "id": "q7a_c",
-          "text_en": "Chat with the elderly residents sitting on the street who have nowhere to go — just like you",
-          "text_vi": "Ngồi nói chuyện với những cụ già ngồi trên vỉa hè không biết đi đâu — giống bạn",
-          "trait_tag": "immediate_action",
-          "next_question": null
-        },
-        {
-          "id": "q7a_d",
-          "text_en": "Leave to the local lounge — at least you still have the $1,000 bathrobe. There's nothing more you can do tonight.",
-          "text_vi": "Đến quán lounge gần đây — ít nhất bạn vẫn còn chiếc áo choàng 1.000 đô. Tối nay bạn không thể làm gì thêm nữa.",
-          "trait_tag": "self_reliance",
-          "next_question": null
-        }
+        { "id": "q7a_a", "text_en": "Wait until you know if he survived", "text_vi": "Đợi cho đến khi biết anh ấy sống sót không", "trait_tag": "risk_recognition", "next_question": null },
+        { "id": "q7a_b", "text_en": "Hold the baby so she can breathe", "text_vi": "Bế đứa bé để chị ấy thở được", "trait_tag": "immediate_action", "next_question": null },
+        { "id": "q7a_c", "text_en": "Track down management for a headcount", "text_vi": "Tìm ban quản lý để kiểm đếm cư dân", "trait_tag": "information_first", "next_question": null },
+        { "id": "q7a_d", "text_en": "Walk to the nearest 7-Eleven. You can't help.", "text_vi": "Đi ra 7-Eleven gần nhất. Ở đây không giúp được gì.", "trait_tag": "self_reliance", "next_question": null }
       ]
     },
     {
       "id": "q7b",
-      "text_en": "The call didn't connect. The phone is gone. You have no information. The fire is partially controlled. An officer nearby is taking statements from residents.\n\n[Name] is unsure what has happened.",
-      "text_vi": "Cuộc gọi không kết nối được. Điện thoại đã trả lại. Bạn không có thông tin gì. Đám cháy đã được khống chế một phần. Một cảnh sát gần đó đang lấy lời khai từ cư dân.\n\n[Name] không chắc chuyện gì đã xảy ra.",
-      "timer": 15,
+      "text_en": "The call never connected. The stranger takes their phone back. She is still frozen, staring at the smoke.\n\n[Name] has nothing to do.",
+      "text_vi": "Cuộc gọi không bao giờ kết nối. Người lạ lấy lại điện thoại. Chị vẫn đứng đông cứng, nhìn lên làn khói tuôn ra từ cửa sổ nhà mình.\n\n[Name] không còn gì để làm.",
+      "timer": 25,
       "options": [
-        {
-          "id": "q7b_a",
-          "text_en": "Give your statement — detail everything you saw from the beginning",
-          "text_vi": "Khai báo — kể chi tiết mọi thứ bạn thấy từ đầu",
-          "trait_tag": "risk_recognition",
-          "next_question": null
-        },
-        {
-          "id": "q7b_b",
-          "text_en": "Ask the officer what they know about the missing residents",
-          "text_vi": "Hỏi cảnh sát họ biết gì về những cư dân mất tích",
-          "trait_tag": "information_first",
-          "next_question": null
-        },
-        {
-          "id": "q7b_c",
-          "text_en": "Find other residents from your floor and compare what everyone saw",
-          "text_vi": "Tìm những cư dân cùng tầng và chia sẻ những gì mọi người đã thấy",
-          "trait_tag": "immediate_action",
-          "next_question": null
-        },
-        {
-          "id": "q7b_d",
-          "text_en": "Write down everything you remember while it's fresh — you might use it for a new enterprise idea",
-          "text_vi": "Ghi lại mọi thứ bạn nhớ khi còn còn tươi — biết đâu dùng được cho ý tưởng kinh doanh mới",
-          "trait_tag": "self_reliance",
-          "next_question": null
-        }
+        { "id": "q7b_a", "text_en": "Give your full statement to the officer", "text_vi": "Khai báo đầy đủ với cảnh sát", "trait_tag": "risk_recognition", "next_question": null },
+        { "id": "q7b_b", "text_en": "Stay beside her. She shouldn't be alone.", "text_vi": "Đứng cạnh chị. Chị không nên một mình.", "trait_tag": "immediate_action", "next_question": null },
+        { "id": "q7b_c", "text_en": "Ask the officer what they know so far", "text_vi": "Hỏi cảnh sát họ biết gì chưa", "trait_tag": "information_first", "next_question": null },
+        { "id": "q7b_d", "text_en": "Sit on the curb. Let it sink in.", "text_vi": "Ngồi bệt xuống vỉa hè. Để nó thấm.", "trait_tag": "self_reliance", "next_question": null }
       ]
     }
   ],
-  "insight_en": "In Vietnam, some tube houses or high-rise apartments are built for living, not for escaping.\n\nThe 2023 Khương Hạ apartment fire in Hanoi killed 56 people in one building. The 2024 Trung Kính fire killed 14. These happen multiple times per year and the death toll per incident is high specifically because of architectural trapping.",
-  "insight_vi": "Ở Việt Nam, một số nhà ống hay chung cư cao tầng được xây để ở, không phải để thoát hiểm.\n\nVụ cháy chung cư Khương Hạ năm 2023 tại Hà Nội khiến 56 người thiệt mạng trong một tòa nhà. Vụ cháy Trung Kính năm 2024 cướp đi 14 sinh mạng. Những vụ như thế này xảy ra nhiều lần mỗi năm, và số người chết cao vì kiến trúc bẫy người."
+  "insight_en": "### The 'Tube' Trap\nIn Vietnam's dense cities, houses and mini-apartments are often built as 'tubes'—long, narrow structures designed to maximize rooms, not safety. When the 2023 Khương Hạ fire killed 56 people, the tragedy wasn't just the fire; it was the **architectural trapping**. High-rise units often have only one exit, and that exit is usually blocked by a sea of motorbikes in the lobby.\n\n### Why the Death Toll is High\n* **The Chimney Effect:** Elevator shafts and open stairwells act like chimneys, sucking smoke upward at incredible speeds. Most victims in high-rise fires die of smoke inhalation long before the flames reach them.\n* **The Cage Habit:** Many residents install 'chuồng cọp' (iron cages) on balconies to prevent theft, inadvertently welding themselves into a cage that firefighters cannot easily penetrate.\n\n### Survival Logic\n* **Crawl, don't walk:** In a burning building, the only air you can breathe is the 10-20cm of space directly above the floor. If you stand up, you inhale toxic Carbon Monoxide.\n* **Forget the elevator:** It is a metal oven during a fire. If the power cuts, you are trapped in a smoke-filled vertical tube with no escape.\n* **Preparation over Panic:** If you live in a tube house, keep a wet towel near your bed and a heavy-duty bolt cutter if your balcony is caged. It's the difference between a close call and a statistic.",
+  "insight_vi": "### Cái bẫy 'Nhà ống'\nTại các đô thị Việt Nam, nhà ở và chung cư mini thường được xây theo dạng 'nhà ống'—dài và hẹp để tối ưu hóa phòng ngủ thay vì lối thoát hiểm. Vụ cháy Khương Hạ năm 2023 khiến 56 người tử vong không chỉ vì lửa, mà vì **thiết kế giam hãm**. Những tòa nhà này thường chỉ có một lối ra duy nhất, và lối đó lại thường bị bịt kín bởi hàng chục chiếc xe máy ở tầng trệt.\n\n### Tại sao tỷ lệ tử vong lại cao?\n* **Hiệu ứng ống khói:** Trục thang máy và cầu thang hở hoạt động như những ống khói, hút khí độc lên cao với tốc độ cực nhanh. Hầu hết nạn nhân tử vong vì ngạt khói trước khi lửa chạm tới.\n* **Tự nhốt mình:** Thói quen hàn 'chuồng cọp' để chống trộm vô tình biến ban công thành chiếc lồng sắt không thể phá bỏ từ bên ngoài, ngăn cản mọi nỗ lực cứu hộ của lính cứu hỏa.\n\n### Tư duy sinh tồn\n* **Bò, không đi:** Trong đám cháy, tầng không khí có thể thở được duy nhất chỉ nằm cách sàn nhà 10-20cm. Nếu đứng thẳng, bạn sẽ hít phải khí CO cực độc.\n* **Quên thang máy đi:** Nó là một chiếc lò nướng kim loại khi có cháy. Nếu mất điện, bạn sẽ bị kẹt trong một ống đứng đầy khói mà không có đường ra.\n* **Chuẩn bị thay vì hoảng loạn:** Nếu ở nhà ống, hãy để sẵn khăn ướt cạnh giường và kìm cộng lực nếu ban công có chuồng cọp. Đó là ranh giới giữa việc sống sót và trở thành một con số thống kê."
 }

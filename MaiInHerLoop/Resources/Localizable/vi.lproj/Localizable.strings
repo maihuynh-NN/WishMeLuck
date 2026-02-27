@@ -108,7 +108,7 @@
 "diary.detail.greeting" = "Nhật Ký Thân Mến,";
 "diary.detail.subtitle" = "Một ngày bình thường của %@ ở Việt Nam.";
 "diary.detail.date" = "Hôm nay là %@";
-"diary.detail.collected" = "Hôm nay tôi đã nhận được một";
+"diary.detail.collected" = "Hôm nay tôi đã lụm được một";
 "diary.detail.collected.a11y" = "Hôm nay tôi đã nhận được một %@";
 "diary.detail.insight_placeholder" = "Nội dung đang được cập nhật.";
 "diary.detail.scroll_hint" = "cuộn để đọc";

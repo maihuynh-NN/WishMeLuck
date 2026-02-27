@@ -1,0 +1,122 @@
+{
+  "id": "south_easy_2",
+  "region": "south",
+  "danger": "1",
+  "title_en": "The Rising Tide",
+  "title_vi": "Nước Dâng",
+  "intro_en": "Saigon, 5:30 PM. A sudden cloudburst has turned the street into a river of brown water and floating trash just as you're trying to head home.",
+  "intro_vi": "Sài Gòn, 5:30 chiều. Một cơn mưa rào bất chợt đã biến đường phố thành một dòng sông nước nâu và rác nổi ngay khi bạn đang cố gắng về nhà.",
+  "start_question": "q1",
+  "questions": [
+    {
+      "id": "q1",
+      "text_en": "Water is already swirling above your motorbike's exhaust pipe, and the engine starts to cough and sputter under the heavy rain.",
+      "text_vi": "Nước đã tràn qua ống xả xe máy và động cơ bắt đầu có tiếng lọc cọc, hụt hơi dưới cơn mưa tầm tã.",
+      "timer": 20,
+      "options": [
+        { "id": "q1_a", "text_en": "Keep the revs high and push through", "text_vi": "Rú ga mạnh để ráng vượt qua", "trait_tag": "self_reliance", "next_question": "q2" },
+        { "id": "q1_b", "text_en": "Turn off the engine and walk the bike", "text_vi": "Tắt máy và dắt xe đi bộ", "trait_tag": "risk_recognition", "next_question": "q2" },
+        { "id": "q1_c", "text_en": "Follow the car in front for a path", "text_vi": "Chạy theo xe ô tô phía trước", "trait_tag": "information_first", "next_question": "q2" },
+        { "id": "q1_d", "text_en": "Stop and park on the high sidewalk", "text_vi": "Dừng lại và đậu xe trên vỉa hè cao", "trait_tag": "immediate_action", "next_question": "q2" }
+      ]
+    },
+    {
+      "id": "q2",
+      "text_en": "The flood reaches your knees, hiding the edge of the open sewer drains while a local vendor shouts at you from a nearby porch.",
+      "text_vi": "Nước dâng cao đến đầu gối, che lấp miệng cống thoát nước trong khi một người bán hàng hét lớn gọi bạn từ hiên nhà gần đó.",
+      "timer": 20,
+      "options": [
+        { "id": "q2_a", "text_en": "Wade toward the porch for safety", "text_vi": "Lội về phía hiên nhà cho an toàn", "trait_tag": "immediate_action", "next_question": "q3" },
+        { "id": "q2_b", "text_en": "Check your phone for a flood map", "text_vi": "Mở điện thoại xem bản đồ ngập", "trait_tag": "information_first", "next_question": "q3" },
+        { "id": "q2_c", "text_en": "Look for visible manhole markers", "text_vi": "Quan sát các cọc dấu miệng cống", "trait_tag": "risk_recognition", "next_question": "q3" },
+        { "id": "q2_d", "text_en": "Keep moving toward the main road", "text_vi": "Tiếp tục đi ra phía đường lớn", "trait_tag": "self_reliance", "next_question": "q3" }
+      ]
+    },
+    {
+      "id": "q3",
+      "text_en": "You step into a hidden dip and the current nearly pulls you under, but a delivery driver grabs your arm just in time.",
+      "text_vi": "Bạn bước hụt vào một hố trũng và dòng nước suýt cuốn bạn đi, nhưng một anh shipper đã kịp tóm lấy tay bạn.",
+      "timer": 18,
+      "options": [
+        { "id": "q3_a", "text_en": "Hold his hand and stabilize yourself", "text_vi": "Nắm tay anh ấy để đứng vững lại", "trait_tag": "immediate_action", "next_question": "q4a" },
+        { "id": "q3_b", "text_en": "Ask him which way is shallowest", "text_vi": "Hỏi anh ấy hướng nào nước nông hơn", "trait_tag": "information_first", "next_question": "q4b" },
+        { "id": "q3_c", "text_en": "Let go and try to find your bike", "text_vi": "Buông tay và cố tìm lại xe máy", "trait_tag": "self_reliance", "next_question": "q4b" },
+        { "id": "q3_d", "text_en": "Wait for the water level to drop", "text_vi": "Đứng yên đợi nước rút bớt", "trait_tag": "risk_recognition", "next_question": "q4a" }
+      ]
+    },
+    {
+      "id": "q4a",
+      "text_en": "A submerged power line sparks nearby, sending a terrifying hum through the water while people start screaming for everyone to get out.",
+      "text_vi": "Một dây điện ngầm bị chập phát tia sáng, tiếng rè rè đáng sợ truyền qua dòng nước trong khi mọi người bắt đầu la hét chạy đi.",
+      "timer": 18,
+      "options": [
+        { "id": "q4a_a", "text_en": "Jump onto a plastic chair or table", "text_vi": "Nhảy lên một chiếc ghế hoặc bàn nhựa", "trait_tag": "risk_recognition", "next_question": "q5" },
+        { "id": "q4a_b", "text_en": "Run toward the nearest dry shop", "text_vi": "Chạy nhanh vào cửa hàng khô gần nhất", "trait_tag": "immediate_action", "next_question": "q5" },
+        { "id": "q4a_c", "text_en": "Shout for someone to cut the power", "text_vi": "Hét lớn nhờ ai đó ngắt điện", "trait_tag": "information_first", "next_question": "q5" },
+        { "id": "q4a_d", "text_en": "Freeze and don't touch any metal", "text_vi": "Đứng im và không chạm vào đồ kim loại", "trait_tag": "self_reliance", "next_question": "q5" }
+      ]
+    },
+    {
+      "id": "q4b",
+      "text_en": "The bike is gone, lost in the murky water, and now your legs feel heavy and itchy as the street waste swirls around you.",
+      "text_vi": "Chiếc xe đã mất hút trong dòng nước đục ngầu, và giờ chân bạn thấy nặng nề, ngứa ngáy khi rác thải cuốn quanh.",
+      "timer": 18,
+      "options": [
+        { "id": "q4b_a", "text_en": "Wade to a pharmacy immediately", "text_vi": "Lội ngay đến một tiệm thuốc tây", "trait_tag": "immediate_action", "next_question": "q5" },
+        { "id": "q4b_b", "text_en": "Call a Grab to get you out", "text_vi": "Gọi một chuyến Grab để rời đi", "trait_tag": "information_first", "next_question": "q5" },
+        { "id": "q4b_c", "text_en": "Check your legs for open cuts", "text_vi": "Kiểm tra xem chân có vết xước không", "trait_tag": "risk_recognition", "next_question": "q5" },
+        { "id": "q4b_d", "text_en": "Find a way to reach high ground", "text_vi": "Tìm cách trèo lên chỗ cao hơn", "trait_tag": "self_reliance", "next_question": "q5" }
+      ]
+    },
+    {
+      "id": "q5",
+      "text_en": "You finally reach a dry café. Your skin is covered in grey silt, and you notice a deep scratch on your ankle you didn't feel before.",
+      "text_vi": "Bạn cũng đến được một quán cà phê khô ráo. Da đầy bùn xám, và bạn thấy một vết xước sâu ở mắt cá mà nãy giờ không biết.",
+      "timer": 20,
+      "options": [
+        { "id": "q5_a", "text_en": "Wash it with clean bottled water", "text_vi": "Rửa sạch bằng nước đóng chai", "trait_tag": "risk_recognition", "next_question": "q6" },
+        { "id": "q5_b", "text_en": "Ask the staff for medical alcohol", "text_vi": "Hỏi nhân viên xin cồn y tế", "trait_tag": "immediate_action", "next_question": "q6" },
+        { "id": "q5_c", "text_en": "Wait until you get home to clean it", "text_vi": "Để dành về nhà mới rửa sạch", "trait_tag": "self_reliance", "next_question": "q6" },
+        { "id": "q5_d", "text_en": "Search online for leptospirosis symptoms", "text_vi": "Tìm triệu chứng bệnh xoắn khuẩn vàng da", "trait_tag": "information_first", "next_question": "q6" }
+      ]
+    },
+    {
+      "id": "q6",
+      "text_en": "Night falls and the water isn't receding. A group of students is trying to push a stalled car through the deep section.",
+      "text_vi": "Đêm buông xuống nhưng nước vẫn không rút. Một nhóm sinh viên đang cố đẩy một chiếc ô tô chết máy qua đoạn ngập sâu.",
+      "timer": 15,
+      "options": [
+        { "id": "q6_a", "text_en": "Warn them about the submerged drains", "text_vi": "Cảnh báo họ về miệng cống ngầm", "trait_tag": "risk_recognition", "next_question": "q7a" },
+        { "id": "q6_b", "text_en": "Join them to help push the car", "text_vi": "Lội ra cùng họ để đẩy xe", "trait_tag": "immediate_action", "next_question": "q7a" },
+        { "id": "q6_c", "text_en": "Film the scene to alert others", "text_vi": "Quay phim để cảnh báo người khác", "trait_tag": "information_first", "next_question": "q7b" },
+        { "id": "q6_d", "text_en": "Call a rescue truck for the car", "text_vi": "Gọi xe cứu hộ cho chiếc ô tô", "trait_tag": "self_reliance", "next_question": "q7b" }
+      ]
+    },
+    {
+      "id": "q7a",
+      "text_en": "One student slips and vanishes for a second into a drain. You pull them up, both of you soaked in the foul water.",
+      "text_vi": "Một sinh viên trượt chân và biến mất trong tích tắc dưới cống. Bạn kéo họ lên, cả hai đều sũng nước bẩn thỉu.",
+      "timer": 25,
+      "options": [
+        { "id": "q7a_a", "text_en": "Take them to a clinic immediately", "text_vi": "Đưa họ đến phòng khám ngay lập tức", "trait_tag": "risk_recognition", "next_question": null },
+        { "id": "q7a_b", "text_en": "Give them your dry jacket", "text_vi": "Đưa áo khoác khô của bạn cho họ", "trait_tag": "immediate_action", "next_question": null },
+        { "id": "q7a_c", "text_en": "Ask if they have family nearby", "text_vi": "Hỏi họ có người thân ở gần đây không", "trait_tag": "information_first", "next_question": null },
+        { "id": "q7a_d", "text_en": "Rest and try to dry off together", "text_vi": "Nghỉ ngơi và cùng nhau lau khô người", "trait_tag": "self_reliance", "next_question": null }
+      ]
+    },
+    {
+      "id": "q7b",
+      "text_en": "The car is abandoned. You're sitting in the café, watching the rain continue. Your ankle is starting to throb painfully.",
+      "text_vi": "Chiếc xe bị bỏ lại. Bạn ngồi trong quán, nhìn mưa rơi mãi không dứt. Mắt cá chân bắt đầu nhức buốt.",
+      "timer": 25,
+      "options": [
+        { "id": "q7b_a", "text_en": "Go to the hospital right now", "text_vi": "Đến bệnh viện ngay lập tức", "trait_tag": "risk_recognition", "next_question": null },
+        { "id": "q7b_b", "text_en": "Buy painkillers at the counter", "text_vi": "Mua thuốc giảm đau tại quầy", "trait_tag": "immediate_action", "next_question": null },
+        { "id": "q7b_c", "text_en": "Ask for a towel and a bucket", "text_vi": "Hỏi xin một chiếc khăn và cái xô", "trait_tag": "information_first", "next_question": null },
+        { "id": "q7b_d", "text_en": "Sleep it off on the café sofa", "text_vi": "Nằm ngủ tạm trên ghế sofa của quán", "trait_tag": "self_reliance", "next_question": null }
+      ]
+    }
+  ],
+  "insight_en": "Urban Flooding and Invisible Killers\nIn Saigon, floods are not just about water—they are about infrastructure failure. Urban street floods combine sewage, industrial runoff, and electricity risks into a deadly soup. While typhoons kill hundreds, urban accidents and infections from flooding claim thousands of health-years invisibly.\n\nWhy the Toll is Hidden\nLeptospirosis (Rat Fever): This bacteria lives in rat urine and thrives in floodwater. It enters through tiny cuts. While dengue gets all the news, post-flood infections often lead to kidney failure or death weeks later because symptoms are mistaken for a common cold.\nElectrocution: Submerged electrical boxes and faulty signboards kill dozens every rainy season. Water and electricity are a silent, lethal combination on HCMC streets.\nOpen Manholes: During heavy floods, the water pressure pops manhole covers off. These become invisible underwater vacuum traps that can swallow a person whole.\n\nPractical Solutions\nWalk, don't ride: If the water is above your exhaust, kill the engine. Pushing through will suck water into the engine, ruining your bike and leaving you stranded.\nSanitize immediately: If you have a cut and touch floodwater, wash it with soap and clean water immediately. Monitor for fever over the next 14 days.\nAvoid the center: The center of the street is safer than the edges where drains and electrical poles are located. Look for markers like branches or trash cans placed by locals over open holes.",
+  "insight_vi": "Ngập lụt đô thị và Những kẻ sát nhân vô hình\nTại Sài Gòn, ngập lụt không chỉ là chuyện nước dâng—đó là sự quá tải của hạ tầng. Nước ngập trên đường phố là hỗn hợp của nước cống, chất thải công nghiệp và rủi ro điện. Trong khi bão giết chết hàng trăm người, các tai nạn và bệnh truyền nhiễm từ ngập lụt lại âm thầm cướp đi hàng ngàn năm tuổi thọ.\n\nTại sao thiệt hại lại bị che khuất\nBệnh Xoắn khuẩn vàng da (Leptospirosis): Vi khuẩn này sống trong nước tiểu chuột và phát triển mạnh trong nước ngập. Nó xâm nhập qua các vết xước nhỏ. Trong khi sốt xuất huyết luôn được chú ý, nhiễm trùng sau ngập lụt thường dẫn đến suy thận hoặc tử vong vài tuần sau đó vì các triệu chứng bị nhầm với cảm lạnh thông thường.\nĐiện giật: Các hộp điện ngầm và bảng hiệu bị lỗi giết chết hàng chục người mỗi mùa mưa. Nước và điện là sự kết hợp thầm lặng nhưng chết người trên đường phố TP.HCM.\nMiệng cống không nắp: Khi ngập nặng, áp suất nước đẩy tung nắp cống. Chúng trở thành những cái bẫy chân không vô hình dưới nước có thể nuốt chửng một người.\n\nGiải pháp thực tế\nDắt bộ, không chạy: Nếu nước cao hơn ống xả, hãy tắt máy. Cố chạy sẽ khiến nước bị hút vào động cơ, làm hỏng xe và khiến bạn bị kẹt giữa dòng.\nSát trùng ngay lập tức: Nếu bạn có vết thương và chạm vào nước ngập, hãy rửa bằng xà phòng và nước sạch ngay. Theo dõi các triệu chứng sốt trong 14 ngày tới.\nTránh lề đường: Giữa đường thường an toàn hơn mép đường, nơi đặt các hố ga và cột điện. Hãy quan sát các dấu hiệu như cành cây hoặc thùng rác được người dân đặt trên các hố mở."
+}
