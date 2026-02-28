@@ -79,7 +79,7 @@
 "ui.chronicles.title" = "CHRONICLES";
 
 
-// MARK: - Region Detail — North Risk Briefing
+// MARK: - Region Detail — Sorth Risk Briefing
 
 "region.south.riskBriefing" = "The South moves fast and forgives slow.\nRain turns streets into rivers in minutes. Heat lingers long after the flood drains. The people who thrive here learned to read the city the way sailors read weather — not by waiting for warnings, but by knowing what comes next.";
 
@@ -93,11 +93,11 @@
 
 "region.south.sections.3.title" = "THE SECOND WAVE COMES QUIET";
 "region.south.sections.3.content" = "Floodwater drains,\nDengue, skin infections, heat exhaustion,\n These arrive after the rain stops, when everyone has already relaxed.";
-"region.north.sections.3.subtitle" = "The locals live by the calendar. You should too.";
+"region.sorth.sections.3.subtitle" = "The locals live by the calendar. You should too.";
 
 "region.south.sections.4.title" = "THE NEIGHBORHOOD MOVES FIRST";
 "region.south.sections.4.content" = "Official help follows.\nThe first response is always a neighbor at your door, a rider shouting through the street, youth volunteers moving before anyone gives the order.";
-"region.north.sections.4.subtitle" = "Don't hide at home, the neighbors are the best rescuers";
+"region.sorth.sections.4.subtitle" = "Don't hide at home, the neighbors are the best rescuers";
 
 
 // MARK: - Region Detail — Central Risk Briefing
@@ -121,7 +121,7 @@
 "region.central.sections.4.subtitle" = "Follow the voice";
 
 
-// MARK: - Region Detail — South Risk Briefing
+// MARK: - Region Detail — Nouth Risk Briefing
 
 "region.north.riskBriefing" = "The North is old and does not explain itself.\nMountains shift without warning. Rivers that were calm at dawn swallow roads by noon. The cold settles in for months. The people here plan ahead not out of worry, but because the land taught them what happens when you don't.";
 

@@ -80,66 +80,63 @@
 
 // MARK: - Region Detail — North Risk Briefing
 
-"region.north.riskBriefing" = "Miền Bắc không chờ bạn chuẩn bị. \nBão ập đến qua đêm. Thung lũng chìm trong nước, sườn núi nứt vỡ, cả xóm làng biến mất sau những bức tường tuyết hay bùn đất. Người địa phương sống sót vì họ lên kế hoạch như thể mạng sống phụ thuộc vào đó. \nCủa bạn cũng vậy.";
+"region.north.riskBriefing" = "Miền Bắc không giải thích trước.\nNúi sạt không báo hiệu. Sông sáng còn yên, trưa đã nuốt đường. Cái lạnh kéo dài cả tháng.\nNgười ở đây chuẩn bị sớm không phải vì lo lắng — mà vì đất đã dạy họ chuyện gì xảy ra khi không kịp.";
 
-"region.north.sections.1.title" = "CHÍNH ĐẤT ĐAI THỬ THÁCH BẠN";
-"region.north.sections.1.content" = "Ở miền Bắc, một khoảnh khắc bạn đứng trên mặt đất trống, khoảnh khắc tiếp theo bạn đang chống chọi với gió lạnh buốt trên sườn núi. \nĐộ cao lấy đi hơi ấm nhanh hơn lửa có thể trả lại. Những người dày dạn kinh nghiệm không bao giờ tin vào một con đường duy nhất, họ mang bản đồ trong đầu. \nKhi con đèo chính sập, họ đã biết các lối tắt.";
-"region.north.sections.1.subtitle" = "Học thuộc chúng, hoặc bị chôn vùi cùng con đường.";
+"region.north.sections.1.title" = "ĐẤT TỰ DI CHUYỂN";
+"region.north.sections.1.content" = "Đường đèo nối mọi nơi — và biến mất trong vài giờ. Lũ quét dồn qua thung lũng hẹp với tốc độ người đồng bằng không tưởng tượng được.\nBão Yagi, bảy mươi chín phần trăm người chết là do sạt lở. Sườn núi không nứt to trước khi đổ.\nNgười đi đường này quen nhìn trời, nhìn đất, và biết lúc nào phải quay lại.";
+"region.north.sections.1.subtitle" = "Sau mưa, đừng tin con đường mình vừa đi qua.";
 
-"region.north.sections.2.title" = "KHÔNG AI SỐNG SÓT MỘT MÌNH";
-"region.north.sections.2.content" = "Ở đây, sinh tồn là một vòng tròn. \nUỷ ban làng tích trữ lương thực, nhiên liệu, thuốc men trước khi bão đến. \nNếu bạn ở trong vòng tròn đó, bạn sẽ được chia lửa. Nếu bạn đứng ngoài, bạn chỉ nhìn khói từ trong giá lạnh. Hãy tham gia sớm.";
-"region.north.sections.2.subtitle" = "Hỏi muộn, cánh cửa sẽ đóng lại.";
+"region.north.sections.2.title" = "ẨM ĐỐT, LẠNH GIỮ";
+"region.north.sections.2.content" = "Mùa nồm, tường nhà rỉ nước. Hơi ẩm chui vào dây điện, ổ cắm, cho đến khi có gì đó cháy.\nMùa đông, nhà đóng kín cửa, đốt than sưởi ấm. Khí CO không có mùi.\nNgười sống qua mùa ở đây tôn trọng thứ mình không nhìn thấy.";
+"region.north.sections.2.subtitle" = "Thời tiết bên trong nhà cũng quan trọng không kém.";
 
-"region.north.sections.3.title" = "BĂNG GIÁ LÀ VỊ VUA TÀN NHẪN";
-"region.north.sections.3.content" = "Đến tháng Mười, mọi can nước, mọi bao gạo, mọi bó củi đều phải sẵn sàng. \nBỏ lỡ điều đó, và mùa đông sẽ nhốt bạn trong im lặng. \nMùa hè làm mục những gì mùa đông bảo tồn, vì vậy nhịp điệu thay đổi.";
-"region.north.sections.3.subtitle" = "Người địa phương sống theo lịch sinh tồn. Bạn cũng nên vậy.";
+"region.north.sections.3.title" = "KHI ĐÈO ĐÓNG, BẠN Ở MỘT MÌNH";
+"region.north.sections.3.content" = "Một con đường tắc là cả huyện bị cắt. Hàng hoá không vào, sóng điện thoại mất.\nNgười vùng cao đã sống với nhịp này nhiều đời. Họ trữ gạo, củi, thuốc trước khi mùa đổi.\nĐến lúc người ngoài biết chuyện thì họ đã yên vị rồi.";
+"region.north.sections.3.subtitle" = "Người ở đây sống theo lịch. Bạn cũng nên vậy.";
 
-"region.north.sections.4.title" = "KHI LỜI NÓI MẤT ĐI, DẤU HIỆU CÒN LẠI";
-"region.north.sections.4.content" = "Cứu hộ ở miền Bắc bắt đầu từ hàng xóm. \nNhững đội xung kích bắc dây qua sông và đào bới qua lở đất trước khi quân đội đến. Lính và trực thăng đến sau, nhưng bàn tay chìa ra đầu tiên trong bóng tối luôn là người địa phương. \nHãy biết các nơi trú ẩn, biết các tuyến đường.";
-"region.north.sections.4.subtitle" = "Nếu bạn ẩn náu ở nhà, đội cứu hộ sẽ đi qua mà không biết.";
-
+"region.north.sections.4.title" = "VÒNG TRÒN ĐẾN TRƯỚC NHÀ NƯỚC";
+"region.north.sections.4.content" = "Uỷ ban thôn, đội xung kích, hàng xóm mang dây — cứu hộ miền Bắc bắt đầu từ người quen.\nHọ căng dây qua sông, đào bới lở đất bằng tay, chia lửa trước khi bộ đội tới.\nNgười sống sót là người đã ở trong vòng tròn đó từ trước.";
+"region.north.sections.4.subtitle" = "Vào sớm đi. Cửa đóng khi bão tới.";
 
 // MARK: - Region Detail — Central Risk Briefing
 
-"region.central.riskBriefing" = "Bờ biển miền Trung không chỉ mưa, mà gào thét. \nBão tố đổ bộ từ biển vào núi, sông lũ ập đến không báo trước, và những con đường biến mất dưới lở đất. Làng mạc chống chọi với gió, thị trấn nhìn sóng biển. \nỞ đây, sinh tồn là sự kịp thời, lòng tin, và biết con đường nào thực sự an toàn.";
+"region.central.riskBriefing" = "Miền Trung nằm giữa biển và núi.\nBão vào từ một phía, lở đất đáp lại từ phía kia. Những thị trấn ở giữa đã sống với chuyện này lâu hơn bất kỳ ai còn nhớ.\nĐiều họ biết không phải là sợ — mà là biết lúc nào phải đi.";
 
-"region.central.sections.1.title" = "BÙN ĐẤT, SÔNG SUỐI VÀ SỰ SỤP ĐỔ";
-"region.central.sections.1.content" = "Từ bãi biển đến đèo núi chỉ một bước. Cát hoá thành bùn, sườn núi sụp đổ, sông lũ bùng phát. \nNgười địa phương chuẩn bị ba tuyến thoát hiểm cho mỗi con đường, bạn cũng nên làm vậy. \nKhi bão đến, địa hình là kẻ cai trị.";
-"region.central.sections.1.subtitle" = "Biết mọi con đường, hoặc bị mắc kẹt.";
+"region.central.sections.1.title" = "ĐỊA HÌNH QUYẾT ĐỊNH TẤT CẢ";
+"region.central.sections.1.content" = "Từ bãi biển lên đèo núi chỉ một đoạn ngắn. Phố cổ nằm trong những con kiệt gỗ xây từ đời trước, đẹp nhưng không có đường thoát.\nKhi sông dâng, nó không dâng từ từ. Thủy điện xả lũ giữa đỉnh bão, nước ập tới nhanh hơn bất kỳ dự báo nào.";
+"region.central.sections.1.subtitle" = "Ở miền Trung, địa hình không chờ bạn hiểu nó.";
 
-"region.central.sections.2.title" = "KHÔNG CON THUYỀN NÀO NỔI MỘT MÌNH";
-"region.central.sections.2.content" = "Gió chưa đến, nhưng thị trấn đã sống động với sự chuẩn bị. \nThuyền được neo, bao cát được chất, người chạy đi kiểm tra từng cánh cửa. Diễn tập sơ tán và kho dự trữ cộng đồng giữ cho mọi người sẵn sàng. \nĐi một mình, bạn đối mặt với lũ; ở cùng nhau, bạn sống sót.";
-"region.central.sections.2.subtitle" = "Sự sống sót ưu ái những người theo nhịp điệu của cộng đồng.";
+"region.central.sections.2.title" = "NGƯỜI Ở LẠI";
+"region.central.sections.2.content" = "Loa phường kêu sơ tán. Nhưng trong nhà còn nguyên đồ đạc.\nMỗi mùa bão, có người chọn ở lại — giữ máy tính, giữ tủ, giữ đàn gà. Nước không hỏi lý do.\nNgười từng trải biết cái gì mua lại được, cái gì thì không.";
+"region.central.sections.2.subtitle" = "Không món đồ nào đáng để bạn kẹt lại.";
 
-"region.central.sections.3.title" = "BIỂN NHỚ, BẠN PHẢI CANH CHỪNG";
-"region.central.sections.3.content" = "Mùa bão thống trị bờ biển. \nMọi ngôi nhà được gia cố, mọi con thuyền được neo chặt, mọi gia đình ngóng nhìn chân trời và kiểm tra điểm sơ tán. Mưa có thể nhấn chìm ruộng đồng trong vài giờ, gió có thể xé mái nhà và gãy cây. \nỞ miền Trung, thích nghi là sự kịp thời.";
-"region.central.sections.3.subtitle" = "Biết ngày nào phải chạy, ngày nào phải cố thủ.";
+"region.central.sections.3.title" = "ĐƯỜNG ĐỨT TRƯỚC KHI BÃO TAN";
+"region.central.sections.3.content" = "Mưa vừa ngớt thì đường đã sạt. Xe cứu trợ không vào được mấy ngày liền. Điểm phát hàng chật kín người.\nRồi gió Lào tới — nóng khô, hút nước trong người nhanh hơn nóng ẩm.\nNgười có kinh nghiệm đã trữ đồ từ trước khi trời đổi.";
+"region.central.sections.3.subtitle" = "Ở miền Trung, bị cô lập đến trước cứu trợ.";
 
-"region.central.sections.4.title" = "KHI LỜI CẢNH BÁO ĐI TRƯỚC CƠN BÃO";
-"region.central.sections.4.content" = "Gió mang theo nhiều hơn mưa, nó mang theo cảnh báo. \nCòi hú vang, cờ phất, sứ giả chạy dọc các con đường núi. Mạng lưới các bậc trưởng lão, hội đoàn, và ngư dân tiếp cận từng ngôi nhà. \nBỏ lỡ tiếng gọi của họ, bùn đất và nước sẽ không chờ bạn.";
-"region.central.sections.4.subtitle" = "Hãy theo những cảnh báo đó, thiên tai sẽ không dừng lại vì bạn.";
-
+"region.central.sections.4.title" = "CẢNH BÁO TRUYỀN BẰNG GIỌNG NÓI";
+"region.central.sections.4.content" = "Loa phường, cờ hiệu, người chạy dọc đường núi. Mạng lưới của già làng, ngư dân, đoàn thanh niên tới từng nhà trước khi điện thoại kịp báo.\nNgười nghe theo là người kịp đi.";
+"region.central.sections.4.subtitle" = "Nghe người xung quanh, đừng chờ màn hình.";
 
 // MARK: - Region Detail — South Risk Briefing
 
-"region.south.riskBriefing" = "Miền Nam thử thách bạn bằng nước và nắng. \nSông dâng lên nhấn chìm đồng bằng, trong khi các thành phố nghẹt thở dưới bão và nước ngập. Khi mặt trời trở lại, cái nóng lấy đi sức lực nhanh hơn đói. Ở đây, sinh tồn không phải là dũng cảm chống chọi cái lạnh, mà là vượt qua trận lũ và bảo vệ nguồn nước.";
+"region.south.riskBriefing" = "Miền Nam chạy rất nhanh, và không phải lúc nào cũng chờ bạn kịp thích nghi.\nMưa đổ xuống vài phút là đường đã ngập. Nước rút rồi nhưng cái nóng vẫn còn đó.\nNgười sống quen ở đây không đợi ai nhắc. Họ nhìn trời, nhìn đường, nhìn dòng người — và tự biết điều gì sắp xảy ra.";
 
-"region.south.sections.1.title" = "LŨ LỤT VIẾT LUẬT CỦA RIÊNG MÌNH";
-"region.south.sections.1.content" = "Ở đây, lũ đến từ những con phố. \nMưa đổ xuống, cống tắc, xe máy biến mất dưới làn nước bẩn. Cứu hộ bị kẹt trong tắc đường. \nNhững người vượt qua không phải là người bị bất ngờ, họ đã biết trường học và cây cối nào trở thành nơi trú ẩn.";
-"region.south.sections.1.subtitle" = "Bản đồ vùng đất an toàn quan trọng hơn vũ khí.";
+"region.south.sections.1.title" = "THÀNH PHỐ XÂY CAO";
+"region.south.sections.1.content" = "Sài Gòn không trải rộng, nó chồng lên nhau. Chung cư cao, cầu thang hẹp, tầng trệt kín xe máy, ban công có khung sắt.\nNgười ở đây quen từng góc cầu thang, từng lối đi phụ.\nHọ biết nếu có chuyện, mình sẽ chạy hướng nào.";
+"region.south.sections.1.subtitle" = "Luôn biết ít nhất hai đường ra khỏi nơi bạn ngủ.";
 
-"region.south.sections.2.title" = "KHI TIẾNG GỌI ĐẾN, ĐỪNG CHẠY MỘT MÌNH";
-"region.south.sections.2.content" = "Không phải quan chức. Không phải xe tải. Cứu hộ ở miền Nam bắt đầu chân trần, ngập đến ngực. Đoàn thanh niên buộc dây, hàng xóm cõng người yếu, đàn ông chất bao cát. Quân đội đến nhiều giờ sau. \nSự sống sót đến từ đám đông xung quanh bạn.";
-"region.south.sections.2.subtitle" = "Đi cùng dòng người, không phải ngược lại.";
+"region.south.sections.2.title" = "KHI ĐÁM ĐÔNG DỒN LẠI";
+"region.south.sections.2.content" = "Sài Gòn thích tụ lại. Countdown, lễ hội, sự kiện ngoài trời.\nChỉ cần một tối, cả khu phố có thể chật kín người.\nNgười đi qua đám đông vững vàng không phải vì họ gan lì — mà vì họ để ý lối ra từ trước.";
+"region.south.sections.2.subtitle" = "Biết cửa thoát ở đâu. Đừng đứng giữa.";
 
-"region.south.sections.3.title" = "LŨ RÚT, NẮNG NÓNG ĐỔ XUỐNG";
-"region.south.sections.3.content" = "Nguy hiểm không kết thúc khi lũ rút. Nhiệt độ trên 38°C quật ngã người khoẻ mạnh, trong khi vũng nước sinh ra bệnh tật. \nSốt xuất huyết, bệnh tiêu hoá, và mầm bệnh ẩn trong nước thường. Người địa phương sống sót bằng cách mang theo bóng mát, làm mát bằng khăn ướt, và đun sôi từng giọt nước uống.";
-"region.south.sections.3.subtitle" = "Ở miền Nam, khát không giết bạn, nước bẩn mới giết.";
+"region.south.sections.3.title" = "NHỮNG GÌ ĐẾN SAU CƠN MƯA";
+"region.south.sections.3.content" = "Nước rút rồi.\nNhưng sốt xuất huyết bắt đầu tăng.\nDa viêm vì nước bẩn. Cơ thể mệt vì nóng kéo dài.\nThứ nguy hiểm nhất thường đến khi mọi người đã thở phào.";
+"region.south.sections.3.subtitle" = "Đừng lơ là khi trời đã tạnh.";
 
-"region.south.sections.4.title" = "KHI TÍN HIỆU MẤT, CON NGƯỜI LÊN TIẾNG";
-"region.south.sections.4.content" = "Thiết bị điện tử chết đầu tiên trong bão. Còi hú chìm trong nước, điện thoại mất sóng, radio tắt tiếng. Nhưng con người thì không. Người đi xe máy hét vang qua phố, hàng xóm đập cửa, tình nguyện viên thanh niên gọi báo trước...";
-"region.south.sections.4.subtitle" = "Bỏ lỡ điều đó, bạn bỏ lỡ cơ hội duy nhất để di chuyển.";
-
+"region.south.sections.4.title" = "KHU PHỐ HÀNH ĐỘNG TRƯỚC";
+"region.south.sections.4.content" = "Lực lượng chính thức sẽ tới.\nNhưng người xuất hiện đầu tiên thường là hàng xóm gõ cửa, người chạy xe hô lên ngoài hẻm, nhóm thanh niên đã tự động giúp nhau trước khi có ai yêu cầu.";
+"region.south.sections.4.subtitle" = "Đừng đóng cửa một mình. Ở đây, người ta gọi nhau trước.";
 
 // MARK: - Scenario List View
 
