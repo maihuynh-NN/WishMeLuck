@@ -56,7 +56,6 @@ struct DiaryEntryDetailView: View {
                     .frame(width: tileColumnWidth)
                     .accessibilityHidden(true)
 
-                // RIGHT: Fixed header on top, scrollable insight below
                 VStack(alignment: .leading, spacing: 0) {
 
                     VStack(alignment: .leading, spacing: 0) {
@@ -85,6 +84,14 @@ struct DiaryEntryDetailView: View {
                             .padding(.trailing, contentPad * 0.8)
                             .padding(.bottom, 60)
                     }
+                    
+                    Text("diary.detail.scroll_hint".localized)
+                        .font(.system(.caption2, design: .monospaced).italic().weight(.bold))
+                        .foregroundColor(Color("Moss"))
+                        .frame(maxWidth: .infinity, alignment: .center)
+                        .padding(.top, 8)
+                        .padding(.bottom, isIPad ? 30 : 20)
+                        .accessibilityHidden(true)
                 }
                 .padding(.top, isIPad ? 60 : 50)
             }
@@ -131,7 +138,7 @@ struct DiaryEntryDetailView: View {
 
             Text(String(format: "diary.detail.subtitle".localized, displayName))
                 .font(.system(.body, design: .monospaced))
-                .foregroundColor(Color("Red3").opacity(0.75))
+                .foregroundColor(Color("Red3"))
                 .fixedSize(horizontal: false, vertical: true)
 
             Text(String(format: "diary.detail.date".localized, dateString))
@@ -139,7 +146,7 @@ struct DiaryEntryDetailView: View {
                 .foregroundColor(Color("Moss"))
                 .padding(.top, 8)
         }
-        .padding(.top, 90)
+        .padding(.top, 80)
     }
 
     // MARK: - Collected block
@@ -152,7 +159,7 @@ struct DiaryEntryDetailView: View {
                 Text("diary.detail.collected".localized)
                     .font(.system(.body, design: .monospaced))
                     .fixedSize(horizontal: false, vertical: true)
-                    .foregroundColor(Color("Red3").opacity(0.75))
+                    .foregroundColor(Color("Moss"))
 
                 HStack(alignment: .center, spacing: 14) {
                     Text(name + "!")
@@ -193,22 +200,15 @@ struct DiaryEntryDetailView: View {
             if !insightText.isEmpty {
                 Text(insightText)
                     .font(.system(.footnote))
-                    .foregroundColor(Color("Red3").opacity(0.85))
+                    .foregroundColor(Color("Moss"))
                     .lineSpacing(5)
                     .fixedSize(horizontal: false, vertical: true)
                     .multilineTextAlignment(.leading)
             } else {
                 Text("diary.detail.insight_placeholder".localized)
                     .font(.system(.footnote).italic())
-                    .foregroundColor(Color("Moss").opacity(0.6))
+                    .foregroundColor(Color("Moss"))
             }
-
-            Text("diary.detail.scroll_hint".localized)
-                .font(.system(.caption2, design: .monospaced).italic())
-                .foregroundColor(Color("Moss").opacity(0.5))
-                .frame(maxWidth: .infinity, alignment: .center)
-                .padding(.top, 8)
-                .accessibilityHidden(true)
         }
     }
 }

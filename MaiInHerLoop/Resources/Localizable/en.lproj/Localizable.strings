@@ -51,7 +51,7 @@
 
 // MARK: - Region Selection View DONE
 
-"region.title" = "RED EMBERS Airlines";
+"region.title" = "RED EMBERS \nAirlines";
 "region.title.mini" = "Departure Flight";
 "region.subtitle" = "Swipe left or right to select your destination";
 "regionselect.selectButton" = "Select Region";
@@ -160,34 +160,34 @@
 "scenariolist.back.a11y.hint" = "Return to region selection";
 
 
-// MARK: - Blindbox Card (Mission Card)
+// MARK: - Blindbox Card (Mission Card) DONE
 
-"mission.classified" = "Not Done";
-"mission.responded" = "Done";
+"mission.classified" = "Select";
+"mission.responded" = "Selected";
 "mission.a11y.label" = "Mission %d, %@";
 "mission.a11y.completed" = "completed";
 "mission.a11y.locked" = "locked";
-"mission.a11y.hint.replay" = "Double tap to replay";
-"mission.a11y.hint.start" = "Double tap to start this mission";
+"mission.a11y.hint.replay" = "Tap to replay";
+"mission.a11y.hint.start" = "Tap to start this mission";
 
 
-// MARK: - Mission Brief Overlay (Dispatch)
+// MARK: - Mission Brief Overlay (Dispatch) DONE
 
 "threat.level" = "THREAT LEVEL";
-"threat.level.accessibility" = "TThreat level: %d out of %d";
-"dispatch.incoming" = "INCOMING DISPATCH";
-"dispatch.scroll_guide" = "scroll to read the briefing";
-"dispatch.respond" = "RESPOND";
-"dispatch.not_ready" = "NOT READY";
-"dispatch.ready_prompt" = "Double tap to accept the mission";
-"dispatch.retreat_hint" = "Double tap to return to mission board";
+"threat.level.accessibility" = "Threat level: %d out of %d";
+"dispatch.incoming" = "Scenario";
+"dispatch.scroll_guide" = "Scroll to read";
+"dispatch.respond" = "Start";
+"dispatch.not_ready" = "Return";
+"dispatch.ready_prompt" = "Tap to accept the mission";
+"dispatch.retreat_hint" = "Tap to return to mission board";
 
 
-// MARK: - Game View
+// MARK: - Game View DONE
 
 "game.reflection_unavailable" = "Reflection unavailable";
 "game.chosen" = "CHOSEN";
-"game.option.hint" = "Double tap to select this option";
+"game.option.hint" = "One tap to select this option";
 
 
 // MARK: - Reflection Result View

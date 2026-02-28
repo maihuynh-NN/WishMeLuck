@@ -43,7 +43,7 @@ struct RegionSelectionView: View {
                         
                         VStack(spacing: 8) {
                             Text("region.title.mini".localized)
-                                .font(.system(.caption, design: .monospaced).weight(.regular))
+                                .font(.system(.caption2, design: .monospaced).weight(.bold))
                                 .foregroundColor(Color("Red3"))
                                 .tracking(2)
                                 .opacity(headerPulse ? 1.0 : 0.8)
@@ -57,7 +57,7 @@ struct RegionSelectionView: View {
                                 .lineLimit(2)
                                 .fixedSize(horizontal: false, vertical: true)
                                 .opacity(headerPulse ? 1.0 : 0.8)
-                                .padding(.top, 10)
+                                .padding(.top, 5)
                                 .accessibilityAddTraits(.isHeader)
                         }
                         

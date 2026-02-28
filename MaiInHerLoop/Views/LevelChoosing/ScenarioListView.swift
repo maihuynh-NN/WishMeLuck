@@ -67,9 +67,9 @@ struct ScenarioListView: View {
 
                     // MARK: - Header
                     VStack(spacing: 12) {
-                        BarRow(color: Color("Red3").opacity(0.7))
+                        BarRow(color: Color("Red3"))
                             .chronicleFade()
-                            .padding(.top, 24)
+                            .padding(.top, 30)
 
                         Text("scenariolist.header".localized)
                             .font(.system(.caption2, design: .monospaced).weight(.bold))
@@ -114,59 +114,67 @@ struct ScenarioListView: View {
                         backgroundColor: Color("Beige3"),
                         size: .customed(width: panelWidth, height: panelHeight)
                     ) {
-                        VStack(spacing: 0) {
-                            Spacer()
-
-                            VStack(spacing: 16) {
-                                // Row 1 — 3 cards
-                                HStack(spacing: 14) {
-                                    ForEach(Array(row1.enumerated()), id: \.element.id) { index, scenario in
-                                        BlindBoxCard(
-                                            index: index,
-                                            isCompleted: completedIDs.contains(scenario.id),
-                                            onTap: { activeScenarioIndex = index },
-                                            cardSize: computedCardSize
-                                        )
-                                        .staggeredAppear(delay: reduceMotion ? 0 : Double(index) * 0.12)
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 10)
+                                .fill(Color("Beige3"))
+                                .frame(width: panelWidth - 6, height: panelHeight - 6)
+                                .accessibilityHidden(true)
+                            
+                            VStack(spacing: 0) {
+                                Spacer()
+                                
+                                VStack(spacing: 16) {
+                                    // Row 1 — 3 cards
+                                    HStack(spacing: 14) {
+                                        ForEach(Array(row1.enumerated()), id: \.element.id) { index, scenario in
+                                            BlindBoxCard(
+                                                index: index,
+                                                isCompleted: completedIDs.contains(scenario.id),
+                                                onTap: { activeScenarioIndex = index },
+                                                cardSize: computedCardSize
+                                            )
+                                            .staggeredAppear(delay: reduceMotion ? 0 : Double(index) * 0.12)
+                                        }
+                                    }
+                                    
+                                    // Row 2 — 2 cards, centered
+                                    HStack(spacing: 14) {
+                                        ForEach(Array(row2.enumerated()), id: \.element.id) { index, scenario in
+                                            BlindBoxCard(
+                                                index: index + 3,
+                                                isCompleted: completedIDs.contains(scenario.id),
+                                                onTap: { activeScenarioIndex = index + 3 },
+                                                cardSize: computedCardSize
+                                            )
+                                            .staggeredAppear(delay: reduceMotion ? 0 : Double(index + 3) * 0.12)
+                                        }
                                     }
                                 }
-
-                                // Row 2 — 2 cards, centered
-                                HStack(spacing: 14) {
-                                    ForEach(Array(row2.enumerated()), id: \.element.id) { index, scenario in
-                                        BlindBoxCard(
-                                            index: index + 3,
-                                            isCompleted: completedIDs.contains(scenario.id),
-                                            onTap: { activeScenarioIndex = index + 3 },
-                                            cardSize: computedCardSize
-                                        )
-                                        .staggeredAppear(delay: reduceMotion ? 0 : Double(index + 3) * 0.12)
-                                    }
+                                
+                                Spacer()
+                                
+                                VStack(spacing: 6) {
+                                    Rectangle()
+                                        .fill(Color("Red3"))
+                                        .frame(height: 0.5)
+                                        .padding(.horizontal, 60)
+                                        .accessibilityHidden(true)
+                                    
+                                    Text("scenariolist.coming_soon".localized)
+                                        .font(.system(.caption2, design: .monospaced).weight(.regular))
+                                        .foregroundColor(Color("Moss"))
+                                        .tracking(1)
+                                        .italic()
+                                        .padding(.vertical, 4)
+                                        .accessibilityHidden(true)
                                 }
+                                .padding(.bottom, 12)
                             }
-
-                            Spacer()
-
-                            VStack(spacing: 6) {
-                                Rectangle()
-                                    .fill(Color("Red3").opacity(0.35))
-                                    .frame(height: 0.5)
-                                    .padding(.horizontal, 60)
-                                    .accessibilityHidden(true)
-
-                                Text("scenariolist.coming_soon".localized)
-                                    .font(.system(.caption2, design: .monospaced).weight(.regular))
-                                    .foregroundColor(Color("Red3").opacity(0.5))
-                                    .tracking(1)
-                                    .italic()
-                                    .accessibilityHidden(true)
-                            }
-                            .padding(.bottom, 12)
                         }
                     }
                     .customedBorder(
-                        borderShape: "panel-border-006",
-                        borderColor: Color("Gold3"),
+                        borderShape: "panel-border-004",
+                        borderColor: Color("Moss"),
                         buttonType: .customed(width: panelWidth, height: panelHeight)
                     )
                     .accessibilityElement(children: .contain)
@@ -176,7 +184,7 @@ struct ScenarioListView: View {
 
                     // MARK: - Bottom actions
                     VStack(spacing: 14) {
-                        DotRow(color: Color("Red3"))
+                        DotRow(color: Color("Moss"))
                             .chronicleFade()
 
                         NavigationLink(destination: DiaryListView(), isActive: $navigateToDiary) {
@@ -185,8 +193,8 @@ struct ScenarioListView: View {
 
                         CustomButton(
                             title: "scenariolist.diary".localized,
-                            textColor: Color("Beige3"),
-                            buttonColor: Color("Red")
+                            textColor: Color("Beige"),
+                            buttonColor: Color("Red3")
                         ) {
                             navigateToDiary = true
                         }
@@ -200,8 +208,8 @@ struct ScenarioListView: View {
 
                         CustomButton(
                             title: "scenariolist.back".localized,
-                            textColor: Color("Beige3"),
-                            buttonColor: Color("Moss")
+                            textColor: Color("Moss"),
+                            buttonColor: Color("Beige")
                         ) {
                             dismiss()
                         }

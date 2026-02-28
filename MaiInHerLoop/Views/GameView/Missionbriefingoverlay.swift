@@ -53,27 +53,28 @@ struct MissionBriefingOverlay: View {
 
                         // MARK: - Header
                         VStack(spacing: 8) {
-                            BarRow(color: Color("Red3"))
+                            BarRow(color: Color("Moss"))
                                 .chronicleFade()
                                 .padding(.top, 10)
 
                             Text(title)
                                 .font(.system(.title3, design: .monospaced).weight(.black))
-                                .foregroundColor(Color("Moss"))
+                                .foregroundColor(Color("Red3"))
                                 .multilineTextAlignment(.center)
+                                .lineLimit(2)
                                 .tracking(1.5)
                                 .opacity(pulseAnimation ? 1.0 : 0.8)
                                 .accessibilityAddTraits(.isHeader)
                                 .padding(.top, 10)
 
-                            SquareDivider(color: Color("Red3"))
+                            SquareDivider(color: Color("Moss"))
                                 .padding(.horizontal, isIPad ? 100 : 60)
                         }
                         .padding(.top, 20)
                         .padding(.bottom, 16)
                         .chronicleFade()
 
-                        // MARK: - Threat Level Row (label + bars on same line)
+                        // MARK: - Threat Level Row
                         HStack(alignment: .center, spacing: 8) {
                             Text("threat.level".localized)
                                 .font(.system(.callout, design: .monospaced).weight(.black))
@@ -110,7 +111,7 @@ struct MissionBriefingOverlay: View {
 
                         // MARK: - Scenario title 
                         Text("dispatch.incoming".localized)
-                            .font(.system(.subheadline, design: .monospaced))
+                            .font(.system(.subheadline, design: .monospaced).weight(.bold))
                             .foregroundColor(Color("Moss"))
                             .lineLimit(2)
                             .multilineTextAlignment(.leading)
@@ -120,10 +121,10 @@ struct MissionBriefingOverlay: View {
                             .padding(.bottom, 10)
                             .chronicleFade()
 
-                        // MARK: - Intro ScrollView (fills remaining space above buttons)
+                        // MARK: - Intro ScrollView
                         ScrollView(.vertical, showsIndicators: false) {
                             Text(intro)
-                                .font(.system(.footnote).weight(.medium))
+                                .font(.system(.footnote, design: .monospaced).weight(.medium))
                                 .foregroundColor(Color("Moss"))
                                 .lineSpacing(3)
                                 .multilineTextAlignment(.leading)
@@ -145,7 +146,7 @@ struct MissionBriefingOverlay: View {
                         .padding(.bottom, 4)
                         .chronicleFade()
 
-                        Text("dispatch.scroll_guide".localized)                  .font(.system(.caption2).weight(.regular))
+                        Text("dispatch.scroll_guide".localized)                  .font(.system(.caption2, design: .monospaced).weight(.bold))
                             .foregroundColor(Color("Moss").opacity(0.7))
                             .padding(.bottom, 10)
                             .chronicleFade()
@@ -155,7 +156,7 @@ struct MissionBriefingOverlay: View {
                         VStack(spacing: 5) {
                             CustomButton(
                                 title: "dispatch.respond".localized,
-                                textColor: Color("Beige3"),
+                                textColor: Color("Beige"),
                                 buttonColor: Color("Red3")
                             ) {
                                 onRespond()
@@ -171,8 +172,8 @@ struct MissionBriefingOverlay: View {
 
                             CustomButton(
                                 title: "dispatch.not_ready".localized,
-                                textColor: Color("Beige3"),
-                                buttonColor: Color("Moss")
+                                textColor: Color("Moss"),
+                                buttonColor: Color("Beige")
                             ) {
                                 onRetreat()
                             }
@@ -209,7 +210,7 @@ struct MissionBriefingOverlay: View {
                 }
             }
             .customedBorder(
-                borderShape: "panel-border-003",
+                borderShape: "panel-border-004",
                 borderColor: Color("Moss"),
                 buttonType: .customed(width: panelWidth, height: panelHeight)
             )
@@ -285,8 +286,8 @@ struct MissionBriefingOverlay: View {
             danger: 2,
             titleEN: "The 18th Floor",
             titleVI: "Tầng 18",
-            introEN: "",
-            introVI: "",
+            introEN: "fefefefefefefefefefeffefefefefeffefefefefeffefefefefeffefefefefeffefefefefeff",
+            introVI: "fefefefefeffefefefefeffefefefefeffefefefefeffefefefefef",
             insightEN: "Heavy rain has been falling for 6 hours. The streets are rising. You are inside a building with no clear escape route and the water is still coming.",
             insightVI: "Mưa lớn đã rơi suốt 6 giờ. Mặt đường đang dâng lên. Bạn đang ở trong tòa nhà.",
             startQuestionID: "q1",

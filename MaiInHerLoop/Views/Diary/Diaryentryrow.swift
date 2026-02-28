@@ -42,7 +42,7 @@ struct DiaryEntryRow: View {
                     .frame(width: 44, height: 44)
                     .overlay(
                         RoundedRectangle(cornerRadius: 6)
-                            .stroke(Color("Moss").opacity(0.5), lineWidth: 1)
+                            .stroke(Color("Moss"), lineWidth: 1)
                     )
                     .accessibilityHidden(true)
             }

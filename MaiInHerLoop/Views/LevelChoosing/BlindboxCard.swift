@@ -14,7 +14,7 @@ struct BlindBoxCard: View {
 
             Button(action: onTap) {
                 CustomPanel(
-                    backgroundColor: isCompleted ? Color("Beige2").opacity(0.55) : Color("Beige2"),
+                    backgroundColor: isCompleted ? Color("Beige").opacity(0.55) : Color("Beige"),
                     size: cardSize
                 ) {
                     ZStack {
@@ -24,8 +24,8 @@ struct BlindBoxCard: View {
                                 .font(.system(.title2, design: .monospaced).weight(.black))
                                 .foregroundColor(
                                     isCompleted
-                                        ? Color("Red2").opacity(0.55)
-                                        : Color("Red2")
+                                        ? Color("Red3").opacity(0.55)
+                                        : Color("Red3")
                                 )
                                 .tracking(3)
                                 .accessibilityHidden(true)
@@ -33,18 +33,18 @@ struct BlindBoxCard: View {
                             if isCompleted {
                                 Image(systemName: "checkmark")
                                     .font(.system(.caption, design: .monospaced).weight(.bold))
-                                    .foregroundColor(Color("Red2").opacity(0.55))
+                                    .foregroundColor(Color("Red3").opacity(0.55))
                                     .accessibilityHidden(true)
                             } else {
                                 HStack(spacing: 4) {
                                     Rectangle()
-                                        .fill(Color("Red2").opacity(0.35))
+                                        .fill(Color("Moss").opacity(0.35))
                                         .frame(width: 12, height: 0.5)
                                     Circle()
-                                        .fill(Color("Red2").opacity(0.5))
+                                        .fill(Color("Moss").opacity(0.5))
                                         .frame(width: 2.5, height: 2.5)
                                     Rectangle()
-                                        .fill(Color("Red2").opacity(0.35))
+                                        .fill(Color("Moss").opacity(0.35))
                                         .frame(width: 12, height: 0.5)
                                 }
                                 .accessibilityHidden(true)

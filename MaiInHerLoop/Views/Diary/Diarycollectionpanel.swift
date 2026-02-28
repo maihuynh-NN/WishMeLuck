@@ -23,7 +23,7 @@ struct DiaryCollectionPanel: View {
         VStack(alignment: .leading, spacing: 0) {
 
             Text("diary.collection.title".localized)                .font(.system(.caption2, design: .monospaced).weight(.bold))
-                .foregroundColor(Color("Moss"))
+                .foregroundColor(Color("Red3"))
                 .tracking(2)
                 .padding(.horizontal, 20)
                 .padding(.top, 18)
@@ -48,7 +48,7 @@ struct DiaryCollectionPanel: View {
         .frame(maxWidth: .infinity)
         .background(Color("Beige").opacity(0.5))
         .customedBorder(
-            borderShape: "panel-border-003",
+            borderShape: "panel-border-008",
             borderColor: Color("Moss"),
             buttonType: .flexible(height: .infinity)
         )
