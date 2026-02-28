@@ -50,27 +50,28 @@
 
 // MARK: - Region Selection View
 
-"region.title" = "Chọn Khu Vực";
+"region.title" = "READ EMBERS \nAirlines";
+"region.title.mini" = "Chuyến Bay Khởi Hành";
 "region.subtitle" = "Vuốt để khám phá các thiên tai khác nhau";
 "regionselect.selectButton" = "CHỌN";
 
 
 // MARK: - Region Card
 
-"region.tap_to_explore" = "Chạm để khám phá ›";
+"region.tap_to_explore" = "Chạm vào đây để khám phá ›";
 
 
 // MARK: - Region Names
 
-"region.north.name" = "Bắc";
-"region.central.name" = "Trung";
-"region.south.name" = "Nam";
+"region.north.name" = "Vùng Bắc";
+"region.central.name" = "Vùng Trung";
+"region.south.name" = "Vùng Nam";
 
 
 // MARK: - Region Detail Popover — UI
 
-"ui.landing_on" = "ĐỔ BỘ VÀO";
-"ui.survival_orientation_manual" = "Cẩm Nang Định Hướng Sinh Tồn";
+"ui.landing_on" = "Chuyến Bay Khởi Hành";
+"ui.survival_orientation_manual" = "Cẩm Nang Định Hướng";
 "ui.the_region" = "MIỀN %@";
 "ui.ready_to_face_trials" = "Sẵn sàng đối mặt với thử thách của %@?";
 "ui.enter_region" = "VÀO KHU VỰC";

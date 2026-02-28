@@ -87,7 +87,7 @@ struct RegionDetailPopOver: View {
                         HStack(spacing: 4) {
                             ForEach(0..<7, id: \.self) { _ in
                                 Rectangle()
-                                    .fill(Color("Red").opacity(0.7))
+                                    .fill(Color("Gold3").opacity(0.7))
                                     .frame(width: 3, height: 12)
                             }
                         }
@@ -99,7 +99,7 @@ struct RegionDetailPopOver: View {
                         ZStack {
                             CustomCard(
                                 image: region.name,
-                                borderColor: Color("Red"),
+                                borderColor: Color("Red3"),
                                 size: .customed(width: 320, height: 220)
                             ) {}
                             
@@ -137,16 +137,16 @@ struct RegionDetailPopOver: View {
                     // MARK: - Cultural Divider
                     HStack {
                         Rectangle()
-                            .fill(Color("Red").opacity(0.6))
+                            .fill(Color("Gold3").opacity(0.6))
                             .frame(height: 1)
                         
                         Text("◆")
                             .font(.system(.caption2))
-                            .foregroundColor(Color("Red"))
+                            .foregroundColor(Color("Gold3"))
                             .accessibilityHidden(true)
                         
                         Rectangle()
-                            .fill(Color("Red").opacity(0.6))
+                            .fill(Color("Gold3").opacity(0.6))
                             .frame(height: 1)
                     }
                     .padding(.horizontal, 50)
@@ -159,7 +159,7 @@ struct RegionDetailPopOver: View {
                             Text("")
                                 .typewriter(riskBriefingText, speed: 0.04)
                                 .font(.system(.caption, design: .monospaced).weight(.medium))
-                                .foregroundColor(Color("Red"))
+                                .foregroundColor(Color("Moss"))
                                 .italic()
                                 .multilineTextAlignment(.center)
                                 .lineSpacing(2)
@@ -171,7 +171,7 @@ struct RegionDetailPopOver: View {
                         HStack(spacing: 6) {
                             ForEach(0..<9, id: \.self) { _ in
                                 Circle()
-                                    .fill(Color("Red").opacity(0.6))
+                                    .fill(Color("Gold3").opacity(0.6))
                                     .frame(width: 3, height: 3)
                             }
                         }
@@ -181,15 +181,15 @@ struct RegionDetailPopOver: View {
                      
                     HStack {
                         Rectangle()
-                            .fill(Color("Red").opacity(0.6))
+                            .fill(Color("Gold3").opacity(0.6))
                             .frame(height: 1)
                         
                         Text("◆")
                             .font(.system(.caption2))
-                            .foregroundColor(Color("Red"))
+                            .foregroundColor(Color("Gold3"))
                         
                         Rectangle()
-                            .fill(Color("Red").opacity(0.6))
+                            .fill(Color("Gold3").opacity(0.6))
                             .frame(height: 1)
                     }
                     .padding(.horizontal, 50)
@@ -200,7 +200,7 @@ struct RegionDetailPopOver: View {
                     VStack(spacing: 8) {
                         Text("ui.chronicles.title".localized)
                             .font(.system(.caption, design: .monospaced).weight(.bold))
-                            .foregroundColor(Color("Red"))
+                            .foregroundColor(Color("Red3"))
                             .tracking(2)
                             .opacity(textOpacity)
                         
@@ -209,7 +209,7 @@ struct RegionDetailPopOver: View {
                             ForEach(0..<8, id: \.self) { _ in
                                 Image(systemName: "chevron.right")
                                     .font(.system(size: 8, weight: .bold))
-                                    .foregroundColor(Color("Red"))
+                                    .foregroundColor(Color("Gold3"))
                             }
                         }
                         .opacity(textOpacity)
@@ -228,13 +228,13 @@ struct RegionDetailPopOver: View {
                                            
                                             VStack(spacing: 2) {
                                                 Rectangle()
-                                                    .fill(Color("Gold").opacity(0.9))
+                                                    .fill(Color("Gold3").opacity(0.9))
                                                     .frame(width: 12, height: 2)
                                                 Rectangle()
-                                                    .fill(Color("Gold").opacity(0.7))
+                                                    .fill(Color("Gold3").opacity(0.7))
                                                     .frame(width: 10, height: 2)
                                                 Rectangle()
-                                                    .fill(Color("Gold").opacity(0.5))
+                                                    .fill(Color("Gold3").opacity(0.5))
                                                     .frame(width: 8, height: 2)
                                                 Rectangle()
                                                     .frame(width: 4, height: 2)
@@ -244,18 +244,18 @@ struct RegionDetailPopOver: View {
                                             VStack(alignment: .leading, spacing: 6) {
                                                 Text(sectionKey(idx, "title"))
                                                     .font(.system(.caption, design: .monospaced).weight(.bold))
-                                                    .foregroundColor(Color("Gold"))
+                                                    .foregroundColor(Color("Red3"))
                                                     .tracking(0.8)
                                                 
                                                 Text(sectionKey(idx, "content"))
                                                     .font(.system(.caption2, design: .monospaced).weight(.medium))
-                                                    .foregroundColor(Color("Gold"))
+                                                    .foregroundColor(Color("Moss"))
                                                     .multilineTextAlignment(.leading)
                                                     .lineSpacing(1.5)
                                                 
                                                 Text(sectionKey(idx, "subtitle"))
                                                     .font(.system(.caption2, design: .monospaced).weight(.semibold))
-                                                    .foregroundColor(Color("Gold").opacity(0.8))
+                                                    .foregroundColor(Color("Moss").opacity(0.8))
                                                     .italic()
                                                     .multilineTextAlignment(.leading)
                                                     .padding(.top, 4)
@@ -275,18 +275,18 @@ struct RegionDetailPopOver: View {
                                             VStack(alignment: .trailing, spacing: 6) {
                                                 Text(sectionKey(idx, "title"))
                                                     .font(.system(.caption, design: .monospaced).weight(.bold))
-                                                    .foregroundColor(Color("Gold"))
+                                                    .foregroundColor(Color("Red3"))
                                                     .tracking(0.8)
                                                 
                                                 Text(sectionKey(idx, "content"))
                                                     .font(.system(.caption2, design: .monospaced).weight(.medium))
-                                                    .foregroundColor(Color("Gold"))
+                                                    .foregroundColor(Color("Moss"))
                                                     .multilineTextAlignment(.trailing)
                                                     .lineSpacing(1.5)
                                                 
                                                 Text(sectionKey(idx, "subtitle"))
                                                     .font(.system(.caption2, design: .monospaced).weight(.semibold))
-                                                    .foregroundColor(Color("Gold").opacity(0.8))
+                                                    .foregroundColor(Color("Moss").opacity(0.8))
                                                     .multilineTextAlignment(.trailing)
                                                     .padding(.top, 4)
                                                     .italic()
@@ -294,16 +294,16 @@ struct RegionDetailPopOver: View {
                                             
                                             VStack(spacing: 2) {
                                                 Rectangle()
-                                                    .fill(Color("Gold").opacity(0.9))
+                                                    .fill(Color("Gold3").opacity(0.9))
                                                     .frame(width: 10, height: 2)
                                                 Rectangle()
-                                                    .fill(Color("Gold").opacity(0.7))
+                                                    .fill(Color("Gold3").opacity(0.7))
                                                     .frame(width: 8, height: 2)
                                                 Rectangle()
-                                                    .fill(Color("Gold").opacity(0.5))
+                                                    .fill(Color("Gold3").opacity(0.5))
                                                     .frame(width: 6, height: 2)
                                                 Rectangle()
-                                                    .fill(Color("Gold").opacity(0.3))
+                                                    .fill(Color("Gold3").opacity(0.3))
                                                     .frame(width: 4, height: 2)
                                             }
                                             .accessibilityHidden(true)
@@ -324,7 +324,7 @@ struct RegionDetailPopOver: View {
                             HStack(spacing: 3) {
                                 ForEach(0..<5, id: \.self) { i in
                                     Rectangle()
-                                        .fill(Color("Gold").opacity(0.8 - Double(i) * 0.1))
+                                        .fill(Color("Gold3").opacity(0.8 - Double(i) * 0.1))
                                         .frame(width: 16, height: 24)
                                 }
                             }
@@ -332,15 +332,15 @@ struct RegionDetailPopOver: View {
                             
                             HStack {
                                 Rectangle()
-                                    .fill(Color("Gold").opacity(0.6))
+                                    .fill(Color("Gold3").opacity(0.6))
                                     .frame(height: 1)
                                 
                                 Text("∎")
                                     .font(.system(.caption2))
-                                    .foregroundColor(Color("Gold"))
+                                    .foregroundColor(Color("Gold3"))
                                 
                                 Rectangle()
-                                    .fill(Color("Gold").opacity(0.6))
+                                    .fill(Color("Gold3").opacity(0.6))
                                     .frame(height: 1)
                             }
                             .padding(.horizontal, 60)
@@ -351,30 +351,30 @@ struct RegionDetailPopOver: View {
                         
                         Text(readyTrialsText)
                             .font(.system(.caption, design: .monospaced).weight(.medium))
-                            .foregroundColor(Color("Gold"))
+                            .foregroundColor(Color("Moss"))
                             .italic()
                             .opacity(textOpacity)
                             .padding(.top, 8)
                         
                         CustomButton(
                             title: "ui.enter_region".localized,
-                            textColor: Color("Moss"),
-                            buttonColor: Color("Gold")
+                            textColor: Color("Beige"),
+                            buttonColor: Color("Red3")
                         ) {
                             onNavigate()
                         }
-                        .customedBorder(borderShape: "panel-border-003", borderColor: Color("Gold"), buttonType: .mainButton)
+                        .customedBorder(borderShape: "panel-border-008", borderColor: Color("Gold3"), buttonType: .mainButton)
                         .padding(.top, 5)
                         
-                        Button(action: onClose) {
-                            Text("ui.study_others_first".localized)
-                                .font(.system(.caption2, design: .monospaced).weight(.regular))
-                                .foregroundColor(Color("Gold").opacity(0.7))
-                                .tracking(0.5)
-                                .underline()
-                                .frame(minWidth: 44, minHeight: 44)
-                                .contentShape(Rectangle())
+                        CustomButton(
+                            title: "ui.study_others_first".localized,
+                            textColor: Color("Moss"),
+                            buttonColor: Color("Beige")
+                        ) {
+                            onClose()
                         }
+                        .customedBorder(borderShape: "panel-border-008", borderColor: Color("Gold3"), buttonType: .mainButton)
+                        .padding(.top, 5)
                     }
                     .padding(.bottom, 30)
                 }

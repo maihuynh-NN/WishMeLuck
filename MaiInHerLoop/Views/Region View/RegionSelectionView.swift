@@ -33,7 +33,7 @@ struct RegionSelectionView: View {
                         HStack(spacing: 4) {
                             ForEach(0..<7, id: \.self) { _ in
                                 Rectangle()
-                                    .fill(Color("Red3").opacity(0.7))
+                                    .fill(Color("Red3"))
                                     .frame(width: 3, height: 12)
                             }
                         }
@@ -42,17 +42,28 @@ struct RegionSelectionView: View {
                         .accessibilityHidden(true)
                         
                         VStack(spacing: 8) {
-                            Text("region.title".localized)
-                                .font(.system(.subheadline, design: .monospaced).weight(.black))
+                            Text("region.title.mini".localized)
+                                .font(.system(.caption, design: .monospaced).weight(.regular))
                                 .foregroundColor(Color("Red3"))
                                 .tracking(2)
                                 .opacity(headerPulse ? 1.0 : 0.8)
+                                .accessibilityAddTraits(.isHeader)
+                            
+                            Text("region.title".localized)
+                                .font(.system(.title2, design: .monospaced).weight(.black))
+                                .foregroundColor(Color("Red3"))
+                                .tracking(2)
+                                .multilineTextAlignment(.center)
+                                .lineLimit(2)
+                                .fixedSize(horizontal: false, vertical: true)
+                                .opacity(headerPulse ? 1.0 : 0.8)
+                                .padding(.top, 10)
                                 .accessibilityAddTraits(.isHeader)
                         }
                         
                         HStack {
                             Rectangle()
-                                .fill(Color("Red3").opacity(0.6))
+                                .fill(Color("Red3"))
                                 .frame(height: 1)
                                 .padding(.leading, 50)
                             
@@ -61,15 +72,16 @@ struct RegionSelectionView: View {
                                 .foregroundColor(Color("Red3"))
                             
                             Rectangle()
-                                .fill(Color("Red3").opacity(0.6))
+                                .fill(Color("Red3"))
                                 .frame(height: 1)
+                                .padding(.trailing, 50)
                         }
                         .padding(.horizontal, 50)
                         .accessibilityHidden(true)
                         
                         Text("region.subtitle".localized)
                             .font(.system(.caption2, design: .monospaced).weight(.medium))
-                            .foregroundColor(Color("Red3"))
+                            .foregroundColor(Color("Moss"))
                             .multilineTextAlignment(.center)
                             .lineSpacing(2)
                             .padding(.horizontal, 40)
@@ -129,7 +141,7 @@ struct RegionSelectionView: View {
                             self.currentRegion = selectedRegion
                             showDifficultySelector = true
                         }
-                        .customedBorder(borderShape: "panel-border-003", borderColor: Color("Gold3"), buttonType: .mainButton)
+                        .customedBorder(borderShape: "panel-border-008", borderColor: Color("Gold3"), buttonType: .mainButton)
                     }
                     .padding(.bottom, 50)
                 }

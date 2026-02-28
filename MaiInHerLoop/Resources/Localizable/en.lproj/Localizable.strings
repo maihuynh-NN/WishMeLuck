@@ -1,4 +1,4 @@
-// MARK: - Splash Screen
+// MARK: - Splash Screen DONE
 
 "splash.welcome_message" = "Not a story about coming home.\n\nA story where you make choices, learn, and live with what follows.";
 "splash.enter_name" = "HOW SHOULD WE CALL YOU";
@@ -9,7 +9,7 @@
 "splash.begin_accessibility" = "Begin the experience";
 
 
-// MARK: - Home View
+// MARK: - Home View DONE
 
 "home.title.red" = "RED";
 "home.title.embers" = "EMBERS";
@@ -17,7 +17,7 @@
 "home.title.a11y" = "Red Embers — Than Hồng";
 "home.start_game" = "Start Game";
 "home.how_to_play" = "How To Play";
-"home.diary" = "Diary";
+"home.diary" = "Open Diary";
 "home.howtoplay" = "How to play";
 "home.howtoplay.hint" = "Opens a guide on how to play";
 
@@ -38,7 +38,7 @@
 "settings.button.hint" = "Opens settings for language and appearance";
 
 
-// MARK: - Story View
+// MARK: - Story View DONE
 
 "story.skip" = "Skip";
 "story.skip.a11y" = "Skip introduction";
@@ -49,37 +49,38 @@
 "story.nav.previous" = "Previous section";
 
 
-// MARK: - Region Selection View
+// MARK: - Region Selection View DONE
 
 "region.title" = "RED EMBERS Airlines";
-"region.subtitle" = "Swipe to explore different disasters";
-"regionselect.selectButton" = "SELECT";
+"region.title.mini" = "Departure Flight";
+"region.subtitle" = "Swipe left or right to select your destination";
+"regionselect.selectButton" = "Select Region";
 
 
-// MARK: - Region Card
+// MARK: - Region Card DONE
 
-"region.tap_to_explore" = "Tap to explore ›";
+"region.tap_to_explore" = "Tap here to explore ›";
 
 
-// MARK: - Region Names
+// MARK: - Region Names DONE
 
 "region.north.name" = "North";
 "region.central.name" = "Central";
 "region.south.name" = "South";
 
 
-// MARK: - Region Detail Popover — UI
+// MARK: - Region Detail Popover — UI DONE
 
 "ui.landing_on" = "LANDING ON";
-"ui.survival_orientation_manual" = "Survival Orientation Manual";
+"ui.survival_orientation_manual" = "Field Notes To Region";
 "ui.the_region" = "THE %@";
 "ui.ready_to_face_trials" = "Ready to face the trials of %@?";
-"ui.enter_region" = "ENTER REGION";
-"ui.study_others_first" = "study other regions first";
-"ui.chronicles.title" = "CHRONICLES";
+"ui.enter_region" = "Select Region";
+"ui.study_others_first" = "Return";
+"ui.chronicles.title" = "The Rundown";
 
 
-// MARK: - Region Detail — Sorth Risk Briefing
+// MARK: - Region Detail — Sorth Risk Briefing DONE
 
 "region.south.riskBriefing" = "The South moves fast and forgives slow.\nRain turns streets into rivers in minutes. Heat lingers long after the flood drains. The people who thrive here learned to read the city the way sailors read weather — not by waiting for warnings, but by knowing what comes next.";
 
@@ -100,7 +101,7 @@
 "region.sorth.sections.4.subtitle" = "Don't hide at home, the neighbors are the best rescuers";
 
 
-// MARK: - Region Detail — Central Risk Briefing
+// MARK: - Region Detail — Central Risk Briefing DONE
 
 "region.central.riskBriefing" = "The Central coast lives between the sea and the mountains.\nTyphoons arrive from one side, landslides answer from the other.\nThe towns in between have weathered this longer than anyone alive.\nWhat they know is not fear, it is timing.";
 
@@ -121,7 +122,7 @@
 "region.central.sections.4.subtitle" = "Follow the voice";
 
 
-// MARK: - Region Detail — Nouth Risk Briefing
+// MARK: - Region Detail — Nouth Risk Briefing DONE
 
 "region.north.riskBriefing" = "The North is old and does not explain itself.\nMountains shift without warning. Rivers that were calm at dawn swallow roads by noon. The cold settles in for months. The people here plan ahead not out of worry, but because the land taught them what happens when you don't.";
 
@@ -142,17 +143,17 @@
 "region.north.sections.4.subtitle" = "Join early. The door closes when the storm hits.";
 
 
-// MARK: - Scenario List View
+// MARK: - Scenario List View DONE
 
-"scenariolist.header" = "MISSION BOARD";
-"scenariolist.subheader" = "Choose your mission";
+"scenariolist.header" = "Welcome Aboard";
+"scenariolist.subheader" = "Events are unpredictable.\nTap on any scenario to preview";
 "scenariolist.coming_soon" = "· more scenarios coming soon ·";
-"scenariolist.back" = "back to regions";
-"scenariolist.diary" = "Diary";
+"scenariolist.back" = "Return";
+"scenariolist.diary" = "Visit Diary";
 "scenariolist.region.north" = "North";
 "scenariolist.region.central" = "Central";
 "scenariolist.region.south" = "South";
-"scenariolist.board.a11y" = "Mission board for %@";
+"scenariolist.board.a11y" = "Enter scenario %@";
 "scenariolist.diary.a11y" = "Open diary";
 "scenariolist.diary.a11y.hint" = "View your reflections from completed missions";
 "scenariolist.back.a11y" = "Go back";

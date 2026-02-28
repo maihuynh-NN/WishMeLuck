@@ -73,13 +73,13 @@ struct ScenarioListView: View {
 
                         Text("scenariolist.header".localized)
                             .font(.system(.caption2, design: .monospaced).weight(.bold))
-                            .foregroundColor(Color("Red3").opacity(0.65))
+                            .foregroundColor(Color("Red3"))
                             .tracking(2)
                             .chronicleFade()
                             .padding(.vertical, 4)
 
                         Text(regionDisplayName.uppercased())
-                            .font(.system(.title3, design: .monospaced).weight(.black))
+                            .font(.system(.title2, design: .monospaced).weight(.black))
                             .foregroundColor(Color("Red3"))
                             .tracking(2)
                             .opacity(headerPulse ? 1.0 : 0.85)
@@ -92,12 +92,15 @@ struct ScenarioListView: View {
 
                         Text("scenariolist.subheader".localized)
                             .font(.system(.caption2, design: .monospaced).weight(.regular))
-                            .foregroundColor(Color("Red3").opacity(0.55))
+                            .foregroundColor(Color("Moss"))
                             .tracking(0.5)
+                            .multilineTextAlignment(.center)
+                            .lineLimit(2)
+                            .fixedSize(horizontal: false, vertical: true)
                             .italic()
                             .chronicleFade()
                     }
-                    .padding(.bottom, 30)
+                    .padding(.bottom, 20)
 
                     // MARK: - Mission board panel
                     let isIPad = UIDevice.current.userInterfaceIdiom == .pad

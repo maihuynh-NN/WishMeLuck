@@ -1,9 +1,9 @@
 import SwiftUI
 
 let regions: [Region] = [
-    Region(region_id: 1, name: "South", story: "Fertile delta lands where monsoons bring both blessing and devastation."),
-    Region(region_id: 2, name: "North", story: "Ancient mountains harbor storms that test the wisdom of ancestors."),
-    Region(region_id: 3, name: "Central", story: "Coastal highlands where typhoons write their chronicles in stone.")
+    Region(region_id: 1, name: "South", story: "Neon rivers and monsoon heat. The delta never sleeps."),
+    Region(region_id: 2, name: "North", story: "Old mountains, deep valleys. The land remembers everything."),
+    Region(region_id: 3, name: "Central", story: "Salt wind and stone towns. Between the sea and the sky.")
 ]
 
 struct Region: Identifiable {
@@ -12,8 +12,4 @@ struct Region: Identifiable {
     let story: String
     
     var id: Int { region_id }
-}
-
-#Preview {
-    Text("Region model - no preview needed")
 }
