@@ -34,7 +34,6 @@ struct DiaryEntryRow: View {
 
     var body: some View {
         HStack(spacing: 12) {
-            // Object image — small thumbnail
             if let a = archetype {
                 Image(a.imageName)
                     .resizable()
@@ -55,19 +54,19 @@ struct DiaryEntryRow: View {
 
                 Text("\(regionLabel)  ·  \(dateLabel)")
                     .font(.system(.caption2, design: .monospaced))
-                    .foregroundColor(Color("Moss").opacity(0.8))
+                    .foregroundColor(Color("Moss"))
             }
 
             Spacer()
 
             Image(systemName: "chevron.right")
                 .font(.system(.caption2).weight(.semibold))
-                .foregroundColor(Color("Moss").opacity(0.5))
+                .foregroundColor(Color("Moss"))
                 .accessibilityHidden(true)
         }
         .padding(.horizontal, 16)
         .padding(.vertical, 12)
-        .background(Color("Beige").opacity(0.5))
+        .background(Color("Beige"))
         .accessibilityElement(children: .combine)
         .accessibilityLabel("\(titleText), \(regionLabel), \(dateLabel)")
         .accessibilityHint("diary.entry.hint".localized)

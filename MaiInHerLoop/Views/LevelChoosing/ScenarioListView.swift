@@ -117,7 +117,10 @@ struct ScenarioListView: View {
                         ZStack {
                             RoundedRectangle(cornerRadius: 10)
                                 .fill(Color("Beige3"))
-                                .frame(width: panelWidth - 6, height: panelHeight - 6)
+                                .frame(
+                                    width: max(0, panelWidth - 5),
+                                    height: max(0, panelHeight - 5)
+                                )
                                 .accessibilityHidden(true)
                             
                             VStack(spacing: 0) {

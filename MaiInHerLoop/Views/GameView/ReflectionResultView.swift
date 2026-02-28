@@ -68,7 +68,7 @@ struct ReflectionResultView: View {
         ) {
             ZStack {
                 RoundedRectangle(cornerRadius: 10)
-                    .fill(Color("Beige3").opacity(0.95))
+                    .fill(Color("Beige3"))
                     .frame(width: panelWidth - 6, height: panelHeight - 6)
                     .accessibilityHidden(true)
 
@@ -116,7 +116,7 @@ struct ReflectionResultView: View {
                     
                     Text("reflection.scroll.guide".localized)
                         .font(.system(.caption2, design: .monospaced).italic())
-                        .foregroundColor(Color("Moss").opacity(0.5))
+                        .foregroundColor(Color("Moss"))
                         .frame(maxWidth: .infinity, alignment: .center)
                         .padding(.top, 8)
                         .accessibilityHidden(true)
@@ -130,7 +130,7 @@ struct ReflectionResultView: View {
             }
         }
         .customedBorder(
-            borderShape: "panel-border-003",
+            borderShape: "panel-border-004",
             borderColor: Color("Moss"),
             buttonType: .customed(width: panelWidth, height: panelHeight)
         )
@@ -142,8 +142,8 @@ struct ReflectionResultView: View {
         if let a = archetype {
             VStack(spacing: 4) {
                 Text("reflection.result.header".localized)
-                    .font(.system(.caption2, design: .monospaced).weight(.medium))
-                    .foregroundColor(Color("Moss3").opacity(0.6))
+                    .font(.system(.caption2, design: .monospaced).weight(.bold))
+                    .foregroundColor(Color("Moss"))
                     .tracking(2)
                     .padding(.top, 5)
                     .accessibilityHidden(true)
@@ -173,8 +173,8 @@ struct ReflectionResultView: View {
                     .accessibilityHidden(true)
 
                 Text(teaser(a))
-                    .font(.system(.caption, design: .serif).italic())
-                    .foregroundColor(Color("Moss").opacity(0.75))
+                    .font(.system(.caption, design: .monospaced).italic())
+                    .foregroundColor(Color("Moss"))
                     .multilineTextAlignment(.center)
                     .accessibilityHidden(true)
             }
@@ -214,13 +214,13 @@ struct ReflectionResultView: View {
                 HStack(alignment: .top, spacing: 8) {
                     Text("◆")
                         .font(.system(size: 7))
-                        .foregroundColor(Color("Moss").opacity(0.5))
+                        .foregroundColor(Color("Moss"))
                         .padding(.top, 3)
                         .accessibilityHidden(true)
 
                     Text(tradeoff(a))
                         .font(.system(.caption, design: .monospaced).italic())
-                        .foregroundColor(Color("Moss").opacity(0.75))
+                        .foregroundColor(Color("Moss"))
                         .lineSpacing(3)
                         .multilineTextAlignment(.leading)
                         .fixedSize(horizontal: false, vertical: true)

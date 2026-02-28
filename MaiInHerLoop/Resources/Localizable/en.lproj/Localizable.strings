@@ -194,24 +194,24 @@
 
 "reflection.result.header" = "IN PEOPLE'S EYES, YOU ARE LIKE";
 "reflection.result.announcement" = "Your archetype is";
-"reflection.diary" = "VIEW DIARY";
-"reflection.diary.hint" = "Double tap to view your diary entry";
-"reflection.play_again" = "PLAY AGAIN";
-"reflection.play_again.hint" = "Double tap to start a new mission";
+"reflection.diary" = "View Diary";
+"reflection.diary.hint" = "Tap to view your diary entry";
+"reflection.play_again" = "Return";
+"reflection.play_again.hint" = "Tap to start a new mission";
 "reflection.scroll.guide" = "Scroll to read";
 
 
-// MARK: - Diary List View
+// MARK: - Diary List View DONE
 
 "diary.title" = "DIARY";
-"diary.subtitle" = "Your adaptation journey.";
+"diary.subtitle" = "Your adaptation journey";
 "diary.past_scenarios" = "PAST SCENARIOS";
 "diary.back" = "Back";
 "diary.back.hint" = "Return to previous screen";
 "diary.entry.hint" = "Open diary entry";
 
 
-// MARK: - Diary Detail View
+// MARK: - Diary Detail View Done
 
 "diary.detail.greeting" = "Dear Diary,";
 "diary.detail.subtitle" = "A regular day of %@'s adaptation in Việt Nam.";
@@ -222,7 +222,7 @@
 "diary.detail.scroll_hint" = "scroll to read";
 
 
-// MARK: - Diary Collection Panel
+// MARK: - Diary Collection Panel DONE
 
 "diary.collection.title" = "YOUR COLLECTION";
 "diary.collection.empty" = "No objects yet. Play a scenario first.";

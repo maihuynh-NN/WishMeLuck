@@ -1,1 +1,120 @@
-
+{
+  "id": "north_easy_3",
+  "region": "north",
+  "danger": "3",
+  "title_en": "The Bia Hơi Escalation",
+  "title_vi": "Xung Đột Quán Bia",
+  "intro_en": "A heated argument at a crowded Hanoi bia hơi corner turns violent. Glasses shatter, and an aggressive group begins pushing. [Name] is trapped between the brawl and a wall.",
+  "intro_vi": "Một cuộc tranh cãi tại quán bia hơi Hà Nội bỗng trở nên bạo lực. Ly cốc vỡ tan, một nhóm người hung hăng bắt đầu xô đẩy. [Name] bị kẹt giữa đám đông hỗn loạn và bức tường.",
+  "start_question": "q1",
+  "questions": [
+    {
+      "id": "q1",
+      "text_en": "A group surges forward, shouting. Someone is pushed into [Name]. The space is shrinking fast. What is the first move?",
+      "text_vi": "Một nhóm người lao tới quát tháo. Có người bị xô vào [Name]. Không gian hẹp lại rất nhanh. Phản ứng đầu tiên là gì?",
+      "timer": 15,
+      "options": [
+        { "id": "q1_a", "text_en": "Adopt a protective stance, arms up", "text_vi": "Thủ thế bảo vệ, đưa tay lên cao", "trait_tag": "risk_recognition", "next_question": "q2" },
+        { "id": "q1_b", "text_en": "Shout back to demand space", "text_vi": "Hét lớn yêu cầu tránh ra", "trait_tag": "immediate_action", "next_question": "q2" },
+        { "id": "q1_c", "text_en": "Try to push through the group", "text_vi": "Cố gắng chen qua nhóm người", "trait_tag": "self_reliance", "next_question": "q2" },
+        { "id": "q1_d", "text_en": "Look for a secondary exit/kitchen", "text_vi": "Tìm lối thoát phụ hoặc nhà bếp", "trait_tag": "information_first", "next_question": "q2" }
+      ]
+    },
+    {
+      "id": "q2",
+      "text_en": "Broken glass covers the floor. The crowd’s movement is erratic and aggressive. Someone swings a plastic stool nearby.",
+      "text_vi": "Mảnh thủy tinh vỡ đầy sàn. Đám đông di chuyển hỗn loạn và hung hăng. Có người vung ghế nhựa ngay gần đó.",
+      "timer": 15,
+      "options": [
+        { "id": "q2_a", "text_en": "Keep eyes on the aggressors' hands", "text_vi": "Quan sát kỹ tay của kẻ hung hăng", "trait_tag": "risk_recognition", "next_question": "q3" },
+        { "id": "q2_b", "text_en": "Grab a stool to protect your head", "text_vi": "Dùng ghế che chắn phần đầu", "trait_tag": "self_reliance", "next_question": "q3" },
+        { "id": "q2_c", "text_en": "Move sideways along the wall", "text_vi": "Di chuyển ngang dọc theo bức tường", "trait_tag": "immediate_action", "next_question": "q3" },
+        { "id": "q2_d", "text_en": "Call out for the quán owner", "text_vi": "Gọi chủ quán hỗ trợ", "trait_tag": "information_first", "next_question": "q3" }
+      ]
+    },
+    {
+      "id": "q3",
+      "text_en": "The brawl moves toward the main street exit. [Name] sees a narrow alley to the left and a parking area to the right.",
+      "text_vi": "Cuộc ẩu đả lan ra cửa chính. [Name] thấy một con ngõ nhỏ bên trái và khu gửi xe bên phải.",
+      "timer": 15,
+      "options": [
+        { "id": "q3_a", "text_en": "Slip into the narrow side alley", "text_vi": "Lách vào con ngõ nhỏ bên cạnh", "trait_tag": "risk_recognition", "next_question": "q4a" },
+        { "id": "q3_b", "text_en": "Head toward the open parking area", "text_vi": "Chạy về phía bãi gửi xe thoáng", "trait_tag": "self_reliance", "next_question": "q4b" },
+        { "id": "q3_c", "text_en": "Wait for the police to arrive", "text_vi": "Đợi công an đến can thiệp", "trait_tag": "information_first", "next_question": "q4a" },
+        { "id": "q3_d", "text_en": "Blend into the stationary crowd", "text_vi": "Hòa vào nhóm người đang đứng yên", "trait_tag": "immediate_action", "next_question": "q4b" }
+      ]
+    },
+    {
+      "id": "q4a",
+      "text_en": "The alley is dark but quiet. However, [Name] hears footsteps following. It might be a group from the fight.",
+      "text_vi": "Ngõ tối nhưng yên tĩnh. Tuy nhiên, [Name] nghe tiếng bước chân bám theo. Có thể là nhóm từ quán bia.",
+      "timer": 15,
+      "options": [
+        { "id": "q4a_a", "text_en": "Keep moving toward a lit area", "text_vi": "Tiếp tục đi về phía có ánh sáng", "trait_tag": "risk_recognition", "next_question": "q5" },
+        { "id": "q4a_b", "text_en": "Hide behind a parked motorbike", "text_vi": "Trốn sau một chiếc xe máy đang đỗ", "trait_tag": "self_reliance", "next_question": "q5" },
+        { "id": "q4a_c", "text_en": "Turn around and confront them", "text_vi": "Quay lại đối mặt với họ", "trait_tag": "immediate_action", "next_question": "q5" },
+        { "id": "q4a_d", "text_en": "Call 113 while walking quickly", "text_vi": "Vừa đi nhanh vừa gọi 113", "trait_tag": "information_first", "next_question": "q5" }
+      ]
+    },
+    {
+      "id": "q4b",
+      "text_en": "In the parking area, motorbikes are being knocked over. The fuel smell is strong. The crowd is spilling out here too.",
+      "text_vi": "Tại bãi xe, xe máy bị xô đổ. Mùi xăng nồng nặc. Đám đông cũng đang tràn ra khu vực này.",
+      "timer": 12,
+      "options": [
+        { "id": "q4b_a", "text_en": "Avoid any area with spilled fuel", "text_vi": "Tránh xa khu vực có xăng đổ", "trait_tag": "risk_recognition", "next_question": "q5" },
+        { "id": "q4b_b", "text_en": "Push through to the outer gate", "text_vi": "Chen lấn để ra cổng ngoài", "trait_tag": "immediate_action", "next_question": "q5" },
+        { "id": "q4b_c", "text_en": "Keep low to avoid flying objects", "text_vi": "Cúi thấp người tránh vật thể bay", "trait_tag": "self_reliance", "next_question": "q5" },
+        { "id": "q4b_d", "text_en": "Signal for the security guard", "text_vi": "Ra hiệu cho bảo vệ bãi xe", "trait_tag": "information_first", "next_question": "q5" }
+      ]
+    },
+    {
+      "id": "q5",
+      "text_en": "The situation peaks. Loud shouting and the sound of sirens approach. The crowd shifts violently as the police intervene.",
+      "text_vi": "Đỉnh điểm xung đột. Tiếng la hét và còi hú vang lên. Đám đông hỗn loạn khi công an can thiệp.",
+      "timer": 15,
+      "options": [
+        { "id": "q5_a", "text_en": "Move with the crowd's flow", "text_vi": "Di chuyển nương theo đám đông", "trait_tag": "risk_recognition", "next_question": "q6" },
+        { "id": "q5_b", "text_en": "Hands visible, stay non-threatening", "text_vi": "Để lộ hai tay, tỏ rõ vẻ không nguy hại", "trait_tag": "immediate_action", "next_question": "q6" },
+        { "id": "q5_c", "text_en": "Duck behind a solid pillar", "text_vi": "Núp sau một cột trụ chắc chắn", "trait_tag": "self_reliance", "next_question": "q6" },
+        { "id": "q5_d", "text_en": "Identify yourself as a witness", "text_vi": "Xác nhận mình là người chứng kiến", "trait_tag": "information_first", "next_question": "q6" }
+      ]
+    },
+    {
+      "id": "q6",
+      "text_en": "The police begin detaining those involved. [Name] is near the perimeter. A gap opens to the sidewalk.",
+      "text_vi": "Công an bắt đầu tạm giữ những người liên quan. [Name] ở gần rìa. Một khoảng trống mở ra phía vỉa hè.",
+      "timer": 15,
+      "options": [
+        { "id": "q6_a", "text_en": "Exit immediately and walk away", "text_vi": "Thoát ra ngoài và rời đi ngay", "trait_tag": "risk_recognition", "next_question": "q7a" },
+        { "id": "q6_b", "text_en": "Stay to record the incident", "text_vi": "Ở lại để quay phim lại vụ việc", "trait_tag": "self_reliance", "next_question": "q7b" }
+      ]
+    },
+    {
+      "id": "q7a",
+      "text_en": "[Name] is safe. The street is calm nearby. The incident was a dangerous mix of alcohol and mob mentality.",
+      "text_vi": "[Name] an toàn. Phố xá gần đó vẫn bình yên. Vụ việc là sự kết hợp nguy hiểm giữa rượu bia và tâm lý đám đông.",
+      "timer": 20,
+      "options": [
+        { "id": "q7a_a", "text_en": "Decline returning to the area", "text_vi": "Tránh quay lại khu vực này sớm", "trait_tag": "risk_recognition", "next_question": null },
+        { "id": "q7a_b", "text_en": "Report details to 113 later", "text_vi": "Trình báo chi tiết cho 113 sau", "trait_tag": "information_first", "next_question": null },
+        { "id": "q7a_c", "text_en": "Check for any minor scratches", "text_vi": "Kiểm tra xem có vết trầy xước nào không", "trait_tag": "self_reliance", "next_question": null },
+        { "id": "q7a_d", "text_en": "Advise friends on safe venues", "text_vi": "Khuyên bạn bè về những địa điểm an toàn", "trait_tag": "immediate_action", "next_question": null }
+      ]
+    },
+    {
+      "id": "q7b",
+      "text_en": "[Name] provides footage to officers. While useful, staying was risky. The situation is finally under control.",
+      "text_vi": "[Name] cung cấp bằng chứng cho công an. Tuy hữu ích nhưng ở lại rất rủi ro. Tình hình cuối cùng đã ổn định.",
+      "timer": 20,
+      "options": [
+        { "id": "q7b_a", "text_en": "Learn de-escalation awareness", "text_vi": "Học cách nhận diện xung đột sớm", "trait_tag": "risk_recognition", "next_question": null },
+        { "id": "q7b_b", "text_en": "Keep emergency contacts ready", "text_vi": "Luôn chuẩn bị sẵn số khẩn cấp", "trait_tag": "information_first", "next_question": null },
+        { "id": "q7b_c", "text_en": "Avoid high-density drinking spots", "text_vi": "Tránh các tụ điểm nhậu quá đông", "trait_tag": "self_reliance", "next_question": null },
+        { "id": "q7b_d", "text_en": "Remain calm during future chaos", "text_vi": "Giữ bình tĩnh trong các vụ hỗn loạn sau", "trait_tag": "immediate_action", "next_question": null }
+      ]
+    }
+  ],
+  "insight_en": "Hanoi Bia Hơi Escalations\nIn Northern Vietnam, the 'Bia Hơi' culture often involves high-density seating in open-front shops. When social conflicts arise, the presence of alcohol and mob mentality can rapidly escalate a verbal dispute into a physical brawl involving multiple groups.\n\nWhy the Toll is High\n Confined Chaos: Shops are often packed with low plastic furniture and glassware. These become improvised weapons or trip hazards, preventing quick escape.\n Mob Mentality: In Northern social settings, 'face' and group loyalty can pull bystanders into the conflict, turning a two-person fight into a large-scale brawl.\n Secondary Dangers: In the panic, motorbikes in parking areas are often knocked over, leading to fuel leaks or crushing injuries against walls and pavement.\n\nPractical Solutions\n The 'Boxing' Stance: If caught in a surge, keep your feet staggered and arms up in a 'box' around your chest. This creates air space and protects vital organs from impact.\n Wall Navigation: Never stay pinned flat against a wall. Move sideways (crab-walk) along the wall toward an exit to avoid being crushed by the crowd's forward pressure.\n De-escalate by Distance: At the first sign of breaking glass or shouting, identify the nearest exit that isn't the main front entrance (often through a kitchen or side alley).",
+  "insight_vi": "Xung đột tại quán bia Hà Nội\nTại miền Bắc, văn hóa 'Bia hơi' thường đi kèm với mật độ chỗ ngồi dày đặc trong không gian mở. Khi mâu thuẫn nảy sinh, rượu bia và tâm lý đám đông có thể nhanh chóng biến tranh chấp bằng lời nói thành ẩu đả bạo lực giữa nhiều nhóm.\n\nTại sao thiệt hại cao?\n Hỗn loạn trong không gian hẹp: Quán thường bày kín bàn ghế nhựa và ly thủy tinh. Chúng trở thành hung khí tự chế hoặc vật cản gây vấp ngã, cản trở việc thoát thân.\n Tâm lý đám đông: Trong bối cảnh xã hội miền Bắc, tâm lý bảo vệ 'thể diện' hoặc lòng trung thành nhóm có thể cuốn cả những người đứng xem vào cuộc chiến.\n Nguy cơ thứ cấp: Trong lúc hoảng loạn, xe máy tại bãi gửi thường bị xô đổ, dẫn đến rò rỉ xăng hoặc gây chấn thương do bị ép vào tường và vỉa hè.\n\nGiải pháp thực tế\n Thế đứng 'Chiếc hộp': Nếu bị kẹt trong đám đông, hãy đứng chân trước chân sau, đưa tay lên tạo thành 'chiếc hộp' quanh ngực. Điều này tạo khoảng thở và bảo vệ nội tạng khỏi va đập.\n Di chuyển dọc tường: Tuyệt đối không đứng yên khi bị ép vào tường. Hãy di chuyển ngang (kiểu đi cua) dọc theo tường về phía lối thoát để tránh bị áp lực đám đông đè nát.\n Thoát thân bằng khoảng cách: Ngay khi thấy dấu hiệu xô xát hoặc tiếng kính vỡ, hãy xác định ngay lối thoát gần nhất không phải là cửa chính (thường là qua nhà bếp hoặc ngõ phụ)."
+}
