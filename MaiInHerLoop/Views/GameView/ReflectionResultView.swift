@@ -14,7 +14,7 @@ struct ReflectionResultView: View {
     // MARK: - Responsive sizing
     private var isIPad: Bool { UIDevice.current.userInterfaceIdiom == .pad }
     private var panelWidth:  CGFloat { isIPad ? 500 : 340 }
-    private var panelHeight: CGFloat { isIPad ? 680 : 560 }
+    private var panelHeight: CGFloat { isIPad ? 780 : 660 }
     private var hPad:        CGFloat { isIPad ? 32 : 24 }
 
     private var archetype: Archetype? {
