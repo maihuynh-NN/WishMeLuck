@@ -121,7 +121,7 @@ struct RegionSelectionView: View {
                         .accessibilityHidden(true)
                         
                         CustomButton(
-                            title: "region.title".localized,
+                            title: "regionselect.selectButton".localized,
                             textColor: Color("Beige"),
                             buttonColor: Color("Red3")
                         ) {

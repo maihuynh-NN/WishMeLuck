@@ -81,65 +81,65 @@
 
 // MARK: - Region Detail — North Risk Briefing
 
-"region.north.riskBriefing" = "The North doesn't wait for you to prepare. \nStorms roll in overnight. Valleys drown, ridges crack, and whole hamlets vanish behind walls of snow or mud. Locals survive because they plan like their lives depend on it. \nYours will, too.";
+"region.south.riskBriefing" = "The South moves fast and forgives slow.\nRain turns streets into rivers in minutes. Heat lingers long after the flood drains. The people who thrive here learned to read the city the way sailors read weather — not by waiting for warnings, but by knowing what comes next.";
 
-"region.north.sections.1.title" = "THE LAND ITSELF TESTS YOU";
-"region.north.sections.1.content" = "In the North, one moment you're on open ground, the next you're fighting icy winds along a ridge. \nAltitude steals heat faster than fire can give it back. Veterans never trust a single road, they carry maps in their heads. \nWhen the main pass collapses, they already know the side paths.";
-"region.north.sections.1.subtitle" = "Learn them, or be buried with the road.";
+"region.south.sections.1.title" = "A CITY BUILT UPWARD, NOT OUTWARD";
+"region.south.sections.1.content" = "Saigon stacks life vertically. High floors, narrow stairwells, lobbies lined with motorbikes, balconies wrapped in iron.\nPeople who belong here know their building the way they know their own kitchen.\nEvery exit, every shortcut.";
+"region.south.sections.1.subtitle" = "Know two ways out of anywhere you sleep.";
 
-"region.north.sections.2.title" = "NO ONE SURVIVES ALONE";
-"region.north.sections.2.content" = "Here, survival is a circle. \nVillage committees stockpile food, fuel, medicine before the storms hit. \nIf you're inside, you'll share the fire. If you're outside, you'll watch the smoke from the cold. Join early.";
-"region.north.sections.2.subtitle" = "Ask late, and doors stay closed.";
+"region.south.sections.2.title" = "WHEN THOUSANDS MOVE AS ONE";
+"region.south.sections.2.content" = "Saigon knows how to celebrate. Countdown nights, street festivals, live events.\nThe city fills every open space with people and sound.\nThe ones who move through crowds well are not anxious.";
+"region.south.sections.2.subtitle" = "Know where the exits are, and stay near the edge";
 
-"region.north.sections.3.title" = "THE FROST IS A CRUEL KING";
-"region.north.sections.3.content" = "By October, every jug of water, every sack of rice, every stick of fuel must be ready. \nMiss it, and winter locks you in silence. \nSummer rots what winter preserves, so the rhythm shifts.";
-"region.north.sections.3.subtitle" = "The locals live by the calendar of survival. You should too.";
+"region.south.sections.3.title" = "THE SECOND WAVE COMES QUIET";
+"region.south.sections.3.content" = "Floodwater drains,\nDengue, skin infections, heat exhaustion,\n These arrive after the rain stops, when everyone has already relaxed.";
+"region.north.sections.3.subtitle" = "The locals live by the calendar. You should too.";
 
-"region.north.sections.4.title" = "WHEN WORDS ARE LOST, SIGNS REMAIN";
-"region.north.sections.4.content" = "Rescue in the North starts with neighbors. \nThe shock teams who rope across rivers and dig through slides before the army ever arrives. Soldiers and helicopters follow, but the first grip in the dark is always local. \nKnow the shelters, know the routes.";
-"region.north.sections.4.subtitle" = "If you wait hidden at home, the rescuers will pass you by.";
+"region.south.sections.4.title" = "THE NEIGHBORHOOD MOVES FIRST";
+"region.south.sections.4.content" = "Official help follows.\nThe first response is always a neighbor at your door, a rider shouting through the street, youth volunteers moving before anyone gives the order.";
+"region.north.sections.4.subtitle" = "Don't hide at home, the neighbors are the best rescuers";
 
 
 // MARK: - Region Detail — Central Risk Briefing
 
-"region.central.riskBriefing" = "The Central coast does not just rain, it roars. \nTyphoons crash from sea to mountains, rivers flash without warning, and roads vanish under mudslides. Villages brace for wind, towns watch the waves. \nDown here, survival is timing, trust, and knowing which path is truly safe.";
+"region.central.riskBriefing" = "The Central coast lives between the sea and the mountains.\nTyphoons arrive from one side, landslides answer from the other.\nThe towns in between have weathered this longer than anyone alive.\nWhat they know is not fear, it is timing.";
 
-"region.central.sections.1.title" = "MUD, RIVERS, AND FALLING RIDGES";
-"region.central.sections.1.content" = "From beach to mountain pass in one stride. Sand softens to mud, ridges fail, rivers erupt. \nLocals run three escape routes for every road, you'd better do the same. \nWhen the typhoon comes, the terrain is the ruler.";
-"region.central.sections.1.subtitle" = "Know every path, or be trapped.";
+"region.central.sections.1.title" = "WHERE THE SEA MEETS THE MOUNTAIN";
+"region.central.sections.1.content" = "From the beach to the mountain pass is one step.\nAncient towns sit in wooden alleyways built for beauty.\nWhen the river rises, it does not climb slowly. \nUpstream dams release water during the peak of a storm, and the surge arrives faster than any forecast.";
+"region.central.sections.1.subtitle" = "In the Central, the geography decides the timeline.";
 
-"region.central.sections.2.title" = "NO BOAT FLOATS ALONE";
-"region.central.sections.2.content" = "The wind hasn't come yet, but the town is alive with preparation. \nBoats tied, sandbags stacked, runners checking doors. Evacuation drills and community stockpiles keep everyone ready. \nGo it alone, and you risk the flood; stay together, and you survive.";
-"region.central.sections.2.subtitle" = "Survival favors those who follow the rhythm of the community.";
+"region.central.sections.2.title" = "THE ONES WHO STAY BEHIND";
+"region.central.sections.2.content" = "The loudspeaker says evacuate. But the house holds everything you own.\nEvery storm, someone decides to stay, to guard the furniture, the workstation, the livestock. \nThe flood does not negotiate with reasons.\nThe people who have done this before know what can be replaced and what cannot.";
+"region.central.sections.2.subtitle" = "Nothing you own is worth what happens if you stay.";
 
-"region.central.sections.3.title" = "THE SEA REMEMBERS, YOU MUST WATCH";
-"region.central.sections.3.content" = "Typhoon season dominates the coast. \nEvery house battened, every boat tied, every family scanning the horizon and checking evacuation points. Rain can drown paddies in hours, wind can tear roofs and snap trees. \nIn the Central, adaptation is timing.";
-"region.central.sections.3.subtitle" = "Knowing the day to flee, the day to ride it out.";
+"region.central.sections.3.title" = "THE ROAD CUTS BEFORE THE STORM ENDS";
+"region.central.sections.3.content" = "When the rain stops, the roads are already gone. \nSupply trucks cannot reach for days. Relief points fill with hundreds of families at once.\nThe heat that follows is different from the storm.\nThe prepared ones stocked before the sky changed.";
+"region.central.sections.3.subtitle" = "In the Central, isolation comes before recovery.";
 
-"region.central.sections.4.title" = "WHEN WORDS TRAVEL BEFORE THE STORM";
-"region.central.sections.4.content" = "The wind carries more than rain, it carries warnings. \nSirens howl, flags snap, messengers race along mountain paths. Networks of elders, unions, and fishermen reach every home. \nMiss their call, and the mud and water won't wait.";
-"region.central.sections.4.subtitle" = "Follow the warnings, disaster won't pause for you.";
+"region.central.sections.4.title" = "THE WARNING TRAVELS BY VOICE";
+"region.central.sections.4.content" = "Loudspeakers, flags, messengers running mountain roads. The network of elders, fishermen, and youth groups reaches every house before any app does.\nThe ones who listened are the ones who moved.";
+"region.central.sections.4.subtitle" = "Follow the voice";
 
 
 // MARK: - Region Detail — South Risk Briefing
 
-"region.south.riskBriefing" = "The South tests you with water and heat. \nRivers swell and drown the delta, while cities choke under storms and standing floods. When the sun returns, the heat steals strength faster than hunger. Down here, survival is not about braving the cold, it is about outlasting the flood and guarding your water.";
+"region.north.riskBriefing" = "The North is old and does not explain itself.\nMountains shift without warning. Rivers that were calm at dawn swallow roads by noon. The cold settles in for months. The people here plan ahead not out of worry, but because the land taught them what happens when you don't.";
 
-"region.south.sections.1.title" = "THE FLOODS WRITE THEIR OWN LAWS";
-"region.south.sections.1.content" = "Here, floods come from the streets. \nRains slam down, drains clog, and motorbikes vanish under filthy water. Rescue crawls through gridlock. \nThe ones who make it are not surprised, they already know which schools and trees turn into shelters.";
-"region.south.sections.1.subtitle" = "Maps of safe ground matter more than weapons.";
+"region.north.sections.1.title" = "THE LAND MOVES ON ITS OWN SCHEDULE";
+"region.north.sections.1.content" = "Mountain passes connect everything — and disappear in hours. Flash floods funnel through narrow valleys with a speed flat-landers never expect.\nLandslides caused seventy-nine percent of deaths during Typhoon Yagi. The slopes do not crack loudly before they go.\nThe people who travel these roads know the sky, the soil, and when to turn back.";
+"region.north.sections.1.subtitle" = "Trust the mountain less after rain.";
 
-"region.south.sections.2.title" = "WHEN THE CALL COMES, DON'T RUN ALONE";
-"region.south.sections.2.content" = "Not officials. Not trucks. Rescue in the South begins barefoot, in chest-deep water. Youth groups tie rope, neighbors carry the weak, men pile the sandbags. The army arrives hours later. \nSurvival comes from the crowd around you.";
-"region.south.sections.2.subtitle" = "Move with the tide of people, not against it.";
+"region.north.sections.2.title" = "HUMIDITY BURNS, COLD TRAPS";
+"region.north.sections.2.content" = "Nồm season fills the walls with water. Moisture crawls inside wiring and appliances until something sparks.\nIn winter, families seal every window and light coal braziers for warmth. The carbon monoxide has no smell.\nThe ones who last through Northern seasons respect what they cannot see.";
+"region.north.sections.2.subtitle" = "The weather inside the house is just as important.";
 
-"region.south.sections.3.title" = "THE FLOOD LEAVES, THE HEAT STRIKES";
-"region.south.sections.3.content" = "Danger does not end with the flood. Heat over 38°C breaks the strong, while puddles breed sickness. \nDengue, stomach bugs, and rot wait in plain water. Locals last by carrying shade, cooling with wet cloths, and boiling every drop they drink.";
-"region.south.sections.3.subtitle" = "In the South, thirst won't kill you, dirty water will.";
+"region.north.sections.3.title" = "WHEN THE PASS CLOSES, YOU ARE ALONE";
+"region.north.sections.3.content" = "One blocked road isolates an entire district. Supplies stop. Communication drops. Mountain communities have lived with this rhythm for generations.\nThey stock fuel, rice, and medicine before the season turns. By the time outsiders notice, the prepared ones are already settled in.";
+"region.north.sections.3.subtitle" = "The locals live by the calendar. You should too.";
 
-"region.south.sections.4.title" = "WHEN SIGNALS FAIL, PEOPLE SPEAK";
-"region.south.sections.4.content" = "Electronics die first in the storm. Sirens drown, phones fail, radios crackle out. But people don't. A motorbike rider shouting through the street, a neighbor pounding your door, youth volunteers calling ahead...";
-"region.south.sections.4.subtitle" = "Miss it, and you miss your only chance to move.";
+"region.north.sections.4.title" = "THE CIRCLE COMES BEFORE THE STATE";
+"region.north.sections.4.content" = "Village committees, rapid-response teams, neighbors with rope — rescue in the North starts local.\nThey string lines across rivers, dig through landslides by hand, and share fire before any vehicle can reach them.\nThe ones who made it were already inside the circle.";
+"region.north.sections.4.subtitle" = "Join early. The door closes when the storm hits.";
 
 
 // MARK: - Scenario List View
