@@ -12,50 +12,78 @@ struct StoryBeat {
 let storyBeats: [StoryBeat] = [
     StoryBeat(
         en: """
-        Vietnam stretches over 1,600 kilometres from the northern mountains to the southern delta. \
-        This length is both its beauty and its burden — no single disaster defines the land, \
-        and no single response can save it.
+        [Name] left Vietnam young, too young to remember much beyond airport lights and moms' hand gripping theirs too tight. 
+        
+        Grew up abroad chasing paper-perfect success: the degree, the venture, the approval.
+        
+        The apartment framed by glass and skyline, where the lights stayed on long after midnight. 
+        
+        It worked, for a while.
         """,
         vi: """
-        Việt Nam trải dài hơn 1.600 km từ vùng núi phía Bắc đến đồng bằng phía Nam. \
-        Chiều dài đó vừa là vẻ đẹp, vừa là gánh nặng — không một thiên tai nào định nghĩa được \
-        mảnh đất này, và không một cách ứng phó nào có thể cứu tất cả.
+        [Name] rời Việt Nam khi còn quá nhỏ. Ký ức chỉ còn ánh đèn sân bay nhòe đi trong mắt và bàn tay mẹ ghì chặt.
+
+        Lớn lên ở xứ người, họ miệt mài theo đuổi một kiểu thành công hình mẫu: những tấm bằng, những dự án, những sự công nhận từ những người quyết định cuộc chơi.
+
+        Căn hộ kính cao tầng, nhìn thẳng ra đường chân trời. Đèn vẫn sáng sau nửa đêm, dường như sự nghỉ ngơi là một thứ xa xỉ nhất.
+
+        Khi ấy, mọi thứ vẫn còn đứng vững
         """
     ),
     StoryBeat(
         en: """
-        Every year, floods bury the North's valleys. Typhoons tear through the Central coast. \
-        Droughts crack the Southern plains. The people rebuild. \
-        They always rebuild — because they have learned that survival is a practice, not a moment.
+        [Name] spent years performing success, the venture sustained by glamorous dinners and introductions where nothing was ever fully written down.
+        
+        Private lenders, handshake extensions, interest rates discussed without numbers. Capital was always “about to land”, but it never did.
+
+        The last call wasn’t from an investor. It was from someone who doesn’t leave voicemails.
         """,
         vi: """
-        Hàng năm, lũ lụt nhấn chìm các thung lũng miền Bắc. Bão tàn phá dải bờ biển miền Trung. \
-        Hạn hán làm nứt nẻ đồng bằng miền Nam. Người dân tái thiết. \
-        Họ luôn tái thiết — vì họ đã học được rằng sống sót là một hành trình, không phải một khoảnh khắc.
+        [Name] đã dành nhiều năm đánh bóng sự thành đạt, giữ dự án tồn tại bằng những bữa tối sang trọng, những cái gật đầu sau cánh cửa đóng kín, không tiện nằm trên giấy.
+
+        Vốn tư nhân, gia hạn bằng bắt tay, lãi suất nói vòng, không bao giờ đặt lên bàn. Tiền thì luôn ‘sắp về’, nhưng mãi chưa thấy tới.
+
+        Cuộc gọi cuối không phải của nhà đầu tư, mà của người không bao giờ để lại tin nhắn.
         """
     ),
     StoryBeat(
         en: """
-        You are about to enter three regions, each with its own disasters and demands. \
-        You will face emergency scenarios under pressure. \
-        There are no right or wrong answers — only choices that reveal who you are when it counts.
+        [Name] wakes up one morning and realize they'd been renting their entire life from people who wanted it back.
+        
+        The phone wouldn't stop ringing, the lynch mob wouldn't need names.
+        
+        Their "Western Dream" is dead, they wanted to leave everything behind to become a ghost.
         """,
         vi: """
-        Bạn sắp bước vào ba vùng đất, mỗi nơi mang theo thiên tai và thử thách riêng. \
-        Bạn sẽ đối mặt với các tình huống khẩn cấp dưới áp lực. \
-        Không có câu trả lời đúng hay sai — chỉ có những lựa chọn cho thấy bạn là ai khi thực sự cần.
+        [Name] thức dậy vào một buổi sáng và nhận ra cả đời mình chỉ là đang mượn — mượn giấc mơ, mượn hào quang, sống trong cái bóng của những người giờ đây muốn lấy lại tất cả.
+        
+        Điện thoại reo không ngừng. Đám đông ngoài kia chẳng cần biết tên.
+
+        ‘Giấc mơ phương Tây’ đã chết. Họ chỉ muốn bỏ lại mọi thứ phía sau, biến mình thành một cái bóng.
         """
     ),
     StoryBeat(
         en: """
-        Choose your region. Read the land. Trust your instincts. \
-        The disaster does not wait for you to be ready. \
-        Neither will the people who need you.
+        [Name] picked Vietnam the way you pick a seat on a late-night bus, a country where $2.50 bowl of phở fills the hunger, lower rent, and fewer expectations.
+        
+        2 A.M. Fifteen degrees. The terminal is half-asleep. [Name] sits with a one-way ticket, one suitcase, and a phone full of numbers that won't work anymore. 
+        
+        [Name] felt the terrifying freedom of absolute zero, and beneath it, a pulse of something almost like awaiting.
         """,
         vi: """
-        Hãy chọn vùng đất của bạn. Đọc hiểu địa hình. Tin vào bản năng. \
-        Thiên tai không đợi bạn sẵn sàng. \
-        Những người cần bạn cũng vậy.
+        [Name] chọn Việt Nam như cách người ta chọn một chỗ ngồi trên chuyến xe đêm, một nơi mà bát phở 2,5 đô có thể lấp đầy cơn đói, tiền thuê nhà nhẹ hơn, và kỳ vọng cũng nhẹ hơn.
+
+        2 giờ sáng, mười lăm độ. Nhà ga còn lơ mơ buồn ngủ, [Name] ngồi đó với tấm vé một chiều, một vali, và chiếc điện thoại đầy những số sẽ không còn liên lạc nữa.
+        
+        [Name] cảm nhận được thứ tự do rợn người của con số không tuyệt đối, và bên dưới nó, là một nhịp đập của điều gì đó gần giống như sự chờ đợi.
+        """
+    ),
+    StoryBeat(
+        en: """
+        Ahead is a country that doesn't know they're coming, but it will ask them questions they've never had to answer before.
+        """,
+        vi: """
+        Phía trước là một đất nước không biết họ sẽ đến, nhưng sẽ đặt ra những câu hỏi mà trước đây họ chưa từng phải tự trả lời.
         """
     )
 ]

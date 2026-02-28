@@ -4,6 +4,7 @@ struct StoryView: View {
 
     // MARK: - State
     @AppStorage("selectedLanguage") private var language = "en"
+    @AppStorage("playerName") private var playerName = ""
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     @State private var currentIndex: Int = 0
@@ -14,14 +15,17 @@ struct StoryView: View {
     private var isFirst:  Bool { currentIndex == 0 }
     private var isLast:   Bool { currentIndex == storyBeats.count - 1 }
     private var beat:     StoryBeat { storyBeats[currentIndex] }
-    private var beatText: String { beat.text(for: language) }
+    private var beatText: String {
+        beat.text(for: language)
+            .replacingOccurrences(of: "[Name]", with: playerName.isEmpty ? "They" : playerName)
+    }
 
     // MARK: - Responsive sizing
     private var isIPad:      Bool    { UIDevice.current.userInterfaceIdiom == .pad }
     private var panelWidth:  CGFloat { isIPad ? 520 : 340 }
     private var panelHeight: CGFloat { isIPad ? 560 : 440 }
     private var hPad:        CGFloat { isIPad ? 32 : 22 }
-    private var bodyFont:    Font    { isIPad ? .body : .callout }
+    private var bodyFont:    Font    { isIPad ? .body.monospaced() : .callout.monospaced() }
 
     // MARK: - Body
     var body: some View {
@@ -29,9 +33,6 @@ struct StoryView: View {
             Image("Background")
                 .resizable()
                 .scaledToFill()
-                .ignoresSafeArea()
-
-            Color.black.opacity(0.3)
                 .ignoresSafeArea()
                 .accessibilityHidden(true)
 
@@ -57,20 +58,20 @@ struct StoryView: View {
 
                 VStack(spacing: 0) {
 
-                    BarRow(color: Color("Gold3"))
-                        .padding(.top, 18)
+                    BarRow(color: Color("Moss"))
+                        .padding(.top, 30)
                         .chronicleFade()
 
                     Text(sectionLabel)
                         .font(.system(.caption2, design: .monospaced).weight(.medium))
                         .foregroundColor(Color("Moss").opacity(0.65))
-                        .tracking(3)
+                        .tracking(2)
                         .padding(.top, 10)
                         .chronicleFade()
                         .accessibilityLabel(sectionAccessibilityLabel)
 
-                    DiamondDivider(color: Color("Gold3"))
-                        .padding(.top, 8)
+                    DiamondDivider(color: Color("Moss"))
+                        .padding(.top, 10)
                         .padding(.horizontal, hPad)
                         .chronicleFade()
 
@@ -91,8 +92,14 @@ struct StoryView: View {
                     }
                     .padding(.horizontal, hPad)
                     .padding(.top, 10)
+                    
+                    Text("diary.detail.scroll_hint".localized)
+                        .font(.system(.caption2).weight(.regular).italic())
+                        .foregroundColor(Color("Moss").opacity(0.5))
+                        .padding(.top, 4)
+                        .accessibilityHidden(true)
 
-                    SquareDivider(color: Color("Gold3"))
+                    SquareDivider(color: Color("Moss"))
                         .padding(.top, 10)
                         .padding(.horizontal, hPad)
                         .chronicleFade()
@@ -105,8 +112,8 @@ struct StoryView: View {
             }
         }
         .customedBorder(
-            borderShape: "panel-border-003",
-            borderColor: Color("Gold3"),
+            borderShape: "panel-border-004",
+            borderColor: Color("Moss"),
             buttonType: .customed(width: panelWidth, height: panelHeight)
         )
         .chronicleFade()
@@ -139,7 +146,7 @@ struct StoryView: View {
     private var skipButton: some View {
         Button { navigateToRegion = true } label: {
             Text("story.skip".localized)
-                .font(.system(.caption2, design: .monospaced).weight(.regular))
+                .font(.system(.caption2, design: .monospaced).weight(.bold))
                 .foregroundColor(Color("Moss"))
                 .underline()
                 .frame(minWidth: 44, minHeight: 44)
@@ -153,13 +160,13 @@ struct StoryView: View {
     private var enterButton: some View {
         CustomButton(
             title: "story.enter".localized,
-            textColor: Color("Beige3"),
+            textColor: Color("Beige"),
             buttonColor: Color("Red3")
         ) {
             navigateToRegion = true
         }
         .customedBorder(
-            borderShape: "panel-border-003",
+            borderShape: "panel-border-008",
             borderColor: Color("Gold3"),
             buttonType: .mainButton
         )
@@ -173,13 +180,13 @@ struct StoryView: View {
                 Color("Red3")
                 Image(systemName: direction == .forward ? "chevron.right" : "chevron.left")
                     .font(.system(.footnote).weight(.bold))
-                    .foregroundColor(Color("Gold3"))
+                    .foregroundColor(Color("Beige"))
             }
             .frame(width: 44, height: 44)
         }
         .buttonStyle(ScaleButtonStyle())
         .customedBorder(
-            borderShape: "panel-border-003",
+            borderShape: "panel-border-008",
             borderColor: Color("Gold3"),
             buttonType: .miniButton
         )
