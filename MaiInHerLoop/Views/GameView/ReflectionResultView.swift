@@ -75,14 +75,14 @@ struct ReflectionResultView: View {
                 VStack(spacing: 0) {
 
                     BarRow(color: Color("Moss"))
-                        .padding(.top, 18)
+                        .padding(.top, 30)
                         .chronicleFade()
                         .accessibilityHidden(true)
 
                     archetypeLabel
                         .chronicleFade()
 
-                    DiamondDivider(color: Color("Gold3"))
+                    DiamondDivider(color: Color("Moss"))
                         .padding(.horizontal, hPad)
                         .padding(.top, 6)
                         .chronicleFade()
@@ -105,12 +105,20 @@ struct ReflectionResultView: View {
                         explanationAndTradeoff
                             .padding(.horizontal, hPad)
                     }
+                    .padding(.horizontal)
                     .frame(maxHeight: .infinity)
 
                     SquareDivider(color: Color("Moss"))
                         .padding(.horizontal, hPad)
                         .padding(.top, 8)
                         .chronicleFade()
+                        .accessibilityHidden(true)
+                    
+                    Text("reflection.scroll.guide".localized)
+                        .font(.system(.caption2, design: .monospaced).italic())
+                        .foregroundColor(Color("Moss").opacity(0.5))
+                        .frame(maxWidth: .infinity, alignment: .center)
+                        .padding(.top, 8)
                         .accessibilityHidden(true)
 
                     navigationButtons
@@ -135,15 +143,17 @@ struct ReflectionResultView: View {
             VStack(spacing: 4) {
                 Text("reflection.result.header".localized)
                     .font(.system(.caption2, design: .monospaced).weight(.medium))
-                    .foregroundColor(Color("Moss").opacity(0.6))
+                    .foregroundColor(Color("Moss3").opacity(0.6))
                     .tracking(2)
+                    .padding(.top, 5)
                     .accessibilityHidden(true)
 
                 Text(archetypeName(a).uppercased())
                     .font(.system(.subheadline, design: .monospaced).weight(.black))
-                    .foregroundColor(Color("Moss"))
+                    .foregroundColor(Color("Red3"))
                     .tracking(1.5)
                     .multilineTextAlignment(.center)
+                    .padding(.top, 5)
                     .accessibilityAddTraits(.isHeader)
             }
             .padding(.top, 10)
@@ -179,7 +189,7 @@ struct ReflectionResultView: View {
         if let a = archetype {
             Text(mirror(a))
                 .font(.system(.callout, design: .monospaced).weight(.semibold))
-                .foregroundColor(Color("Moss"))
+                .foregroundColor(Color("Red3"))
                 .multilineTextAlignment(.center)
                 .lineSpacing(4)
                 .fixedSize(horizontal: false, vertical: true)
@@ -193,7 +203,7 @@ struct ReflectionResultView: View {
         if let a = archetype {
             VStack(alignment: .leading, spacing: 0) {
                 Text(explanation(a))
-                    .font(.system(.footnote).weight(.regular))
+                    .font(.system(.footnote, design: .monospaced).weight(.regular))
                     .foregroundColor(Color("Moss"))
                     .lineSpacing(4)
                     .multilineTextAlignment(.leading)
@@ -240,8 +250,8 @@ struct ReflectionResultView: View {
 
             CustomButton(
                 title: "reflection.play_again".localized,
-                textColor: Color("Beige3"),
-                buttonColor: Color("Moss")
+                textColor: Color("Beige"),
+                buttonColor: Color("Red3")
             ) {
                 onGoToScenarios?()
             }

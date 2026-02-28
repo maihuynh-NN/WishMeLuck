@@ -60,7 +60,7 @@ struct SplashScreenView: View {
         ) {
             ZStack {
                 RoundedRectangle(cornerRadius: 12)
-                    .fill(Color("Beige3").opacity(0.6))
+                    .fill(Color("Beige3"))
                     .frame(width: panelWidth - 5, height: panelHeight - 5)
                     .accessibilityHidden(true)
 
@@ -85,6 +85,7 @@ struct SplashScreenView: View {
                     VStack(spacing: 12) {
                         Text("splash.enter_name".localized)
                             .font(.system(.caption, design: .monospaced).weight(.medium))
+                            
                             .foregroundColor(Color("Moss").opacity(0.7))
                             .tracking(1)
 
@@ -122,13 +123,13 @@ struct SplashScreenView: View {
                         CustomButton(
                             title: "splash.begin".localized,
                             textColor: Color("Beige"),
-                            buttonColor: Color("Moss")
+                            buttonColor: Color("Red3")
                         ) {
                             proceed()
                         }
                         .customedBorder(
-                            borderShape: "panel-border-005",
-                            borderColor: Color("Gold"),
+                            borderShape: "panel-border-008",
+                            borderColor: Color("Gold3"),
                             buttonType: .mainButton
                         )
                         .accessibilityLabel("splash.begin_accessibility".localized)
@@ -141,7 +142,7 @@ struct SplashScreenView: View {
             }
         }
         .customedBorder(
-            borderShape: "panel-border-003",
+            borderShape: "panel-border-004",
             borderColor: Color("Moss"),
             buttonType: .customed(width: panelWidth, height: panelHeight)
         )

@@ -1,16 +1,82 @@
 {
   "images" : [
     {
+      "filename" : "dreamina-2025-10-23-3652-A calm, culturally grounded background f....jpeg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "light"
+        }
+      ],
+      "filename" : "dreamina-2025-10-23-3652-A calm, culturally grounded background f... 1.jpeg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
       "filename" : "(1).png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "dreamina-2025-10-23-3652-A calm, culturally grounded background f...@2x.jpeg",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "light"
+        }
+      ],
+      "filename" : "dreamina-2025-10-23-3652-A calm, culturally grounded background f...@2x 1.jpeg",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
       "filename" : "(1)@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "dreamina-2025-10-23-3652-A calm, culturally grounded background f...@3x.jpeg",
+      "idiom" : "universal",
+      "scale" : "3x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "light"
+        }
+      ],
+      "filename" : "dreamina-2025-10-23-3652-A calm, culturally grounded background f...@3x 1.jpeg",
+      "idiom" : "universal",
+      "scale" : "3x"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
       "filename" : "(1)@3x.png",
       "idiom" : "universal",
       "scale" : "3x"

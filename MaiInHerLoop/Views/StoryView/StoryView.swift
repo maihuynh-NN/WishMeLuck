@@ -52,7 +52,7 @@ struct StoryView: View {
             ZStack {
                 RoundedRectangle(cornerRadius: 10)
                     .fill(Color("Beige3"))
-                    .frame(width: panelWidth - 6, height: panelHeight - 6)
+                    .frame(width: panelWidth - 8, height: panelHeight - 8)
                     .accessibilityHidden(true)
 
                 VStack(spacing: 0) {

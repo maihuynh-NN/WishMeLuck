@@ -196,6 +196,7 @@
 "reflection.diary.hint" = "Nhấn đúp để xem mục nhật ký";
 "reflection.play_again" = "CHƠI LẠI";
 "reflection.play_again.hint" = "Nhấn đúp để bắt đầu nhiệm vụ mới";
+"reflection.scroll.guide" = "Lướt dọc để đọc";
 
 
 // MARK: - Diary List View

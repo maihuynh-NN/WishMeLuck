@@ -1,7 +1,7 @@
 // MARK: - Splash Screen
 
-"splash.welcome_message" = "Welcome, survivor.\nBefore you step into the unknown, tell us — who are you?";
-"splash.enter_name" = "YOUR IDENTITY";
+"splash.welcome_message" = "Not a story about coming home.\n\nA story where you make choices, learn, and live with what follows.";
+"splash.enter_name" = "HOW SHOULD WE CALL YOU";
 "splash.name_placeholder" = "Enter your name";
 "splash.begin" = "BEGIN";
 "splash.name_accessibility" = "Enter your name";
@@ -197,6 +197,7 @@
 "reflection.diary.hint" = "Double tap to view your diary entry";
 "reflection.play_again" = "PLAY AGAIN";
 "reflection.play_again.hint" = "Double tap to start a new mission";
+"reflection.scroll.guide" = "Scroll to read";
 
 
 // MARK: - Diary List View
