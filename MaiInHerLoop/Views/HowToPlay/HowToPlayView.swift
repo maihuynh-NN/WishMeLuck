@@ -36,13 +36,13 @@ struct HowToPlayView: View {
                 
                 CustomButton(
                     title: language == "vi" ? "Về Trang Chủ" : "Back To Home",
-                    textColor: Color("Beige3"),
+                    textColor: Color("Beige"),
                     buttonColor: Color("Red3")
                 ) {
                     dismiss()
                 }
                 .customedBorder(
-                    borderShape: "panel-border-003",
+                    borderShape: "panel-border-008",
                     borderColor: Color("Gold3"),
                     buttonType: .mainButton
                 )
@@ -69,6 +69,13 @@ struct HowToPlayView: View {
                     panelHeader
                     sectionTitleBlock
                     contentScrollArea
+                    
+                    Text("diary.detail.scroll_hint".localized)
+                        .font(.system(.caption2).weight(.regular).italic())
+                        .foregroundColor(Color("Moss").opacity(0.5))
+                        .padding(.top, 4)
+                        .accessibilityHidden(true)
+                    
                     archetypeStrip
                     dividerBottom
                     navigationRow
@@ -76,8 +83,8 @@ struct HowToPlayView: View {
             }
         }
         .customedBorder(
-            borderShape: "panel-border-003",
-            borderColor: Color("Gold3"),
+            borderShape: "panel-border-004",
+            borderColor: Color("Moss"),
             buttonType: .customed(width: panelWidth, height: panelHeight)
         )
     }
@@ -86,20 +93,21 @@ struct HowToPlayView: View {
 
     private var panelHeader: some View {
         VStack(spacing: 6) {
-            BarRow(color: Color("Gold3"))
-                .padding(.top, 14)
+            BarRow(color: Color("Moss"))
+                .padding(.top, 30)
 
             Text(language == "vi" ? "HƯỚNG DẪN" : "HOW TO PLAY")
                 .font(.system(.subheadline, design: .monospaced).weight(.black))
-                .foregroundColor(Color("Moss"))
+                .foregroundColor(Color("Red3"))
                 .tracking(2)
+                .padding(.top, 10)
                 .accessibilityAddTraits(.isHeader)
 
-            DiamondDivider(color: Color("Gold3"))
+            DiamondDivider(color: Color("Moss"))
                 .padding(.horizontal, hPad)
                 .accessibilityHidden(true)
         }
-        .padding(.bottom, 10)
+        .padding(.vertical, 10)
         .chronicleFade()
     }
 
@@ -107,7 +115,7 @@ struct HowToPlayView: View {
 
     private var sectionTitleBlock: some View {
         Text(sectionTitle)
-            .font(.system(.caption, design: .monospaced).weight(.bold))
+            .font(.system(.caption, design: .monospaced).weight(.medium))
             .foregroundColor(Color("Red3"))
             .tracking(1.2)
             .multilineTextAlignment(.center)
@@ -136,7 +144,7 @@ struct HowToPlayView: View {
         .frame(maxHeight: .infinity)
         .background(
             RoundedRectangle(cornerRadius: 8)
-                .fill(Color("Moss").opacity(0.04))
+                .fill(Color("Beige"))
                 .padding(.horizontal, hPad - 6)
         )
         .padding(.bottom, 8)
@@ -149,7 +157,7 @@ struct HowToPlayView: View {
         if currentIndex == 3 {
             let ids = ["risk_recognition", "information_first", "immediate_action", "self_reliance"]
             VStack(spacing: 6) {
-                SquareDivider(color: Color("Gold3"))
+                SquareDivider(color: Color("Moss"))
                     .padding(.horizontal, hPad)
                     .accessibilityHidden(true)
 
@@ -190,7 +198,7 @@ struct HowToPlayView: View {
     // MARK: - Bottom divider
 
     private var dividerBottom: some View {
-        SquareDivider(color: Color("Gold3"))
+        SquareDivider(color: Color("Moss"))
             .padding(.horizontal, hPad)
             .padding(.top, 4)
             .accessibilityHidden(true)
@@ -229,13 +237,13 @@ struct HowToPlayView: View {
                 Color("Red3")
                 Image(systemName: systemIcon)
                     .font(.system(.footnote).weight(.bold))
-                    .foregroundColor(Color("Gold3"))
+                    .foregroundColor(Color("Beige"))
             }
             .frame(width: 44, height: 44)
         }
         .buttonStyle(ScaleButtonStyle())
         .customedBorder(
-            borderShape: "panel-border-003",
+            borderShape: "panel-border-008",
             borderColor: Color("Gold3"),
             buttonType: .miniButton
         )
@@ -253,9 +261,7 @@ struct HowToPlayView: View {
 }
 
 // MARK: - Previews
-
-#Preview("EN") { NavigationStack { HowToPlayView() } }
-#Preview("VI") {
+#Preview("en") {
     NavigationStack {
         HowToPlayView()
             .onAppear { UserDefaults.standard.set("vi", forKey: "selectedLanguage") }

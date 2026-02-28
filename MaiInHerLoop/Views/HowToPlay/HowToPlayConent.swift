@@ -15,153 +15,160 @@ struct HowToPlayContent {
 
         // MARK: Section 1 — What this app is
         HowToPlaySection(
-            titleEN: "WHAT YOU'RE WALKING INTO",
-            titleVI: "BẠN ĐANG BƯỚC VÀO ĐÂY",
+            titleEN: "Welcome To Red Embers",
+            titleVI: "Red Embers Chào Bạn",
             bodyEN: """
-You didn't open a quiz. You opened a room that asks whether you'd survive it.
+Sometimes, what harms people is rarely the disaster itself — it's what happens in the minute before and after a decision.
 
-Mai In Her Loop puts you inside real situations — the kind that have actually happened across Vietnam's three regions. Flash floods at midnight. Apartment fires with one exit. Heat that makes people stop thinking clearly. Every scenario is built from the texture of real life here: the narrow staircases, the motorbikes, the family you're responsible for, the neighbor knocking at 1am.
+Red Embers is an educational, narrative, and card-based game about decision-making under pressure in Vietnam. The app is structured around three regions: North, Central, and South. Each region contains five scenarios. Each scenario represents one danger category contextualized to that region, so the risks feel local and specific.
 
-You play as a Việt Kiều who just landed back in Vietnam after years abroad. You're not ignorant. You've just never had to think about these particular kinds of risk before. You're learning alongside the character — which is the whole point.
+Red Embers is built for young adults ranging from 18 to 35, people who navigate between regions for study, work, or economic opportunity around Việt Nam. Young adults are the most capable of action, digitally adept, yet often carrying the weight of decision-making for their household.
 
-This isn't about surviving the apocalypse. It's about the ordinary decisions that turn ordinary disasters into something survivable — or not.
+In Red Embers, you step into the role of a young adult returning to Vietnam to start over from zero. Vietnam is affordable, culturally rich, and resilient — but it's also layered with risks that don't announce themselves.
+
+The character represents anyone rebuilding on unfamiliar ground, where no one tells you what to do, and the real dangers are often hidden inside ordinary life. This app lets you run the moment once, so if it ever happens for real, your mind has already been there.
 """,
             bodyVI: """
-Bạn không mở một bài kiểm tra. Bạn mở một căn phòng và tự hỏi: liệu mình có thoát được không?
+Có những lúc, điều làm con người tổn thương không hẳn là bản thân thảm hoạ, mà là những gì xảy ra trong một phút trước và sau khi một quyết định được đưa ra.
 
-Mai In Her Loop đặt bạn vào những tình huống có thật — những chuyện đã xảy ra khắp ba miền Việt Nam. Lũ bùng lúc nửa đêm. Đám cháy chung cư chỉ có một lối thoát. Nắng nóng khiến người ta không còn nghĩ được rõ ràng. Mỗi tình huống được xây dựng từ kết cấu của đời thường: cầu thang hẹp, xe máy, gia đình bạn đang lo, người hàng xóm gõ cửa lúc 1 giờ sáng.
+Red Embers là một trò chơi giáo dục mang tính tự sự, theo dạng thẻ bài, xoay quanh việc ra quyết định dưới áp lực trong bối cảnh Việt Nam. Ứng dụng được xây dựng dựa trên ba vùng: Bắc, Trung và Nam. Mỗi vùng gồm năm kịch bản. Mỗi kịch bản đại diện cho một nhóm nguy cơ cụ thể gắn với đặc thù của vùng đó, để rủi ro không còn chung chung mà mang tính địa phương, sát với đời sống.
 
-Bạn đóng vai một Việt Kiều vừa trở về sau nhiều năm ở nước ngoài. Bạn không kém cỏi. Bạn chỉ chưa từng phải nghĩ đến những loại rủi ro này. Bạn học cùng nhân vật — đó mới là điều quan trọng.
+Red Embers hướng đến người trẻ từ 18 đến 35 tuổi, những người di chuyển giữa các vùng để học tập, làm việc hoặc tìm kiếm cơ hội kinh tế trên khắp Việt Nam. Đây là nhóm có khả năng hành động mạnh mẽ, quen thuộc với công nghệ, nhưng cũng thường gánh trên vai những quyết định quan trọng cho gia đình.
 
-Đây không phải chuyện sống sót qua tận thế. Đây là những quyết định bình thường biến một thảm họa bình thường thành thứ có thể vượt qua — hoặc không.
+Trong Red Embers, bạn vào vai một người trẻ trở về Việt Nam để bắt đầu lại từ con số không. Việt Nam mức sống vừa phải chăng, giàu bản sắc, sức sống bền bỉ, nhưng đồng thời cũng ẩn chứa những rủi ro tiềm ẩn và bất ngờ từ những ngày bình dị.
+
+Nhân vật đại diện cho bất kỳ ai đang xây dựng lại cuộc sống trên một vùng đất chưa quen thuộc, nơi không ai chỉ dẫn sẵn bạn phải làm gì, và những nguy cơ thực sự thường nằm trong những điều rất đời thường.
+
+Ứng dụng này cho bạn trải qua khoảnh khắc ấy một lần trong môi trường an toàn, để nếu ngoài đời thật điều đó xảy ra, bạn không bị đóng băng vì bất ngờ.
 """
         ),
 
         // MARK: Section 2 — How to navigate the app
         HowToPlaySection(
-            titleEN: "FINDING YOUR WAY AROUND",
-            titleVI: "ĐIỀU HƯỚNG TRONG ỨNG DỤNG",
+            titleEN: "How To Navigate",
+            titleVI: "Điều Hướng Trong Ứng Dụng",
             bodyEN: """
 The app has a few rooms. Here's what each one does.
 
-The Region Map is where you choose your starting ground — North, Central, or South. Each region carries different terrain, different weather patterns, different kinds of risk. Read the survival orientation brief before you commit.
+1. Start Game: When you tap Start Game, you are taken to the Region Selection View. Swipe left or right to browse South, North, and Central.
+   - Tap on any card to reveal a sheet for exploring regional content.
+   - Or tap the "Choose Region" button to go straight to the Scenario List.
 
-The Mission Board shows the scenarios available in your region. Tap a card to read the dispatch — the situation briefing. If you're ready, you go in. If not, you retreat and come back.
+2. Scenario View: There are 5 blind boxes of incidents, categorized by Fire, Flood, Crowd, Heat, and Contamination.
+   - When you tap on any scenario, you enter the main game view with a brief preview of the incident. You can either continue or return to the Scenario View.
+   - Once you begin, the game is continuous with no pause — because in real life, when you're caught in an incident, you don't get to choose to escape.
 
-The Game itself is where decisions happen. You'll read a situation, feel the weight of it, and choose. There's no right answer on the surface. But reality has an opinion.
+3. After the main game ends, you see the Reflection Result View. From here, you can either:
+   - Go back to the Scenario View to play another scene, or
+   - Visit the Diary View.
 
-The Reflection Screen appears after you finish. That's where the real learning lands.
+4. Diary: This view stores the objects you've collected and records the scenarios you played as a diary journey.
 
-The Diary keeps everything you've played. It's also where your collected objects live.
-
-Need to switch language or toggle dark mode? Open Settings — the gear icon sits in the corner of most screens.
+5. Settings: You can:
+   - Choose English or Vietnamese
+   - Choose dark or light theme
 """,
             bodyVI: """
-Ứng dụng có vài màn hình. Đây là những gì mỗi màn hình làm.
+App được chia thành vài “không gian”. Mỗi nơi có một vai trò riêng.
 
-Bản đồ Vùng là nơi bạn chọn điểm xuất phát — Bắc, Trung hay Nam. Mỗi vùng mang địa hình khác nhau, thời tiết khác nhau, loại rủi ro khác nhau. Đọc cẩm nang định hướng sinh tồn trước khi vào.
+1. Bắt đầu trò chơi: Khi bạn nhấn Start Game, bạn sẽ được đưa đến màn hình chọn vùng. Vuốt sang trái hoặc phải để xem Nam, Bắc và Trung.
 
-Bảng Nhiệm Vụ hiển thị các tình huống trong vùng bạn chọn. Nhấn vào thẻ để đọc điện khẩn — bản tóm tắt tình huống. Nếu sẵn sàng, bạn bước vào. Nếu chưa, lui lại và quay sau.
+* Chạm vào bất kỳ thẻ nào để mở một bảng nội dung giúp bạn khám phá thông tin của vùng đó.
+* Hoặc nhấn “Choose Region” để đi thẳng đến danh sách kịch bản.
 
-Chính Trò Chơi là nơi quyết định xảy ra. Bạn đọc tình huống, cảm nhận sức nặng của nó, rồi chọn. Bề ngoài không có đáp án đúng. Nhưng thực tế thì có.
+2. Màn hình kịch bản: Có 5 “hộp mù” tình huống, được phân theo các nhóm: Cháy, Lũ, Đám đông, Nắng nóng và Ô nhiễm.
 
-Màn Hình Suy Ngẫm xuất hiện sau khi bạn hoàn thành. Đó là nơi bài học thực sự đọng lại.
+* Khi bạn chọn một kịch bản, bạn sẽ vào màn chơi chính với phần giới thiệu ngắn về sự cố. Bạn có thể tiếp tục hoặc quay lại danh sách kịch bản.
+* Khi đã bắt đầu, trò chơi diễn ra liên tục và không có tạm dừng — vì ngoài đời, khi bị cuốn vào một sự cố, bạn không thể chọn thoát ra giữa chừng.
 
-Nhật Ký lưu tất cả những gì bạn đã chơi. Đó cũng là nơi những vật phẩm bạn thu thập được sống.
+3. Sau khi kết thúc màn chơi chính, bạn sẽ thấy màn hình Kết quả Phản chiếu. Tại đây, bạn có thể:
 
-Cần chuyển ngôn ngữ hoặc bật chế độ tối? Mở Cài Đặt — biểu tượng bánh răng ở góc hầu hết các màn hình.
+* Quay lại danh sách kịch bản để chơi tình huống khác, hoặc
+* Mở Nhật ký.
+
+4. Nhật ký: Nơi lưu lại các vật phẩm bạn đã thu thập và ghi lại những kịch bản bạn đã trải qua như một hành trình cá nhân.
+
+5. Cài đặt: Tại đây bạn có thể:
+
+* Chọn ngôn ngữ Tiếng Anh hoặc Tiếng Việt
+* Chọn giao diện sáng hoặc tối
+
 """
         ),
 
         // MARK: Section 3 — The game mechanism
         HowToPlaySection(
-            titleEN: "HOW THE GAME ACTUALLY WORKS",
-            titleVI: "CÁCH TRÒ CHƠI VẬN HÀNH",
+            titleEN: "How To Play In Main Game View",
+            titleVI: "Cách Chơi Trong Khung Chơi Chính",
             bodyEN: """
-Each scenario has seven moments. Not questions — moments.
+There are no "correct" or "incorrect" answers, and there are no consequences. Every option is something a real person might choose.
 
-The story builds before anything asks you to choose. By the time the choice appears, you're already inside the situation. You've met the characters. You've felt the pressure rising. That's deliberate.
+Once the game begins, it cannot be paused or returned, so stay focused and act quick.
 
-When the choice arrives, all four options feel reasonable. That's also deliberate. In real emergencies, bad decisions rarely feel obviously bad. The person who drove their motorbike into floodwater wasn't being reckless — they thought it was manageable.
+You are given 7 questions per scenario. Each question comes with 4 options. Each question has a time limit from 10 to 30 seconds, depending on the urgency and severity of the situation.
 
-There's a timer. Not to punish you — to mirror reality. In a flash flood, in a building fire, in a crowd crush, the window for deciding closes fast. Waiting is itself a choice, and not always the right one.
-
-Play seven moments. Each choice affects what comes next. The story tracks your decisions. At the end, it reflects them back.
+- Read the question
+- Tap one of the four cards
+- Watch the time
 """,
             bodyVI: """
-Mỗi tình huống có bảy khoảnh khắc. Không phải câu hỏi — là khoảnh khắc.
+Không có đáp án “đúng” hay “sai”, và cũng không có hình phạt nào. Mỗi lựa chọn đều là điều mà một người thật ngoài đời có thể đưa ra.
 
-Câu chuyện được xây dựng trước khi có bất kỳ yêu cầu nào bắt bạn chọn. Khi lựa chọn xuất hiện, bạn đã ở trong tình huống rồi. Bạn đã gặp các nhân vật. Bạn đã cảm nhận áp lực dâng lên. Điều đó là cố ý.
+Khi trò chơi bắt đầu, bạn sẽ không thể tạm dừng hay quay lại. Vì vậy, hãy giữ sự tập trung và phản ứng nhanh.
 
-Khi lựa chọn đến, cả bốn phương án đều có vẻ hợp lý. Điều đó cũng cố ý. Trong tình huống khẩn cấp thực tế, quyết định sai hiếm khi trông rõ ràng là sai. Người lái xe máy vào đường ngập không phải vì liều lĩnh — họ nghĩ vẫn qua được.
+Mỗi kịch bản gồm 7 câu hỏi. Mỗi câu có 4 lựa chọn. Thời gian cho mỗi câu dao động từ 10 đến 30 giây, tùy theo mức độ khẩn cấp và nghiêm trọng của tình huống.
 
-Có đồng hồ đếm ngược. Không phải để phạt bạn — mà để phản ánh thực tế. Trong lũ quét, trong đám cháy, trong đám đông chen chúc, cửa sổ để quyết định đóng rất nhanh. Chờ đợi cũng là một lựa chọn, và không phải lúc nào cũng đúng.
-
-Chơi qua bảy khoảnh khắc. Mỗi lựa chọn ảnh hưởng đến những gì xảy ra tiếp theo. Câu chuyện theo dõi các quyết định của bạn. Kết thúc, nó phản chiếu lại những quyết định đó.
+* Đọc câu hỏi
+* Chạm vào một trong bốn thẻ
+* Theo dõi thời gian
 """
         ),
 
         // MARK: Section 4 — Reflection & archetype
         HowToPlaySection(
-            titleEN: "THE OBJECT YOU TAKE HOME",
-            titleVI: "VẬT PHẨM BẠN MANG VỀ",
+            titleEN: "The Aftermath Of Main Game View",
+            titleVI: "Kết Quả Sau Khung Chơi Chính",
             bodyEN: """
-When the scenario ends, the game shows you something unexpected: an object.
+When the 7 questions end, you might receive one of four objects from ordinary Vietnamese life: a rubber band, a honeycomb slipper, a mom's market basket, or a brick.
 
-Not a score. Not a rank. An object from ordinary Vietnamese life — a rubber band, a foam slipper, a market basket, a brick.
+Each object represents a pattern the game observed in how you responded: the way you approached information, whether you acted fast or gathered more before moving, whether you relied on yourself or waited for the group.
 
-Each object represents a pattern the game observed in how you responded. The way you approached information. Whether you acted fast or gathered more before moving. Whether you relied on yourself or waited for the group. These aren't personality tests. They're behavioral snapshots — what you actually did in that specific situation, under that specific pressure.
-
-The four objects you might receive:
-
-Rubber Bands · Market Basket · Honeycomb Slipper · A Brick
-
-Each one carries a clear-eyed description of what that behavior looks like in a crisis — including its blind spot. Because every instinct that saves you in one scenario can get you killed in another.
+These aren't personality tests or a judgment call. They're behavioral snapshots — what you actually did in that specific situation, under that specific pressure. No matter what the outcome is, what you collected is the insight, the experience, and the practical solution. This knowledge is wrapped inside the Diary View.
 
 You're not being labeled. You're being shown a mirror.
 """,
             bodyVI: """
-Khi tình huống kết thúc, trò chơi cho bạn thấy điều bất ngờ: một vật phẩm.
+Khi 7 câu hỏi kết thúc, bạn có thể nhận được một trong bốn vật dụng quen thuộc trong đời sống Việt Nam: một sợi dây thun, một đôi dép tổ ong, một chiếc giỏ đi chợ của mẹ, hoặc một viên gạch.
 
-Không phải điểm số. Không phải xếp hạng. Một vật phẩm từ đời thường Việt Nam — cái nịt, dép tổ ong, giỏ chợ, cục gạch.
+Mỗi vật tượng trưng cho một mẫu hành vi mà trò chơi ghi nhận từ cách bạn phản ứng: cách bạn tiếp cận thông tin, bạn hành động ngay hay chờ quan sát thêm, bạn tự mình quyết định hay đợi tập thể.
 
-Mỗi vật phẩm đại diện cho một khuôn mẫu mà trò chơi quan sát được trong cách bạn phản ứng. Cách bạn tiếp cận thông tin. Bạn hành động nhanh hay thu thập thêm trước khi di chuyển. Bạn tự dựa vào bản thân hay chờ đợi tập thể. Đây không phải bài kiểm tra tính cách. Đây là ảnh chụp hành vi — những gì bạn thực sự làm trong tình huống cụ thể đó, dưới áp lực cụ thể đó.
+Đây không phải là bài trắc nghiệm tính cách, cũng không phải một lời phán xét. Đó là một lát cắt hành vi — những gì bạn thực sự đã làm trong đúng tình huống đó, dưới đúng áp lực đó. Dù kết quả là gì, thứ bạn “nhận được” chính là sự thấu hiểu, trải nghiệm, và một cách xử lý thực tế. Tất cả được lưu lại trong mục Nhật ký.
 
-Bốn vật phẩm bạn có thể nhận được:
-
-Cái Nịt · Giỏ Chợ Của Mẹ · Dép Tổ Ong · Cục Gạch
-
-Mỗi vật phẩm mang theo mô tả rõ ràng về hành vi đó trông như thế nào trong khủng hoảng — kể cả điểm mù của nó. Vì mỗi bản năng cứu bạn trong tình huống này có thể giết bạn trong tình huống khác.
-
-Bạn không bị dán nhãn. Bạn đang được nhìn vào gương.
+Đây không phải định nghĩa bạn là ai. Chỉ là cách bạn đã hành động trong khoảnh khắc đó.
 """
         ),
 
         // MARK: Section 5 — Diary
         HowToPlaySection(
-            titleEN: "THE DIARY — WHY IT EXISTS",
-            titleVI: "NHẬT KÝ — TẠI SAO NÓ TỒN TẠI",
+            titleEN: "The Diary, Why It Exists",
+            titleVI: "Tại Sao Bạn Cần Quyển Nhật Ký Này",
             bodyEN: """
-The Diary is not a trophy case. It's a record of what you went through and what it cost.
+The Diary is not a trophy case. it's a record of what you went through and whats left is a lesson.
 
-Every scenario you complete leaves an entry. Open it and you'll find the insight — not a lecture on disaster preparedness, but the real thing: what actually happened to people who made similar choices in that specific kind of crisis in Vietnam. The research behind each scenario is real. The statistics are real. The names aren't, but the situations are.
+Everyone keeps a diary at some point, collects something, rubber bands, rocks, ticket stubs, things that meant nothing until they didn't. 
 
-The collection panel shows every object you've earned. Play different scenarios and you may find yourself receiving different objects — because different pressures reveal different instincts. The person who is a Brick in a flood situation might be a Market Basket in a fire.
+Your diary here works the same way. It records what you lived through, what you picked up along the way, and what you'd do differently next time. No grades, no lectures. 
 
-We built the Diary because we believe knowing what happened matters more than knowing what you scored. A score fades. An insight about why 56 people died in a tube house fire because there was one exit and no alarm — that stays.
-
-That's what this app is actually trying to do. Not teach you survival rules. Teach you why the rules exist in the first place.
+Just you, writing it down so you remember.
 """,
             bodyVI: """
-Nhật Ký không phải tủ trưng bày. Đó là hồ sơ về những gì bạn đã trải qua và cái giá của nó.
+Nhật ký không phải là nơi trưng bày chiến tích. Nó là ghi chép về những gì bạn đã đi qua, và điều còn lại sau cùng là bài học.
 
-Mỗi tình huống bạn hoàn thành để lại một mục. Mở ra và bạn sẽ thấy bài học — không phải bài giảng về phòng chống thiên tai, mà là điều thực sự: những gì đã xảy ra với những người đưa ra lựa chọn tương tự trong đúng loại khủng hoảng đó ở Việt Nam. Nghiên cứu đằng sau mỗi tình huống là có thật. Con số thống kê là có thật. Tên không có thật, nhưng tình huống thì có.
+Ai rồi cũng từng giữ một cuốn nhật ký, từng cất lại một thứ gì đó: dây thun, viên đá, cuống vé, những món đồ tưởng chừng chẳng có ý nghĩa gì… cho đến khi chúng bắt đầu có ý nghĩa.
 
-Bảng sưu tập hiển thị mọi vật phẩm bạn đã kiếm được. Chơi các tình huống khác nhau và bạn có thể thấy mình nhận được những vật phẩm khác nhau — vì áp lực khác nhau bộc lộ bản năng khác nhau. Người là Cục Gạch trong tình huống lũ lụt có thể là Giỏ Chợ trong đám cháy.
+Nhật ký trong ứng dụng này cũng vậy. Nó lưu lại những gì bạn đã trải nghiệm, những gì bạn “nhặt” được trên đường đi, và nếu có lần sau, bạn sẽ làm khác điều gì. Không điểm số. Không bài giảng.
 
-Chúng tôi xây dựng Nhật Ký vì chúng tôi tin rằng biết điều gì đã xảy ra quan trọng hơn biết bạn đạt bao nhiêu điểm. Điểm số mờ dần. Còn sự hiểu biết về lý do tại sao 56 người chết trong một vụ cháy nhà ống vì chỉ có một lối thoát và không có chuông báo động — điều đó ở lại.
-
-Đó là điều ứng dụng này thực sự đang cố gắng làm. Không phải dạy bạn quy tắc sinh tồn. Mà dạy bạn tại sao những quy tắc đó tồn tại ngay từ đầu.
+Chỉ là bạn, viết lại để không quên.
 """
         )
     ]
