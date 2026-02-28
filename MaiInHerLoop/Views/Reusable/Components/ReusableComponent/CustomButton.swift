@@ -19,7 +19,7 @@ struct CustomButton: View {
     var body: some View {
         Button(action: action) {
             Text(title)
-                .font(.system(.body, design: .monospaced).weight(.medium))
+                .font(.system(.headline, design: .monospaced).weight(.bold))
                 .foregroundStyle(textColor)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background(buttonColor)

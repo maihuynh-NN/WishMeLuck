@@ -114,29 +114,43 @@ struct HomeView: View {
 
     // MARK: - Title Section
     private var titleSection: some View {
-        VStack(alignment: .trailing, spacing: 2) {
+        VStack(alignment: .trailing, spacing: 0) {
             Text("home.title.red".localized)
-                .font(.system(.title, design: .monospaced).weight(.bold))
-                .foregroundColor(Color("Beige2"))
-                .tracking(4)
-                .shadow(color: Color.black.opacity(0.7), radius: 6)
+                .font(.system(.title2, design: .serif).weight(.light))
+                .foregroundColor(Color("Beige"))
+                .tracking(8)
 
             Text("home.title.embers".localized)
                 .font(.system(.largeTitle, design: .monospaced).weight(.black))
-                .foregroundColor(Color("Beige2"))
+                .foregroundColor(Color("Beige"))
                 .tracking(5)
-                .shadow(color: Color.black.opacity(0.7), radius: 6)
                 .minimumScaleFactor(typeSize >= .accessibility1 ? 0.7 : 1.0)
+
+            Rectangle()
+                .fill(Color("Beige").opacity(0.5))
+                .frame(height: 1)
+                .padding(.top, 6)
+                .padding(.bottom, 6)
+                .padding(.leading, 90)
 
             Text("home.title.vi".localized)
                 .font(.system(.caption, design: .monospaced).weight(.medium))
-                .foregroundColor(Color("Beige2"))
-                .tracking(2)
-                .shadow(color: Color.black.opacity(0.5), radius: 4)
-                .padding(.top, 2)
+                .foregroundColor(Color("Beige").opacity(0.75))
+                .tracking(4)
         }
         .padding(.trailing, isIPad ? 50 : 28)
         .padding(.top, isIPad ? 135 : 120)
+        .background(
+            // Gradient scrim behind the text block only
+            LinearGradient(
+                colors: [Color.black.opacity(0.45), Color.clear],
+                startPoint: .trailing,
+                endPoint: .leading
+            )
+            .blur(radius: 20)
+            .padding(.vertical, -20)
+            .padding(.trailing, -40)
+        )
         .accessibilityElement(children: .combine)
         .accessibilityAddTraits(.isHeader)
         .accessibilityLabel("home.title.a11y".localized)
@@ -148,22 +162,21 @@ struct HomeView: View {
 
             homeButton(
                 title: "home.start_game".localized,
-                textColor: Color("Beige2"),
+                textColor: Color("Beige"),
                 buttonColor: Color("Red3"),
                 borderColor: Color("Gold3"),
-                rotation: -3,
+                rotation: -3.8,
                 staggerDelay: 0.2
             ) {
                 navigateToScenarioList = true
             }
             
-            // Button 2: Visit Regions
            homeButton(
                title: "home.how_to_play".localized,
-               textColor: Color("Beige2"),
-               buttonColor: Color("Moss").opacity(0.75),
-               borderColor: Color("Gold").opacity(0.6),
-               rotation: 1.5,
+               textColor: Color("Beige"),
+               buttonColor: Color("Moss"),
+               borderColor: Color("Gold"),
+               rotation: 1.8,
                staggerDelay: 0.4
            ) {
                navigateToView = true
@@ -171,19 +184,19 @@ struct HomeView: View {
 
             homeButton(
                 title: "home.diary".localized,
-                textColor: Color("Beige2"),
+                textColor: Color("Beige"),
                 buttonColor: Color("Red3"),
                 borderColor: Color("Gold3"),
-                rotation: -2,
+                rotation: -2.8,
                 staggerDelay: 0.6
             ) {
                 navigateToDiary = true
             }
 
-            // MARK: - Settings mini-button (below the 3 main buttons)
+            // MARK: - Settings mini-button
             CustomMiniButton(
                 systemIcon: "gearshape.fill",
-                buttonColor: Color("Beige2"),
+                buttonColor: Color("Red3"),
                 action: {
                     if reduceMotion {
                         showSettings = true
@@ -195,8 +208,8 @@ struct HomeView: View {
                 }
             )
             .customedBorder(
-                borderShape: "panel-border-004",
-                borderColor: Color("Beige2").opacity(0.6),
+                borderShape: "panel-border-002",
+                borderColor: Color("Gold3"),
                 buttonType: .miniButton
             )
             .modifier(ShadowModifier(color: Color.black.opacity(0.3)))
@@ -206,7 +219,7 @@ struct HomeView: View {
             .accessibilityLabel("settings.button".localized)
             .accessibilityHint("settings.button.hint".localized)
         }
-        .padding(.leading, buttonLeading)
+        .padding(.leading, buttonLeading + 10)
     }
 
     // MARK: - Single Home Button
@@ -227,7 +240,7 @@ struct HomeView: View {
             action()
         }
         .customedBorder(
-            borderShape: "panel-border-005",
+            borderShape: "panel-border-008",
             borderColor: borderColor,
             buttonType: .mainButton
         )
@@ -270,5 +283,5 @@ struct HomeView: View {
     NavigationStack {
         HomeView()
     }
-    .previewDevice("iPad Pro (12.9-inch) (6th generation)")
+
 }

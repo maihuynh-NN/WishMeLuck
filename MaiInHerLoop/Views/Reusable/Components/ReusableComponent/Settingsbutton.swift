@@ -30,7 +30,7 @@ struct SettingsButton: View {
                         }
                     )
                     .customedBorder(
-                        borderShape: "panel-border-004",
+                        borderShape: "panel-border-002",
                         borderColor: Color("Gold3"),
                         buttonType: .miniButton
                     )
