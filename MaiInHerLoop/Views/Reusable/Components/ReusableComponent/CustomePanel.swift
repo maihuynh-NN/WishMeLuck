@@ -31,7 +31,7 @@ struct CustomPanel<Content: View>: View {
         ) {
             Text("Fixed panel")
         }
-        .customedBorder(borderShape: "panel-border-003", borderColor: Color("Moss"), buttonType: .customed(width: 300, height: 200))
+        .customedBorder(borderShape: "panel-border-004", borderColor: Color("Moss"), buttonType: .customed(width: 300, height: 200))
 
         CustomPanel(
             backgroundColor: Color("Moss"),
@@ -39,7 +39,7 @@ struct CustomPanel<Content: View>: View {
         ) {
             Text("Flexible panel")
         }
-        .customedBorder(borderShape: "panel-border-003", borderColor: Color("Moss"), buttonType: .flexible(height: 200))
+        .customedBorder(borderShape: "panel-border-004", borderColor: Color("Moss"), buttonType: .flexible(height: 200))
         .padding(.horizontal, 20)
     }
 }

@@ -30,6 +30,7 @@ struct CustomedBorder: ViewModifier {
                     }
                 }
             )
+            .clipped()
     }
 }
 
@@ -51,7 +52,7 @@ extension View {
         ) {
             Text("Fixed")
         }
-        .customedBorder(borderShape: "panel-border-003", borderColor: Color("Moss"), buttonType: .customed(width: 300, height: 150))
+        .customedBorder(borderShape: "panel-border-004", borderColor: Color("Moss"), buttonType: .customed(width: 300, height: 150))
 
         CustomPanel(
             backgroundColor: Color(.white),
@@ -59,7 +60,7 @@ extension View {
         ) {
             Text("Flexible")
         }
-        .customedBorder(borderShape: "panel-border-003", borderColor: Color("Moss"), buttonType: .flexible(height: 150))
+        .customedBorder(borderShape: "panel-border-004", borderColor: Color("Moss"), buttonType: .flexible(height: 150))
         .padding(.horizontal, 20)
     }
 }

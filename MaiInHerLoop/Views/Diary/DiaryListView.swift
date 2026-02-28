@@ -96,7 +96,7 @@ struct DiaryListView: View {
                 }
             }
         }
-        .background(Color("Beige"))
+        .background(Color("Beige3"))
         .customedBorder(
             borderShape: "panel-border-008",
             borderColor: Color("Moss"),

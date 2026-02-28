@@ -54,7 +54,7 @@ The app has a few rooms. Here's what each one does.
    - Tap on any card to reveal a sheet for exploring regional content.
    - Or tap the "Choose Region" button to go straight to the Scenario List.
 
-2. Scenario View: There are 5 blind boxes of incidents, categorized by Fire, Flood, Crowd, Heat, and Contamination.
+2. Scenario View: There are 5 blind boxes of incidents, categorized by Fire, Flood, Crowd, Heat, and Fraud/Scam.
    - When you tap on any scenario, you enter the main game view with a brief preview of the incident. You can either continue or return to the Scenario View.
    - Once you begin, the game is continuous with no pause — because in real life, when you're caught in an incident, you don't get to choose to escape.
 

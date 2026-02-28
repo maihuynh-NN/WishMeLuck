@@ -141,7 +141,7 @@ struct AppPattern: View {
 #Preview {
     VStack(spacing: 40) {
         AppPattern(color: Color("Moss"))
-        AppPattern(color: Color("Gold"))
+        AppPattern(color: Color("Gold3"))
         AppPattern(color: Color("Red3"))
     }
     .padding()

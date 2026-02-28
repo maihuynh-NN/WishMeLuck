@@ -175,7 +175,7 @@ struct HomeView: View {
                title: "home.how_to_play".localized,
                textColor: Color("Beige"),
                buttonColor: Color("Moss"),
-               borderColor: Color("Gold"),
+               borderColor: Color("Gold3"),
                rotation: 1.8,
                staggerDelay: 0.4
            ) {

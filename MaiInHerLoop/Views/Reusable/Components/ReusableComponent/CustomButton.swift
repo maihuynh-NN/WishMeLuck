@@ -24,7 +24,8 @@ struct CustomButton: View {
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background(buttonColor)
         }
-        .buttonStyle(ScaleButtonStyle())                
+        .buttonStyle(ScaleButtonStyle())
+        .clipShape(Rectangle())
     }
 }
 
@@ -33,12 +34,12 @@ struct CustomButton: View {
         CustomButton(
             title: "How To Play",
             textColor: Color("Beige"),
-            buttonColor: Color("Red"),
+            buttonColor: Color("Red3"),
             action: {}
         )
         .customedBorder(
             borderShape: "panel-border-005",
-            borderColor: Color("Gold"),
+            borderColor: Color("Gold3"),
             buttonType: .mainButton
         )
     }

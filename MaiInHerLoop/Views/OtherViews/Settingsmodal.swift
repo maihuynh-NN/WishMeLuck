@@ -64,8 +64,8 @@ struct SettingsModal: View {
                 }
             }
             .customedBorder(
-                borderShape: "panel-border-003",
-                borderColor: Color("Moss"),
+                borderShape: "panel-border-004",
+                borderColor: Color("Gold3"),
                 buttonType: .customed(width: panelWidth, height: panelHeight)
             )
             .panelExpand()
@@ -205,7 +205,7 @@ struct SettingsModal: View {
             }
             .customedBorder(
                 borderShape: "panel-border-005",
-                borderColor: Color("Gold"),
+                borderColor: Color("Gold3"),
                 buttonType: .mainButton
             )
             .accessibilityLabel("settings.close".localized)

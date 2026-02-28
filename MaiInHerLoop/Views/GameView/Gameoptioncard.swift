@@ -30,7 +30,7 @@ struct GameOptionCard: View {
 
                 Text(text)
                     .font(.system(isWide ? .subheadline : .caption, design: .monospaced).weight(.medium))
-                    .foregroundColor(isSelected ? Color("Gold") : Color("Moss"))
+                    .foregroundColor(isSelected ? Color("Beige3") : Color("Beige"))
                     .multilineTextAlignment(.center)
                     .fixedSize(horizontal: false, vertical: true)
                     .padding(.horizontal, 10)
@@ -40,7 +40,7 @@ struct GameOptionCard: View {
                 if isSelected {
                     Text("game.chosen".localized)
                         .font(.system(.caption2, design: .monospaced).weight(.black))
-                        .foregroundColor(Color("Gold"))
+                        .foregroundColor(Color("Gold3"))
                         .tracking(1)
                         .padding(.bottom, 6)
                 } else {
@@ -62,12 +62,12 @@ struct GameOptionCard: View {
             .frame(maxWidth: .infinity, minHeight: isWide ? 100 : 80)
             .background(
                 RoundedRectangle(cornerRadius: 8)
-                    .fill(isSelected ? Color("Moss") : Color("Gold").opacity(0.9))
+                    .fill(isSelected ? Color("Moss") : Color("Gold3").opacity(0.9))
             )
             .overlay(
                 RoundedRectangle(cornerRadius: 8)
                     .stroke(
-                        isSelected ? Color("Red").opacity(0.6) : Color("Red").opacity(0.5),
+                        isSelected ? Color("Red3").opacity(0.6) : Color("Red3").opacity(0.5),
                         lineWidth: 1
                     )
             )

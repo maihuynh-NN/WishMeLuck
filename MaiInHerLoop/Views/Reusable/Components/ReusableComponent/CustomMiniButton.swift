@@ -56,7 +56,7 @@ struct CustomMiniButton: View {
 #Preview {
     ZStack {
         LinearGradient(
-            gradient: Gradient(colors: [Color("Moss"), Color("Red")]),
+            gradient: Gradient(colors: [Color("Moss"), Color("Red3")]),
             startPoint: .topLeading,
             endPoint: .bottomTrailing
         )

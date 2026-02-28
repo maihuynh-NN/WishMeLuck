@@ -57,7 +57,6 @@ struct RegionSelectionView: View {
                                 .lineLimit(2)
                                 .fixedSize(horizontal: false, vertical: true)
                                 .opacity(headerPulse ? 1.0 : 0.8)
-                                .padding(.top, 5)
                                 .accessibilityAddTraits(.isHeader)
                         }
                         

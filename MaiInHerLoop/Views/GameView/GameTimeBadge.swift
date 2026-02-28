@@ -7,7 +7,7 @@ struct GameTimerBadge: View {
     let timeRemaining: Int
 
     private var badgeColor: Color {
-        if timeRemaining <= 10 { return Color("Red2") }
+        if timeRemaining <= 10 { return Color("Red3") }
         if timeRemaining <= 20 { return Color("Gold2") }
         return Color("Moss")
     }
