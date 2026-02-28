@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "central.jpg",
+      "filename" : "grok-image-7dad2945-cf57-4f54-a6c1-9b1656cb91c4.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "central@2x.jpg",
+      "filename" : "grok-image-7dad2945-cf57-4f54-a6c1-9b1656cb91c4@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "central@3x.jpg",
+      "filename" : "grok-image-7dad2945-cf57-4f54-a6c1-9b1656cb91c4@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

@@ -27,7 +27,7 @@
 "settings.title" = "SETTINGS";
 "settings.language" = "LANGUAGE";
 "settings.language.current" = "Currently selected";
-"settings.language.switch" = "Double tap to switch";
+"settings.language.switch" = "Tap to switch";
 "settings.appearance" = "APPEARANCE";
 "settings.light" = "Light";
 "settings.dark" = "Dark";

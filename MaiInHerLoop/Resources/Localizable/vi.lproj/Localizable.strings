@@ -1,15 +1,15 @@
-// MARK: - Splash Screen
+// MARK: - Splash Screen done
 
-"splash.welcome_message" = "Chào mừng, người sống sót.\nTrước khi bước vào điều chưa biết, hãy cho chúng tôi biết — bạn là ai?";
-"splash.enter_name" = "DANH TÍNH CỦA BẠN";
+"splash.welcome_message" = "Không phải câu chuyện về một chuyến trở về.\n\nMà là nơi bạn đưa ra lựa chọn, trưởng thành qua đó, và sống cùng những gì theo sau.";
+"splash.enter_name" = "BẠN TÊN LÀ GÌ";
 "splash.name_placeholder" = "Nhập tên của bạn";
 "splash.begin" = "BẮT ĐẦU";
 "splash.name_accessibility" = "Nhập tên của bạn";
-"splash.name_hint" = "Nhập tên để bắt đầu trải nghiệm";
+"splash.name_hint" = "Điền tên để bước vào hành trình";
 "splash.begin_accessibility" = "Bắt đầu trải nghiệm";
 
 
-// MARK: - Home View
+// MARK: - Home View done
 
 "home.title.red" = "RED";
 "home.title.embers" = "EMBERS";
@@ -21,11 +21,11 @@
 "home.howtoplay.hint" = "Mở hướng dẫn chơi";
 
 
-// MARK: - Settings Modal
+// MARK: - Settings Modal doen
 
 "settings.title" = "CÀI ĐẶT";
 "settings.language" = "NGÔN NGỮ";
-"settings.language.current" = "Đang được chọn";
+"settings.language.current" = "Đang Chọn";
 "settings.language.switch" = "Nhấn đúp để chuyển";
 "settings.appearance" = "GIAO DIỆN";
 "settings.light" = "Sáng";
@@ -37,7 +37,7 @@
 "settings.button.hint" = "Mở cài đặt ngôn ngữ và giao diện";
 
 
-// MARK: - Story View
+// MARK: - Story View done
 
 "story.skip" = "Bỏ qua";
 "story.skip.a11y" = "Bỏ qua phần giới thiệu";
@@ -48,38 +48,38 @@
 "story.nav.previous" = "Phần trước";
 
 
-// MARK: - Region Selection View
+// MARK: - Region Selection View done
 
 "region.title" = "READ EMBERS \nAirlines";
-"region.title.mini" = "Chuyến Bay Khởi Hành";
-"region.subtitle" = "Vuốt để khám phá các thiên tai khác nhau";
-"regionselect.selectButton" = "CHỌN";
+"region.title.mini" = "Khởi Hành";
+"region.subtitle" = "Vuốt trái hoặc phải để chọn điểm đến củ bạn";
+"regionselect.selectButton" = "Chọn Vùng";
 
 
-// MARK: - Region Card
+// MARK: - Region Card done done
 
 "region.tap_to_explore" = "Chạm vào đây để khám phá ›";
 
 
-// MARK: - Region Names
+// MARK: - Region Names done
 
 "region.north.name" = "Vùng Bắc";
 "region.central.name" = "Vùng Trung";
 "region.south.name" = "Vùng Nam";
 
 
-// MARK: - Region Detail Popover — UI
+// MARK: - Region Detail Popover — UI done
 
-"ui.landing_on" = "Chuyến Bay Khởi Hành";
-"ui.survival_orientation_manual" = "Cẩm Nang Định Hướng";
-"ui.the_region" = "MIỀN %@";
-"ui.ready_to_face_trials" = "Sẵn sàng đối mặt với thử thách của %@?";
-"ui.enter_region" = "VÀO KHU VỰC";
-"ui.study_others_first" = "tìm hiểu các vùng khác trước";
-"ui.chronicles.title" = "BIÊN NIÊN SỬ";
+"ui.landing_on" = "CHẠM ĐẤT TẠI";
+"ui.survival_orientation_manual" = "Nhật Ký Vùng Đất";
+"ui.the_region" = "%@ HUYỀN THOẠI";
+"ui.ready_to_face_trials" = "Sẵn sàng đối mặt với những thử thách của %@?";
+"ui.enter_region" = "Chọn Vùng Đất";
+"ui.study_others_first" = "Quay Lại";
+"ui.chronicles.title" = "Toàn Cảnh";
 
 
-// MARK: - Region Detail — North Risk Briefing
+// MARK: - Region Detail — North Risk Briefing doen
 
 "region.north.riskBriefing" = "Miền Bắc không giải thích trước.\nNúi sạt không báo hiệu. Sông sáng còn yên, trưa đã nuốt đường. Cái lạnh kéo dài cả tháng.\nNgười ở đây chuẩn bị sớm không phải vì lo lắng — mà vì đất đã dạy họ chuyện gì xảy ra khi không kịp.";
 
@@ -99,7 +99,7 @@
 "region.north.sections.4.content" = "Uỷ ban thôn, đội xung kích, hàng xóm mang dây — cứu hộ miền Bắc bắt đầu từ người quen.\nHọ căng dây qua sông, đào bới lở đất bằng tay, chia lửa trước khi bộ đội tới.\nNgười sống sót là người đã ở trong vòng tròn đó từ trước.";
 "region.north.sections.4.subtitle" = "Vào sớm đi. Cửa đóng khi bão tới.";
 
-// MARK: - Region Detail — Central Risk Briefing
+// MARK: - Region Detail — Central Risk Briefing dhone
 
 "region.central.riskBriefing" = "Miền Trung nằm giữa biển và núi.\nBão vào từ một phía, lở đất đáp lại từ phía kia. Những thị trấn ở giữa đã sống với chuyện này lâu hơn bất kỳ ai còn nhớ.\nĐiều họ biết không phải là sợ — mà là biết lúc nào phải đi.";
 
@@ -119,7 +119,7 @@
 "region.central.sections.4.content" = "Loa phường, cờ hiệu, người chạy dọc đường núi. Mạng lưới của già làng, ngư dân, đoàn thanh niên tới từng nhà trước khi điện thoại kịp báo.\nNgười nghe theo là người kịp đi.";
 "region.central.sections.4.subtitle" = "Nghe người xung quanh, đừng chờ màn hình.";
 
-// MARK: - Region Detail — South Risk Briefing
+// MARK: - Region Detail — South Risk Briefing done
 
 "region.south.riskBriefing" = "Miền Nam chạy rất nhanh, và không phải lúc nào cũng chờ bạn kịp thích nghi.\nMưa đổ xuống vài phút là đường đã ngập. Nước rút rồi nhưng cái nóng vẫn còn đó.\nNgười sống quen ở đây không đợi ai nhắc. Họ nhìn trời, nhìn đường, nhìn dòng người — và tự biết điều gì sắp xảy ra.";
 
@@ -139,72 +139,72 @@
 "region.south.sections.4.content" = "Lực lượng chính thức sẽ tới.\nNhưng người xuất hiện đầu tiên thường là hàng xóm gõ cửa, người chạy xe hô lên ngoài hẻm, nhóm thanh niên đã tự động giúp nhau trước khi có ai yêu cầu.";
 "region.south.sections.4.subtitle" = "Đừng đóng cửa một mình. Ở đây, người ta gọi nhau trước.";
 
-// MARK: - Scenario List View
+// MARK: - Scenario List View dhoen
 
-"scenariolist.header" = "BẢNG NHIỆM VỤ";
-"scenariolist.subheader" = "Chọn nhiệm vụ của bạn";
-"scenariolist.coming_soon" = "· sắp có thêm tình huống ·";
-"scenariolist.back" = "quay lại chọn vùng";
-"scenariolist.diary" = "Nhật Ký";
+"scenariolist.header" = "Chào Mừng Bạn";
+"scenariolist.subheader" = "Mọi chuyện có thể xảy ra bất cứ lúc nào.\nChạm vào một tình huống để xem trước";
+"scenariolist.coming_soon" = "· sắp có thêm tình huống mới ·";
+"scenariolist.back" = "Quay Lại";
+"scenariolist.diary" = "Mở Nhật Ký";
 "scenariolist.region.north" = "Miền Bắc";
 "scenariolist.region.central" = "Miền Trung";
 "scenariolist.region.south" = "Miền Nam";
-"scenariolist.board.a11y" = "Bảng nhiệm vụ cho %@";
+"scenariolist.board.a11y" = "Vào tình huống %@";
 "scenariolist.diary.a11y" = "Mở nhật ký";
-"scenariolist.diary.a11y.hint" = "Xem lại các kết quả từ nhiệm vụ đã hoàn thành";
+"scenariolist.diary.a11y.hint" = "Xem lại những suy ngẫm từ các nhiệm vụ đã hoàn thành";
 "scenariolist.back.a11y" = "Quay lại";
-"scenariolist.back.a11y.hint" = "Quay về chọn vùng";
+"scenariolist.back.a11y.hint" = "Trở về màn hình chọn vùng";
 
 
-// MARK: - Blindbox Card (Mission Card)
+// MARK: - Blindbox Card (Mission Card) doen
 
-"mission.classified" = "Chưa Hoàn Thành";
-"mission.responded" = "Đã Hoàn Thành";
+"mission.classified" = "Chọn";
+"mission.responded" = "Đã Chọn";
 "mission.a11y.label" = "Nhiệm vụ %d, %@";
 "mission.a11y.completed" = "đã hoàn thành";
-"mission.a11y.locked" = "chưa mở";
-"mission.a11y.hint.replay" = "Nhấn đúp để chơi lại";
-"mission.a11y.hint.start" = "Nhấn đúp để bắt đầu nhiệm vụ";
+"mission.a11y.locked" = "chưa mở khóa";
+"mission.a11y.hint.replay" = "Chạm để chơi lại";
+"mission.a11y.hint.start" = "Chạm để bắt đầu nhiệm vụ này";
 
 
 // MARK: - Mission Brief Overlay (Dispatch)
 
-"threat.level" = "MỨC ĐỘ NGUY HIỂM";
+"threat.level" = "MỨC ĐỘ";
 "threat.level.accessibility" = "Mức độ nguy hiểm: %d trên %d";
-"dispatch.incoming" = "ĐIỆN KHẨN ĐẾN";
-"dispatch.scroll_guide" = "cuộn để đọc bản tin";
-"dispatch.respond" = "ỨNG CHIẾN";
-"dispatch.not_ready" = "CHƯA SẴN SÀNG";
-"dispatch.ready_prompt" = "Nhấn đúp để nhận nhiệm vụ";
-"dispatch.retreat_hint" = "Nhấn đúp để quay lại bảng nhiệm vụ";
+"dispatch.incoming" = "Tình Huống";
+"dispatch.scroll_guide" = "Cuộn để đọc tiếp";
+"dispatch.respond" = "Bắt Đầu";
+"dispatch.not_ready" = "Quay Lại";
+"dispatch.ready_prompt" = "Chạm để nhận nhiệm vụ";
+"dispatch.retreat_hint" = "Chạm để quay về bảng nhiệm vụ";
 
 
-// MARK: - Game View
+// MARK: - Game View done
 
 "game.reflection_unavailable" = "Không thể hiển thị kết quả";
 "game.chosen" = "ĐÃ CHỌN";
-"game.option.hint" = "Nhấn đúp để chọn phương án này";
+"game.option.hint" = "Nhấn để chọn phương án này";
 
 
 // MARK: - Reflection Result View
 
-"reflection.result.header" = "MẪU HÌNH CỦA BẠN";
-"reflection.result.announcement" = "Mẫu hình của bạn là";
-"reflection.diary" = "XEM NHẬT KÝ";
-"reflection.diary.hint" = "Nhấn đúp để xem mục nhật ký";
-"reflection.play_again" = "CHƠI LẠI";
-"reflection.play_again.hint" = "Nhấn đúp để bắt đầu nhiệm vụ mới";
-"reflection.scroll.guide" = "Lướt dọc để đọc";
+"reflection.result.header" = "TRONG MẮT NGƯỜI KHÁC, BẠN GIỐNG NHƯ";
+"reflection.result.announcement" = "Hình mẫu của bạn là";
+"reflection.diary" = "Xem Nhật Ký";
+"reflection.diary.hint" = "Chạm để xem trang nhật ký của bạn";
+"reflection.play_again" = "Quay Lại";
+"reflection.play_again.hint" = "Chạm để bắt đầu một nhiệm vụ mới";
+"reflection.scroll.guide" = "Cuộn để đọc tiếp";
 
 
 // MARK: - Diary List View
 
 "diary.title" = "NHẬT KÝ";
-"diary.subtitle" = "Hành trình thích nghi của bạn.";
-"diary.past_scenarios" = "CÁC TÌNH HUỐNG ĐÃ QUA";
-"diary.back" = "Quay lại";
-"diary.back.hint" = "Quay về màn hình trước";
-"diary.entry.hint" = "Mở mục nhật ký";
+"diary.subtitle" = "Hành trình thích nghi của bạn";
+"diary.past_scenarios" = "NHỮNG TÌNH HUỐNG ĐÃ QUA";
+"diary.back" = "Quay Lại";
+"diary.back.hint" = "Trở về màn hình trước";
+"diary.entry.hint" = "Mở trang nhật ký này";
 
 
 // MARK: - Diary Detail View

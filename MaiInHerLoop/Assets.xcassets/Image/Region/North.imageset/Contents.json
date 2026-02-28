@@ -1,14 +1,17 @@
 {
   "images" : [
     {
+      "filename" : "grok-image-1bd8ee0e-d84e-403c-a271-cea87bc77119.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "grok-image-1bd8ee0e-d84e-403c-a271-cea87bc77119@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "grok-image-1bd8ee0e-d84e-403c-a271-cea87bc77119@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
